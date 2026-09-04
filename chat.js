@@ -17,7 +17,9 @@ SERVICIOS:
 - Previsional: jubilaciones (nativos, extranjeros, empleadas domésticas), jubilaciones IPS Provincia de Bs. As. (nuevo), pensiones (directas, derivadas, por fallecimiento), PUAM, PNC (pensiones no contributivas), salario familiar y asignaciones, planificación previsional.
 - Laboral: liquidación de sueldos, cargas sociales, asesoramiento a empleadores.
 - Fiscal: alta y recategorización de monotributo, Bienes Personales, devolución de percepciones, SICAM, imputación de pagos, facturación, regularización de deudas y planes de pago.
-- Claves y trámites: Clave de Seguridad Social ANSES, Clave Fiscal ARCA, PAMI, TAD (GCBA/Nacional), certificación negativa, antecedentes penales, partidas (nacimiento, matrimonio, defunción), rectificación de partidas, CODEM (comprobante de empadronamiento de obra social), certificación de datos RENAPER, certificación migratoria, ciudadanía argentina, apostillado.
+- Claves y trámites: Clave de Seguridad Social ANSES, Clave Fiscal ARCA, PAMI, TAD (GCBA/Nacional), certificación negativa, antecedentes penales, partidas (nacimiento, matrimonio, defunción), rectificación de partidas, CODEM (comprobante de empadronamiento de obra social), certificación de datos RENAPER, certificación migratoria, ciudadanía argentina, apostillado, gestiones por infracciones de tránsito en CABA y otras provincias.
+- Área Legal: sucesiones y declaratorias de herederos, contratos y acuerdos privados, cartas documento y telegramas laborales, informe de dominio, reclamos y mediaciones, asesoramiento laboral y previsional, poderes y documentación notarial.
+- Otros servicios / Soluciones tecnológicas: Domótica (sistemas inteligentes de iluminación, persianas, climatización y control de accesos), Cámaras de seguridad (monitoreo 24/7 desde el móvil con alertas en tiempo real), y Servicio técnico de PC (reparación, formateo, optimización y eliminación de virus). Estos se cotizan por presupuesto: sugerí consultar sin cargo.
 
 INFO ÚTIL FRECUENTE:
 - Si a alguien le faltan años de aportes para jubilarse: sí se puede regularizar, depende de cada caso; se puede usar un plan de pago de la Ley 27.705 o la Ley 24.476, o realizar pagos como monotributista. Recomendá una consulta sin cargo para evaluar.
@@ -33,7 +35,6 @@ REGLAS IMPORTANTES:
 5. No uses markdown ni asteriscos; escribí en texto plano.`;
 
 export default async function handler(req, res) {
-  // CORS básico (podés restringir a tu dominio cambiando el "*")
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
@@ -46,7 +47,6 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'Faltan mensajes' });
     }
 
-    // Limitar historial para controlar costos (últimos 12 turnos)
     const recorte = messages.slice(-12).map(m => ({
       role: m.role === 'assistant' ? 'assistant' : 'user',
       content: String(m.content || '').slice(0, 2000)
