@@ -269,14 +269,20 @@ nav.menu a:not(.btn):hover::after{right:0}
 .score small{display:block;color:var(--muted);font-weight:600;font-size:.8rem}
 .res-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .res{background:var(--surface);border:1px solid var(--line);
-  border-radius:var(--radius);padding:28px 26px;display:flex;flex-direction:column;gap:16px;transition:.28s}
+  border-radius:var(--radius);padding:28px 26px;display:flex;flex-direction:column;gap:16px;transition:.28s;text-decoration:none;cursor:pointer}
 .res:hover{transform:translateY(-3px);border-color:rgba(63,184,174,.35)}
 .res .stars{color:var(--star);letter-spacing:2px;font-size:.9rem}
 .res p{font-size:.94rem;color:#c3ccde;flex:1}
+.res-autor{display:flex;align-items:center;gap:10px;font-weight:700;font-size:.9rem;color:#fff}
+.res-ini{width:32px;height:32px;border-radius:50%;flex-shrink:0;
+  background:linear-gradient(135deg,#3fb8ae,#2f8f88);color:#04211d;
+  display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.9rem}
 .res .src{display:flex;align-items:center;gap:10px;font-size:.7rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 .res .src::before{content:"G";width:26px;height:26px;border-radius:50%;
   background:linear-gradient(135deg,#1f4a52,#132229);color:#fff;
   display:inline-flex;align-items:center;justify-content:center;font-size:.85rem}
+.res .src::after{content:"Ver en Google ›";margin-left:auto;color:var(--gold-2);opacity:0;transition:.2s;letter-spacing:.04em}
+.res:hover .src::after{opacity:1}
 .res.cta-res{align-items:center;justify-content:center;text-align:center;gap:18px;border-style:dashed}
 .res.cta-res p{flex:0;font-weight:700;color:#fff}
 
@@ -432,9 +438,6 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .mitem a:hover{color:#fff}
 
 /* Vistas (secciones tipo pestaña dentro del index) */
-.vista-tec{display:none}
-body.ver-tec .vista-principal{display:none}
-body.ver-tec .vista-tec{display:block}
 .tec-hero{padding:110px 0 40px;position:relative}
 .tec-hero .volver{display:inline-flex;align-items:center;gap:7px;color:var(--muted);font-size:.9rem;font-weight:600;margin-bottom:22px;cursor:pointer;background:none;border:none;font-family:inherit}
 .tec-hero .volver:hover{color:var(--gold-2)}
@@ -450,6 +453,17 @@ body.ver-tec .vista-tec{display:block}
 .tec-card .twa{display:inline-flex;align-items:center;gap:7px;font-size:.85rem;font-weight:700;color:var(--gold-2);transition:.2s}
 .tec-card:hover .twa{gap:11px}
 @media(max-width:760px){.tec-grid{grid-template-columns:1fr}}
+
+/* ===== Sistema de módulos (SPA) ===== */
+.modulo{display:none;animation:fadeIn .4s ease}
+.modulo.activo{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.modulo{animation:none}}
+/* Menú: marcar solapa activa */
+nav.menu a.nav-activo{color:#fff}
+nav.menu a.nav-activo::after{right:0!important}
+/* Fondo reactivo al scroll */
+.aura{transition:background-position .3s ease, opacity .3s ease}
 </style>
 </head>
 <body>
@@ -462,22 +476,23 @@ body.ver-tec .vista-tec{display:block}
       <div class="brand-t"><strong>Estudio CG</strong><span>Gestoría & Consultoría</span></div>
     </a>
     <button class="hamb" aria-label="Abrir menú" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
-    <nav class="menu" id="menu">
-      <a href="#" onclick="irA('inicio');return false;">Inicio</a>
-      <a href="#" onclick="irA('servicios');return false;">Servicios</a>
-      <a href="#" onclick="verTecnologia();return false;">Otros Servicios</a>
-      <a href="#" onclick="irA('proceso');return false;">Cómo trabajamos</a>
-      <a href="#" onclick="irA('nosotros');return false;">Nosotros</a>
-      <a href="#" onclick="irA('resenas');return false;">Opiniones</a>
-      <a href="#" onclick="irA('faq');return false;">Preguntas</a>
-      <a href="#" onclick="irA('contacto');return false;">Contacto</a>
-      <a class="btn btn-gold" href="#" onclick="irA('contacto');return false;">Contactanos</a>
+        <nav class="menu" id="menu">
+      <a href="#" data-mod="inicio" onclick="mostrar('inicio');return false;">Inicio</a>
+      <a href="#" data-mod="servicios" onclick="mostrar('servicios');return false;">Servicios</a>
+      <a href="#" data-mod="otros" onclick="mostrar('otros');return false;">Otros Servicios</a>
+      <a href="#" data-mod="proceso" onclick="mostrar('proceso');return false;">Cómo trabajamos</a>
+      <a href="#" data-mod="nosotros" onclick="mostrar('nosotros');return false;">Nosotros</a>
+      <a href="#" data-mod="resenas" onclick="mostrar('resenas');return false;">Opiniones</a>
+      <a href="#" data-mod="faq" onclick="mostrar('faq');return false;">Preguntas</a>
+      <a href="#" data-mod="contacto" onclick="mostrar('contacto');return false;">Contacto</a>
+      <a class="btn btn-gold" href="#" onclick="mostrar('contacto');return false;">Contactanos</a>
     </nav>
   </div>
 </header>
 
-<main class="vista-principal">
-<!-- HERO -->
+<div id="cuerpo">
+<!-- MÓDULO INICIO -->
+<div class="modulo activo" id="mod-inicio">
 <section class="hero" id="inicio">
   <div class="wrap">
     <div>
@@ -492,7 +507,7 @@ body.ver-tec .vista-tec{display:block}
       <div class="hero-mini">
         <div class="mini"><b>+20</b><small>años de experiencia</small></div>
         <div class="mini"><b class="g">5.0<span style="-webkit-text-fill-color:var(--star);color:var(--star)">★</span></b><small>en Google Maps</small></div>
-        <div class="mini"><b>+40</b><small>reseñas de clientes</small></div>
+        <div class="mini"><b>40</b><small>reseñas de clientes</small></div>
         <div class="mini"><b>100%</b><small>atención personal</small></div>
       </div>
     </div>
@@ -518,7 +533,9 @@ body.ver-tec .vista-tec{display:block}
     <span>Gestionamos ante <i>·</i> ANSES <i>·</i> ARCA <i>·</i> PAMI <i>·</i> IPS PBA <i>·</i> Migraciones <i>·</i> TAD <i>·</i> RENAPER <i>·</i> Registro Civil <i>·</i></span>
   </div>
 </div>
-
+</div>
+<!-- MÓDULO SERVICIOS -->
+<div class="modulo" id="mod-servicios">
 <!-- SERVICIOS -->
 <section id="servicios">
   <div class="wrap">
@@ -559,8 +576,9 @@ body.ver-tec .vista-tec{display:block}
     </div>
   </div>
 </section>
-
-<!-- PROCESO -->
+</div>
+<!-- MÓDULO PROCESO -->
+<div class="modulo" id="mod-proceso">
 <section id="proceso">
   <div class="wrap">
     <span class="pill reveal">Cómo trabajamos</span>
@@ -573,8 +591,9 @@ body.ver-tec .vista-tec{display:block}
     </div>
   </div>
 </section>
-
-<!-- NOSOTROS -->
+</div>
+<!-- MÓDULO NOSOTROS -->
+<div class="modulo" id="mod-nosotros">
 <section class="porque" id="nosotros">
   <div class="wrap">
     <div>
@@ -593,8 +612,9 @@ body.ver-tec .vista-tec{display:block}
     </div>
   </div>
 </section>
-
-<!-- RESEÑAS -->
+</div>
+<!-- MÓDULO RESEÑAS -->
+<div class="modulo" id="mod-resenas">
 <section id="resenas">
   <div class="wrap">
     <div class="res-head">
@@ -602,20 +622,22 @@ body.ver-tec .vista-tec{display:block}
         <span class="pill reveal">Opiniones de nuestros clientes</span>
         <h2 class="h2 reveal" style="margin-bottom:0">Lo que dicen quienes ya resolvieron sus trámites</h2>
       </div>
-      <div class="score reveal"><span class="n">5.0</span><div><div class="stars">★★★★★</div><small>+40 reseñas en Google Maps</small></div></div>
+      <div class="score reveal"><span class="n">5.0</span><div><div class="stars">★★★★★</div><small>40 reseñas en Google Maps</small></div></div>
     </div>
     <div class="res-grid">
-      <div class="res reveal"><span class="stars">★★★★★</span><p>«Excelente profesional, cálido y eficiente. Mi esposa y yo estamos muy agradecidos. Muy recomendable.»</p><span class="src">Reseña de Google</span></div>
-      <div class="res reveal"><span class="stars">★★★★★</span><p>«Excelente atención y resolución del Estudio CG. Recomiendo 100% consultar siempre con Cristian.»</p><span class="src">Reseña de Google</span></div>
-      <div class="res reveal"><span class="stars">★★★★★</span><p>«Excelente atención y muy profesionales en la gestión de los trámites que solicité. Los recomiendo.»</p><span class="src">Reseña de Google</span></div>
-      <div class="res reveal"><span class="stars">★★★★★</span><p>«¡Excelente profesional! Nos ayudó a mí y a mi hermana con el trámite de la jubilación y nos acompañó en todo. ¡Muy buen servicio! 🙌💪»</p><span class="src">Reseña de Google</span></div>
-      <div class="res reveal"><span class="stars">★★★★★</span><p>«La atención fue excelente: demostró gran calidad humana y empatía. Siempre estuvo disponible y respondió cada consulta con paciencia y claridad sobre el trámite de moratoria. Muy agradecida.»</p><span class="src">Reseña de Google</span></div>
+      <a class="res reveal" href="https://maps.app.goo.gl/qpvtmTRtjDiKDS7K6" target="_blank" rel="noopener"><span class="stars">★★★★★</span><p>«Estamos muy conformes por su profesionalismo, se nota que ama lo que hace, es usted una persona sumamente confiable.»</p><span class="res-autor"><span class="res-ini">J</span>Jorge Rodríguez</span><span class="src">Reseña de Google</span></a>
+      <a class="res reveal" href="https://maps.app.goo.gl/qpvtmTRtjDiKDS7K6" target="_blank" rel="noopener"><span class="stars">★★★★★</span><p>«Gestionó la jubilación de mi hermano de manera muy profesional y rápida. Te explica muy bien cómo se irá haciendo la gestión, cumplió de manera excelente todo el proceso.»</p><span class="res-autor"><span class="res-ini">I</span>Isabel Campanilla</span><span class="src">Reseña de Google</span></a>
+      <a class="res reveal" href="https://maps.app.goo.gl/qpvtmTRtjDiKDS7K6" target="_blank" rel="noopener"><span class="stars">★★★★★</span><p>«Excelente persona y profesional. Diligente, tenaz y empático. ¡Súper recomendable!»</p><span class="res-autor"><span class="res-ini">L</span>Laura Soto</span><span class="src">Reseña de Google</span></a>
+      <a class="res reveal" href="https://maps.app.goo.gl/qpvtmTRtjDiKDS7K6" target="_blank" rel="noopener"><span class="stars">★★★★★</span><p>«Buena atención, muy confiable. Recomiendo 100%.»</p><span class="res-autor"><span class="res-ini">F</span>Favio Jalsansky</span><span class="src">Reseña de Google</span></a>
+      <a class="res reveal" href="https://maps.app.goo.gl/qpvtmTRtjDiKDS7K6" target="_blank" rel="noopener"><span class="stars">★★★★★</span><p>«Excelente atención, disponibilidad y colaboración. Confiable 100%, Cristian.»</p><span class="res-autor"><span class="res-ini">E</span>Euge Bonne</span><span class="src">Reseña de Google</span></a>
+      <a class="res reveal" href="https://maps.app.goo.gl/qpvtmTRtjDiKDS7K6" target="_blank" rel="noopener"><span class="stars">★★★★★</span><p>«Excelente atención. Confiable para resolver mi consulta y lograr la resolución esperada.»</p><span class="res-autor"><span class="res-ini">M</span>Mariela Laboral</span><span class="src">Reseña de Google</span></a>
       <div class="res cta-res reveal"><p>¿Ya trabajaste con nosotros?</p><a class="btn btn-glass" href="https://maps.app.goo.gl/qpvtmTRtjDiKDS7K6" target="_blank" rel="noopener">Ver todas en Google</a></div>
     </div>
   </div>
 </section>
-
-<!-- FAQ -->
+</div>
+<!-- MÓDULO FAQ -->
+<div class="modulo" id="mod-faq">
 <section id="faq">
   <div class="wrap">
     <span class="pill reveal">Preguntas frecuentes</span>
@@ -632,8 +654,9 @@ body.ver-tec .vista-tec{display:block}
     </div>
   </div>
 </section>
-
-<!-- CONTACTO -->
+</div>
+<!-- MÓDULO CONTACTO -->
+<div class="modulo" id="mod-contacto">
 <section class="contacto" id="contacto">
   <div class="wrap">
     <div>
@@ -674,11 +697,9 @@ body.ver-tec .vista-tec{display:block}
     </div>
   </div>
 </section>
-
-</main>
-
-<!-- VISTA: Soluciones Tecnológicas (dentro del index) -->
-<div class="vista-tec">
+</div>
+<!-- MÓDULO OTROS SERVICIOS -->
+<div class="modulo" id="mod-otros">
   <section class="tec-hero">
     <div class="wrap">
       <button class="volver" onclick="verPrincipal()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg> Volver al inicio</button>
@@ -712,6 +733,7 @@ body.ver-tec .vista-tec{display:block}
     </div>
   </section>
 </div>
+</div><!-- /cuerpo -->
 
 <footer>
   <div class="wrap">
@@ -751,24 +773,39 @@ function enviarMail(){
   window.location.href='mailto:gintegralcg@gmail.com?subject='+encodeURIComponent('Consulta web — '+tema)+'&body='+encodeURIComponent(armar());
 }
 
-// ===== Vistas: principal / tecnológica =====
-function verTecnologia(){
-  document.body.classList.add('ver-tec');
+// ===== Sistema de módulos (SPA) =====
+function mostrar(mod){
+  // ocultar todos
+  document.querySelectorAll('.modulo').forEach(function(m){m.classList.remove('activo')});
+  // mostrar el elegido
+  var destino=document.getElementById('mod-'+mod);
+  if(destino) destino.classList.add('activo');
+  // marcar solapa activa en el menú
+  document.querySelectorAll('#menu a[data-mod]').forEach(function(a){
+    a.classList.toggle('nav-activo', a.getAttribute('data-mod')===mod);
+  });
+  // cerrar menú móvil y volver arriba
   document.getElementById('menu').classList.remove('open');
   window.scrollTo({top:0,behavior:'instant'});
+  // reejecutar animaciones reveal del módulo visible
+  if(destino){
+    destino.querySelectorAll('.reveal').forEach(function(el){el.classList.add('vis')});
+  }
 }
-function verPrincipal(){
-  document.body.classList.remove('ver-tec');
-  window.scrollTo({top:0,behavior:'instant'});
-}
-// Ir a una sección: primero vuelve a la vista principal, luego navega
-function irA(id){
-  document.body.classList.remove('ver-tec');
-  document.getElementById('menu').classList.remove('open');
-  if(id==='inicio'){ window.scrollTo({top:0,behavior:'smooth'}); return; }
-  const el=document.getElementById(id);
-  if(el){ setTimeout(function(){ el.scrollIntoView({behavior:'smooth'}); }, 30); }
-}
+// Compatibilidad con llamadas viejas
+function verTecnologia(){ mostrar('otros'); }
+function verPrincipal(){ mostrar('inicio'); }
+function irA(id){ mostrar(id); }
+
+// ===== Fondo reactivo al scroll =====
+window.addEventListener('scroll', function(){
+  var y = window.scrollY || 0;
+  var aura = document.querySelector('.aura');
+  if(aura){
+    aura.style.backgroundPosition = '0 ' + (y*0.25) + 'px, 0 ' + (y*-0.15) + 'px';
+    aura.style.opacity = Math.max(0.4, 1 - y/1400);
+  }
+}, {passive:true});
 
 // ===== Modal de área (lista de trámites) =====
 (function(){
@@ -818,5 +855,8 @@ function irA(id){
 })();
 </script>
   <script src="cg-chat-widget.js" defer></script>
+</body>
+</html>
+
 </body>
 </html>
