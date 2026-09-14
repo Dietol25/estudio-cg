@@ -85,10 +85,10 @@ header{position:sticky;top:0;z-index:100;
   border-bottom:1px solid var(--line);}
 .nav{display:flex;align-items:center;justify-content:space-between;padding:15px 0}
 .brand{display:flex;align-items:center;gap:12px}
-.logo{width:44px;height:44px;border-radius:13px;
-  background:linear-gradient(135deg,#1f4a52,#111c23);
-  color:#fff;font-weight:800;font-size:1rem;display:flex;align-items:center;justify-content:center;
-  border:1px solid var(--line-2);box-shadow:inset 0 -3px 0 var(--gold),0 0 24px rgba(63,184,174,.20)}
+.logo{height:52px;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,#ffffff,#f2ede3);border-radius:12px;padding:6px 10px;
+  box-shadow:0 4px 16px rgba(0,0,0,.3)}
+.logo img{height:100%;width:auto;display:block}
 .brand-t strong{display:block;font-weight:800;font-size:1.06rem;font-stretch:85%;color:#fff;line-height:1.1}
 .brand-t span{font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
 nav.menu{display:flex;align-items:center;gap:26px;font-size:.9rem;font-weight:600}
@@ -458,7 +458,7 @@ body.ver-tec .vista-tec{display:block}
 <header>
   <div class="wrap nav">
     <a class="brand" href="#" onclick="irA('inicio');return false;">
-      <div class="logo">CG</div>
+      <div class="logo"><img src="logo-header.png" alt="Estudio CG"></div>
       <div class="brand-t"><strong>Estudio CG</strong><span>Gestoría & Consultoría</span></div>
     </a>
     <button class="hamb" aria-label="Abrir menú" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
@@ -820,4 +820,3 @@ function irA(id){
   <script src="cg-chat-widget.js" defer></script>
 </body>
 </html>
-
