@@ -15,7 +15,7 @@ DATOS DEL ESTUDIO:
 
 SERVICIOS:
 - Previsional: jubilaciones (nativos, extranjeros, empleadas domésticas), jubilaciones IPS Provincia de Bs. As. (nuevo), pensiones (directas, derivadas, por fallecimiento), PUAM, PNC (pensiones no contributivas), salario familiar y asignaciones, planificación previsional.
-- Laboral: liquidación de sueldos, cargas sociales, asesoramiento a empleadores.
+- Laboral: liquidación de sueldos, cargas sociales, asesoramiento a empleadores, confección de CVs y mejora de perfiles de LinkedIn.
 - Fiscal: alta y recategorización de monotributo, Bienes Personales, devolución de percepciones, SICAM, imputación de pagos, facturación, regularización de deudas y planes de pago.
 - Claves y trámites: Clave de Seguridad Social ANSES, Clave Fiscal ARCA, PAMI, TAD (GCBA/Nacional), certificación negativa, antecedentes penales, partidas (nacimiento, matrimonio, defunción), rectificación de partidas, CODEM (comprobante de empadronamiento de obra social), certificación de datos RENAPER, certificación migratoria, ciudadanía argentina, apostillado, gestiones por infracciones de tránsito en CABA y otras provincias.
 - Área Legal: sucesiones y declaratorias de herederos, contratos y acuerdos privados, cartas documento y telegramas laborales, informe de dominio, reclamos y mediaciones, asesoramiento laboral y previsional, poderes y documentación notarial.
@@ -93,5 +93,7 @@ export default async function handler(req, res) {
       reply: 'Ocurrió un error. Podés escribirnos por WhatsApp y te respondemos a la brevedad.',
       derivar: true
     });
+  }
+}
   }
 }
