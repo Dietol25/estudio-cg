@@ -100,51 +100,42 @@ nav.menu a:not(.btn):hover::after{right:0}
 .hamb{display:none;background:none;border:none;font-size:1.7rem;color:#fff;cursor:pointer}
 
 /* ---------- Hero ---------- */
-.hero{padding:120px 0 130px;overflow:hidden}
-.hero::before{content:"";position:absolute;inset:0;z-index:-1;
-  background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);
-  background-size:58px 58px;
-  mask-image:radial-gradient(760px 560px at 55% 25%,#000 25%,transparent 72%)}
-.hero .wrap{display:grid;grid-template-columns:1.3fr 1fr;gap:64px;align-items:center}
-.hero h1{font-size:clamp(2.4rem,5.4vw,3.9rem);font-weight:900;font-stretch:76%;
-  line-height:1.05;letter-spacing:-.02em;margin-bottom:22px;color:#fff}
+.hero{position:relative;min-height:88vh;display:flex;align-items:center;overflow:hidden;padding:100px 0}
+/* Foto de fondo — reemplazá la url por tu foto (ej. url('fondo-hero.jpg')) */
+.hero-bg{position:absolute;inset:0;z-index:0;
+  background:
+    linear-gradient(120deg,#0c1a2e 0%,#0a1420 55%,#0e2230 100%);
+  background-size:cover;background-position:center}
+/* cuadrícula sutil premium sobre el fondo */
+.hero-bg::after{content:"";position:absolute;inset:0;
+  background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+  background-size:64px 64px;
+  mask-image:radial-gradient(900px 700px at 50% 40%,#000 20%,transparent 75%)}
+.hero-overlay{position:absolute;inset:0;z-index:1;
+  background:
+    radial-gradient(700px 500px at 20% 20%,rgba(63,184,174,.10),transparent 60%),
+    linear-gradient(180deg,rgba(6,11,20,.55) 0%,rgba(6,11,20,.78) 100%)}
+.hero-inner{position:relative;z-index:2;max-width:820px;text-align:center;margin:0 auto}
+.hero-inner .pill{margin-left:auto;margin-right:auto}
+.hero h1{font-size:clamp(2.3rem,5vw,3.7rem);font-weight:900;font-stretch:78%;
+  line-height:1.08;letter-spacing:-.02em;margin-bottom:22px;color:#fff}
 .hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--gold-2),var(--gold));
   -webkit-background-clip:text;background-clip:text;color:transparent}
-.hero p{color:#a9b5cc;max-width:560px;margin-bottom:36px;font-size:1.1rem}
-.hero .eslogan{font-size:1.15rem;font-weight:700;font-style:italic;line-height:1.4;margin-bottom:20px;
-  color:var(--gold-2);max-width:560px;
-  border-left:3px solid var(--gold);padding-left:16px}
-.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:48px}
-.hero-mini{display:flex;gap:14px;flex-wrap:wrap}
-.mini{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:16px;
-  padding:16px 20px;min-width:120px}
-.mini b{display:block;font-size:1.5rem;font-weight:800;color:#fff;font-stretch:82%;line-height:1}
-.mini b.g{background:linear-gradient(90deg,var(--gold-2),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
-.mini small{font-size:.76rem;color:var(--muted)}
-
-/* Anillo */
-.ring-box{display:flex;justify-content:center;align-items:center;position:relative;cursor:pointer;transition:transform .3s ease}
-.ring-box:hover{transform:scale(1.03)}
-.ring-box:hover .ring-core .lbl{color:var(--gold-2)}
-.ring-box::before{content:"";position:absolute;width:340px;height:340px;border-radius:50%;
-  background:radial-gradient(circle,rgba(63,184,174,.18),transparent 65%);filter:blur(10px)}
-.ring{position:relative;width:300px;height:300px;display:flex;align-items:center;justify-content:center}
-.ring svg{position:absolute;inset:0;width:100%;height:100%}
-.ring svg text{font-family:'Archivo',sans-serif;font-size:12px;font-weight:700;letter-spacing:.18em;fill:var(--gold-2);text-transform:uppercase}
-.ring-core{width:196px;height:196px;border-radius:50%;
-  background:linear-gradient(160deg,rgba(255,255,255,.09),rgba(255,255,255,.02));
-  border:1px solid var(--line-2);backdrop-filter:blur(8px);
-  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center;
-  box-shadow:0 30px 70px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.15)}
-.ring-core .big{font-weight:900;font-stretch:80%;font-size:2.7rem;line-height:1;color:#fff}
-.ring-core .stars{color:var(--star);letter-spacing:3px;font-size:1rem}
-.ring-core .lbl{font-size:.64rem;font-weight:700;letter-spacing:.2em;color:var(--muted);text-transform:uppercase}
-@media (prefers-reduced-motion:no-preference){
-  .ring svg{animation:girar 90s ease-in-out infinite}
-  @keyframes girar{to{transform:rotate(360deg)}}
-  .ring-box::before{animation:pulso 4s ease-in-out infinite}
-  @keyframes pulso{0%,100%{opacity:.6;transform:scale(1)}50%{opacity:1;transform:scale(1.06)}}
-}
+.hero .eslogan{font-size:1.2rem;font-weight:600;font-style:italic;line-height:1.4;margin:0 auto 22px;
+  color:var(--gold-2);max-width:560px}
+.hero-desc{color:#b9c4da;max-width:600px;margin:0 auto 40px;font-size:1.08rem}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-bottom:40px}
+/* Rating pequeño, detalle secundario */
+.hero-foot{display:inline-flex;align-items:center;gap:18px;flex-wrap:wrap;justify-content:center;
+  padding:12px 22px;border:1px solid rgba(255,255,255,.12);border-radius:100px;
+  background:rgba(255,255,255,.03);backdrop-filter:blur(4px)}
+.rating-mini{display:inline-flex;align-items:center;gap:9px;text-decoration:none;transition:.2s}
+.rating-mini:hover{transform:translateY(-1px)}
+.rm-stars{color:var(--star);letter-spacing:1px;font-size:.95rem}
+.rm-txt{color:#cbd4e4;font-size:.88rem;font-weight:600}
+.rm-txt b{color:#fff}
+.hero-sep{color:rgba(255,255,255,.2)}
+.hero-exp{color:#9fb0cd;font-size:.86rem;font-weight:600}
 
 /* ---------- Marquee ---------- */
 .marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);
@@ -353,10 +344,9 @@ footer b{color:#fff}
 /* Responsive */
 @media(max-width:940px){
   section{padding:76px 0}
-  .hero{padding:84px 0 96px}
+  .hero{min-height:auto;padding:90px 0 70px}
   .hero .wrap,.porque .wrap,.contacto .wrap{grid-template-columns:1fr}
   .serv-grid,.pasos,.res-grid{grid-template-columns:1fr}
-  .ring-box{order:-1}.ring{width:240px;height:240px}.ring-core{width:158px;height:158px}.ring-core .big{font-size:2.1rem}
   nav.menu{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;
     background:rgba(7,12,23,.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--line);padding:10px 24px 20px}
   nav.menu.open{display:flex}
@@ -375,17 +365,13 @@ footer b{color:#fff}
   .sub{font-size:1rem;margin-bottom:36px}
 
   /* Hero más compacto y legible */
-  .hero{padding:64px 0 76px}
-  .hero h1{font-size:2rem;line-height:1.1}
-  .hero p{font-size:1rem}
+  .hero{padding:76px 0 60px}
+  .hero h1{font-size:2rem;line-height:1.12}
+  .hero-desc{font-size:1rem}
   .hero-cta{gap:10px}
   .hero-cta .btn{width:100%}
-  .hero-mini{gap:10px}
-  .mini{flex:1;min-width:calc(50% - 5px);padding:14px 16px}
-  .mini b{font-size:1.3rem}
-  .ring{width:210px;height:210px}
-  .ring-core{width:138px;height:138px}
-  .ring-core .big{font-size:1.9rem}
+  .hero-foot{flex-direction:column;gap:8px;padding:14px 20px}
+  .hero-sep{display:none}
 
   /* Tarjetas con menos padding */
   .card{padding:26px 22px}
@@ -414,7 +400,6 @@ footer b{color:#fff}
 
 /* Ajuste para pantallas muy angostas */
 @media(max-width:360px){
-  .mini{min-width:100%}
   .hero h1{font-size:1.75rem}
   .h2{font-size:1.45rem}
 }
@@ -479,7 +464,7 @@ nav.menu a.nav-activo::after{right:0!important}
     </a>
     <button class="hamb" aria-label="Abrir menú" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
         <nav class="menu" id="menu">
-      <a href="#" data-mod="inicio" onclick="mostrar('inicio');return false;">Inicio</a>
+      <a href="#" id="nav-inicio" data-mod="inicio" onclick="mostrar('inicio');return false;">Inicio</a>
       <a href="#" data-mod="servicios" onclick="mostrar('servicios');return false;">Servicios</a>
       <a href="#" data-mod="otros" onclick="mostrar('otros');return false;">Otros Servicios</a>
       <a href="#" data-mod="proceso" onclick="mostrar('proceso');return false;">Cómo trabajamos</a>
@@ -495,36 +480,25 @@ nav.menu a.nav-activo::after{right:0!important}
 <!-- MÓDULO INICIO -->
 <div class="modulo activo" id="mod-inicio">
 <section class="hero" id="inicio">
-  <div class="wrap">
-    <div>
-      <span class="pill">Previsional · Laboral · Fiscal · Migratorio</span>
-      <h1>Tus trámites, resueltos de manera <em>simple, rápida y segura</em>.</h1>
-      <p class="eslogan">«Si se puede hacer, lo hacemos. Si no, también vemos.»</p>
-      <p>Asesoramiento integral y soluciones personalizadas para personas y empresas, con más de 20 años de experiencia en gestiones ante organismos públicos.</p>
-      <div class="hero-cta">
-        <a class="btn btn-wa" href="https://wa.me/5491125114119?text=Hola%2C%20quiero%20hacer%20una%20consulta" target="_blank" rel="noopener">Consultá por WhatsApp</a>
-        <a class="btn btn-glass" href="#" onclick="irA('servicios');return false;">Ver servicios</a>
-      </div>
-      <div class="hero-mini">
-        <div class="mini"><b>+20</b><small>años de experiencia</small></div>
-        <div class="mini"><b class="g">5.0<span style="-webkit-text-fill-color:var(--star);color:var(--star)">★</span></b><small>en Google Maps</small></div>
-        <div class="mini"><b>40</b><small>reseñas de clientes</small></div>
-        <div class="mini"><b>100%</b><small>atención personal</small></div>
-      </div>
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="wrap hero-inner">
+    <span class="pill">Previsional · Laboral · Fiscal · Migratorio</span>
+    <h1>Tus trámites, resueltos de manera <em>simple, rápida y segura</em>.</h1>
+    <p class="eslogan">«Si se puede hacer, lo hacemos. Si no, también vemos.»</p>
+    <p class="hero-desc">Asesoramiento integral y soluciones personalizadas para personas y empresas, con más de 20 años de experiencia en gestiones ante organismos públicos.</p>
+    <div class="hero-cta">
+      <a class="btn btn-wa" href="https://wa.me/5491125114119?text=Hola%2C%20quiero%20hacer%20una%20consulta" target="_blank" rel="noopener">Consultá por WhatsApp</a>
+      <a class="btn btn-glass" href="#" onclick="irA('servicios');return false;">Ver servicios</a>
     </div>
-    <a class="ring-box" href="https://maps.app.goo.gl/qpvtmTRtjDiKDS7K6" target="_blank" rel="noopener" aria-label="Ver reseñas en Google" style="text-decoration:none">
-      <div class="ring">
-        <svg viewBox="0 0 300 300" aria-hidden="true">
-          <defs><path id="circ" d="M150,150 m-122,0 a122,122 0 1,1 244,0 a122,122 0 1,1 -244,0"/></defs>
-          <text><textPath href="#circ" textLength="766" lengthAdjust="spacing">ESTUDIO CG • GESTORÍA & CONSULTORÍA • BUENOS AIRES • </textPath></text>
-        </svg>
-        <div class="ring-core">
-          <span class="big">5.0</span>
-          <span class="stars">★★★★★</span>
-          <span class="lbl">Ver reseñas en Google</span>
-        </div>
-      </div>
-    </a>
+    <div class="hero-foot">
+      <a class="rating-mini" href="https://maps.app.goo.gl/qpvtmTRtjDiKDS7K6" target="_blank" rel="noopener">
+        <span class="rm-stars">★★★★★</span>
+        <span class="rm-txt"><b>5.0</b> · +40 reseñas en Google</span>
+      </a>
+      <span class="hero-sep">|</span>
+      <span class="hero-exp">+20 años de experiencia</span>
+    </div>
   </div>
 </section>
 
@@ -623,7 +597,7 @@ nav.menu a.nav-activo::after{right:0!important}
         <span class="pill reveal">Opiniones de nuestros clientes</span>
         <h2 class="h2 reveal" style="margin-bottom:0">Lo que dicen quienes ya resolvieron sus trámites</h2>
       </div>
-      <div class="score reveal"><span class="n">5.0</span><div><div class="stars">★★★★★</div><small>40 reseñas en Google Maps</small></div></div>
+      <div class="score reveal"><span class="n">5.0</span><div><div class="stars">★★★★★</div><small>+40 reseñas en Google Maps</small></div></div>
     </div>
     <div class="res-grid">
       <a class="res reveal" href="https://maps.app.goo.gl/qpvtmTRtjDiKDS7K6" target="_blank" rel="noopener"><span class="stars">★★★★★</span><p>«Estamos muy conformes por su profesionalismo, se nota que ama lo que hace, es usted una persona sumamente confiable.»</p><span class="res-autor"><span class="res-ini">J</span>Jorge Rodríguez</span><span class="src">Reseña de Google</span></a>
@@ -747,6 +721,8 @@ nav.menu a.nav-activo::after{right:0!important}
 // Reveal on scroll
 const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target)}})},{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+// Al cargar, ocultar "Inicio" del menú (arrancamos en el inicio)
+(function(){var ni=document.getElementById('nav-inicio'); if(ni) ni.style.display='none';})();
 
 // Cerrar menú móvil al hacer clic
 document.querySelectorAll('#menu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('menu').classList.remove('open')));
@@ -785,6 +761,9 @@ function mostrar(mod){
   document.querySelectorAll('#menu a[data-mod]').forEach(function(a){
     a.classList.toggle('nav-activo', a.getAttribute('data-mod')===mod);
   });
+  // "Inicio" solo se muestra cuando NO estamos en el inicio
+  var navInicio=document.getElementById('nav-inicio');
+  if(navInicio) navInicio.style.display = (mod==='inicio') ? 'none' : '';
   // cerrar menú móvil y volver arriba
   document.getElementById('menu').classList.remove('open');
   window.scrollTo({top:0,behavior:'instant'});
@@ -856,8 +835,5 @@ window.addEventListener('scroll', function(){
 })();
 </script>
   <script src="cg-chat-widget.js" defer></script>
-</body>
-</html>
-
 </body>
 </html>
