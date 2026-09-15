@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Estudio CG — Gestoría y Consultoría | Previsional · Laboral · Fiscal · Legal</title>
 <meta name="description" content="Firma profesional con más de 20 años de trayectoria: jubilaciones, pensiones, gestión laboral, asesoramiento fiscal y trámites ante organismos públicos.">
+<link rel="icon" type="image/png" href="logo-cg.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -149,19 +150,14 @@ header {
   align-items: center;
   gap: 14px;
 }
-.brand-monogram {
-  width: 40px;
-  height: 40px;
-  border: 1px solid var(--gold);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-serif);
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: var(--gold);
-  border-radius: var(--radius-sm);
-  letter-spacing: -0.05em;
+.brand-logo-img {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  border: 1px solid rgba(184, 138, 82, 0.4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  object-fit: cover;
+  display: block;
 }
 .brand-text strong {
   display: block;
@@ -986,7 +982,7 @@ footer {
 <header>
   <div class="wrap nav-container">
     <a class="brand" href="#" onclick="mostrar('inicio');return false;">
-      <div class="brand-monogram">CG</div>
+      <img src="logo-cg.png" alt="Logo Estudio CG" class="brand-logo-img">
       <div class="brand-text">
         <strong>ESTUDIO CG</strong>
         <span>GESTORÍA Y CONSULTORÍA</span>
@@ -1469,7 +1465,7 @@ footer {
     <div class="foot-grid">
       <div class="foot-brand">
         <div class="brand">
-          <div class="brand-monogram">CG</div>
+          <img src="logo-cg.png" alt="Logo Estudio CG" class="brand-logo-img">
           <div class="brand-text">
             <strong>ESTUDIO CG</strong>
             <span>GESTORÍA Y CONSULTORÍA</span>
