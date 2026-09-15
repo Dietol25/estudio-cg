@@ -3,406 +3,797 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Estudio CG — Gestoría y Consultoría</title>
-<meta name="description" content="Firma de gestoría y consultoría con más de 20 años de experiencia. Jubilaciones, pensiones, monotributo, ciudadanía y trámites ante organismos públicos.">
-
-<!-- Favicon -->
-<link rel="icon" href="logo-header.png" type="image/png">
-<link rel="apple-touch-icon" href="logo-header.png">
-
-<!-- Compartir en WhatsApp / redes -->
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Estudio CG">
-<meta property="og:title" content="Estudio CG — Gestoría y Consultoría">
-<meta property="og:description" content="Tus trámites, resueltos de manera simple, rápida y segura. Jubilaciones, pensiones, monotributo, ciudadanía y más. Más de 20 años de experiencia.">
-<meta property="og:url" content="https://estudiocg.com">
-<meta property="og:image" content="https://estudiocg.com/logo-web.png">
-<meta property="og:locale" content="es_AR">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#111111">
-
-<!-- Datos del negocio para buscadores -->
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"ProfessionalService",
-  "name":"Estudio CG — Gestoría y Consultoría",
-  "description":"Gestoría y consultoría: jubilaciones, pensiones, monotributo, trámites previsionales, laborales, fiscales y migratorios.",
-  "url":"https://estudiocg.com",
-  "telephone":"+54 11 2511-4119",
-  "email":"gintegralcg@gmail.com",
-  "address":{"@type":"PostalAddress","streetAddress":"José Ignacio Rucci 3351","addressLocality":"Ciudad Autónoma de Buenos Aires","addressCountry":"AR"},
-  "openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"10:00","closes":"17:00"},
-  "aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"40"},
-  "sameAs":["https://www.instagram.com/estudiocgig","https://www.facebook.com/share/1EfnPQymaQ/","https://www.tiktok.com/@estudiocg"]
-}
-</script>
+<title>Estudio CG — Gestoría & Consultoría | Previsional · Laboral · Asesoramiento</title>
+<meta name="description" content="Asesoramiento integral con más de 20 años de experiencia: jubilaciones y pensiones, monotributo, TAD, ciudadanía argentina y gestiones ante organismos públicos.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&display=swap" rel="stylesheet">
 <style>
 :root{
-  --black:#111111; --ink:#1a1712;
-  --cream:#FAF8F4; --cream-2:#F4EFE7; --taupe:#C9B9A5;
-  --gold:#B88A52; --gold-2:#D2B07A; --brown:#4A3A2C;
-  --line:rgba(26,23,18,.14); --line-soft:rgba(26,23,18,.08);
-  --muted:#6b6155; --muted-2:#928a7d;
-  --serif:'Cormorant Garamond',Georgia,serif;
-  --sans:'Manrope',system-ui,sans-serif;
+  --bg:#0a1014;
+  --bg-2:#0e161c;
+  --surface:#111c23;
+  --surface-2:#16232c;
+  --line:rgba(255,255,255,.08);
+  --line-2:rgba(255,255,255,.14);
+  --navy:#1f4a52;
+  --gold:#3fb8ae;
+  --gold-2:#7fd8ce;
+  --bordo:#c05a3a;
+  --wa:#25c368;
+  --star:#f5b942;
+  --text:#eef2f9;
+  --muted:#8794ad;
+  --muted-2:#5f6c86;
+  --radius:22px;
+  --glow:0 0 0 rgba(0,0,0,0);
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:var(--sans);background:var(--cream);color:var(--ink);
-  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body{
+  font-family:'Archivo',system-ui,sans-serif;
+  background:var(--bg);color:var(--text);
+  line-height:1.6;font-size:16.5px;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
 a{color:inherit;text-decoration:none}
-.wrap{max-width:1280px;margin:0 auto;padding:0 40px}
-h1,h2,h3,.serif{font-family:var(--serif)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+section{padding:110px 0;position:relative}
 
-/* Eyebrow editorial (no all-caps tracked) */
-.eyebrow{font-family:var(--sans);font-size:.8rem;font-weight:600;color:var(--gold);
-  letter-spacing:.02em;margin-bottom:18px;display:flex;align-items:center;gap:10px}
-.eyebrow::before{content:"";width:28px;height:1px;background:var(--gold)}
+/* Aura de fondo global */
+.aura{position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:
+   radial-gradient(700px 560px at 15% 5%,rgba(31,74,82,.28),transparent 62%),
+   radial-gradient(600px 520px at 88% 18%,rgba(63,184,174,.06),transparent 62%);
+}
 
-.h2{font-family:var(--serif);font-size:clamp(2.1rem,4vw,3.1rem);font-weight:500;
-  line-height:1.12;letter-spacing:-.01em;color:var(--black);margin-bottom:18px}
-.lead{font-size:1.06rem;color:var(--muted);max-width:60ch;line-height:1.7}
+/* pill */
+.pill{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--gold-2);background:rgba(63,184,174,.08);
+  border:1px solid rgba(63,184,174,.28);
+  padding:8px 16px;border-radius:100px;margin-bottom:22px;
+}
+.pill::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold);
+  box-shadow:0 0 10px var(--gold)}
 
-/* ---------- Buttons ---------- */
-.btn{font-family:var(--sans);font-weight:600;font-size:.92rem;padding:15px 30px;
-  display:inline-flex;align-items:center;justify-content:center;gap:10px;cursor:pointer;
-  border:1px solid transparent;transition:.3s;border-radius:2px}
-.btn-primary{background:var(--black);color:var(--cream)}
-.btn-primary:hover{background:var(--brown)}
-.btn-ghost{background:transparent;color:var(--black);border-color:var(--line)}
-.btn-ghost:hover{border-color:var(--black)}
-.btn-gold{background:var(--gold);color:#fff}
-.btn-gold:hover{background:var(--brown)}
+.h2{
+  font-size:clamp(2rem,4.2vw,2.9rem);font-weight:800;font-stretch:78%;
+  letter-spacing:-.015em;line-height:1.1;margin-bottom:16px;max-width:700px;
+  background:linear-gradient(180deg,#fff,#b9c4da);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.sub{color:var(--muted);max-width:640px;margin-bottom:56px;font-size:1.06rem}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  font-weight:700;font-size:.92rem;padding:14px 26px;border-radius:100px;
+  transition:.28s cubic-bezier(.2,.7,.3,1);letter-spacing:.01em;cursor:pointer;border:none;position:relative;
+}
+.btn-gold{background:linear-gradient(135deg,var(--gold-2),var(--gold));color:#04211d;
+  box-shadow:0 10px 30px rgba(63,184,174,.30)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(63,184,174,.45)}
+.btn-wa{background:var(--wa);color:#04180d;box-shadow:0 10px 30px rgba(37,195,104,.28)}
+.btn-wa:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(37,195,104,.42)}
+.btn-glass{background:rgba(255,255,255,.05);border:1px solid var(--line-2);color:#fff;backdrop-filter:blur(6px)}
+.btn-glass:hover{background:rgba(255,255,255,.1);transform:translateY(-2px)}
 
 /* ---------- Nav ---------- */
-header{position:sticky;top:0;z-index:100;background:rgba(250,248,244,.88);
-  backdrop-filter:blur(12px);border-bottom:1px solid var(--line-soft)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
-.brand{display:flex;align-items:center;gap:13px}
-.brand .logo{height:46px;display:flex;align-items:center}
-.brand .logo img{height:100%;width:auto}
-.brand-t{line-height:1.1}
-.brand-t strong{font-family:var(--serif);font-weight:600;font-size:1.25rem;color:var(--black);display:block;letter-spacing:.01em}
-.brand-t span{font-family:var(--sans);font-size:.62rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
-nav.menu{display:flex;align-items:center;gap:34px}
-nav.menu a:not(.btn){font-size:.9rem;font-weight:500;color:var(--ink);position:relative;padding:4px 0;transition:.2s}
-nav.menu a:not(.btn):hover{color:var(--gold)}
-nav.menu a.nav-activo{color:var(--gold)}
-nav.menu a.nav-activo::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:1px;background:var(--gold)}
-.hamb{display:none;background:none;border:none;cursor:pointer;width:28px;height:22px;position:relative}
-.hamb span{position:absolute;left:0;width:100%;height:1.5px;background:var(--black);transition:.3s}
-.hamb span:nth-child(1){top:0}.hamb span:nth-child(2){top:10px}.hamb span:nth-child(3){top:20px}
-
-/* ---------- Módulos ---------- */
-.modulo{display:none}
-.modulo.activo{display:block}
+header{position:sticky;top:0;z-index:100;
+  background:rgba(7,12,23,.72);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--line);}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:15px 0}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{height:52px;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,#ffffff,#f2ede3);border-radius:12px;padding:6px 10px;
+  box-shadow:0 4px 16px rgba(0,0,0,.3)}
+.logo img{height:100%;width:auto;display:block}
+.brand-t strong{display:block;font-weight:800;font-size:1.06rem;font-stretch:85%;color:#fff;line-height:1.1}
+.brand-t span{font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+nav.menu{display:flex;align-items:center;gap:26px;font-size:.9rem;font-weight:600}
+nav.menu a:not(.btn){color:var(--muted);padding:6px 2px;position:relative;transition:.2s}
+nav.menu a:not(.btn)::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:2px;
+  background:linear-gradient(90deg,var(--gold-2),var(--gold));transition:.25s;border-radius:2px}
+nav.menu a:not(.btn):hover{color:#fff}
+nav.menu a:not(.btn):hover::after{right:0}
+.hamb{display:none;background:none;border:none;font-size:1.7rem;color:#fff;cursor:pointer}
 
 /* ---------- Hero ---------- */
-.hero{position:relative;min-height:calc(100vh - 76px);display:grid;
-  grid-template-columns:1.05fr .95fr;align-items:stretch}
-.hero-text{padding:80px 40px 80px 0;display:flex;flex-direction:column;justify-content:center;max-width:640px;margin-left:auto;padding-left:40px}
-.wrap-hero{max-width:1280px;margin:0 auto;display:contents}
-.hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(2.8rem,5.2vw,4.4rem);
-  line-height:1.04;letter-spacing:-.015em;color:var(--black);margin-bottom:26px}
-.hero h1 .em{font-style:italic;color:var(--gold)}
-.hero .quote{font-family:var(--serif);font-style:italic;font-size:1.4rem;color:var(--brown);
-  margin-bottom:24px;line-height:1.4;font-weight:500}
-.hero .desc{font-size:1.05rem;color:var(--muted);margin-bottom:38px;max-width:52ch;line-height:1.7}
-.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:46px}
-.hero-proof{display:flex;align-items:center;gap:28px;padding-top:30px;border-top:1px solid var(--line)}
-.proof-item .big{font-family:var(--serif);font-size:2rem;font-weight:600;color:var(--black);line-height:1}
-.proof-item .big em{font-style:normal;color:var(--gold)}
-.proof-item .lbl{font-size:.78rem;color:var(--muted);margin-top:3px}
-.proof-sep{width:1px;height:38px;background:var(--line)}
-.proof-item.link{cursor:pointer}
-.proof-item.link:hover .big{color:var(--gold)}
-.hero-visual{position:relative;background:var(--cream-2);overflow:hidden}
-.hero-visual .ph-photo{position:absolute;inset:0;
-  background:linear-gradient(135deg,#e8dfd0,#d8cbb5);
+.hero{position:relative;min-height:88vh;display:flex;align-items:center;overflow:hidden;padding:100px 0}
+/* Foto de fondo — reemplazá la url por tu foto (ej. url('fondo-hero.jpg')) */
+.hero-bg{position:absolute;inset:0;z-index:0;
+  background:
+    linear-gradient(120deg,#0c1a2e 0%,#0a1420 55%,#0e2230 100%);
+  background-size:cover;background-position:center}
+/* cuadrícula sutil premium sobre el fondo */
+.hero-bg::after{content:"";position:absolute;inset:0;
+  background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+  background-size:64px 64px;
+  mask-image:radial-gradient(900px 700px at 50% 40%,#000 20%,transparent 75%)}
+.hero-overlay{position:absolute;inset:0;z-index:1;
+  background:
+    radial-gradient(700px 500px at 20% 20%,rgba(63,184,174,.10),transparent 60%),
+    linear-gradient(180deg,rgba(6,11,20,.55) 0%,rgba(6,11,20,.78) 100%)}
+.hero-inner{position:relative;z-index:2;max-width:820px;text-align:center;margin:0 auto}
+.hero-inner .pill{margin-left:auto;margin-right:auto}
+.hero h1{font-size:clamp(2.3rem,5vw,3.7rem);font-weight:900;font-stretch:78%;
+  line-height:1.08;letter-spacing:-.02em;margin-bottom:22px;color:#fff}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--gold-2),var(--gold));
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .eslogan{font-size:1.2rem;font-weight:600;font-style:italic;line-height:1.4;margin:0 auto 22px;
+  color:var(--gold-2);max-width:560px}
+.hero-desc{color:#b9c4da;max-width:600px;margin:0 auto 40px;font-size:1.08rem}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-bottom:40px}
+/* Rating pequeño, detalle secundario */
+.hero-foot{display:inline-flex;align-items:center;gap:18px;flex-wrap:wrap;justify-content:center;
+  padding:12px 22px;border:1px solid rgba(255,255,255,.12);border-radius:100px;
+  background:rgba(255,255,255,.03);backdrop-filter:blur(4px)}
+.rating-mini{display:inline-flex;align-items:center;gap:9px;text-decoration:none;transition:.2s}
+.rating-mini:hover{transform:translateY(-1px)}
+.rm-stars{color:var(--star);letter-spacing:1px;font-size:.95rem}
+.rm-txt{color:#cbd4e4;font-size:.88rem;font-weight:600}
+.rm-txt b{color:#fff}
+.hero-sep{color:rgba(255,255,255,.2)}
+.hero-exp{color:#9fb0cd;font-size:.86rem;font-weight:600}
+
+/* Trámites más pedidos */
+.destacados{padding:80px 0}
+.dest-head{text-align:center;margin-bottom:44px}
+.dest-head .pill{margin:0 auto 22px}
+.dest-head .sub{margin-left:auto;margin-right:auto}
+.dest-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.dest-card{background:var(--surface);border:1px solid var(--line);border-radius:16px;
+  padding:24px 20px;text-align:center;text-decoration:none;transition:.28s;display:block}
+.dest-card:hover{transform:translateY(-4px);border-color:rgba(63,184,174,.4);box-shadow:0 16px 40px rgba(0,0,0,.3)}
+.dest-ic{font-size:2rem;display:block;margin-bottom:12px}
+.dest-card h4{color:#fff;font-weight:800;font-stretch:88%;font-size:1.02rem;margin-bottom:5px}
+.dest-card p{color:var(--muted);font-size:.82rem;line-height:1.35}
+.dest-cta{text-align:center;margin-top:36px}
+@media(max-width:900px){.dest-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:460px){.dest-grid{grid-template-columns:1fr}}
+
+/* ---------- Marquee ---------- */
+.marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  overflow:hidden;padding:20px 0;background:rgba(255,255,255,.015)}
+.marquee-track{display:flex;width:max-content}
+.marquee-track span{font-size:.82rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--muted-2);padding:0 34px;white-space:nowrap}
+.marquee-track span i{font-style:normal;color:var(--gold);padding-right:34px}
+@media (prefers-reduced-motion:no-preference){
+  .marquee-track{animation:desliza 32s linear infinite}
+  @keyframes desliza{to{transform:translateX(-50%)}}
+}
+
+/* ---------- Cards servicios ---------- */
+.serv-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.card{background:var(--surface);
+  border:1px solid var(--line);border-radius:var(--radius);padding:34px 30px;
+  transition:.28s;position:relative;overflow:hidden}
+
+.card:hover{transform:translateY(-3px);border-color:rgba(63,184,174,.35)}
+
+.card .chip{width:54px;height:54px;border-radius:16px;font-size:1.5rem;
+  display:flex;align-items:center;justify-content:center;margin-bottom:20px;
+  background:rgba(255,255,255,.05);border:1px solid var(--line);box-shadow:0 8px 20px rgba(0,0,0,.35)}
+.card.c-navy .chip{background:rgba(63,184,174,.1);border-color:rgba(63,184,174,.25)}
+.card.c-gold .chip{background:rgba(63,184,174,.1);border-color:rgba(63,184,174,.25)}
+.card.c-bordo .chip{background:rgba(63,184,174,.1);border-color:rgba(63,184,174,.25)}
+.card h3{font-weight:800;font-stretch:85%;font-size:1.24rem;color:#fff;margin-bottom:14px}
+.card ul{list-style:none}
+.card li{padding:8px 0 8px 26px;position:relative;font-size:.94rem;color:#b7c1d6;border-bottom:1px solid var(--line);cursor:pointer;transition:.2s}
+.card li:hover{color:#fff;padding-left:30px}
+.card li:hover::before{color:var(--gold-2)}
+.card li:last-child{border:none}
+.card li::before{content:"✓";position:absolute;left:2px;color:var(--gold);font-weight:800;transition:.2s}
+.card li[data-info]::after{content:"›";position:absolute;right:2px;top:50%;transform:translateY(-50%);
+  color:var(--muted-2);font-weight:700;font-size:1.1rem;opacity:0;transition:.2s}
+.card li[data-info]:hover::after{opacity:1;color:var(--gold-2)}
+.card li b{color:#eef2f9}
+
+/* Modal de trámite */
+.modal-ov{position:fixed;inset:0;z-index:9999;background:rgba(5,9,16,.72);backdrop-filter:blur(6px);
+  display:none;align-items:center;justify-content:center;padding:20px;opacity:0;transition:.25s}
+.modal-ov.open{display:flex;opacity:1}
+.modal{background:linear-gradient(160deg,#12213c,#0b1425);border:1px solid var(--line-2);
+  border-radius:22px;max-width:440px;width:100%;padding:34px 32px;position:relative;
+  box-shadow:0 40px 90px rgba(0,0,0,.6);transform:translateY(16px);transition:.3s}
+.modal-ov.open .modal{transform:translateY(0)}
+.modal .mchip{width:56px;height:56px;border-radius:16px;font-size:1.6rem;
+  display:flex;align-items:center;justify-content:center;margin-bottom:18px;
+  background:linear-gradient(135deg,#1f4a52,#132229)}
+.modal h3{font-size:1.35rem;font-weight:800;font-stretch:85%;color:#fff;margin-bottom:12px;padding-right:30px}
+.modal p{color:#c3ccde;font-size:.98rem;line-height:1.6;margin-bottom:24px}
+.modal .mwa{display:inline-flex;align-items:center;justify-content:center;gap:9px;width:100%;
+  background:var(--wa);color:#04180d;font-weight:700;font-size:.94rem;padding:14px;border-radius:100px;
+  text-decoration:none;transition:.2s}
+.modal .mwa:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.modal .mclose{position:absolute;top:18px;right:20px;background:none;border:none;color:var(--muted);
+  font-size:1.7rem;cursor:pointer;line-height:1;padding:2px}
+.modal .mclose:hover{color:#fff}
+.tag-new{background:linear-gradient(135deg,#ff5a3c,#ff3d68);color:#fff;
+  font-size:.62rem;font-weight:800;letter-spacing:.1em;padding:2px 9px;border-radius:100px;text-transform:uppercase;
+  margin-left:6px;box-shadow:0 0 12px rgba(255,61,104,.55);animation:pulseNew 1.8s ease-in-out infinite;vertical-align:middle}
+@keyframes pulseNew{0%,100%{box-shadow:0 0 8px rgba(255,61,104,.4);transform:scale(1)}50%{box-shadow:0 0 18px rgba(255,61,104,.8);transform:scale(1.06)}}
+@media (prefers-reduced-motion:reduce){.tag-new{animation:none}}
+.tag-soon{display:inline-flex;align-items:center;gap:6px;background:rgba(63,184,174,.14);
+  border:1px solid rgba(63,184,174,.4);color:#7fd8ce;font-size:.62rem;font-weight:800;
+  letter-spacing:.1em;padding:3px 11px;border-radius:100px;text-transform:uppercase;margin-left:10px}
+.card.c-soon .chip{background:linear-gradient(135deg,#243b3f,#16232c);border:1px solid rgba(63,184,174,.3)}
+.card.c-soon h3{display:flex;align-items:center;flex-wrap:wrap}
+.card.c-soon li{color:#8fa0a8}
+.otros{margin-top:24px;background:linear-gradient(160deg,var(--surface),var(--bg-2));
+  border:1px solid var(--line);border-radius:var(--radius);padding:34px 32px;position:relative;overflow:hidden}
+.otros::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;
+  background:linear-gradient(180deg,#3fb8ae,#2f8f88)}
+.otros h3{font-weight:800;font-stretch:85%;font-size:1.24rem;color:#fff;margin-bottom:6px}
+.otros .lead{color:var(--gold-2);font-size:.9rem;font-weight:600;margin-bottom:24px}
+.otros-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.otro{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:16px;padding:22px 20px;transition:.3s}
+.otro:hover{border-color:var(--line-2);transform:translateY(-3px)}
+.otro .ic{width:46px;height:46px;border-radius:13px;font-size:1.3rem;margin-bottom:14px;
+  background:rgba(63,184,174,.1);border:1px solid rgba(63,184,174,.25);
   display:flex;align-items:center;justify-content:center}
-.hero-visual .ph-photo span{font-family:var(--sans);font-size:.75rem;letter-spacing:.15em;
-  text-transform:uppercase;color:var(--brown);opacity:.5}
-.hero-visual::after{content:"";position:absolute;inset:0;
-  box-shadow:inset 0 0 120px rgba(74,58,44,.15)}
-.hero-mono{position:absolute;bottom:34px;right:34px;font-family:var(--serif);
-  font-size:5rem;font-weight:600;color:rgba(255,255,255,.5);line-height:1;z-index:2}
-
-/* ---------- Marquee de organismos ---------- */
-.orgs{border-top:1px solid var(--line);border-bottom:1px solid var(--line);
-  padding:22px 0;background:var(--cream-2);overflow:hidden}
-.orgs-in{display:flex;align-items:center;gap:14px;justify-content:center;flex-wrap:wrap}
-.orgs-lbl{font-size:.78rem;color:var(--muted);font-weight:500}
-.orgs-list{display:flex;gap:26px;flex-wrap:wrap;justify-content:center}
-.orgs-list span{font-family:var(--serif);font-size:1.15rem;color:var(--brown);font-weight:600}
-
-/* ---------- Destacados ---------- */
-.destacados{padding:100px 0}
-.sec-head{margin-bottom:56px;max-width:60ch}
-.dest-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line)}
-.dest{display:flex;align-items:center;gap:18px;padding:26px 28px 26px 4px;
-  border-bottom:1px solid var(--line);border-right:1px solid var(--line);transition:.25s}
-.dest:nth-child(3n){border-right:none}
-.dest:hover{background:var(--cream-2);padding-left:14px}
-.dest-ic{width:30px;height:30px;color:var(--gold);flex-shrink:0}
-.dest-ic svg{width:100%;height:100%}
-.dest strong{font-family:var(--serif);font-size:1.2rem;font-weight:600;color:var(--black);display:block}
-.dest em{font-style:normal;font-size:.84rem;color:var(--muted)}
-.dest-more{margin-top:44px}
-.dest-more a{font-size:.92rem;font-weight:600;color:var(--gold);border-bottom:1px solid var(--gold);padding-bottom:3px}
-
-/* ---------- Áreas de servicio ---------- */
-.areas{padding:100px 0;background:var(--cream-2)}
-.areas-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
-.area{background:var(--cream-2);border:none;text-align:left;cursor:pointer;padding:44px 40px;
-  display:flex;gap:24px;transition:.3s;font-family:var(--sans);align-items:flex-start}
-.area:hover{background:var(--cream)}
-.area-ic{width:44px;height:44px;color:var(--gold);flex-shrink:0;margin-top:4px}
-.area-ic svg{width:100%;height:100%}
-.area-n{font-family:var(--serif);font-style:italic;font-size:1rem;color:var(--gold);display:block;margin-bottom:6px}
-.area h3{font-family:var(--serif);font-size:1.7rem;font-weight:600;color:var(--black);margin-bottom:12px;line-height:1.1;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-.area p{font-size:.95rem;color:var(--muted);line-height:1.6;margin-bottom:18px;max-width:44ch}
-.area-link{font-size:.86rem;font-weight:600;color:var(--black);border-bottom:1px solid var(--line);padding-bottom:2px;transition:.2s}
-.area:hover .area-link{border-color:var(--gold);color:var(--gold)}
-.new{font-family:var(--sans);font-size:.6rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
-  color:#fff;background:var(--gold);padding:2px 8px;border-radius:2px}
+.otro h4{color:#fff;font-weight:800;font-stretch:88%;font-size:1.02rem;margin-bottom:6px}
+.otro p{color:var(--muted);font-size:.9rem}
+@media(max-width:940px){.otros-grid{grid-template-columns:1fr}}
 
 /* ---------- Proceso ---------- */
-.proceso{padding:100px 0}
-.pasos{display:grid;grid-template-columns:repeat(3,1fr);gap:50px;margin-top:20px}
-.paso{border-top:2px solid var(--black);padding-top:24px}
-.paso .pn{font-family:var(--serif);font-style:italic;font-size:2.6rem;color:var(--gold);line-height:1;margin-bottom:16px}
-.paso h3{font-family:var(--serif);font-size:1.5rem;font-weight:600;margin-bottom:12px}
-.paso p{font-size:.95rem;color:var(--muted);line-height:1.65}
+.pasos{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.paso{background:var(--surface);
+  border:1px solid var(--line);border-radius:var(--radius);padding:38px 30px;transition:.28s;position:relative}
+.paso:hover{transform:translateY(-3px);border-color:rgba(63,184,174,.35)}
+.paso .n{width:46px;height:46px;border-radius:14px;
+  background:linear-gradient(135deg,rgba(63,184,174,.2),rgba(63,184,174,.05));
+  border:1px solid rgba(63,184,174,.38);color:var(--gold-2);
+  display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.05rem;margin-bottom:20px}
+.paso h3{color:#fff;font-weight:800;font-stretch:85%;font-size:1.16rem;margin-bottom:10px}
+.paso p{color:var(--muted);font-size:.95rem}
 
 /* ---------- Nosotros ---------- */
-.nosotros{padding:100px 0;background:var(--cream-2)}
-.nos-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-.nos-vals{display:grid;gap:0}
-.val{padding:26px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:start}
-.val:last-child{border-bottom:none}
-.val .vn{font-family:var(--serif);font-style:italic;font-size:1.3rem;color:var(--gold)}
-.val h4{font-family:var(--serif);font-size:1.35rem;font-weight:600;margin-bottom:6px}
-.val p{font-size:.92rem;color:var(--muted);line-height:1.6}
-.nos-quote{font-family:var(--serif);font-size:1.9rem;font-weight:500;line-height:1.35;color:var(--black)}
-.nos-quote .mark{color:var(--gold);font-size:3rem;line-height:0;display:block;margin-bottom:10px}
-.nos-firma{margin-top:30px;font-family:var(--sans);font-size:.8rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.porque .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+.valores{display:grid;gap:14px}
+.valor{background:var(--surface);border:1px solid var(--line);
+  border-radius:16px;padding:20px 24px;display:flex;gap:18px;align-items:flex-start;transition:.24s}
+.valor:hover{border-color:rgba(63,184,174,.35)}
+.valor .dot{flex-shrink:0;width:42px;height:42px;border-radius:12px;font-size:1.15rem;
+  background:rgba(255,255,255,.05);border:1px solid var(--line);display:flex;align-items:center;justify-content:center}
+.valor h4{font-weight:800;font-stretch:88%;color:#fff;font-size:1rem;margin-bottom:2px}
+.valor p{font-size:.9rem;color:var(--muted)}
+.quote{background:linear-gradient(160deg,#12213c,#0b1425);border:1px solid var(--line);
+  border-radius:26px;padding:46px 42px;position:relative;overflow:hidden;box-shadow:var(--glow)}
+.quote::before{content:"“";position:absolute;top:-26px;right:18px;font-size:9rem;font-weight:900;
+  color:rgba(63,184,174,.18);line-height:1}
+.quote p{font-size:1.14rem;line-height:1.6;color:#d3dbec;position:relative}
+.quote .firma{margin-top:26px;font-size:.72rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--gold-2);display:flex;align-items:center;gap:12px}
+.quote .firma::before{content:"";width:34px;height:2px;background:var(--gold)}
 
-/* ---------- Opiniones ---------- */
-.opiniones{padding:100px 0}
-.op-top{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-bottom:56px}
-.op-score{text-align:right}
-.op-score .n{font-family:var(--serif);font-size:3.4rem;font-weight:600;color:var(--black);line-height:1}
-.op-score .st{color:var(--gold);letter-spacing:2px}
-.op-score .lk{display:block;font-size:.82rem;color:var(--muted);margin-top:4px;border-bottom:1px solid var(--line);padding-bottom:2px}
-.op-score .lk:hover{color:var(--gold);border-color:var(--gold)}
-.op-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line)}
-.op{padding:34px 30px 34px 0;border-bottom:1px solid var(--line);border-right:1px solid var(--line)}
-.op:nth-child(3n){border-right:none;padding-right:0}
-.op .st{color:var(--gold);letter-spacing:2px;font-size:.85rem;margin-bottom:16px;display:block}
-.op p{font-family:var(--serif);font-size:1.18rem;line-height:1.5;color:var(--ink);margin-bottom:20px;font-weight:500}
-.op .who{display:flex;align-items:center;gap:12px}
-.op .ini{width:38px;height:38px;border-radius:50%;background:var(--black);color:var(--cream);
-  display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:1.1rem;font-weight:600}
-.op .who b{font-size:.9rem;font-weight:600}
-.op .who em{font-style:normal;font-size:.76rem;color:var(--muted);display:block}
+/* ---------- Reseñas ---------- */
+.res-head{display:flex;justify-content:space-between;align-items:flex-end;gap:28px;flex-wrap:wrap;margin-bottom:54px}
+.score{display:flex;align-items:center;gap:18px;background:linear-gradient(160deg,var(--surface),var(--bg-2));
+  border:1px solid var(--line);border-radius:18px;padding:18px 26px}
+.score .n{font-size:2.7rem;font-weight:900;font-stretch:80%;color:#fff;line-height:1}
+.score .stars{color:var(--star);letter-spacing:2px}
+.score small{display:block;color:var(--muted);font-weight:600;font-size:.8rem}
+.res-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.res{background:var(--surface);border:1px solid var(--line);
+  border-radius:var(--radius);padding:28px 26px;display:flex;flex-direction:column;gap:16px;transition:.28s;text-decoration:none;cursor:pointer}
+.res:hover{transform:translateY(-3px);border-color:rgba(63,184,174,.35)}
+.res .stars{color:var(--star);letter-spacing:2px;font-size:.9rem}
+.res p{font-size:.94rem;color:#c3ccde;flex:1}
+.res-autor{display:flex;align-items:center;gap:10px;font-weight:700;font-size:.9rem;color:#fff}
+.res-ini{width:32px;height:32px;border-radius:50%;flex-shrink:0;
+  background:linear-gradient(135deg,#3fb8ae,#2f8f88);color:#04211d;
+  display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.9rem}
+.res .src{display:flex;align-items:center;gap:10px;font-size:.7rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.res .src::before{content:"G";width:26px;height:26px;border-radius:50%;
+  background:linear-gradient(135deg,#1f4a52,#132229);color:#fff;
+  display:inline-flex;align-items:center;justify-content:center;font-size:.85rem}
+.res .src::after{content:"Ver en Google ›";margin-left:auto;color:var(--gold-2);opacity:0;transition:.2s;letter-spacing:.04em}
+.res:hover .src::after{opacity:1}
+.res.cta-res{align-items:center;justify-content:center;text-align:center;gap:18px;border-style:dashed}
+.res.cta-res p{flex:0;font-weight:700;color:#fff}
 
 /* ---------- FAQ ---------- */
-.faq{padding:100px 0;background:var(--cream-2)}
-.faq-list{max-width:820px;margin-top:20px}
-.q{border-bottom:1px solid var(--line)}
-.q summary{list-style:none;cursor:pointer;padding:26px 0;display:flex;justify-content:space-between;
-  align-items:center;gap:24px;font-family:var(--serif);font-size:1.35rem;font-weight:600;color:var(--black)}
-.q summary::-webkit-details-marker{display:none}
-.q summary .pm{flex-shrink:0;width:24px;height:24px;position:relative;transition:.3s}
-.q summary .pm::before,.q summary .pm::after{content:"";position:absolute;background:var(--gold);transition:.3s}
-.q summary .pm::before{top:11px;left:0;width:24px;height:1.5px}
-.q summary .pm::after{left:11px;top:0;width:1.5px;height:24px}
-.q[open] summary .pm::after{transform:rotate(90deg);opacity:0}
-.q .a{padding:0 0 28px;font-size:1rem;color:var(--muted);line-height:1.7;max-width:70ch}
+.faq-list{display:grid;gap:14px;max-width:860px}
+.faq{background:var(--surface);border:1px solid var(--line);
+  border-radius:16px;overflow:hidden;transition:.25s}
+.faq[open]{border-color:var(--line-2)}
+.faq summary{list-style:none;cursor:pointer;padding:22px 26px;display:flex;justify-content:space-between;
+  align-items:center;gap:20px;font-weight:700;font-size:1.02rem;color:#fff}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .ic{flex-shrink:0;width:30px;height:30px;border-radius:50%;border:1px solid var(--line-2);
+  display:flex;align-items:center;justify-content:center;transition:.3s;color:var(--gold-2);font-size:1.2rem}
+.faq[open] summary .ic{transform:rotate(45deg);background:var(--gold);color:#211803;border-color:transparent}
+.faq .ans{padding:0 26px 24px;color:var(--muted);font-size:.96rem;line-height:1.65}
 
 /* ---------- Contacto ---------- */
-.contacto{padding:100px 0}
-.cont-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px}
-.cont-info .ci{padding:22px 0;border-bottom:1px solid var(--line);display:block}
-.cont-info .ci .k{font-size:.78rem;color:var(--gold);font-weight:600;letter-spacing:.04em;margin-bottom:5px}
-.cont-info .ci .v{font-family:var(--serif);font-size:1.35rem;font-weight:600;color:var(--black)}
-.form label{display:block;font-size:.82rem;font-weight:600;color:var(--ink);margin-bottom:8px}
-.field{margin-bottom:22px}
-.field input,.field select,.field textarea{width:100%;background:transparent;border:none;
-  border-bottom:1px solid var(--line);padding:12px 0;font-family:var(--sans);font-size:1rem;color:var(--ink);transition:.2s}
-.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--gold)}
-.field textarea{resize:vertical;min-height:80px}
-.form .btn{margin-top:8px}
-.form .note{font-size:.78rem;color:var(--muted);margin-top:14px}
+.contacto .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:56px;align-items:start}
+.cont-grid{display:grid;gap:14px}
+.c-item{display:flex;align-items:center;gap:18px;background:var(--surface);
+  border:1px solid var(--line);border-radius:16px;padding:18px 22px;transition:.24s}
+.c-item:hover{border-color:rgba(63,184,174,.35)}
+.c-item .ico{width:46px;height:46px;border-radius:13px;flex-shrink:0;font-size:1.25rem;
+  background:rgba(255,255,255,.05);border:1px solid var(--line);display:flex;align-items:center;justify-content:center}
+.c-item b{display:block;font-size:.68rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:1px}
+.c-item span{font-weight:700;color:#eef2f9;font-size:.98rem}
 
-/* ---------- Otros servicios (módulo) ---------- */
-.otros-hero{padding:80px 0 40px}
-.otros-back{font-size:.86rem;color:var(--muted);cursor:pointer;background:none;border:none;
-  font-family:var(--sans);display:inline-flex;align-items:center;gap:8px;margin-bottom:28px}
-.otros-back:hover{color:var(--gold)}
-.otros-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);
-  border:1px solid var(--line);margin-bottom:100px}
-.oserv{background:var(--cream);padding:44px 38px}
-.oserv .oic{width:42px;height:42px;color:var(--gold);margin-bottom:22px}
-.oserv .oic svg{width:100%;height:100%}
-.oserv h3{font-family:var(--serif);font-size:1.6rem;font-weight:600;margin-bottom:12px}
-.oserv p{font-size:.95rem;color:var(--muted);line-height:1.65;margin-bottom:20px}
-.oserv a{font-size:.86rem;font-weight:600;color:var(--gold);border-bottom:1px solid var(--gold);padding-bottom:2px}
-
-/* ---------- Módulo genérico hero interno ---------- */
-.mod-hero{padding:70px 0 20px}
-.mod-hero .back{font-size:.86rem;color:var(--muted);cursor:pointer;background:none;border:none;
-  font-family:var(--sans);display:inline-flex;align-items:center;gap:8px;margin-bottom:24px}
-.mod-hero .back:hover{color:var(--gold)}
+/* Formulario */
+.form-card{background:linear-gradient(160deg,#12213c,#0a1223);border:1px solid var(--line-2);
+  border-radius:26px;padding:36px 34px;box-shadow:var(--glow)}
+.form-card h3{font-weight:800;font-stretch:84%;font-size:1.5rem;color:#fff;margin-bottom:6px}
+.form-card .lead{color:var(--muted);font-size:.94rem;margin-bottom:26px}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:.74rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-2);margin-bottom:7px}
+.field input,.field select,.field textarea{
+  width:100%;background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:12px;
+  padding:13px 15px;color:#fff;font-family:inherit;font-size:.96rem;transition:.2s}
+.field input::placeholder,.field textarea::placeholder{color:var(--muted-2)}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--gold);
+  background:rgba(255,255,255,.06);box-shadow:0 0 0 3px rgba(63,184,174,.14)}
+.field select option{background:#0f1a30;color:#fff}
+.field textarea{resize:vertical;min-height:96px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form-card .btn{width:100%;margin-top:6px}
+.form-note{text-align:center;font-size:.78rem;color:var(--muted-2);margin-top:14px}
 
 /* ---------- Footer ---------- */
-footer{background:var(--black);color:var(--cream);padding:80px 0 34px}
-.foot-grid{display:grid;grid-template-columns:1.7fr 1fr 1fr 1.3fr;gap:50px;margin-bottom:60px}
-.foot-brand .fb-logo{font-family:var(--serif);font-size:1.6rem;font-weight:600;color:var(--cream);margin-bottom:4px}
-.foot-brand .fb-sub{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-2);margin-bottom:22px}
-.foot-brand p{font-size:.9rem;color:rgba(244,239,231,.6);line-height:1.7;max-width:36ch;margin-bottom:14px}
-.foot-brand .fb-quote{font-family:var(--serif);font-style:italic;color:var(--gold-2);font-size:1rem}
-.foot-social{display:flex;gap:12px;margin-top:24px}
-.foot-social a{width:42px;height:42px;border:1px solid rgba(244,239,231,.2);border-radius:2px;
-  display:inline-flex;align-items:center;justify-content:center;color:rgba(244,239,231,.7);transition:.25s}
-.foot-social a:hover{color:var(--black);background:var(--gold-2);border-color:var(--gold-2)}
-.foot-col h4{font-family:var(--serif);font-size:1.1rem;font-weight:600;color:var(--cream);margin-bottom:18px}
-.foot-col a,.foot-col span{display:block;font-size:.88rem;color:rgba(244,239,231,.6);padding:6px 0;transition:.2s;line-height:1.4}
-.foot-col a:hover{color:var(--gold-2)}
-.foot-bottom{border-top:1px solid rgba(244,239,231,.14);padding-top:26px;display:flex;
-  justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.8rem;color:rgba(244,239,231,.4)}
+footer{background:var(--bg-2);border-top:1px solid var(--line);color:var(--muted);padding:64px 0 28px;font-size:.9rem}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.3fr;gap:40px;margin-bottom:44px}
+.foot-brand p{color:var(--muted);font-size:.9rem;line-height:1.6;margin:16px 0 0;max-width:340px}
+.foot-eslogan{color:var(--gold-2)!important;font-style:italic;font-weight:600;font-size:.86rem!important}
+.foot-logo{display:flex;align-items:center;gap:12px}
+.foot-logo .logo{height:44px;padding:5px 8px}
+.foot-social{display:flex;gap:12px;margin-top:20px}
+.foot-social a{width:40px;height:40px;padding:0;border-radius:10px;background:rgba(255,255,255,.05);
+  border:1px solid var(--line);display:inline-flex!important;align-items:center;justify-content:center;color:var(--muted);transition:.2s}
+.foot-social a svg{display:block}
+.foot-social a:hover{color:var(--gold-2);border-color:rgba(63,184,174,.4);transform:translateY(-2px)}
+.foot-col h4{color:#fff;font-weight:800;font-stretch:88%;font-size:.95rem;margin-bottom:16px;letter-spacing:.02em}
+.foot-col a,.foot-col span{display:block;color:var(--muted);text-decoration:none;font-size:.88rem;
+  padding:5px 0;transition:.2s;line-height:1.4}
+.foot-col a:hover{color:#fff}
+.foot-horario{color:var(--muted)}
+.foot-bottom{border-top:1px solid var(--line);padding-top:24px;display:flex;justify-content:space-between;
+  gap:16px;flex-wrap:wrap;font-size:.82rem;color:var(--muted-2)}
+footer b,footer strong{color:#fff}
+@media(max-width:900px){.foot-grid{grid-template-columns:1fr 1fr;gap:32px}.foot-brand{grid-column:1/-1}}
+@media(max-width:520px){.foot-grid{grid-template-columns:1fr}.foot-bottom{flex-direction:column;gap:8px}}
 
-/* ---------- Modal ---------- */
-.modal-ov{position:fixed;inset:0;z-index:9999;background:rgba(17,17,17,.55);backdrop-filter:blur(3px);
-  display:none;align-items:center;justify-content:center;padding:24px}
-.modal-ov.open{display:flex}
-.modal{background:var(--cream);max-width:600px;width:100%;max-height:88vh;display:flex;flex-direction:column;
-  padding:44px 44px 36px;position:relative;border-top:3px solid var(--gold)}
-.modal .mx{position:absolute;top:22px;right:24px;background:none;border:none;font-size:1.6rem;
-  cursor:pointer;color:var(--muted);line-height:1}
-.modal .mx:hover{color:var(--black)}
-.modal .mic{width:40px;height:40px;color:var(--gold);margin-bottom:14px}
-.modal .mic svg{width:100%;height:100%}
-.modal h3{font-family:var(--serif);font-size:2rem;font-weight:600;margin-bottom:6px;padding-right:30px}
-.modal .msub{font-size:.86rem;color:var(--muted);margin-bottom:24px}
-.mlist{overflow-y:auto;margin:0 -8px 24px;padding:0 8px}
-.mitem{padding:20px 0;border-bottom:1px solid var(--line)}
-.mitem:last-child{border-bottom:none}
-.mitem h4{font-family:var(--serif);font-size:1.2rem;font-weight:600;margin-bottom:6px;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
-.mitem p{font-size:.9rem;color:var(--muted);line-height:1.6;margin-bottom:10px}
-.mitem a{font-size:.82rem;font-weight:600;color:var(--gold)}
-.mitem a:hover{color:var(--brown)}
-.modal .mwa{background:var(--black);color:var(--cream);text-align:center;padding:15px;font-weight:600;font-size:.9rem;transition:.2s}
-.modal .mwa:hover{background:var(--brown)}
+/* WhatsApp flotante */
+.wa-flot{position:fixed;bottom:24px;right:24px;z-index:200;width:60px;height:60px;border-radius:50%;
+  background:var(--wa);display:flex;align-items:center;justify-content:center;
+  box-shadow:0 12px 32px rgba(37,195,104,.5);transition:.25s}
+.wa-flot:hover{transform:scale(1.1)}
+.wa-flot::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--wa);animation:ping 2s ease-out infinite}
+@keyframes ping{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.6);opacity:0}}
+@media (prefers-reduced-motion:reduce){.wa-flot::before{display:none}}
 
-/* ---------- WhatsApp flotante ---------- */
-.wa-flot{position:fixed;bottom:28px;right:28px;z-index:200;width:56px;height:56px;border-radius:50%;
-  background:var(--black);color:var(--cream);display:flex;align-items:center;justify-content:center;
-  box-shadow:0 10px 30px rgba(17,17,17,.3);transition:.25s}
-.wa-flot:hover{background:var(--gold);transform:scale(1.06)}
-.wa-flot svg{width:28px;height:28px}
-
-/* ---------- Reveal ---------- */
-.reveal{opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s ease}
+/* Reveal */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
 .reveal.vis{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
 
-/* ---------- Responsive ---------- */
-@media(max-width:980px){
-  .wrap{padding:0 26px}
-  .hero{grid-template-columns:1fr;min-height:auto}
-  .hero-text{padding:60px 0;max-width:none}
-  .hero-visual{min-height:340px}
-  .nos-grid,.cont-grid{grid-template-columns:1fr;gap:44px}
-  .areas-grid{grid-template-columns:1fr}
-  .pasos,.dest-grid,.op-grid,.otros-grid{grid-template-columns:1fr}
-  .dest:nth-child(n){border-right:none}
-  .op:nth-child(n){border-right:none;padding-right:0}
-  .foot-grid{grid-template-columns:1fr 1fr;gap:36px}
-  .foot-brand{grid-column:1/-1}
-  nav.menu{display:none;position:absolute;top:76px;left:0;right:0;flex-direction:column;
-    align-items:stretch;gap:0;background:var(--cream);border-bottom:1px solid var(--line);padding:12px 26px 22px}
+/* Responsive */
+@media(max-width:940px){
+  section{padding:76px 0}
+  .hero{min-height:auto;padding:90px 0 70px}
+  .hero .wrap,.porque .wrap,.contacto .wrap{grid-template-columns:1fr}
+  .serv-grid,.pasos,.res-grid{grid-template-columns:1fr}
+  nav.menu{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;
+    background:rgba(7,12,23,.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--line);padding:10px 24px 20px}
   nav.menu.open{display:flex}
-  nav.menu a:not(.btn){padding:14px 0;border-bottom:1px solid var(--line-soft)}
+  nav.menu a:not(.btn){padding:14px 0;border-bottom:1px solid var(--line)}
   nav.menu .btn{margin-top:14px}
   .hamb{display:block}
-  section,.destacados,.areas,.proceso,.nosotros,.opiniones,.faq,.contacto{padding:64px 0}
+  .row2{grid-template-columns:1fr}
 }
-@media(max-width:560px){
-  .wrap{padding:0 20px}
-  .hero h1{font-size:2.4rem}
-  .hero-proof{flex-wrap:wrap;gap:18px}
-  .foot-grid{grid-template-columns:1fr}
-  .foot-bottom{flex-direction:column;gap:8px}
-  .modal{padding:34px 26px 28px}
+
+/* Optimización fina para celulares */
+@media(max-width:600px){
+  body{font-size:16px}
+  .wrap{padding:0 18px}
+  section{padding:56px 0}
+  .h2{font-size:1.6rem}
+  .sub{font-size:1rem;margin-bottom:36px}
+
+  /* Hero más compacto y legible */
+  .hero{padding:76px 0 60px}
+  .hero h1{font-size:2rem;line-height:1.12}
+  .hero-desc{font-size:1rem}
+  .hero-cta{gap:10px}
+  .hero-cta .btn{width:100%}
+  .hero-foot{flex-direction:column;gap:8px;padding:14px 20px}
+  .hero-sep{display:none}
+
+  /* Tarjetas con menos padding */
+  .card{padding:26px 22px}
+  .card h3{font-size:1.14rem}
+  .otros{padding:26px 22px}
+
+  /* Botones táctiles cómodos */
+  .btn{padding:15px 24px;font-size:.95rem}
+
+  /* Reseñas: score full width y prolijo */
+  .res-head{margin-bottom:36px}
+  .score{width:100%;justify-content:center}
+
+  /* FAQ y contacto */
+  .faq summary{padding:18px 20px;font-size:.98rem}
+  .faq .ans{padding:0 20px 20px}
+  .form-card{padding:28px 22px}
+  .quote{padding:34px 26px}
+  .quote p{font-size:1.02rem}
+  .panel-cta{padding:34px 24px}
+
+  /* WhatsApp flotante un toque más chico y al borde */
+  .wa-flot{width:54px;height:54px;bottom:18px;right:18px}
+  .wa-flot svg{width:28px;height:28px}
 }
-a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
-.skip{position:absolute;left:-9999px;top:0;z-index:999;background:var(--black);color:var(--cream);
-  padding:14px 22px;font-size:.9rem;font-weight:600}
-.skip:focus{left:0}
-.modulo:focus{outline:none}
-/* Indicador de carga de módulo */
-.cargando{position:fixed;top:76px;left:0;right:0;height:2px;z-index:90;pointer-events:none;opacity:0;transition:opacity .2s}
-.cargando.on{opacity:1}
-.cargando span{display:block;height:100%;width:30%;background:var(--gold);animation:barra 1s ease-in-out infinite}
-@keyframes barra{0%{margin-left:-30%}100%{margin-left:100%}}
-@media (prefers-reduced-motion:reduce){.cargando span{animation:none;width:100%;opacity:.5}}
-.err{border-color:#b3261e!important}
-.err-msg{color:#b3261e;font-size:.8rem;margin-top:6px;display:none}
-.err-msg.show{display:block}
+
+/* Ajuste para pantallas muy angostas */
+@media(max-width:360px){
+  .hero h1{font-size:1.75rem}
+  .h2{font-size:1.45rem}
+}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
+
+/* Tarjeta resumida de área */
+.card-res{display:flex;flex-direction:column;min-height:220px;cursor:pointer}
+.card-res h3{font-weight:800;font-stretch:85%;font-size:1.24rem;color:#fff;margin-bottom:10px}
+.card-res .card-res-p{color:var(--muted);font-size:.95rem;flex:1;margin-bottom:20px}
+.card-res .vermas{display:inline-flex;align-items:center;gap:7px;font-weight:700;font-size:.9rem;color:var(--gold-2);transition:.2s}
+.card-res:hover .vermas{gap:11px}
+.card-res .vermas svg{width:16px;height:16px}
+/* Modal área: lista de trámites */
+.modal-area{max-width:520px;max-height:86vh;display:flex;flex-direction:column}
+.mlista{overflow-y:auto;margin:4px -6px 22px;padding:0 6px;display:flex;flex-direction:column;gap:12px}
+.mlista::-webkit-scrollbar{width:6px}
+.mlista::-webkit-scrollbar-thumb{background:rgba(255,255,255,.15);border-radius:3px}
+.mitem{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.mitem h4{display:flex;align-items:center;gap:9px;font-weight:800;font-stretch:88%;font-size:1rem;color:#fff;margin-bottom:6px}
+.mitem h4::before{content:"✓";color:var(--gold);font-weight:800}
+.mitem p{color:var(--muted);font-size:.9rem;line-height:1.5;margin-bottom:10px}
+.mitem a{font-size:.82rem;font-weight:700;color:var(--gold-2);transition:.2s}
+.mitem a:hover{color:#fff}
+
+/* Vistas (secciones tipo pestaña dentro del index) */
+.tec-hero{padding:110px 0 40px;position:relative}
+.tec-hero .volver{display:inline-flex;align-items:center;gap:7px;color:var(--muted);font-size:.9rem;font-weight:600;margin-bottom:22px;cursor:pointer;background:none;border:none;font-family:inherit}
+.tec-hero .volver:hover{color:var(--gold-2)}
+.tec-hero .bigchip{width:64px;height:64px;border-radius:18px;font-size:1.9rem;display:flex;align-items:center;justify-content:center;margin-bottom:24px;background:rgba(63,184,174,.1);border:1px solid rgba(63,184,174,.25)}
+.tec-hero h1{font-size:clamp(2rem,4.4vw,3rem);font-weight:900;font-stretch:78%;letter-spacing:-.02em;color:#fff;margin-bottom:14px}
+.tec-hero p{color:var(--muted);font-size:1.08rem;max-width:640px}
+.tec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding:20px 0 90px}
+.tec-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:34px 30px;transition:.28s}
+.tec-card:hover{border-color:rgba(63,184,174,.35);transform:translateY(-3px)}
+.tec-card .ic{width:56px;height:56px;border-radius:16px;font-size:1.6rem;display:flex;align-items:center;justify-content:center;margin-bottom:18px;background:rgba(63,184,174,.1);border:1px solid rgba(63,184,174,.25)}
+.tec-card h3{font-weight:800;font-stretch:85%;font-size:1.2rem;color:#fff;margin-bottom:10px}
+.tec-card p{color:var(--muted);font-size:.94rem;line-height:1.55;margin-bottom:18px}
+.tec-card .twa{display:inline-flex;align-items:center;gap:7px;font-size:.85rem;font-weight:700;color:var(--gold-2);transition:.2s}
+.tec-card:hover .twa{gap:11px}
+@media(max-width:760px){.tec-grid{grid-template-columns:1fr}}
+
+/* ===== Sistema de módulos (SPA) ===== */
+.modulo{display:none;animation:fadeIn .4s ease}
+.modulo.activo{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.modulo{animation:none}}
+/* Menú: marcar solapa activa */
+nav.menu a.nav-activo{color:#fff}
+nav.menu a.nav-activo::after{right:0!important}
+/* Fondo reactivo al scroll */
+.aura{transition:background-position .3s ease, opacity .3s ease}
 </style>
 </head>
 <body>
-<a class="skip" href="#cuerpo">Saltar al contenido</a>
+<div class="aura"></div>
 
 <header>
   <div class="wrap nav">
-    <a class="brand" href="#" onclick="mostrar('inicio');return false;">
-      <span class="logo"><img src="logo-header.png" alt="Estudio CG"></span>
-      <span class="brand-t"><strong>Estudio CG</strong><span>Gestoría y Consultoría</span></span>
+    <a class="brand" href="#" onclick="irA('inicio');return false;">
+      <div class="logo"><img src="logo-header.png" alt="Estudio CG"></div>
+      <div class="brand-t"><strong>Estudio CG</strong><span>Gestoría & Consultoría</span></div>
     </a>
-    <button class="hamb" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu" onclick="toggleMenu(this)"><span></span><span></span><span></span></button>
-    <nav class="menu" id="menu">
+    <button class="hamb" aria-label="Abrir menú" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+        <nav class="menu" id="menu">
       <a href="#" id="nav-inicio" data-mod="inicio" onclick="mostrar('inicio');return false;">Inicio</a>
       <a href="#" data-mod="servicios" onclick="mostrar('servicios');return false;">Servicios</a>
       <a href="#" data-mod="otros" onclick="mostrar('otros');return false;">Otros Servicios</a>
+      <a href="#" data-mod="proceso" onclick="mostrar('proceso');return false;">Cómo trabajamos</a>
       <a href="#" data-mod="nosotros" onclick="mostrar('nosotros');return false;">Nosotros</a>
       <a href="#" data-mod="resenas" onclick="mostrar('resenas');return false;">Opiniones</a>
       <a href="#" data-mod="faq" onclick="mostrar('faq');return false;">Preguntas</a>
-      <a class="btn btn-gold" href="#" onclick="mostrar('contacto');return false;">Consultá</a>
+      <a href="#" data-mod="contacto" onclick="mostrar('contacto');return false;">Contacto</a>
     </nav>
   </div>
 </header>
 
 <div id="cuerpo">
+<!-- MÓDULO INICIO -->
+<div class="modulo activo" id="mod-inicio">
+<section class="hero" id="inicio">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="wrap hero-inner">
+    <span class="pill">Previsional · Laboral · Fiscal · Migratorio</span>
+    <h1>Tus trámites, resueltos de manera <em>simple, rápida y segura</em>.</h1>
+    <p class="eslogan">«Si se puede hacer, lo hacemos. Si no, también vemos.»</p>
+    <p class="hero-desc">Asesoramiento integral y soluciones personalizadas para personas y empresas, con más de 20 años de experiencia en gestiones ante organismos públicos.</p>
+    <div class="hero-cta">
+      <a class="btn btn-wa" href="https://wa.me/5491125114119?text=Hola%2C%20quiero%20hacer%20una%20consulta" target="_blank" rel="noopener">Consultá por WhatsApp</a>
+      <a class="btn btn-glass" href="#" onclick="irA('servicios');return false;">Ver servicios</a>
+    </div>
+    <div class="hero-foot">
+      <a class="rating-mini" href="https://maps.app.goo.gl/qpvtmTRtjDiKDS7K6" target="_blank" rel="noopener">
+        <span class="rm-stars">★★★★★</span>
+        <span class="rm-txt"><b>5.0</b> · 40 reseñas en Google</span>
+      </a>
+      <span class="hero-sep">|</span>
+      <span class="hero-exp">+20 años de experiencia</span>
+    </div>
+  </div>
+</section>
 
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Gestionamos ante <i>·</i> ANSES <i>·</i> ARCA <i>·</i> PAMI <i>·</i> IPS PBA <i>·</i> Migraciones <i>·</i> TAD <i>·</i> RENAPER <i>·</i> Registro Civil <i>·</i></span>
+    <span>Gestionamos ante <i>·</i> ANSES <i>·</i> ARCA <i>·</i> PAMI <i>·</i> IPS PBA <i>·</i> Migraciones <i>·</i> TAD <i>·</i> RENAPER <i>·</i> Registro Civil <i>·</i></span>
+  </div>
+</div>
 
-<!-- Los módulos se cargan acá por fetch desde /modulos/ -->
-<div class="modulo activo" id="mod-vista" tabindex="-1"></div>
-<div class="cargando" id="cargando" aria-hidden="true"><span></span></div>
-
+<!-- TRÁMITES MÁS PEDIDOS -->
+<section class="destacados">
+  <div class="wrap">
+    <div class="dest-head">
+      <span class="pill reveal">Lo más consultado</span>
+      <h2 class="h2 reveal">Nuestros trámites más pedidos</h2>
+      <p class="sub reveal">Un vistazo a las gestiones que más resolvemos. Tocá cualquiera para consultar, o mirá todas las áreas más abajo.</p>
+    </div>
+    <div class="dest-grid">
+      <a class="dest-card reveal" href="https://wa.me/5491125114119?text=Hola%2C%20quiero%20consultar%20sobre%20mi%20Jubilaci%C3%B3n" target="_blank" rel="noopener"><span class="dest-ic">🏛️</span><h4>Jubilaciones</h4><p>ANSES e IPS Provincia</p></a>
+      <a class="dest-card reveal" href="https://wa.me/5491125114119?text=Hola%2C%20quiero%20consultar%20sobre%20Pensiones" target="_blank" rel="noopener"><span class="dest-ic">📄</span><h4>Pensiones</h4><p>Directas, derivadas y por fallecimiento</p></a>
+      <a class="dest-card reveal" href="https://wa.me/5491125114119?text=Hola%2C%20quiero%20consultar%20sobre%20Monotributo" target="_blank" rel="noopener"><span class="dest-ic">🧾</span><h4>Monotributo</h4><p>Alta y recategorización</p></a>
+      <a class="dest-card reveal" href="https://wa.me/5491125114119?text=Hola%2C%20quiero%20consultar%20sobre%20Ciudadan%C3%ADa" target="_blank" rel="noopener"><span class="dest-ic">🌎</span><h4>Ciudadanía</h4><p>Ciudadanía argentina y migratorio</p></a>
+      <a class="dest-card reveal" href="https://wa.me/5491125114119?text=Hola%2C%20quiero%20consultar%20sobre%20Liquidaci%C3%B3n%20de%20sueldos" target="_blank" rel="noopener"><span class="dest-ic">📋</span><h4>Liquidación de sueldos</h4><p>Y cargas sociales</p></a>
+      <a class="dest-card reveal" href="https://wa.me/5491125114119?text=Hola%2C%20quiero%20consultar%20sobre%20una%20infracci%C3%B3n%20de%20tr%C3%A1nsito" target="_blank" rel="noopener"><span class="dest-ic">🚗</span><h4>Infracciones</h4><p>CABA y otras provincias</p></a>
+      <a class="dest-card reveal" href="https://wa.me/5491125114119?text=Hola%2C%20quiero%20consultar%20sobre%20Partidas" target="_blank" rel="noopener"><span class="dest-ic">🗂️</span><h4>Partidas</h4><p>Nacimiento, matrimonio, defunción</p></a>
+      <a class="dest-card reveal" href="https://wa.me/5491125114119?text=Hola%2C%20quiero%20consultar%20sobre%20PUAM%20o%20PNC" target="_blank" rel="noopener"><span class="dest-ic">👵</span><h4>PUAM / PNC</h4><p>Pensiones no contributivas</p></a>
+    </div>
+    <div class="dest-cta">
+      <a class="btn btn-glass reveal" href="#" onclick="mostrar('servicios');return false;">Ver todas las áreas de servicio →</a>
+    </div>
+  </div>
+</section>
+</div>
+<!-- MÓDULO SERVICIOS -->
+<div class="modulo" id="mod-servicios">
+<!-- SERVICIOS -->
+<section id="servicios">
+  <div class="wrap">
+    <span class="pill reveal">Nuestros servicios</span>
+    <h2 class="h2 reveal">Un solo estudio para todas tus gestiones</h2>
+    <p class="sub reveal">Trabajamos con compromiso y responsabilidad para que cada trámite sea rápido, seguro y eficiente, desde la primera consulta hasta la resolución final.</p>
+    <div class="serv-grid">
+      <div class="card card-res reveal" data-area="0">
+        <div class="chip">🏛️</div>
+        <h3>Área Previsional</h3>
+        <p class="card-res-p">Jubilaciones (ANSES e IPS), pensiones, PUAM, PNC y planificación previsional.</p>
+        <span class="vermas">Ver trámites <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </div>
+      <div class="card card-res reveal" data-area="1">
+        <div class="chip">📋</div>
+        <h3>Gestión Laboral <span class="tag-new">Nuevo</span></h3>
+        <p class="card-res-p">Liquidación de sueldos, cargas sociales, asesoramiento a empleadores y confección de CVs.</p>
+        <span class="vermas">Ver trámites <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </div>
+      <div class="card card-res reveal" data-area="2">
+        <div class="chip">🧾</div>
+        <h3>Asesoramiento Fiscal</h3>
+        <p class="card-res-p">Monotributo, Bienes Personales, SICAM, facturación y planes de pago.</p>
+        <span class="vermas">Ver trámites <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </div>
+      <div class="card card-res reveal" data-area="3">
+        <div class="chip">🗂️</div>
+        <h3>Claves y Otros Trámites <span class="tag-new">Nuevo</span></h3>
+        <p class="card-res-p">ANSES, ARCA, PAMI, TAD, partidas, RENAPER, infracciones, ciudadanía y apostillado.</p>
+        <span class="vermas">Ver trámites <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </div>
+      <div class="card card-res reveal" data-area="4">
+        <div class="chip">⚖️</div>
+        <h3>Área Legal</h3>
+        <p class="card-res-p">Sucesiones, contratos, cartas documento, informe de dominio y poderes.</p>
+        <span class="vermas">Ver trámites <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+<!-- MÓDULO PROCESO -->
+<div class="modulo" id="mod-proceso">
+<section id="proceso">
+  <div class="wrap">
+    <span class="pill reveal">Cómo trabajamos</span>
+    <h2 class="h2 reveal">Tres pasos, cero vueltas</h2>
+    <p class="sub reveal">Vos hacés la consulta; nosotros nos ocupamos del resto.</p>
+    <div class="pasos">
+      <div class="paso reveal"><div class="n">1</div><h3>Escribinos tu consulta</h3><p>Contactanos por WhatsApp, correo o el formulario. Analizamos tu caso y te decimos con claridad qué se puede hacer, qué documentación necesitás y cuánto demora.</p></div>
+      <div class="paso reveal"><div class="n">2</div><h3>Gestionamos por vos</h3><p>Iniciamos y seguimos el trámite ante ANSES, ARCA, PAMI, IPS PBA, Migraciones o el organismo que corresponda, de forma presencial o a distancia.</p></div>
+      <div class="paso reveal"><div class="n">3</div><h3>Te mantenemos al tanto</h3><p>Recibís avances en cada etapa hasta la resolución final, sin trámites eternos ni respuestas a medias.</p></div>
+    </div>
+  </div>
+</section>
+</div>
+<!-- MÓDULO NOSOTROS -->
+<div class="modulo" id="mod-nosotros">
+<section class="porque" id="nosotros">
+  <div class="wrap">
+    <div>
+      <span class="pill reveal">Por qué elegirnos</span>
+      <h2 class="h2 reveal">Más de 20 años resolviendo gestiones</h2>
+      <div class="valores" style="margin-top:28px">
+        <div class="valor reveal"><div class="dot">🎓</div><div><h4>Experiencia comprobada</h4><p>Dos décadas de trabajo en gestión previsional, laboral y administrativa ante organismos públicos y privados.</p></div></div>
+        <div class="valor reveal"><div class="dot">🤝</div><div><h4>Atención personalizada</h4><p>Cada caso es único: te asesoramos de manera directa, con seguimiento propio y sin intermediarios.</p></div></div>
+        <div class="valor reveal"><div class="dot">🔍</div><div><h4>Compromiso y transparencia</h4><p>Te explicamos cada paso en lenguaje claro, con honorarios acordados desde el inicio.</p></div></div>
+        <div class="valor reveal"><div class="dot">⚡</div><div><h4>Rapidez y eficiencia</h4><p>Conocemos los circuitos de cada organismo, lo que nos permite evitar demoras y errores frecuentes.</p></div></div>
+      </div>
+    </div>
+    <div class="quote reveal">
+      <p>Nuestro objetivo es simple: que encuentres el respaldo profesional que necesitás para resolver tus gestiones de manera simple y confiable, sin perder tiempo ni hacer filas innecesarias.</p>
+      <div class="firma">Estudio CG — Gestoría & Consultoría</div>
+    </div>
+  </div>
+</section>
+</div>
+<!-- MÓDULO RESEÑAS -->
+<div class="modulo" id="mod-resenas">
+<section id="resenas">
+  <div class="wrap">
+    <div class="res-head">
+      <div style="max-width:560px">
+        <span class="pill reveal">Opiniones de nuestros clientes</span>
+        <h2 class="h2 reveal" style="margin-bottom:0">Lo que dicen quienes ya resolvieron sus trámites</h2>
+      </div>
+      <div class="score reveal"><span class="n">5.0</span><div><div class="stars">★★★★★</div><small>40 reseñas en Google Maps</small></div></div>
+    </div>
+    <div class="res-grid">
+      <a class="res reveal" href="https://maps.app.goo.gl/qpvtmTRtjDiKDS7K6" target="_blank" rel="noopener"><span class="stars">★★★★★</span><p>«Estamos muy conformes por su profesionalismo, se nota que ama lo que hace, es usted una persona sumamente confiable.»</p><span class="res-autor"><span class="res-ini">J</span>Jorge Rodríguez</span><span class="src">Reseña de Google</span></a>
+      <a class="res reveal" href="https://maps.app.goo.gl/qpvtmTRtjDiKDS7K6" target="_blank" rel="noopener"><span class="stars">★★★★★</span><p>«Gestionó la jubilación de mi hermano de manera muy profesional y rápida. Te explica muy bien cómo se irá haciendo la gestión, cumplió de manera excelente todo el proceso.»</p><span class="res-autor"><span class="res-ini">I</span>Isabel Campanilla</span><span class="src">Reseña de Google</span></a>
+      <a class="res reveal" href="https://maps.app.goo.gl/qpvtmTRtjDiKDS7K6" target="_blank" rel="noopener"><span class="stars">★★★★★</span><p>«Excelente persona y profesional. Diligente, tenaz y empático. ¡Súper recomendable!»</p><span class="res-autor"><span class="res-ini">L</span>Laura Soto</span><span class="src">Reseña de Google</span></a>
+      <a class="res reveal" href="https://maps.app.goo.gl/qpvtmTRtjDiKDS7K6" target="_blank" rel="noopener"><span class="stars">★★★★★</span><p>«Buena atención, muy confiable. Recomiendo 100%.»</p><span class="res-autor"><span class="res-ini">F</span>Favio Jalsansky</span><span class="src">Reseña de Google</span></a>
+      <a class="res reveal" href="https://maps.app.goo.gl/qpvtmTRtjDiKDS7K6" target="_blank" rel="noopener"><span class="stars">★★★★★</span><p>«Excelente atención, disponibilidad y colaboración. Confiable 100%, Cristian.»</p><span class="res-autor"><span class="res-ini">E</span>Euge Bonne</span><span class="src">Reseña de Google</span></a>
+      <a class="res reveal" href="https://maps.app.goo.gl/qpvtmTRtjDiKDS7K6" target="_blank" rel="noopener"><span class="stars">★★★★★</span><p>«Excelente atención. Confiable para resolver mi consulta y lograr la resolución esperada.»</p><span class="res-autor"><span class="res-ini">M</span>Mariela Laboral</span><span class="src">Reseña de Google</span></a>
+      <div class="res cta-res reveal"><p>¿Ya trabajaste con nosotros?</p><a class="btn btn-glass" href="https://maps.app.goo.gl/qpvtmTRtjDiKDS7K6" target="_blank" rel="noopener">Ver todas en Google</a></div>
+    </div>
+  </div>
+</section>
+</div>
+<!-- MÓDULO FAQ -->
+<div class="modulo" id="mod-faq">
+<section id="faq">
+  <div class="wrap">
+    <span class="pill reveal">Preguntas frecuentes</span>
+    <h2 class="h2 reveal">Respuestas a lo que más nos consultan</h2>
+    <p class="sub reveal">Y si tu duda no está acá, escribinos y te respondemos a la brevedad.</p>
+    <div class="faq-list">
+      <details class="faq reveal"><summary>¿Cómo empiezo un trámite con ustedes? <span class="ic">+</span></summary><div class="ans">Escribinos por WhatsApp, correo o el formulario contándonos tu caso. Analizamos tu situación, te explicamos qué se puede hacer y acordamos los honorarios antes de empezar cualquier trámite.</div></details>
+      <details class="faq reveal"><summary>¿Atienden solo en Buenos Aires o también a distancia? <span class="ic">+</span></summary><div class="ans">Trabajamos de forma presencial en José Ignacio Rucci 3351, CABA, y también a distancia mediante TAD y gestión online, así que podemos ayudarte estés donde estés dentro del país.</div></details>
+      <details class="faq reveal"><summary>¿Qué documentación necesito para iniciar mi jubilación? <span class="ic">+</span></summary><div class="ans">Depende de tu caso (ANSES o IPS Provincia de Bs. As.), pero en general se requiere DNI, historial de aportes y documentación laboral. Al contactarnos te damos el listado exacto según tu situación.</div></details>
+      <details class="faq reveal"><summary>¿Tramitan jubilaciones de IPS Provincia de Buenos Aires? <span class="ic">+</span></summary><div class="ans">Sí. Sumamos recientemente la gestión de jubilaciones del IPS PBA, además de las nacionales de ANSES, jubilaciones de empleadas domésticas y de extranjeros.</div></details>
+      <details class="faq reveal"><summary>¿Cuánto demora un trámite? <span class="ic">+</span></summary><div class="ans">Los plazos los define cada organismo, pero conocer bien los circuitos nos permite evitar demoras y errores. Te mantenemos informado del avance en cada etapa hasta la resolución final.</div></details>
+      <details class="faq reveal"><summary>¿Si me faltan años de aportes puedo comprarlos? <span class="ic">+</span></summary><div class="ans">Sí. Cada caso es distinto y depende de tu situación: si tenés aportes o no. Se puede utilizar un plan de pago de la Ley 27.705 o de la Ley 24.476, o bien regularizar realizando pagos como monotributista. Escribinos y analizamos cuál es la mejor opción para vos.</div></details>
+      <details class="faq reveal"><summary>¿Cómo son los honorarios? <span class="ic">+</span></summary><div class="ans">Se acuerdan de forma clara y transparente desde el inicio, según el tipo de trámite. Sin sorpresas ni costos ocultos: sabés cuánto vas a pagar antes de empezar.</div></details>
+    </div>
+  </div>
+</section>
+</div>
+<!-- MÓDULO CONTACTO -->
+<div class="modulo" id="mod-contacto">
+<section class="contacto" id="contacto">
+  <div class="wrap">
+    <div>
+      <span class="pill reveal">Contacto</span>
+      <h2 class="h2 reveal">Hablemos de tu trámite</h2>
+      <p class="sub reveal" style="margin-bottom:28px">Completá el formulario o escribinos directo. Te respondemos a la brevedad.</p>
+      <div class="cont-grid">
+        <a class="c-item reveal" href="https://wa.me/5491125114119" target="_blank" rel="noopener"><div class="ico">📞</div><div><b>Teléfono / WhatsApp</b><span>11 2511-4119</span></div></a>
+        <a class="c-item reveal" href="mailto:gintegralcg@gmail.com"><div class="ico">✉️</div><div><b>Correo electrónico</b><span>gintegralcg@gmail.com</span></div></a>
+        <a class="c-item reveal" href="https://maps.app.goo.gl/qpvtmTRtjDiKDS7K6" target="_blank" rel="noopener"><div class="ico">📍</div><div><b>Dirección</b><span>José Ignacio Rucci 3351, CABA</span></div></a>
+        <div class="c-item reveal"><div class="ico">🕓</div><div><b>Horario de atención</b><span>Lunes a viernes · 10 a 17 hs</span></div></div>
+      </div>
+    </div>
+    <div class="form-card reveal">
+      <h3>Escribinos tu consulta</h3>
+      <p class="lead">Contanos tu caso y te contactamos con los pasos a seguir.</p>
+      <div class="field"><label for="nombre">Nombre y apellido</label><input id="nombre" type="text" placeholder="Tu nombre"></div>
+      <div class="row2">
+        <div class="field"><label for="tel">Teléfono</label><input id="tel" type="tel" placeholder="11 ...."></div>
+        <div class="field"><label for="mail">Email</label><input id="mail" type="email" placeholder="tu@correo.com"></div>
+      </div>
+      <div class="field"><label for="tema">Tipo de trámite</label>
+        <select id="tema">
+          <option value="Consulta general">Consulta general</option>
+          <option value="Jubilación / Pensión (ANSES)">Jubilación / Pensión (ANSES)</option>
+          <option value="Jubilación IPS Provincia Bs. As.">Jubilación IPS Provincia Bs. As.</option>
+          <option value="Monotributo / Fiscal">Monotributo / Fiscal</option>
+          <option value="Liquidación de sueldos">Liquidación de sueldos</option>
+          <option value="Ciudadanía / Migratorio">Ciudadanía / Migratorio</option>
+          <option value="Partidas / RENAPER / CODEM">Partidas / RENAPER / CODEM</option>
+          <option value="Otro trámite">Otro trámite</option>
+        </select>
+      </div>
+      <div class="field"><label for="msg">Mensaje</label><textarea id="msg" placeholder="Contanos brevemente qué necesitás..."></textarea></div>
+      <button class="btn btn-gold" onclick="enviarMail()">Enviar consulta por Email</button>
+      <button class="btn btn-glass" style="margin-top:10px" onclick="enviarWA()">O enviar por WhatsApp</button>
+      <p class="form-note">Tus datos se usan solo para responder tu consulta.</p>
+    </div>
+  </div>
+</section>
+</div>
+<!-- MÓDULO OTROS SERVICIOS -->
+<div class="modulo" id="mod-otros">
+  <section class="tec-hero">
+    <div class="wrap">
+      <button class="volver" onclick="verPrincipal()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg> Volver al inicio</button>
+      <div class="bigchip">💡</div>
+      <h1>Soluciones Tecnológicas</h1>
+      <p>Además de las gestiones, ofrecemos soluciones tecnológicas para tu hogar o negocio. Consultá por tu presupuesto.</p>
+    </div>
+  </section>
+  <section style="padding:0">
+    <div class="wrap">
+      <div class="tec-grid">
+        <div class="tec-card">
+          <div class="ic">🏠</div>
+          <h3>Domótica</h3>
+          <p>Sistemas inteligentes para el hogar y la oficina: iluminación, persianas, climatización y control de accesos, todo desde tu celular.</p>
+          <a class="twa" href="https://wa.me/5491125114119?text=Hola%2C%20quiero%20consultar%20sobre%20Dom%C3%B3tica" target="_blank" rel="noopener">Consultar ›</a>
+        </div>
+        <div class="tec-card">
+          <div class="ic">📹</div>
+          <h3>Cámaras de Seguridad</h3>
+          <p>Instalación y configuración de cámaras con monitoreo 24/7 desde tu móvil y alertas en tiempo real.</p>
+          <a class="twa" href="https://wa.me/5491125114119?text=Hola%2C%20quiero%20consultar%20sobre%20C%C3%A1maras%20de%20Seguridad" target="_blank" rel="noopener">Consultar ›</a>
+        </div>
+        <div class="tec-card">
+          <div class="ic">💻</div>
+          <h3>Servicio Técnico PC</h3>
+          <p>Reparación, formateo, optimización y eliminación de virus para tu computadora.</p>
+          <a class="twa" href="https://wa.me/5491125114119?text=Hola%2C%20quiero%20consultar%20sobre%20Servicio%20T%C3%A9cnico%20PC" target="_blank" rel="noopener">Consultar ›</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
 </div><!-- /cuerpo -->
 
 <footer>
   <div class="wrap">
     <div class="foot-grid">
-      <div class="foot-brand">
-        <div class="fb-logo">Estudio CG</div>
-        <div class="fb-sub">Gestoría y Consultoría</div>
-        <p>Acompañamos a personas y empresas en gestiones previsionales, laborales, fiscales y migratorias, con más de veinte años de oficio.</p>
-        <p class="fb-quote">«Si se puede hacer, lo hacemos. Si no, también vemos.»</p>
+      <div class="foot-col foot-brand">
+        <div class="foot-logo"><div class="logo"><img src="logo-header.png" alt="Estudio CG"></div>
+          <div class="brand-t"><strong>Estudio CG</strong><span>Gestoría & Consultoría</span></div>
+        </div>
+        <p>Asesoramiento integral con más de 20 años de experiencia en gestiones previsionales, laborales, fiscales y migratorias.</p>
+        <p class="foot-eslogan">«Si se puede hacer, lo hacemos. Si no, también vemos.»</p>
         <div class="foot-social">
-          <a href="https://www.instagram.com/estudiocgig" target="_blank" rel="noopener" aria-label="Instagram"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
-          <a href="https://www.tiktok.com/@estudiocg" target="_blank" rel="noopener" aria-label="TikTok"><svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.8a4.3 4.3 0 0 1-1-2.8h-3.3v11.4a2.4 2.4 0 1 1-2.4-2.4c.2 0 .5 0 .7.1V6.7a5.7 5.7 0 1 0 5 5.7V8.7a7.3 7.3 0 0 0 4.3 1.4V6.8a4.3 4.3 0 0 1-3.3-1z"/></svg></a>
-          <a href="https://www.facebook.com/share/1EfnPQymaQ/" target="_blank" rel="noopener" aria-label="Facebook"><svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V5h-3c-2.2 0-4 1.8-4 4v2H7v4h3v7h4v-7h3l1-4h-4V9c0-.6.4-1 1-1z"/></svg></a>
-          <a href="https://wa.me/5491125114119" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.9 4.43-9.9 9.88 0 1.74.46 3.44 1.32 4.94L2 22l5.32-1.39c1.45.79 3.08 1.21 4.72 1.21 5.46 0 9.9-4.43 9.9-9.88C21.94 6.43 17.5 2 12.04 2z"/></svg></a>
+          <a href="https://www.instagram.com/estudiocgig" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://www.facebook.com/share/1EfnPQymaQ/" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V5h-3c-2.2 0-4 1.8-4 4v2H7v4h3v7h4v-7h3l1-4h-4V9c0-.6.4-1 1-1z"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@estudiocg" target="_blank" rel="noopener" aria-label="TikTok">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.8a4.3 4.3 0 0 1-1-2.8h-3.3v11.4a2.4 2.4 0 1 1-2.4-2.4c.2 0 .5 0 .7.1V6.7a5.7 5.7 0 1 0 5 5.7V8.7a7.3 7.3 0 0 0 4.3 1.4V6.8a4.3 4.3 0 0 1-3.3-1z"/></svg>
+          </a>
+          <a href="https://wa.me/5491125114119" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.9 4.43-9.9 9.88 0 1.74.46 3.44 1.32 4.94L2 22l5.32-1.39c1.45.79 3.08 1.21 4.72 1.21 5.46 0 9.9-4.43 9.9-9.88C21.94 6.43 17.5 2 12.04 2z"/></svg>
+          </a>
         </div>
       </div>
-      <div class="foot-col"><h4>Servicios</h4>
+      <div class="foot-col">
+        <h4>Servicios</h4>
         <a href="#" onclick="mostrar('servicios');return false;">Área Previsional</a>
         <a href="#" onclick="mostrar('servicios');return false;">Gestión Laboral</a>
         <a href="#" onclick="mostrar('servicios');return false;">Asesoramiento Fiscal</a>
@@ -410,196 +801,146 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,s
         <a href="#" onclick="mostrar('servicios');return false;">Área Legal</a>
         <a href="#" onclick="mostrar('otros');return false;">Otros Servicios</a>
       </div>
-      <div class="foot-col"><h4>Estudio</h4>
+      <div class="foot-col">
+        <h4>Estudio</h4>
         <a href="#" onclick="mostrar('nosotros');return false;">Nosotros</a>
-        <a href="#" onclick="mostrar('faq');return false;">Preguntas</a>
+        <a href="#" onclick="mostrar('proceso');return false;">Cómo trabajamos</a>
         <a href="#" onclick="mostrar('resenas');return false;">Opiniones</a>
+        <a href="#" onclick="mostrar('faq');return false;">Preguntas frecuentes</a>
         <a href="https://maps.app.goo.gl/qpvtmTRtjDiKDS7K6" target="_blank" rel="noopener">Reseñas en Google</a>
       </div>
-      <div class="foot-col"><h4>Contacto</h4>
-        <a href="https://wa.me/5491125114119" target="_blank" rel="noopener">11 2511-4119</a>
-        <a href="mailto:gintegralcg@gmail.com">gintegralcg@gmail.com</a>
-        <a href="https://maps.app.goo.gl/qpvtmTRtjDiKDS7K6" target="_blank" rel="noopener">José Ignacio Rucci 3351, CABA</a>
-        <span>Lun a Vie · 10 a 17 hs</span>
+      <div class="foot-col">
+        <h4>Contacto</h4>
+        <a href="https://wa.me/5491125114119" target="_blank" rel="noopener">📞 11 2511-4119</a>
+        <a href="mailto:gintegralcg@gmail.com">✉️ gintegralcg@gmail.com</a>
+        <a href="https://maps.app.goo.gl/qpvtmTRtjDiKDS7K6" target="_blank" rel="noopener">📍 José Ignacio Rucci 3351, CABA</a>
+        <span class="foot-horario">🕓 Lun a Vie · 10 a 17 hs</span>
       </div>
     </div>
     <div class="foot-bottom">
-      <span>© 2026 Estudio CG — Gestoría y Consultoría</span>
-      <span>Previsional · Laboral · Fiscal · Migratorio</span>
+      <span>© 2026 Estudio CG — Gestoría & Consultoría · Buenos Aires, Argentina</span>
+      <span>Previsional · Laboral · Fiscal · Asesoramiento</span>
     </div>
   </div>
 </footer>
 
-<a class="wa-flot" href="https://wa.me/5491125114119?text=Hola%2C%20quiero%20hacer%20una%20consulta" target="_blank" rel="noopener" aria-label="WhatsApp">
-  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.9 4.43-9.9 9.88 0 1.74.46 3.44 1.32 4.94L2 22l5.32-1.39c1.45.79 3.08 1.21 4.72 1.21 5.46 0 9.9-4.43 9.9-9.88C21.94 6.43 17.5 2 12.04 2zm0 18.02c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23 4.54 0 8.24 3.69 8.24 8.23 0 4.54-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></svg>
-</a>
-
 <script>
-const AREAS = [{"titulo": "Área Previsional", "emoji": "", "tramites": [["Jubilaciones ANSES", "Tramitamos tu jubilación por el régimen nacional (ANSES), tanto para argentinos como extranjeros con residencia. Analizamos tus aportes y buscamos el mejor haber posible según tu historia laboral."], ["Jubilación de empleadas domésticas", "Gestión de la jubilación para trabajadoras de casas particulares, contemplando el régimen especial y los aportes correspondientes a esta actividad."], ["Jubilación IPS Provincia de Bs. As.", "Tramitamos jubilaciones ante el Instituto de Previsión Social (IPS) de la Provincia de Buenos Aires, para empleados provinciales y municipales."], ["Pensiones", "Gestionamos pensiones directas, derivadas y por fallecimiento de un familiar, para que accedas al beneficio que te corresponde ante ANSES o IPS."], ["PUAM", "La Pensión Universal para el Adulto Mayor es un beneficio para personas de 65 años o más que no cuentan con una jubilación. Te ayudamos a tramitarla desde cero."], ["Pensiones No Contributivas", "Beneficios para personas en situación de vulnerabilidad: por invalidez, madres de 7 o más hijos, o vejez, sin necesidad de aportes previos."], ["Salario Familiar y Asignaciones", "Gestionamos las asignaciones familiares (hijo, prenatal, ayuda escolar, etc.) ante ANSES para trabajadores y beneficiarios."], ["Planificación previsional", "Analizamos tu situación de aportes y te asesoramos sobre cuándo y cómo conviene jubilarte para obtener el mejor haber posible."]]}, {"titulo": "Gestión Laboral", "emoji": "", "tramites": [["Liquidación de sueldos", "Calculamos y confeccionamos los recibos de sueldo de tu personal, con todos los conceptos, descuentos y aportes al día según convenio."], ["Cargas sociales", "Determinamos y presentamos los aportes y contribuciones (F.931) que debe pagar el empleador por su personal registrado."], ["Asesoramiento a empleadores", "Te acompañamos en todo lo relativo a la relación laboral: altas, bajas, sanciones, convenios y obligaciones como empleador."], ["Confección de CVs y mejora de LinkedIn[NUEVO]", "Armamos tu currículum vitae profesional y optimizamos tu perfil de LinkedIn para mejorar tu presencia y oportunidades laborales."]]}, {"titulo": "Asesoramiento Fiscal", "emoji": "", "tramites": [["Alta y recategorización de Monotributo", "Te inscribimos en el monotributo o ajustamos tu categoría según tu facturación, para que cumplas con ARCA sin pagar de más."], ["Bienes Personales", "Confeccionamos y presentamos la declaración jurada del impuesto sobre los Bienes Personales según tu patrimonio."], ["Devolución de percepciones", "Gestionamos la devolución de percepciones y retenciones que te descontaron de más (por compras en el exterior, dólar, etc.)."], ["SICAM", "Calculamos y regularizamos aportes adeudados como autónomo o monotributista a través del SICAM, útil para completar años para jubilarte."], ["Imputación de pagos y facturación", "Te ayudamos con la emisión de facturas y la correcta imputación de pagos ante ARCA."], ["Regularización de deudas", "Armamos planes de pago para regularizar deudas impositivas y previsionales, evitando intereses y sanciones mayores."]]}, {"titulo": "Claves y Otros Trámites", "emoji": "", "tramites": [["Clave de Seguridad Social ANSES", "Generamos o recuperamos tu clave de la Seguridad Social para que puedas operar en Mi ANSES y hacer trámites online."], ["Clave Fiscal ARCA", "Obtenemos o blanqueamos tu clave fiscal de ARCA (ex AFIP), necesaria para todos los trámites impositivos."], ["Trámites PAMI", "Afiliaciones, cambios y gestiones ante PAMI para jubilados y pensionados, incluyendo medicamentos y prestaciones."], ["TAD - Trámites a Distancia", "Realizamos trámites a distancia ante organismos nacionales y de CABA, sin que tengas que hacer filas ni moverte de tu casa."], ["Certificación negativa y antecedentes", "Obtenemos la certificación negativa de ANSES y el certificado de antecedentes penales para lo que necesites."], ["Partidas", "Gestionamos partidas de nacimiento, matrimonio y defunción ante el Registro Civil, incluso de otras jurisdicciones."], ["Rectificación de partidas", "Corregimos errores en partidas (nombres, fechas, datos) mediante el trámite de rectificación ante el Registro Civil."], ["CODEM", "Obtenemos el comprobante de empadronamiento que acredita a qué obra social estás afiliado, requerido en muchos trámites."], ["Certificación de datos RENAPER", "Gestionamos la certificación de datos personales ante el RENAPER, útil para validar identidad en distintos trámites."], ["Certificación migratoria y ciudadanía", "Tramitamos certificaciones de ingresos y egresos del país y acompañamos el proceso de obtención de la ciudadanía argentina."], ["Apostillado", "Gestionamos la apostilla de La Haya para que tus documentos tengan validez legal en el exterior."], ["Infracciones de tránsito[NUEVO]", "Realizamos gestiones por infracciones de tránsito en CABA y otras provincias: consulta, descargo y regularización de multas."]]}, {"titulo": "Área Legal", "emoji": "", "tramites": [["Sucesiones", "Iniciamos y acompañamos el juicio sucesorio para transmitir los bienes de una persona fallecida a sus herederos legales."], ["Contratos y acuerdos", "Redactamos y revisamos contratos y acuerdos privados (locación, compraventa, servicios, etc.) para proteger tus intereses."], ["Cartas documento y telegramas", "Confeccionamos y enviamos cartas documento y telegramas laborales para reclamos, intimaciones o renuncias con validez legal."], ["Informe de dominio", "Solicitamos el informe de dominio de un inmueble o vehículo para conocer su titularidad y si tiene gravámenes o embargos."], ["Reclamos y mediaciones", "Te representamos en reclamos y mediaciones para resolver conflictos de forma ágil antes de llegar a un juicio."], ["Asesoramiento laboral y previsional", "Asesoramiento legal sobre tus derechos laborales y previsionales, despidos, indemnizaciones y beneficios."], ["Poderes y documentación notarial", "Gestionamos poderes y documentación notarial para que alguien te represente o para formalizar actos legales."]]}];
-const AREA_IC = ["prev","lab","fisc","tram","legal"];
-const IC_SVG = {
-  prev:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 21h18M5 21V10m4 11V10m6 11V10m4 11V10M3 10l9-6 9 6"/></svg>',
-  lab:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="7" width="18" height="13" rx="1.5"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>',
-  fisc:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="5" y="3" width="14" height="18" rx="1.5"/><path d="M9 7h6M9 11h6M9 15h3"/></svg>',
-  tram:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 5h16M4 5v14a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V5M9 10l2 2 4-4"/></svg>',
-  legal:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3v18M7 8l-4 6a4 4 0 0 0 8 0L7 8zM17 8l-4 6a4 4 0 0 0 8 0l-4-6zM5 6h14"/></svg>'
-};
+// Reveal on scroll
+const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+// Al cargar, ocultar "Inicio" del menú (arrancamos en el inicio)
+(function(){var ni=document.getElementById('nav-inicio'); if(ni) ni.style.display='none';})();
 
-var TITULOS={inicio:'Estudio CG — Gestoría y Consultoría',servicios:'Servicios — Estudio CG',
-  otros:'Otros servicios — Estudio CG',nosotros:'Nosotros — Estudio CG',
-  resenas:'Opiniones — Estudio CG',faq:'Preguntas frecuentes — Estudio CG',contacto:'Contacto — Estudio CG'};
-var MODULOS=['inicio','servicios','otros','nosotros','resenas','faq','contacto'];
-var cache={};           // módulos ya descargados
-var vista=document.getElementById('mod-vista');
-var loader=document.getElementById('cargando');
+// Cerrar menú móvil al hacer clic
+document.querySelectorAll('#menu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('menu').classList.remove('open')));
 
-function marcarMenu(mod){
-  document.querySelectorAll('#menu a[data-mod]').forEach(function(a){
-    var act=a.getAttribute('data-mod')===mod;
-    a.classList.toggle('nav-activo',act);
-    if(act){a.setAttribute('aria-current','page');}else{a.removeAttribute('aria-current');}
-  });
-  var ni=document.getElementById('nav-inicio'); if(ni) ni.style.display=(mod==='inicio')?'none':'';
-  var mb=document.querySelector('.hamb');
-  document.getElementById('menu').classList.remove('open');
-  if(mb) mb.setAttribute('aria-expanded','false');
-  document.title=TITULOS[mod]||TITULOS.inicio;
-}
-
-function pintarHTML(html,mod){
-  vista.innerHTML=html;
-  marcarMenu(mod);
-  window.scrollTo({top:0,behavior:'instant'});
-  vista.querySelectorAll('.reveal').forEach(function(el){el.classList.add('vis');});
-  vista.focus({preventScroll:true});
-}
-
-function cargar(mod){
-  if(MODULOS.indexOf(mod)===-1) mod='inicio';
-  if(cache[mod]){ pintarHTML(cache[mod],mod); return Promise.resolve(mod); }
-  loader.classList.add('on');
-  return fetch('modulos/'+mod+'.html',{cache:'no-cache'})
-    .then(function(r){ if(!r.ok) throw new Error(r.status); return r.text(); })
-    .then(function(html){
-      cache[mod]=html; loader.classList.remove('on'); pintarHTML(html,mod); return mod;
-    })
-    .catch(function(){
-      loader.classList.remove('on');
-      vista.innerHTML='<section class="mod-hero"><div class="wrap">'+
-        '<h2 class="h2">No pudimos cargar esta sección</h2>'+
-        '<p class="lead">Revisá tu conexión y volvé a intentarlo. Si el problema sigue, escribinos al 11 2511-4119.</p>'+
-        '<p style="margin-top:24px"><button class="btn btn-primary" onclick="mostrar(\''+mod+'\')">Reintentar</button></p>'+
-        '</div></section>';
-      marcarMenu(mod);
-      return mod;
-    });
-}
-
-function mostrar(mod){
-  cargar(mod).then(function(m){
-    var url=(m==='inicio')?location.pathname:location.pathname+'#'+m;
-    history.pushState({mod:m},'',url);
-  });
-}
-
-window.addEventListener('popstate',function(e){
-  cargar((e.state&&e.state.mod)||(location.hash||'').replace('#','')||'inicio');
-});
-
-document.addEventListener('DOMContentLoaded',function(){
-  var inicial=(location.hash||'').replace('#','')||'inicio';
-  cargar(inicial).then(function(m){
-    history.replaceState({mod:m},'',location.hash||location.pathname);
-    // precargar el resto en segundo plano para que los cambios sean instantáneos
-    MODULOS.forEach(function(x){
-      if(x!==m && !cache[x]){
-        fetch('modulos/'+x+'.html').then(function(r){return r.ok?r.text():null;})
-          .then(function(h){ if(h) cache[x]=h; }).catch(function(){});
-      }
-    });
-  });
-});
-
-// Modal de área
-(function(){
-  var ov=document.createElement('div'); ov.className='modal-ov';
-  ov.innerHTML='<div class="modal" role="dialog" aria-modal="true"><button class="mx" aria-label="Cerrar">&times;</button><div class="mic" id="mIc"></div><h3 id="mT"></h3><div class="msub" id="mS"></div><div class="mlist" id="mL"></div><a class="mwa" id="mW" target="_blank" rel="noopener">Consultar por WhatsApp</a></div>';
-  document.body.appendChild(ov);
-  var mT=ov.querySelector('#mT'),mL=ov.querySelector('#mL'),mW=ov.querySelector('#mW'),mIc=ov.querySelector('#mIc'),mS=ov.querySelector('#mS');
-  function abrir(i){
-    var a=AREAS[i]; if(!a)return;
-    mIc.innerHTML=IC_SVG[AREA_IC[i]]||'';
-    mT.textContent=a.titulo;
-    mS.textContent=a.tramites.length+' trámites disponibles';
-    mL.innerHTML=a.tramites.map(function(t){
-      var raw=t[0], desc=t[1];
-      var nuevo=raw.indexOf('[NUEVO]')!==-1;
-      var tit=raw.replace('[NUEVO]','');
-      var badge=nuevo?' <span class="new">nuevo</span>':'';
-      var wa='https://wa.me/5491125114119?text='+encodeURIComponent('Hola, quiero consultar sobre: '+tit);
-      return '<div class="mitem"><h4>'+tit+badge+'</h4><p>'+desc+'</p><a href="'+wa+'" target="_blank" rel="noopener">Consultar este trámite →</a></div>';
-    }).join('');
-    mW.href='https://wa.me/5491125114119?text='+encodeURIComponent('Hola, quiero consultar sobre '+a.titulo);
-    ov.classList.add('open'); document.body.style.overflow='hidden'; mL.scrollTop=0; ov.querySelector('.mx').focus();
-  }
-  var ultimoFoco=null;
-  function cerrar(){
-    ov.classList.remove('open');document.body.style.overflow='';
-    if(ultimoFoco){ultimoFoco.focus();ultimoFoco=null;}
-  }
-  document.addEventListener('click',function(e){
-    var b=e.target.closest('[data-area]');
-    if(b){ultimoFoco=b;abrir(parseInt(b.getAttribute('data-area')));}
-  });
-  // atrapar el foco dentro del modal
-  ov.addEventListener('keydown',function(e){
-    if(e.key!=='Tab')return;
-    var f=ov.querySelectorAll('button, a[href], [tabindex]:not([tabindex="-1"])');
-    if(!f.length)return;
-    var pri=f[0], ult=f[f.length-1];
-    if(e.shiftKey && document.activeElement===pri){e.preventDefault();ult.focus();}
-    else if(!e.shiftKey && document.activeElement===ult){e.preventDefault();pri.focus();}
-  });
-  ov.querySelector('.mx').addEventListener('click',cerrar);
-  ov.addEventListener('click',function(e){if(e.target===ov)cerrar();});
-  document.addEventListener('keydown',function(e){if(e.key==='Escape')cerrar();});
-})();
-
-// Formulario
-function toggleMenu(btn){
-  var m=document.getElementById('menu');
-  var abierto=m.classList.toggle('open');
-  btn.setAttribute('aria-expanded',abierto?'true':'false');
-  btn.setAttribute('aria-label',abierto?'Cerrar menú':'Abrir menú');
-}
-function validar(){
-  var ok=true;
-  [['nombre','err-nombre'],['msg','err-msg']].forEach(function(p){
-    var campo=document.getElementById(p[0]), err=document.getElementById(p[1]);
-    if(!campo.value.trim()){campo.classList.add('err');err.classList.add('show');ok=false;}
-    else{campo.classList.remove('err');err.classList.remove('show');}
-  });
-  if(!ok){var pri=document.querySelector('.err');if(pri)pri.focus();}
-  return ok;
-}
+// Armar mensaje del formulario
 function armar(){
-  var n=document.getElementById('nombre').value.trim();
-  var t=document.getElementById('tel').value.trim();
-  var tema=document.getElementById('tema').value;
-  var msg=document.getElementById('msg').value.trim();
-  var txt='Hola, quiero hacer una consulta.\nTrámite: '+tema;
-  if(n)txt+='\nNombre: '+n; if(t)txt+='\nTeléfono: '+t; if(msg)txt+='\nMensaje: '+msg;
+  const n=document.getElementById('nombre').value.trim();
+  const t=document.getElementById('tel').value.trim();
+  const m=document.getElementById('mail').value.trim();
+  const tema=document.getElementById('tema').value;
+  const msg=document.getElementById('msg').value.trim();
+  let txt='Hola, quiero hacer una consulta.\n';
+  txt+='\nTrámite: '+tema;
+  if(n) txt+='\nNombre: '+n;
+  if(t) txt+='\nTeléfono: '+t;
+  if(m) txt+='\nEmail: '+m;
+  if(msg) txt+='\nMensaje: '+msg;
   return txt;
 }
-function enviarWA(){if(!validar())return;window.open('https://wa.me/5491125114119?text='+encodeURIComponent(armar()),'_blank');}
-function enviarMail(){if(!validar())return;var tema=document.getElementById('tema').value;window.location.href='mailto:gintegralcg@gmail.com?subject='+encodeURIComponent('Consulta web — '+tema)+'&body='+encodeURIComponent(armar());}
+function enviarWA(){
+  window.open('https://wa.me/5491125114119?text='+encodeURIComponent(armar()),'_blank');
+}
+function enviarMail(){
+  const tema=document.getElementById('tema').value;
+  window.location.href='mailto:gintegralcg@gmail.com?subject='+encodeURIComponent('Consulta web — '+tema)+'&body='+encodeURIComponent(armar());
+}
 
-// Reveal
-var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target);}});},{threshold:.1});
-document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-(function(){var ni=document.getElementById('nav-inicio');if(ni)ni.style.display='none';})();
-document.querySelectorAll('#menu a').forEach(a=>a.addEventListener('click',function(){document.getElementById('menu').classList.remove('open');}));
+// ===== Sistema de módulos (SPA) =====
+function mostrar(mod){
+  // ocultar todos
+  document.querySelectorAll('.modulo').forEach(function(m){m.classList.remove('activo')});
+  // mostrar el elegido
+  var destino=document.getElementById('mod-'+mod);
+  if(destino) destino.classList.add('activo');
+  // marcar solapa activa en el menú
+  document.querySelectorAll('#menu a[data-mod]').forEach(function(a){
+    a.classList.toggle('nav-activo', a.getAttribute('data-mod')===mod);
+  });
+  // "Inicio" solo se muestra cuando NO estamos en el inicio
+  var navInicio=document.getElementById('nav-inicio');
+  if(navInicio) navInicio.style.display = (mod==='inicio') ? 'none' : '';
+  // cerrar menú móvil y volver arriba
+  document.getElementById('menu').classList.remove('open');
+  window.scrollTo({top:0,behavior:'instant'});
+  // reejecutar animaciones reveal del módulo visible
+  if(destino){
+    destino.querySelectorAll('.reveal').forEach(function(el){el.classList.add('vis')});
+  }
+}
+// Compatibilidad con llamadas viejas
+function verTecnologia(){ mostrar('otros'); }
+function verPrincipal(){ mostrar('inicio'); }
+function irA(id){ mostrar(id); }
+
+// ===== Fondo reactivo al scroll =====
+window.addEventListener('scroll', function(){
+  var y = window.scrollY || 0;
+  var aura = document.querySelector('.aura');
+  if(aura){
+    aura.style.backgroundPosition = '0 ' + (y*0.25) + 'px, 0 ' + (y*-0.15) + 'px';
+    aura.style.opacity = Math.max(0.4, 1 - y/1400);
+  }
+}, {passive:true});
+
+// ===== Modal de área (lista de trámites) =====
+(function(){
+  const AREAS = [{"titulo": "Área Previsional", "emoji": "🏛️", "tramites": [["Jubilaciones ANSES", "Tramitamos tu jubilación por el régimen nacional (ANSES), tanto para argentinos como extranjeros con residencia. Analizamos tus aportes y buscamos el mejor haber posible según tu historia laboral."], ["Jubilación de empleadas domésticas", "Gestión de la jubilación para trabajadoras de casas particulares, contemplando el régimen especial y los aportes correspondientes a esta actividad."], ["Jubilación IPS Provincia de Bs. As.", "Tramitamos jubilaciones ante el Instituto de Previsión Social (IPS) de la Provincia de Buenos Aires, para empleados provinciales y municipales."], ["Pensiones", "Gestionamos pensiones directas, derivadas y por fallecimiento de un familiar, para que accedas al beneficio que te corresponde ante ANSES o IPS."], ["PUAM", "La Pensión Universal para el Adulto Mayor es un beneficio para personas de 65 años o más que no cuentan con una jubilación. Te ayudamos a tramitarla desde cero."], ["Pensiones No Contributivas", "Beneficios para personas en situación de vulnerabilidad: por invalidez, madres de 7 o más hijos, o vejez, sin necesidad de aportes previos."], ["Salario Familiar y Asignaciones", "Gestionamos las asignaciones familiares (hijo, prenatal, ayuda escolar, etc.) ante ANSES para trabajadores y beneficiarios."], ["Planificación previsional", "Analizamos tu situación de aportes y te asesoramos sobre cuándo y cómo conviene jubilarte para obtener el mejor haber posible."]]}, {"titulo": "Gestión Laboral", "emoji": "📋", "tramites": [["Liquidación de sueldos", "Calculamos y confeccionamos los recibos de sueldo de tu personal, con todos los conceptos, descuentos y aportes al día según convenio."], ["Cargas sociales", "Determinamos y presentamos los aportes y contribuciones (F.931) que debe pagar el empleador por su personal registrado."], ["Asesoramiento a empleadores", "Te acompañamos en todo lo relativo a la relación laboral: altas, bajas, sanciones, convenios y obligaciones como empleador."], ["Confección de CVs y mejora de LinkedIn[NUEVO]", "Armamos tu currículum vitae profesional y optimizamos tu perfil de LinkedIn para mejorar tu presencia y oportunidades laborales."]]}, {"titulo": "Asesoramiento Fiscal", "emoji": "🧾", "tramites": [["Alta y recategorización de Monotributo", "Te inscribimos en el monotributo o ajustamos tu categoría según tu facturación, para que cumplas con ARCA sin pagar de más."], ["Bienes Personales", "Confeccionamos y presentamos la declaración jurada del impuesto sobre los Bienes Personales según tu patrimonio."], ["Devolución de percepciones", "Gestionamos la devolución de percepciones y retenciones que te descontaron de más (por compras en el exterior, dólar, etc.)."], ["SICAM", "Calculamos y regularizamos aportes adeudados como autónomo o monotributista a través del SICAM, útil para completar años para jubilarte."], ["Imputación de pagos y facturación", "Te ayudamos con la emisión de facturas y la correcta imputación de pagos ante ARCA."], ["Regularización de deudas", "Armamos planes de pago para regularizar deudas impositivas y previsionales, evitando intereses y sanciones mayores."]]}, {"titulo": "Claves y Otros Trámites", "emoji": "🗂️", "tramites": [["Clave de Seguridad Social ANSES", "Generamos o recuperamos tu clave de la Seguridad Social para que puedas operar en Mi ANSES y hacer trámites online."], ["Clave Fiscal ARCA", "Obtenemos o blanqueamos tu clave fiscal de ARCA (ex AFIP), necesaria para todos los trámites impositivos."], ["Trámites PAMI", "Afiliaciones, cambios y gestiones ante PAMI para jubilados y pensionados, incluyendo medicamentos y prestaciones."], ["TAD - Trámites a Distancia", "Realizamos trámites a distancia ante organismos nacionales y de CABA, sin que tengas que hacer filas ni moverte de tu casa."], ["Certificación negativa y antecedentes", "Obtenemos la certificación negativa de ANSES y el certificado de antecedentes penales para lo que necesites."], ["Partidas", "Gestionamos partidas de nacimiento, matrimonio y defunción ante el Registro Civil, incluso de otras jurisdicciones."], ["Rectificación de partidas", "Corregimos errores en partidas (nombres, fechas, datos) mediante el trámite de rectificación ante el Registro Civil."], ["CODEM", "Obtenemos el comprobante de empadronamiento que acredita a qué obra social estás afiliado, requerido en muchos trámites."], ["Certificación de datos RENAPER", "Gestionamos la certificación de datos personales ante el RENAPER, útil para validar identidad en distintos trámites."], ["Certificación migratoria y ciudadanía", "Tramitamos certificaciones de ingresos y egresos del país y acompañamos el proceso de obtención de la ciudadanía argentina."], ["Apostillado", "Gestionamos la apostilla de La Haya para que tus documentos tengan validez legal en el exterior."], ["Infracciones de tránsito[NUEVO]", "Realizamos gestiones por infracciones de tránsito en CABA y otras provincias: consulta, descargo y regularización de multas."]]}, {"titulo": "Área Legal", "emoji": "⚖️", "tramites": [["Sucesiones", "Iniciamos y acompañamos el juicio sucesorio para transmitir los bienes de una persona fallecida a sus herederos legales."], ["Contratos y acuerdos", "Redactamos y revisamos contratos y acuerdos privados (locación, compraventa, servicios, etc.) para proteger tus intereses."], ["Cartas documento y telegramas", "Confeccionamos y enviamos cartas documento y telegramas laborales para reclamos, intimaciones o renuncias con validez legal."], ["Informe de dominio", "Solicitamos el informe de dominio de un inmueble o vehículo para conocer su titularidad y si tiene gravámenes o embargos."], ["Reclamos y mediaciones", "Te representamos en reclamos y mediaciones para resolver conflictos de forma ágil antes de llegar a un juicio."], ["Asesoramiento laboral y previsional", "Asesoramiento legal sobre tus derechos laborales y previsionales, despidos, indemnizaciones y beneficios."], ["Poderes y documentación notarial", "Gestionamos poderes y documentación notarial para que alguien te represente o para formalizar actos legales."]]}];
+  const ov=document.createElement('div');
+  ov.className='modal-ov';
+  ov.innerHTML=`
+    <div class="modal modal-area" role="dialog" aria-modal="true">
+      <button class="mclose" aria-label="Cerrar">&times;</button>
+      <div class="mchip" id="mChip">📄</div>
+      <h3 id="mTitulo"></h3>
+      <div class="mlista" id="mLista"></div>
+      <a class="mwa" id="mWa" target="_blank" rel="noopener">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="#04180d"><path d="M12.04 2c-5.46 0-9.9 4.43-9.9 9.88 0 1.74.46 3.44 1.32 4.94L2 22l5.32-1.39c1.45.79 3.08 1.21 4.72 1.21 5.46 0 9.9-4.43 9.9-9.88C21.94 6.43 17.5 2 12.04 2zm0 18.02c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23 4.54 0 8.24 3.69 8.24 8.23 0 4.54-3.7 8.24-8.24 8.24z"/></svg>
+        Consultar por WhatsApp
+      </a>
+    </div>`;
+  document.body.appendChild(ov);
+  const mTitulo=ov.querySelector('#mTitulo'), mLista=ov.querySelector('#mLista'),
+        mWa=ov.querySelector('#mWa'), mChip=ov.querySelector('#mChip');
+
+  function abrir(idx){
+    const a=AREAS[idx]; if(!a) return;
+    mChip.textContent=a.emoji;
+    mTitulo.textContent=a.titulo;
+    mLista.innerHTML=a.tramites.map(function(t){
+      var tituloRaw=t[0], desc=t[1];
+      var esNuevo=tituloRaw.indexOf('[NUEVO]')!==-1;
+      var titulo=tituloRaw.replace('[NUEVO]','');
+      var badge=esNuevo?' <span class="tag-new">Nuevo</span>':'';
+      var wa='https://wa.me/5491125114119?text='+encodeURIComponent('Hola, quiero consultar sobre: '+titulo);
+      return '<div class="mitem"><h4>'+titulo+badge+'</h4><p>'+desc+'</p><a href="'+wa+'" target="_blank" rel="noopener">Consultar este trámite ›</a></div>';
+    }).join('');
+    mWa.href='https://wa.me/5491125114119?text='+encodeURIComponent('Hola, quiero consultar sobre '+a.titulo);
+    ov.classList.add('open');
+    document.body.style.overflow='hidden';
+    mLista.scrollTop=0;
+  }
+  function cerrar(){ov.classList.remove('open');document.body.style.overflow='';}
+
+  document.querySelectorAll('.card-res[data-area]').forEach(function(c){
+    c.addEventListener('click',function(){abrir(parseInt(c.getAttribute('data-area')))});
+  });
+  ov.querySelector('.mclose').addEventListener('click',cerrar);
+  ov.addEventListener('click',function(e){if(e.target===ov)cerrar()});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')cerrar()});
+})();
 </script>
-<script src="cg-chat-widget.js" defer></script>
+  <script src="cg-chat-widget.js" defer></script>
 </body>
 </html>
