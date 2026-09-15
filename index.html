@@ -123,7 +123,9 @@ nav.menu a:not(.btn):hover::after{right:0}
 .mini small{font-size:.76rem;color:var(--muted)}
 
 /* Anillo */
-.ring-box{display:flex;justify-content:center;align-items:center;position:relative}
+.ring-box{display:flex;justify-content:center;align-items:center;position:relative;cursor:pointer;transition:transform .3s ease}
+.ring-box:hover{transform:scale(1.03)}
+.ring-box:hover .ring-core .lbl{color:var(--gold-2)}
 .ring-box::before{content:"";position:absolute;width:340px;height:340px;border-radius:50%;
   background:radial-gradient(circle,rgba(63,184,174,.18),transparent 65%);filter:blur(10px)}
 .ring{position:relative;width:300px;height:300px;display:flex;align-items:center;justify-content:center}
@@ -510,19 +512,19 @@ nav.menu a.nav-activo::after{right:0!important}
         <div class="mini"><b>100%</b><small>atención personal</small></div>
       </div>
     </div>
-    <div class="ring-box" aria-hidden="true">
+    <a class="ring-box" href="https://maps.app.goo.gl/qpvtmTRtjDiKDS7K6" target="_blank" rel="noopener" aria-label="Ver reseñas en Google" style="text-decoration:none">
       <div class="ring">
-        <svg viewBox="0 0 300 300">
+        <svg viewBox="0 0 300 300" aria-hidden="true">
           <defs><path id="circ" d="M150,150 m-122,0 a122,122 0 1,1 244,0 a122,122 0 1,1 -244,0"/></defs>
           <text><textPath href="#circ" textLength="766" lengthAdjust="spacing">ESTUDIO CG • GESTORÍA & CONSULTORÍA • BUENOS AIRES • </textPath></text>
         </svg>
         <div class="ring-core">
           <span class="big">5.0</span>
           <span class="stars">★★★★★</span>
-          <span class="lbl">Calificación en Google</span>
+          <span class="lbl">Ver reseñas en Google</span>
         </div>
       </div>
-    </div>
+    </a>
   </div>
 </section>
 
@@ -854,5 +856,8 @@ window.addEventListener('scroll', function(){
 })();
 </script>
   <script src="cg-chat-widget.js" defer></script>
+</body>
+</html>
+
 </body>
 </html>
