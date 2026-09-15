@@ -137,6 +137,22 @@ nav.menu a:not(.btn):hover::after{right:0}
 .hero-sep{color:rgba(255,255,255,.2)}
 .hero-exp{color:#9fb0cd;font-size:.86rem;font-weight:600}
 
+/* Trámites más pedidos */
+.destacados{padding:80px 0}
+.dest-head{text-align:center;margin-bottom:44px}
+.dest-head .pill{margin:0 auto 22px}
+.dest-head .sub{margin-left:auto;margin-right:auto}
+.dest-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.dest-card{background:var(--surface);border:1px solid var(--line);border-radius:16px;
+  padding:24px 20px;text-align:center;text-decoration:none;transition:.28s;display:block}
+.dest-card:hover{transform:translateY(-4px);border-color:rgba(63,184,174,.4);box-shadow:0 16px 40px rgba(0,0,0,.3)}
+.dest-ic{font-size:2rem;display:block;margin-bottom:12px}
+.dest-card h4{color:#fff;font-weight:800;font-stretch:88%;font-size:1.02rem;margin-bottom:5px}
+.dest-card p{color:var(--muted);font-size:.82rem;line-height:1.35}
+.dest-cta{text-align:center;margin-top:36px}
+@media(max-width:900px){.dest-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:460px){.dest-grid{grid-template-columns:1fr}}
+
 /* ---------- Marquee ---------- */
 .marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);
   overflow:hidden;padding:20px 0;background:rgba(255,255,255,.015)}
@@ -323,9 +339,27 @@ nav.menu a:not(.btn):hover::after{right:0}
 .form-note{text-align:center;font-size:.78rem;color:var(--muted-2);margin-top:14px}
 
 /* ---------- Footer ---------- */
-footer{background:var(--bg-2);border-top:1px solid var(--line);color:var(--muted);padding:40px 0;font-size:.85rem}
-footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
-footer b{color:#fff}
+footer{background:var(--bg-2);border-top:1px solid var(--line);color:var(--muted);padding:64px 0 28px;font-size:.9rem}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.3fr;gap:40px;margin-bottom:44px}
+.foot-brand p{color:var(--muted);font-size:.9rem;line-height:1.6;margin:16px 0 0;max-width:340px}
+.foot-eslogan{color:var(--gold-2)!important;font-style:italic;font-weight:600;font-size:.86rem!important}
+.foot-logo{display:flex;align-items:center;gap:12px}
+.foot-logo .logo{height:44px;padding:5px 8px}
+.foot-social{display:flex;gap:12px;margin-top:20px}
+.foot-social a{width:40px;height:40px;padding:0;border-radius:10px;background:rgba(255,255,255,.05);
+  border:1px solid var(--line);display:inline-flex!important;align-items:center;justify-content:center;color:var(--muted);transition:.2s}
+.foot-social a svg{display:block}
+.foot-social a:hover{color:var(--gold-2);border-color:rgba(63,184,174,.4);transform:translateY(-2px)}
+.foot-col h4{color:#fff;font-weight:800;font-stretch:88%;font-size:.95rem;margin-bottom:16px;letter-spacing:.02em}
+.foot-col a,.foot-col span{display:block;color:var(--muted);text-decoration:none;font-size:.88rem;
+  padding:5px 0;transition:.2s;line-height:1.4}
+.foot-col a:hover{color:#fff}
+.foot-horario{color:var(--muted)}
+.foot-bottom{border-top:1px solid var(--line);padding-top:24px;display:flex;justify-content:space-between;
+  gap:16px;flex-wrap:wrap;font-size:.82rem;color:var(--muted-2)}
+footer b,footer strong{color:#fff}
+@media(max-width:900px){.foot-grid{grid-template-columns:1fr 1fr;gap:32px}.foot-brand{grid-column:1/-1}}
+@media(max-width:520px){.foot-grid{grid-template-columns:1fr}.foot-bottom{flex-direction:column;gap:8px}}
 
 /* WhatsApp flotante */
 .wa-flot{position:fixed;bottom:24px;right:24px;z-index:200;width:60px;height:60px;border-radius:50%;
@@ -494,7 +528,7 @@ nav.menu a.nav-activo::after{right:0!important}
     <div class="hero-foot">
       <a class="rating-mini" href="https://maps.app.goo.gl/qpvtmTRtjDiKDS7K6" target="_blank" rel="noopener">
         <span class="rm-stars">★★★★★</span>
-        <span class="rm-txt"><b>5.0</b> · +40 reseñas en Google</span>
+        <span class="rm-txt"><b>5.0</b> · 40 reseñas en Google</span>
       </a>
       <span class="hero-sep">|</span>
       <span class="hero-exp">+20 años de experiencia</span>
@@ -508,6 +542,30 @@ nav.menu a.nav-activo::after{right:0!important}
     <span>Gestionamos ante <i>·</i> ANSES <i>·</i> ARCA <i>·</i> PAMI <i>·</i> IPS PBA <i>·</i> Migraciones <i>·</i> TAD <i>·</i> RENAPER <i>·</i> Registro Civil <i>·</i></span>
   </div>
 </div>
+
+<!-- TRÁMITES MÁS PEDIDOS -->
+<section class="destacados">
+  <div class="wrap">
+    <div class="dest-head">
+      <span class="pill reveal">Lo más consultado</span>
+      <h2 class="h2 reveal">Nuestros trámites más pedidos</h2>
+      <p class="sub reveal">Un vistazo a las gestiones que más resolvemos. Tocá cualquiera para consultar, o mirá todas las áreas más abajo.</p>
+    </div>
+    <div class="dest-grid">
+      <a class="dest-card reveal" href="https://wa.me/5491125114119?text=Hola%2C%20quiero%20consultar%20sobre%20mi%20Jubilaci%C3%B3n" target="_blank" rel="noopener"><span class="dest-ic">🏛️</span><h4>Jubilaciones</h4><p>ANSES e IPS Provincia</p></a>
+      <a class="dest-card reveal" href="https://wa.me/5491125114119?text=Hola%2C%20quiero%20consultar%20sobre%20Pensiones" target="_blank" rel="noopener"><span class="dest-ic">📄</span><h4>Pensiones</h4><p>Directas, derivadas y por fallecimiento</p></a>
+      <a class="dest-card reveal" href="https://wa.me/5491125114119?text=Hola%2C%20quiero%20consultar%20sobre%20Monotributo" target="_blank" rel="noopener"><span class="dest-ic">🧾</span><h4>Monotributo</h4><p>Alta y recategorización</p></a>
+      <a class="dest-card reveal" href="https://wa.me/5491125114119?text=Hola%2C%20quiero%20consultar%20sobre%20Ciudadan%C3%ADa" target="_blank" rel="noopener"><span class="dest-ic">🌎</span><h4>Ciudadanía</h4><p>Ciudadanía argentina y migratorio</p></a>
+      <a class="dest-card reveal" href="https://wa.me/5491125114119?text=Hola%2C%20quiero%20consultar%20sobre%20Liquidaci%C3%B3n%20de%20sueldos" target="_blank" rel="noopener"><span class="dest-ic">📋</span><h4>Liquidación de sueldos</h4><p>Y cargas sociales</p></a>
+      <a class="dest-card reveal" href="https://wa.me/5491125114119?text=Hola%2C%20quiero%20consultar%20sobre%20una%20infracci%C3%B3n%20de%20tr%C3%A1nsito" target="_blank" rel="noopener"><span class="dest-ic">🚗</span><h4>Infracciones</h4><p>CABA y otras provincias</p></a>
+      <a class="dest-card reveal" href="https://wa.me/5491125114119?text=Hola%2C%20quiero%20consultar%20sobre%20Partidas" target="_blank" rel="noopener"><span class="dest-ic">🗂️</span><h4>Partidas</h4><p>Nacimiento, matrimonio, defunción</p></a>
+      <a class="dest-card reveal" href="https://wa.me/5491125114119?text=Hola%2C%20quiero%20consultar%20sobre%20PUAM%20o%20PNC" target="_blank" rel="noopener"><span class="dest-ic">👵</span><h4>PUAM / PNC</h4><p>Pensiones no contributivas</p></a>
+    </div>
+    <div class="dest-cta">
+      <a class="btn btn-glass reveal" href="#" onclick="mostrar('servicios');return false;">Ver todas las áreas de servicio →</a>
+    </div>
+  </div>
+</section>
 </div>
 <!-- MÓDULO SERVICIOS -->
 <div class="modulo" id="mod-servicios">
@@ -597,7 +655,7 @@ nav.menu a.nav-activo::after{right:0!important}
         <span class="pill reveal">Opiniones de nuestros clientes</span>
         <h2 class="h2 reveal" style="margin-bottom:0">Lo que dicen quienes ya resolvieron sus trámites</h2>
       </div>
-      <div class="score reveal"><span class="n">5.0</span><div><div class="stars">★★★★★</div><small>+40 reseñas en Google Maps</small></div></div>
+      <div class="score reveal"><span class="n">5.0</span><div><div class="stars">★★★★★</div><small>40 reseñas en Google Maps</small></div></div>
     </div>
     <div class="res-grid">
       <a class="res reveal" href="https://maps.app.goo.gl/qpvtmTRtjDiKDS7K6" target="_blank" rel="noopener"><span class="stars">★★★★★</span><p>«Estamos muy conformes por su profesionalismo, se nota que ama lo que hace, es usted una persona sumamente confiable.»</p><span class="res-autor"><span class="res-ini">J</span>Jorge Rodríguez</span><span class="src">Reseña de Google</span></a>
@@ -712,8 +770,57 @@ nav.menu a.nav-activo::after{right:0!important}
 
 <footer>
   <div class="wrap">
-    <span><b>Estudio CG</b> — Gestoría & Consultoría | Previsional · Laboral · Asesoramiento</span>
-    <span>© 2026 · Buenos Aires, Argentina</span>
+    <div class="foot-grid">
+      <div class="foot-col foot-brand">
+        <div class="foot-logo"><div class="logo"><img src="logo-header.png" alt="Estudio CG"></div>
+          <div class="brand-t"><strong>Estudio CG</strong><span>Gestoría & Consultoría</span></div>
+        </div>
+        <p>Asesoramiento integral con más de 20 años de experiencia en gestiones previsionales, laborales, fiscales y migratorias.</p>
+        <p class="foot-eslogan">«Si se puede hacer, lo hacemos. Si no, también vemos.»</p>
+        <div class="foot-social">
+          <a href="https://www.instagram.com/estudiocgig" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://www.facebook.com/share/1EfnPQymaQ/" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V5h-3c-2.2 0-4 1.8-4 4v2H7v4h3v7h4v-7h3l1-4h-4V9c0-.6.4-1 1-1z"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@estudiocg" target="_blank" rel="noopener" aria-label="TikTok">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.8a4.3 4.3 0 0 1-1-2.8h-3.3v11.4a2.4 2.4 0 1 1-2.4-2.4c.2 0 .5 0 .7.1V6.7a5.7 5.7 0 1 0 5 5.7V8.7a7.3 7.3 0 0 0 4.3 1.4V6.8a4.3 4.3 0 0 1-3.3-1z"/></svg>
+          </a>
+          <a href="https://wa.me/5491125114119" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.9 4.43-9.9 9.88 0 1.74.46 3.44 1.32 4.94L2 22l5.32-1.39c1.45.79 3.08 1.21 4.72 1.21 5.46 0 9.9-4.43 9.9-9.88C21.94 6.43 17.5 2 12.04 2z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h4>Servicios</h4>
+        <a href="#" onclick="mostrar('servicios');return false;">Área Previsional</a>
+        <a href="#" onclick="mostrar('servicios');return false;">Gestión Laboral</a>
+        <a href="#" onclick="mostrar('servicios');return false;">Asesoramiento Fiscal</a>
+        <a href="#" onclick="mostrar('servicios');return false;">Claves y Trámites</a>
+        <a href="#" onclick="mostrar('servicios');return false;">Área Legal</a>
+        <a href="#" onclick="mostrar('otros');return false;">Otros Servicios</a>
+      </div>
+      <div class="foot-col">
+        <h4>Estudio</h4>
+        <a href="#" onclick="mostrar('nosotros');return false;">Nosotros</a>
+        <a href="#" onclick="mostrar('proceso');return false;">Cómo trabajamos</a>
+        <a href="#" onclick="mostrar('resenas');return false;">Opiniones</a>
+        <a href="#" onclick="mostrar('faq');return false;">Preguntas frecuentes</a>
+        <a href="https://maps.app.goo.gl/qpvtmTRtjDiKDS7K6" target="_blank" rel="noopener">Reseñas en Google</a>
+      </div>
+      <div class="foot-col">
+        <h4>Contacto</h4>
+        <a href="https://wa.me/5491125114119" target="_blank" rel="noopener">📞 11 2511-4119</a>
+        <a href="mailto:gintegralcg@gmail.com">✉️ gintegralcg@gmail.com</a>
+        <a href="https://maps.app.goo.gl/qpvtmTRtjDiKDS7K6" target="_blank" rel="noopener">📍 José Ignacio Rucci 3351, CABA</a>
+        <span class="foot-horario">🕓 Lun a Vie · 10 a 17 hs</span>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Estudio CG — Gestoría & Consultoría · Buenos Aires, Argentina</span>
+      <span>Previsional · Laboral · Fiscal · Asesoramiento</span>
+    </div>
   </div>
 </footer>
 
