@@ -3,944 +3,1679 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Estudio CG — Gestoría & Consultoría | Previsional · Laboral · Asesoramiento</title>
-<meta name="description" content="Asesoramiento integral con más de 20 años de experiencia: jubilaciones y pensiones, monotributo, TAD, ciudadanía argentina y gestiones ante organismos públicos.">
+<title>Estudio CG — Gestoría y Consultoría | Previsional · Laboral · Fiscal · Legal</title>
+<meta name="description" content="Firma profesional con más de 20 años de trayectoria: jubilaciones, pensiones, gestión laboral, asesoramiento fiscal y trámites ante organismos públicos.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{
-  --bg:#0a1014;
-  --bg-2:#0e161c;
-  --surface:#111c23;
-  --surface-2:#16232c;
-  --line:rgba(255,255,255,.08);
-  --line-2:rgba(255,255,255,.14);
-  --navy:#1f4a52;
-  --gold:#3fb8ae;
-  --gold-2:#7fd8ce;
-  --bordo:#c05a3a;
-  --wa:#25c368;
-  --star:#f5b942;
-  --text:#eef2f9;
-  --muted:#8794ad;
-  --muted-2:#5f6c86;
-  --radius:22px;
-  --glow:0 0 0 rgba(0,0,0,0);
-}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  font-family:'Archivo',system-ui,sans-serif;
-  background:var(--bg);color:var(--text);
-  line-height:1.6;font-size:16.5px;
-  -webkit-font-smoothing:antialiased;overflow-x:hidden;
-}
-a{color:inherit;text-decoration:none}
-.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
-section{padding:110px 0;position:relative}
-
-/* Aura de fondo global */
-.aura{position:fixed;inset:0;z-index:-1;pointer-events:none;
-  background:
-   radial-gradient(700px 560px at 15% 5%,rgba(31,74,82,.28),transparent 62%),
-   radial-gradient(600px 520px at 88% 18%,rgba(63,184,174,.06),transparent 62%);
+:root {
+  --bg: #111111;
+  --bg-subtle: #161616;
+  --surface: #1b1b1b;
+  --surface-hover: #222222;
+  --border: rgba(244, 239, 231, 0.12);
+  --border-focus: rgba(184, 138, 82, 0.45);
+  
+  --cream: #F4EFE7;
+  --cream-light: #FAF8F4;
+  --gold: #B88A52;
+  --gold-light: #D2B07A;
+  --taupe: #C9B9A5;
+  --muted: #8E8880;
+  --muted-light: #BDB7AE;
+  
+  --wa: #25c368;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Manrope', system-ui, -apple-system, sans-serif;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --transition: 0.24s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* pill */
-.pill{
-  display:inline-flex;align-items:center;gap:8px;
-  font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
-  color:var(--gold-2);background:rgba(63,184,174,.08);
-  border:1px solid rgba(63,184,174,.28);
-  padding:8px 16px;border-radius:100px;margin-bottom:22px;
-}
-.pill::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold);
-  box-shadow:0 0 10px var(--gold)}
-
-.h2{
-  font-size:clamp(2rem,4.2vw,2.9rem);font-weight:800;font-stretch:78%;
-  letter-spacing:-.015em;line-height:1.1;margin-bottom:16px;max-width:700px;
-  background:linear-gradient(180deg,#fff,#b9c4da);
-  -webkit-background-clip:text;background-clip:text;color:transparent;
-}
-.sub{color:var(--muted);max-width:640px;margin-bottom:56px;font-size:1.06rem}
-
-.btn{
-  display:inline-flex;align-items:center;justify-content:center;gap:10px;
-  font-weight:700;font-size:.92rem;padding:14px 26px;border-radius:100px;
-  transition:.28s cubic-bezier(.2,.7,.3,1);letter-spacing:.01em;cursor:pointer;border:none;position:relative;
-}
-.btn-gold{background:linear-gradient(135deg,var(--gold-2),var(--gold));color:#04211d;
-  box-shadow:0 10px 30px rgba(63,184,174,.30)}
-.btn-gold:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(63,184,174,.45)}
-.btn-wa{background:var(--wa);color:#04180d;box-shadow:0 10px 30px rgba(37,195,104,.28)}
-.btn-wa:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(37,195,104,.42)}
-.btn-glass{background:rgba(255,255,255,.05);border:1px solid var(--line-2);color:#fff;backdrop-filter:blur(6px)}
-.btn-glass:hover{background:rgba(255,255,255,.1);transform:translateY(-2px)}
-
-/* ---------- Nav ---------- */
-header{position:sticky;top:0;z-index:100;
-  background:rgba(7,12,23,.72);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
-  border-bottom:1px solid var(--line);}
-.nav{display:flex;align-items:center;justify-content:space-between;padding:15px 0}
-.brand{display:flex;align-items:center;gap:12px}
-.logo{height:52px;display:flex;align-items:center;justify-content:center;
-  background:linear-gradient(135deg,#ffffff,#f2ede3);border-radius:12px;padding:6px 10px;
-  box-shadow:0 4px 16px rgba(0,0,0,.3)}
-.logo img{height:100%;width:auto;display:block}
-.brand-t strong{display:block;font-weight:800;font-size:1.06rem;font-stretch:85%;color:#fff;line-height:1.1}
-.brand-t span{font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
-nav.menu{display:flex;align-items:center;gap:26px;font-size:.9rem;font-weight:600}
-nav.menu a:not(.btn){color:var(--muted);padding:6px 2px;position:relative;transition:.2s}
-nav.menu a:not(.btn)::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:2px;
-  background:linear-gradient(90deg,var(--gold-2),var(--gold));transition:.25s;border-radius:2px}
-nav.menu a:not(.btn):hover{color:#fff}
-nav.menu a:not(.btn):hover::after{right:0}
-.hamb{display:none;background:none;border:none;font-size:1.7rem;color:#fff;cursor:pointer}
-
-/* ---------- Hero ---------- */
-.hero{position:relative;min-height:88vh;display:flex;align-items:center;overflow:hidden;padding:100px 0}
-/* Foto de fondo — reemplazá la url por tu foto (ej. url('fondo-hero.jpg')) */
-.hero-bg{position:absolute;inset:0;z-index:0;
-  background:
-    linear-gradient(120deg,#0c1a2e 0%,#0a1420 55%,#0e2230 100%);
-  background-size:cover;background-position:center}
-/* cuadrícula sutil premium sobre el fondo */
-.hero-bg::after{content:"";position:absolute;inset:0;
-  background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
-  background-size:64px 64px;
-  mask-image:radial-gradient(900px 700px at 50% 40%,#000 20%,transparent 75%)}
-.hero-overlay{position:absolute;inset:0;z-index:1;
-  background:
-    radial-gradient(700px 500px at 20% 20%,rgba(63,184,174,.10),transparent 60%),
-    linear-gradient(180deg,rgba(6,11,20,.55) 0%,rgba(6,11,20,.78) 100%)}
-.hero-inner{position:relative;z-index:2;max-width:820px;text-align:center;margin:0 auto}
-.hero-inner .pill{margin-left:auto;margin-right:auto}
-.hero h1{font-size:clamp(2.3rem,5vw,3.7rem);font-weight:900;font-stretch:78%;
-  line-height:1.08;letter-spacing:-.02em;margin-bottom:22px;color:#fff}
-.hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--gold-2),var(--gold));
-  -webkit-background-clip:text;background-clip:text;color:transparent}
-.hero .eslogan{font-size:1.2rem;font-weight:600;font-style:italic;line-height:1.4;margin:0 auto 22px;
-  color:var(--gold-2);max-width:560px}
-.hero-desc{color:#b9c4da;max-width:600px;margin:0 auto 40px;font-size:1.08rem}
-.hero-cta{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-bottom:40px}
-/* Rating pequeño, detalle secundario */
-.hero-foot{display:inline-flex;align-items:center;gap:18px;flex-wrap:wrap;justify-content:center;
-  padding:12px 22px;border:1px solid rgba(255,255,255,.12);border-radius:100px;
-  background:rgba(255,255,255,.03);backdrop-filter:blur(4px)}
-.rating-mini{display:inline-flex;align-items:center;gap:9px;text-decoration:none;transition:.2s}
-.rating-mini:hover{transform:translateY(-1px)}
-.rm-stars{color:var(--star);letter-spacing:1px;font-size:.95rem}
-.rm-txt{color:#cbd4e4;font-size:.88rem;font-weight:600}
-.rm-txt b{color:#fff}
-.hero-sep{color:rgba(255,255,255,.2)}
-.hero-exp{color:#9fb0cd;font-size:.86rem;font-weight:600}
-
-/* Trámites más pedidos */
-.destacados{padding:80px 0}
-.dest-head{text-align:center;margin-bottom:44px}
-.dest-head .pill{margin:0 auto 22px}
-.dest-head .sub{margin-left:auto;margin-right:auto}
-.dest-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.dest-card{background:var(--surface);border:1px solid var(--line);border-radius:16px;
-  padding:24px 20px;text-align:center;text-decoration:none;transition:.28s;display:block}
-.dest-card:hover{transform:translateY(-4px);border-color:rgba(63,184,174,.4);box-shadow:0 16px 40px rgba(0,0,0,.3)}
-.dest-ic{font-size:2rem;display:block;margin-bottom:12px}
-.dest-card h4{color:#fff;font-weight:800;font-stretch:88%;font-size:1.02rem;margin-bottom:5px}
-.dest-card p{color:var(--muted);font-size:.82rem;line-height:1.35}
-.dest-cta{text-align:center;margin-top:36px}
-@media(max-width:900px){.dest-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:460px){.dest-grid{grid-template-columns:1fr}}
-
-/* ---------- Marquee ---------- */
-.marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);
-  overflow:hidden;padding:20px 0;background:rgba(255,255,255,.015)}
-.marquee-track{display:flex;width:max-content}
-.marquee-track span{font-size:.82rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;
-  color:var(--muted-2);padding:0 34px;white-space:nowrap}
-.marquee-track span i{font-style:normal;color:var(--gold);padding-right:34px}
-@media (prefers-reduced-motion:no-preference){
-  .marquee-track{animation:desliza 32s linear infinite}
-  @keyframes desliza{to{transform:translateX(-50%)}}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg);
+  color: var(--cream);
+  line-height: 1.6;
+  font-size: 15.5px;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
-/* ---------- Cards servicios ---------- */
-.serv-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
-.card{background:var(--surface);
-  border:1px solid var(--line);border-radius:var(--radius);padding:34px 30px;
-  transition:.28s;position:relative;overflow:hidden}
+a { color: inherit; text-decoration: none; }
+.wrap { max-width: 1240px; margin: 0 auto; padding: 0 32px; }
+section { padding: 110px 0; position: relative; }
 
-.card:hover{transform:translateY(-3px);border-color:rgba(63,184,174,.35)}
+/* Tipografía Editorial */
+h1, h2, h3, .serif-font {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
 
-.card .chip{width:54px;height:54px;border-radius:16px;font-size:1.5rem;
-  display:flex;align-items:center;justify-content:center;margin-bottom:20px;
-  background:rgba(255,255,255,.05);border:1px solid var(--line);box-shadow:0 8px 20px rgba(0,0,0,.35)}
-.card.c-navy .chip{background:rgba(63,184,174,.1);border-color:rgba(63,184,174,.25)}
-.card.c-gold .chip{background:rgba(63,184,174,.1);border-color:rgba(63,184,174,.25)}
-.card.c-bordo .chip{background:rgba(63,184,174,.1);border-color:rgba(63,184,174,.25)}
-.card h3{font-weight:800;font-stretch:85%;font-size:1.24rem;color:#fff;margin-bottom:14px}
-.card ul{list-style:none}
-.card li{padding:8px 0 8px 26px;position:relative;font-size:.94rem;color:#b7c1d6;border-bottom:1px solid var(--line);cursor:pointer;transition:.2s}
-.card li:hover{color:#fff;padding-left:30px}
-.card li:hover::before{color:var(--gold-2)}
-.card li:last-child{border:none}
-.card li::before{content:"✓";position:absolute;left:2px;color:var(--gold);font-weight:800;transition:.2s}
-.card li[data-info]::after{content:"›";position:absolute;right:2px;top:50%;transform:translateY(-50%);
-  color:var(--muted-2);font-weight:700;font-size:1.1rem;opacity:0;transition:.2s}
-.card li[data-info]:hover::after{opacity:1;color:var(--gold-2)}
-.card li b{color:#eef2f9}
+.eyebrow {
+  font-family: var(--font-sans);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+.eyebrow::before {
+  content: "";
+  width: 24px;
+  height: 1px;
+  background: var(--gold);
+}
 
-/* Modal de trámite */
-.modal-ov{position:fixed;inset:0;z-index:9999;background:rgba(5,9,16,.72);backdrop-filter:blur(6px);
-  display:none;align-items:center;justify-content:center;padding:20px;opacity:0;transition:.25s}
-.modal-ov.open{display:flex;opacity:1}
-.modal{background:linear-gradient(160deg,#12213c,#0b1425);border:1px solid var(--line-2);
-  border-radius:22px;max-width:440px;width:100%;padding:34px 32px;position:relative;
-  box-shadow:0 40px 90px rgba(0,0,0,.6);transform:translateY(16px);transition:.3s}
-.modal-ov.open .modal{transform:translateY(0)}
-.modal .mchip{width:56px;height:56px;border-radius:16px;font-size:1.6rem;
-  display:flex;align-items:center;justify-content:center;margin-bottom:18px;
-  background:linear-gradient(135deg,#1f4a52,#132229)}
-.modal h3{font-size:1.35rem;font-weight:800;font-stretch:85%;color:#fff;margin-bottom:12px;padding-right:30px}
-.modal p{color:#c3ccde;font-size:.98rem;line-height:1.6;margin-bottom:24px}
-.modal .mwa{display:inline-flex;align-items:center;justify-content:center;gap:9px;width:100%;
-  background:var(--wa);color:#04180d;font-weight:700;font-size:.94rem;padding:14px;border-radius:100px;
-  text-decoration:none;transition:.2s}
-.modal .mwa:hover{filter:brightness(1.08);transform:translateY(-1px)}
-.modal .mclose{position:absolute;top:18px;right:20px;background:none;border:none;color:var(--muted);
-  font-size:1.7rem;cursor:pointer;line-height:1;padding:2px}
-.modal .mclose:hover{color:#fff}
-.tag-new{background:linear-gradient(135deg,#ff5a3c,#ff3d68);color:#fff;
-  font-size:.62rem;font-weight:800;letter-spacing:.1em;padding:2px 9px;border-radius:100px;text-transform:uppercase;
-  margin-left:6px;box-shadow:0 0 12px rgba(255,61,104,.55);animation:pulseNew 1.8s ease-in-out infinite;vertical-align:middle}
-@keyframes pulseNew{0%,100%{box-shadow:0 0 8px rgba(255,61,104,.4);transform:scale(1)}50%{box-shadow:0 0 18px rgba(255,61,104,.8);transform:scale(1.06)}}
-@media (prefers-reduced-motion:reduce){.tag-new{animation:none}}
-.tag-soon{display:inline-flex;align-items:center;gap:6px;background:rgba(63,184,174,.14);
-  border:1px solid rgba(63,184,174,.4);color:#7fd8ce;font-size:.62rem;font-weight:800;
-  letter-spacing:.1em;padding:3px 11px;border-radius:100px;text-transform:uppercase;margin-left:10px}
-.card.c-soon .chip{background:linear-gradient(135deg,#243b3f,#16232c);border:1px solid rgba(63,184,174,.3)}
-.card.c-soon h3{display:flex;align-items:center;flex-wrap:wrap}
-.card.c-soon li{color:#8fa0a8}
-.otros{margin-top:24px;background:linear-gradient(160deg,var(--surface),var(--bg-2));
-  border:1px solid var(--line);border-radius:var(--radius);padding:34px 32px;position:relative;overflow:hidden}
-.otros::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;
-  background:linear-gradient(180deg,#3fb8ae,#2f8f88)}
-.otros h3{font-weight:800;font-stretch:85%;font-size:1.24rem;color:#fff;margin-bottom:6px}
-.otros .lead{color:var(--gold-2);font-size:.9rem;font-weight:600;margin-bottom:24px}
-.otros-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.otro{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:16px;padding:22px 20px;transition:.3s}
-.otro:hover{border-color:var(--line-2);transform:translateY(-3px)}
-.otro .ic{width:46px;height:46px;border-radius:13px;font-size:1.3rem;margin-bottom:14px;
-  background:rgba(63,184,174,.1);border:1px solid rgba(63,184,174,.25);
-  display:flex;align-items:center;justify-content:center}
-.otro h4{color:#fff;font-weight:800;font-stretch:88%;font-size:1.02rem;margin-bottom:6px}
-.otro p{color:var(--muted);font-size:.9rem}
-@media(max-width:940px){.otros-grid{grid-template-columns:1fr}}
+.h2 {
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  line-height: 1.15;
+  color: var(--cream-light);
+  margin-bottom: 18px;
+}
+.sub {
+  color: var(--muted-light);
+  max-width: 600px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  font-weight: 300;
+  margin-bottom: 48px;
+}
 
-/* ---------- Proceso ---------- */
-.pasos{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.paso{background:var(--surface);
-  border:1px solid var(--line);border-radius:var(--radius);padding:38px 30px;transition:.28s;position:relative}
-.paso:hover{transform:translateY(-3px);border-color:rgba(63,184,174,.35)}
-.paso .n{width:46px;height:46px;border-radius:14px;
-  background:linear-gradient(135deg,rgba(63,184,174,.2),rgba(63,184,174,.05));
-  border:1px solid rgba(63,184,174,.38);color:var(--gold-2);
-  display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.05rem;margin-bottom:20px}
-.paso h3{color:#fff;font-weight:800;font-stretch:85%;font-size:1.16rem;margin-bottom:10px}
-.paso p{color:var(--muted);font-size:.95rem}
+/* Botones */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.88rem;
+  letter-spacing: 0.04em;
+  padding: 13px 26px;
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+.btn-primary {
+  background-color: var(--gold);
+  color: #111111;
+  border-color: var(--gold);
+}
+.btn-primary:hover {
+  background-color: var(--gold-light);
+  border-color: var(--gold-light);
+  transform: translateY(-2px);
+}
+.btn-secondary {
+  background: transparent;
+  border-color: var(--border);
+  color: var(--cream);
+}
+.btn-secondary:hover {
+  border-color: var(--gold);
+  color: var(--gold-light);
+  transform: translateY(-2px);
+}
 
-/* ---------- Nosotros ---------- */
-.porque .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
-.valores{display:grid;gap:14px}
-.valor{background:var(--surface);border:1px solid var(--line);
-  border-radius:16px;padding:20px 24px;display:flex;gap:18px;align-items:flex-start;transition:.24s}
-.valor:hover{border-color:rgba(63,184,174,.35)}
-.valor .dot{flex-shrink:0;width:42px;height:42px;border-radius:12px;font-size:1.15rem;
-  background:rgba(255,255,255,.05);border:1px solid var(--line);display:flex;align-items:center;justify-content:center}
-.valor h4{font-weight:800;font-stretch:88%;color:#fff;font-size:1rem;margin-bottom:2px}
-.valor p{font-size:.9rem;color:var(--muted)}
-.quote{background:linear-gradient(160deg,#12213c,#0b1425);border:1px solid var(--line);
-  border-radius:26px;padding:46px 42px;position:relative;overflow:hidden;box-shadow:var(--glow)}
-.quote::before{content:"“";position:absolute;top:-26px;right:18px;font-size:9rem;font-weight:900;
-  color:rgba(63,184,174,.18);line-height:1}
-.quote p{font-size:1.14rem;line-height:1.6;color:#d3dbec;position:relative}
-.quote .firma{margin-top:26px;font-size:.72rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;
-  color:var(--gold-2);display:flex;align-items:center;gap:12px}
-.quote .firma::before{content:"";width:34px;height:2px;background:var(--gold)}
+/* Header & Navegación */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(17, 17, 17, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.brand-monogram {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--gold);
+  border-radius: var(--radius-sm);
+  letter-spacing: -0.05em;
+}
+.brand-text strong {
+  display: block;
+  font-size: 0.98rem;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  color: var(--cream-light);
+  line-height: 1.2;
+}
+.brand-text span {
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 500;
+}
 
-/* ---------- Reseñas ---------- */
-.res-head{display:flex;justify-content:space-between;align-items:flex-end;gap:28px;flex-wrap:wrap;margin-bottom:54px}
-.score{display:flex;align-items:center;gap:18px;background:linear-gradient(160deg,var(--surface),var(--bg-2));
-  border:1px solid var(--line);border-radius:18px;padding:18px 26px}
-.score .n{font-size:2.7rem;font-weight:900;font-stretch:80%;color:#fff;line-height:1}
-.score .stars{color:var(--star);letter-spacing:2px}
-.score small{display:block;color:var(--muted);font-weight:600;font-size:.8rem}
-.res-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.res{background:var(--surface);border:1px solid var(--line);
-  border-radius:var(--radius);padding:28px 26px;display:flex;flex-direction:column;gap:16px;transition:.28s;text-decoration:none;cursor:pointer}
-.res:hover{transform:translateY(-3px);border-color:rgba(63,184,174,.35)}
-.res .stars{color:var(--star);letter-spacing:2px;font-size:.9rem}
-.res p{font-size:.94rem;color:#c3ccde;flex:1}
-.res-autor{display:flex;align-items:center;gap:10px;font-weight:700;font-size:.9rem;color:#fff}
-.res-ini{width:32px;height:32px;border-radius:50%;flex-shrink:0;
-  background:linear-gradient(135deg,#3fb8ae,#2f8f88);color:#04211d;
-  display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.9rem}
-.res .src{display:flex;align-items:center;gap:10px;font-size:.7rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
-.res .src::before{content:"G";width:26px;height:26px;border-radius:50%;
-  background:linear-gradient(135deg,#1f4a52,#132229);color:#fff;
-  display:inline-flex;align-items:center;justify-content:center;font-size:.85rem}
-.res .src::after{content:"Ver en Google ›";margin-left:auto;color:var(--gold-2);opacity:0;transition:.2s;letter-spacing:.04em}
-.res:hover .src::after{opacity:1}
-.res.cta-res{align-items:center;justify-content:center;text-align:center;gap:18px;border-style:dashed}
-.res.cta-res p{flex:0;font-weight:700;color:#fff}
+nav.menu {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+nav.menu a:not(.btn) {
+  color: var(--muted-light);
+  padding: 6px 0;
+  position: relative;
+  transition: var(--transition);
+}
+nav.menu a:not(.btn):hover, nav.menu a.nav-activo {
+  color: var(--cream-light);
+}
+nav.menu a.nav-activo::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 1.5px;
+  background: var(--gold);
+}
+.hamb {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--cream);
+  font-size: 1.6rem;
+  cursor: pointer;
+}
 
-/* ---------- FAQ ---------- */
-.faq-list{display:grid;gap:14px;max-width:860px}
-.faq{background:var(--surface);border:1px solid var(--line);
-  border-radius:16px;overflow:hidden;transition:.25s}
-.faq[open]{border-color:var(--line-2)}
-.faq summary{list-style:none;cursor:pointer;padding:22px 26px;display:flex;justify-content:space-between;
-  align-items:center;gap:20px;font-weight:700;font-size:1.02rem;color:#fff}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary .ic{flex-shrink:0;width:30px;height:30px;border-radius:50%;border:1px solid var(--line-2);
-  display:flex;align-items:center;justify-content:center;transition:.3s;color:var(--gold-2);font-size:1.2rem}
-.faq[open] summary .ic{transform:rotate(45deg);background:var(--gold);color:#211803;border-color:transparent}
-.faq .ans{padding:0 26px 24px;color:var(--muted);font-size:.96rem;line-height:1.65}
+/* Hero Editorial */
+.hero {
+  padding: 120px 0 90px;
+  border-bottom: 1px solid var(--border);
+  background: radial-gradient(circle at 80% 20%, rgba(184, 138, 82, 0.05) 0%, transparent 60%);
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 60px;
+  align-items: end;
+}
+.hero h1 {
+  font-size: clamp(2.8rem, 5.5vw, 4.6rem);
+  line-height: 1.08;
+  color: var(--cream-light);
+  margin-bottom: 24px;
+}
+.hero h1 em {
+  font-style: italic;
+  color: var(--gold-light);
+  font-weight: 400;
+}
+.hero-motto {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-style: italic;
+  color: var(--taupe);
+  margin-bottom: 24px;
+  border-left: 2px solid var(--gold);
+  padding-left: 18px;
+}
+.hero-desc {
+  font-size: 1.05rem;
+  color: var(--muted-light);
+  font-weight: 300;
+  line-height: 1.7;
+  margin-bottom: 38px;
+  max-width: 580px;
+}
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
 
-/* ---------- Contacto ---------- */
-.contacto .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:56px;align-items:start}
-.cont-grid{display:grid;gap:14px}
-.c-item{display:flex;align-items:center;gap:18px;background:var(--surface);
-  border:1px solid var(--line);border-radius:16px;padding:18px 22px;transition:.24s}
-.c-item:hover{border-color:rgba(63,184,174,.35)}
-.c-item .ico{width:46px;height:46px;border-radius:13px;flex-shrink:0;font-size:1.25rem;
-  background:rgba(255,255,255,.05);border:1px solid var(--line);display:flex;align-items:center;justify-content:center}
-.c-item b{display:block;font-size:.68rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:1px}
-.c-item span{font-weight:700;color:#eef2f9;font-size:.98rem}
+/* Métricas */
+.metrics-panel {
+  border-left: 1px solid var(--border);
+  padding-left: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+.metric-item .val {
+  font-family: var(--font-serif);
+  font-size: 3.2rem;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--cream-light);
+  margin-bottom: 4px;
+}
+.metric-item .val sup {
+  font-size: 1.5rem;
+  color: var(--gold);
+}
+.metric-item .lbl {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  font-weight: 600;
+}
 
-/* Formulario */
-.form-card{background:linear-gradient(160deg,#12213c,#0a1223);border:1px solid var(--line-2);
-  border-radius:26px;padding:36px 34px;box-shadow:var(--glow)}
-.form-card h3{font-weight:800;font-stretch:84%;font-size:1.5rem;color:#fff;margin-bottom:6px}
-.form-card .lead{color:var(--muted);font-size:.94rem;margin-bottom:26px}
-.field{margin-bottom:16px}
-.field label{display:block;font-size:.74rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-2);margin-bottom:7px}
-.field input,.field select,.field textarea{
-  width:100%;background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:12px;
-  padding:13px 15px;color:#fff;font-family:inherit;font-size:.96rem;transition:.2s}
-.field input::placeholder,.field textarea::placeholder{color:var(--muted-2)}
-.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--gold);
-  background:rgba(255,255,255,.06);box-shadow:0 0 0 3px rgba(63,184,174,.14)}
-.field select option{background:#0f1a30;color:#fff}
-.field textarea{resize:vertical;min-height:96px}
-.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.form-card .btn{width:100%;margin-top:6px}
-.form-note{text-align:center;font-size:.78rem;color:var(--muted-2);margin-top:14px}
+/* Cinta de Organismos */
+.ticker {
+  border-bottom: 1px solid var(--border);
+  padding: 18px 0;
+  background: var(--bg-subtle);
+  overflow: hidden;
+  white-space: nowrap;
+}
+.ticker-track {
+  display: inline-block;
+  animation: ticker 36s linear infinite;
+}
+.ticker-track span {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding: 0 28px;
+}
+.ticker-track span i {
+  color: var(--gold);
+  font-style: normal;
+  margin-right: 28px;
+}
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
 
-/* ---------- Footer ---------- */
-footer{background:var(--bg-2);border-top:1px solid var(--line);color:var(--muted);padding:64px 0 28px;font-size:.9rem}
-.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.3fr;gap:40px;margin-bottom:44px}
-.foot-brand p{color:var(--muted);font-size:.9rem;line-height:1.6;margin:16px 0 0;max-width:340px}
-.foot-eslogan{color:var(--gold-2)!important;font-style:italic;font-weight:600;font-size:.86rem!important}
-.foot-logo{display:flex;align-items:center;gap:12px}
-.foot-logo .logo{height:44px;padding:5px 8px}
-.foot-social{display:flex;gap:12px;margin-top:20px}
-.foot-social a{width:40px;height:40px;padding:0;border-radius:10px;background:rgba(255,255,255,.05);
-  border:1px solid var(--line);display:inline-flex!important;align-items:center;justify-content:center;color:var(--muted);transition:.2s}
-.foot-social a svg{display:block}
-.foot-social a:hover{color:var(--gold-2);border-color:rgba(63,184,174,.4);transform:translateY(-2px)}
-.foot-col h4{color:#fff;font-weight:800;font-stretch:88%;font-size:.95rem;margin-bottom:16px;letter-spacing:.02em}
-.foot-col a,.foot-col span{display:block;color:var(--muted);text-decoration:none;font-size:.88rem;
-  padding:5px 0;transition:.2s;line-height:1.4}
-.foot-col a:hover{color:#fff}
-.foot-horario{color:var(--muted)}
-.foot-bottom{border-top:1px solid var(--line);padding-top:24px;display:flex;justify-content:space-between;
-  gap:16px;flex-wrap:wrap;font-size:.82rem;color:var(--muted-2)}
-footer b,footer strong{color:#fff}
-@media(max-width:900px){.foot-grid{grid-template-columns:1fr 1fr;gap:32px}.foot-brand{grid-column:1/-1}}
-@media(max-width:520px){.foot-grid{grid-template-columns:1fr}.foot-bottom{flex-direction:column;gap:8px}}
+/* Trámites Frecuentes */
+.quick-access-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+.quick-card {
+  padding: 32px 24px;
+  background: var(--bg);
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 170px;
+  transition: var(--transition);
+}
+.quick-card:nth-child(4n) { border-right: none; }
+.quick-card:nth-last-child(-n+4) { border-bottom: none; }
+.quick-card:hover {
+  background: var(--surface);
+  transform: translateY(-2px);
+}
+.quick-card-num {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+.quick-card h4 {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--cream);
+  margin-bottom: 6px;
+}
+.quick-card p {
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.quick-card .arrow {
+  margin-top: 14px;
+  color: var(--gold);
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
 
-/* WhatsApp flotante */
-.wa-flot{position:fixed;bottom:24px;right:24px;z-index:200;width:60px;height:60px;border-radius:50%;
-  background:var(--wa);display:flex;align-items:center;justify-content:center;
-  box-shadow:0 12px 32px rgba(37,195,104,.5);transition:.25s}
-.wa-flot:hover{transform:scale(1.1)}
-.wa-flot::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--wa);animation:ping 2s ease-out infinite}
-@keyframes ping{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.6);opacity:0}}
-@media (prefers-reduced-motion:reduce){.wa-flot::before{display:none}}
+/* Cuadrícula de Servicios */
+.services-editorial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.serv-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 280px;
+  cursor: pointer;
+  transition: var(--transition);
+  position: relative;
+}
+.serv-card:hover {
+  border-color: var(--border-focus);
+  background: var(--surface-hover);
+  transform: translateY(-3px);
+}
+.serv-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 24px;
+}
+.serv-card-num {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-style: italic;
+  color: var(--gold);
+}
+.serv-badge {
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 3px 8px;
+  background: rgba(184, 138, 82, 0.15);
+  border: 1px solid var(--gold);
+  color: var(--gold-light);
+  border-radius: 2px;
+}
+.serv-card h3 {
+  font-size: 1.8rem;
+  line-height: 1.2;
+  color: var(--cream-light);
+  margin-bottom: 12px;
+}
+.serv-card p {
+  color: var(--muted-light);
+  font-size: 0.94rem;
+  line-height: 1.6;
+  font-weight: 300;
+  margin-bottom: 24px;
+}
+.serv-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--gold);
+  transition: var(--transition);
+}
+.serv-card:hover .serv-action {
+  gap: 12px;
+  color: var(--gold-light);
+}
 
-/* Reveal */
-.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
-.reveal.vis{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+/* Proceso */
+.steps-editorial {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--border);
+  margin-top: 40px;
+}
+.step-col {
+  padding: 44px 36px 44px 0;
+  border-right: 1px solid var(--border);
+}
+.step-col:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+.step-col:not(:first-child) {
+  padding-left: 36px;
+}
+.step-idx {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 18px;
+}
+.step-col h3 {
+  font-family: var(--font-sans);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--cream);
+  margin-bottom: 10px;
+}
+.step-col p {
+  font-size: 0.92rem;
+  color: var(--muted-light);
+  line-height: 1.65;
+  font-weight: 300;
+}
+
+/* Sección Nosotros */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 72px;
+  align-items: center;
+}
+.values-list {
+  display: grid;
+  gap: 24px;
+  margin-top: 36px;
+}
+.value-row {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 20px;
+}
+.value-row h4 {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--cream);
+  margin-bottom: 6px;
+}
+.value-row p {
+  color: var(--muted-light);
+  font-size: 0.92rem;
+  font-weight: 300;
+}
+.quote-box {
+  border: 1px solid var(--border);
+  padding: 56px 48px;
+  background: var(--bg-subtle);
+  position: relative;
+}
+.quote-box::before {
+  content: "“";
+  font-family: var(--font-serif);
+  font-size: 6rem;
+  color: var(--gold);
+  line-height: 0;
+  position: absolute;
+  top: 36px;
+  left: 32px;
+  opacity: 0.3;
+}
+.quote-box p {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  line-height: 1.5;
+  color: var(--cream-light);
+  font-style: italic;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 28px;
+}
+.quote-box cite {
+  font-family: var(--font-sans);
+  font-style: normal;
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 700;
+  display: block;
+}
+
+/* Testimonios */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.rev-card {
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  padding: 36px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+}
+.rev-card:hover {
+  border-color: var(--border-focus);
+}
+.rev-card p {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-style: italic;
+  line-height: 1.6;
+  color: var(--cream);
+  margin-bottom: 24px;
+}
+.rev-author {
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.rev-name {
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--cream-light);
+}
+.rev-meta {
+  font-size: 0.75rem;
+  color: var(--gold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* FAQ */
+.faq-wrap {
+  max-width: 860px;
+}
+.faq-item {
+  border-bottom: 1px solid var(--border);
+}
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 24px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.12rem;
+  font-weight: 600;
+  color: var(--cream);
+  transition: var(--transition);
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary:hover { color: var(--gold-light); }
+.faq-item summary .sign {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  color: var(--gold);
+  transition: transform 0.2s ease;
+}
+.faq-item[open] summary .sign {
+  transform: rotate(45deg);
+}
+.faq-body {
+  padding-bottom: 28px;
+  color: var(--muted-light);
+  font-size: 0.98rem;
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+/* Contacto y Formulario */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 72px;
+  align-items: start;
+}
+.contact-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-top: 36px;
+}
+.c-row {
+  border-left: 2px solid var(--gold);
+  padding-left: 20px;
+}
+.c-row span {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--muted);
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.c-row strong, .c-row a {
+  font-size: 1.1rem;
+  color: var(--cream-light);
+  font-weight: 600;
+}
+
+.editorial-form {
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  padding: 44px 40px;
+  border-radius: var(--radius-sm);
+}
+.editorial-form h3 {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+.editorial-form .lead {
+  font-size: 0.92rem;
+  color: var(--muted-light);
+  margin-bottom: 32px;
+  font-weight: 300;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group label {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--taupe);
+  margin-bottom: 8px;
+}
+.form-group input, .form-group select, .form-group textarea {
+  width: 100%;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 13px 16px;
+  color: var(--cream-light);
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+  background: #141414;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.form-btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+/* Otros Servicios (Tecnología) */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+.tech-card {
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  padding: 40px 32px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.tech-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+.tech-card p {
+  color: var(--muted-light);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  font-weight: 300;
+  margin-bottom: 28px;
+}
+
+/* Modal Detalle Trámites */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(8px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+.modal-overlay.open {
+  display: flex;
+  opacity: 1;
+}
+.modal-window {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  max-width: 580px;
+  width: 100%;
+  max-height: 88vh;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 30px 70px rgba(0,0,0,0.6);
+}
+.modal-close {
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 1.8rem;
+  cursor: pointer;
+  line-height: 1;
+}
+.modal-close:hover { color: var(--cream); }
+.modal-window h3 {
+  font-size: 2.1rem;
+  margin-bottom: 20px;
+  padding-right: 32px;
+}
+.modal-items-list {
+  overflow-y: auto;
+  margin: 12px -12px 28px 0;
+  padding-right: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.modal-items-list::-webkit-scrollbar { width: 4px; }
+.modal-items-list::-webkit-scrollbar-thumb { background: var(--border); }
+.modal-item {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 16px;
+}
+.modal-item:last-child { border-bottom: none; }
+.modal-item h4 {
+  font-family: var(--font-sans);
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--cream-light);
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.modal-item p {
+  color: var(--muted-light);
+  font-size: 0.88rem;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+.modal-item a {
+  color: var(--gold);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Footer Editorial */
+footer {
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  padding: 90px 0 40px;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+.foot-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1.2fr;
+  gap: 48px;
+  margin-bottom: 64px;
+}
+.foot-brand p {
+  font-weight: 300;
+  line-height: 1.7;
+  max-width: 320px;
+  margin: 18px 0 24px;
+  color: var(--muted-light);
+}
+.foot-social-row {
+  display: flex;
+  gap: 12px;
+}
+.foot-social-row a {
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  color: var(--muted-light);
+  transition: var(--transition);
+}
+.foot-social-row a:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+.foot-col h5 {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--cream);
+  margin-bottom: 22px;
+}
+.foot-col a, .foot-col span {
+  display: block;
+  color: var(--muted-light);
+  padding: 5px 0;
+  font-weight: 300;
+  transition: var(--transition);
+}
+.foot-col a:hover { color: var(--gold-light); }
+.foot-bottom {
+  border-top: 1px solid var(--border);
+  padding-top: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* Botón Flotante WhatsApp */
+.wa-float-btn {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 200;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--wa);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  transition: var(--transition);
+}
+.wa-float-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+}
+
+/* SPA Modules */
+.modulo {
+  display: none;
+  animation: modFadeIn 0.35s ease forwards;
+}
+.modulo.activo { display: block; }
+@keyframes modFadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
 /* Responsive */
-@media(max-width:940px){
-  section{padding:76px 0}
-  .hero{min-height:auto;padding:90px 0 70px}
-  .hero .wrap,.porque .wrap,.contacto .wrap{grid-template-columns:1fr}
-  .serv-grid,.pasos,.res-grid{grid-template-columns:1fr}
-  nav.menu{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;
-    background:rgba(7,12,23,.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--line);padding:10px 24px 20px}
-  nav.menu.open{display:flex}
-  nav.menu a:not(.btn){padding:14px 0;border-bottom:1px solid var(--line)}
-  nav.menu .btn{margin-top:14px}
-  .hamb{display:block}
-  .row2{grid-template-columns:1fr}
+@media (max-width: 1024px) {
+  .hero-grid, .about-grid, .contact-layout { grid-template-columns: 1fr; gap: 48px; }
+  .metrics-panel { border-left: none; padding-left: 0; flex-direction: row; justify-content: space-between; border-top: 1px solid var(--border); padding-top: 32px; }
+  .services-editorial-grid, .tech-grid, .reviews-grid { grid-template-columns: 1fr 1fr; }
+  .foot-grid { grid-template-columns: 1fr 1fr; }
 }
 
-/* Optimización fina para celulares */
-@media(max-width:600px){
-  body{font-size:16px}
-  .wrap{padding:0 18px}
-  section{padding:56px 0}
-  .h2{font-size:1.6rem}
-  .sub{font-size:1rem;margin-bottom:36px}
-
-  /* Hero más compacto y legible */
-  .hero{padding:76px 0 60px}
-  .hero h1{font-size:2rem;line-height:1.12}
-  .hero-desc{font-size:1rem}
-  .hero-cta{gap:10px}
-  .hero-cta .btn{width:100%}
-  .hero-foot{flex-direction:column;gap:8px;padding:14px 20px}
-  .hero-sep{display:none}
-
-  /* Tarjetas con menos padding */
-  .card{padding:26px 22px}
-  .card h3{font-size:1.14rem}
-  .otros{padding:26px 22px}
-
-  /* Botones táctiles cómodos */
-  .btn{padding:15px 24px;font-size:.95rem}
-
-  /* Reseñas: score full width y prolijo */
-  .res-head{margin-bottom:36px}
-  .score{width:100%;justify-content:center}
-
-  /* FAQ y contacto */
-  .faq summary{padding:18px 20px;font-size:.98rem}
-  .faq .ans{padding:0 20px 20px}
-  .form-card{padding:28px 22px}
-  .quote{padding:34px 26px}
-  .quote p{font-size:1.02rem}
-  .panel-cta{padding:34px 24px}
-
-  /* WhatsApp flotante un toque más chico y al borde */
-  .wa-flot{width:54px;height:54px;bottom:18px;right:18px}
-  .wa-flot svg{width:28px;height:28px}
+@media (max-width: 768px) {
+  .wrap { padding: 0 20px; }
+  section { padding: 76px 0; }
+  .hero { padding: 90px 0 60px; }
+  .quick-access-grid { grid-template-columns: 1fr; }
+  .quick-card { border-right: none; }
+  .services-editorial-grid, .tech-grid, .reviews-grid, .steps-editorial { grid-template-columns: 1fr; }
+  .step-col { border-right: none; border-bottom: 1px solid var(--border); padding: 28px 0; }
+  .step-col:not(:first-child) { padding-left: 0; }
+  .form-row { grid-template-columns: 1fr; }
+  .metrics-panel { flex-direction: column; gap: 24px; }
+  
+  nav.menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    flex-direction: column;
+    padding: 24px;
+    gap: 16px;
+  }
+  nav.menu.open { display: flex; }
+  .hamb { display: block; }
+  .foot-grid { grid-template-columns: 1fr; }
 }
-
-/* Ajuste para pantallas muy angostas */
-@media(max-width:360px){
-  .hero h1{font-size:1.75rem}
-  .h2{font-size:1.45rem}
-}
-a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
-
-/* Tarjeta resumida de área */
-.card-res{display:flex;flex-direction:column;min-height:220px;cursor:pointer}
-.card-res h3{font-weight:800;font-stretch:85%;font-size:1.24rem;color:#fff;margin-bottom:10px}
-.card-res .card-res-p{color:var(--muted);font-size:.95rem;flex:1;margin-bottom:20px}
-.card-res .vermas{display:inline-flex;align-items:center;gap:7px;font-weight:700;font-size:.9rem;color:var(--gold-2);transition:.2s}
-.card-res:hover .vermas{gap:11px}
-.card-res .vermas svg{width:16px;height:16px}
-/* Modal área: lista de trámites */
-.modal-area{max-width:520px;max-height:86vh;display:flex;flex-direction:column}
-.mlista{overflow-y:auto;margin:4px -6px 22px;padding:0 6px;display:flex;flex-direction:column;gap:12px}
-.mlista::-webkit-scrollbar{width:6px}
-.mlista::-webkit-scrollbar-thumb{background:rgba(255,255,255,.15);border-radius:3px}
-.mitem{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
-.mitem h4{display:flex;align-items:center;gap:9px;font-weight:800;font-stretch:88%;font-size:1rem;color:#fff;margin-bottom:6px}
-.mitem h4::before{content:"✓";color:var(--gold);font-weight:800}
-.mitem p{color:var(--muted);font-size:.9rem;line-height:1.5;margin-bottom:10px}
-.mitem a{font-size:.82rem;font-weight:700;color:var(--gold-2);transition:.2s}
-.mitem a:hover{color:#fff}
-
-/* Vistas (secciones tipo pestaña dentro del index) */
-.tec-hero{padding:110px 0 40px;position:relative}
-.tec-hero .volver{display:inline-flex;align-items:center;gap:7px;color:var(--muted);font-size:.9rem;font-weight:600;margin-bottom:22px;cursor:pointer;background:none;border:none;font-family:inherit}
-.tec-hero .volver:hover{color:var(--gold-2)}
-.tec-hero .bigchip{width:64px;height:64px;border-radius:18px;font-size:1.9rem;display:flex;align-items:center;justify-content:center;margin-bottom:24px;background:rgba(63,184,174,.1);border:1px solid rgba(63,184,174,.25)}
-.tec-hero h1{font-size:clamp(2rem,4.4vw,3rem);font-weight:900;font-stretch:78%;letter-spacing:-.02em;color:#fff;margin-bottom:14px}
-.tec-hero p{color:var(--muted);font-size:1.08rem;max-width:640px}
-.tec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding:20px 0 90px}
-.tec-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:34px 30px;transition:.28s}
-.tec-card:hover{border-color:rgba(63,184,174,.35);transform:translateY(-3px)}
-.tec-card .ic{width:56px;height:56px;border-radius:16px;font-size:1.6rem;display:flex;align-items:center;justify-content:center;margin-bottom:18px;background:rgba(63,184,174,.1);border:1px solid rgba(63,184,174,.25)}
-.tec-card h3{font-weight:800;font-stretch:85%;font-size:1.2rem;color:#fff;margin-bottom:10px}
-.tec-card p{color:var(--muted);font-size:.94rem;line-height:1.55;margin-bottom:18px}
-.tec-card .twa{display:inline-flex;align-items:center;gap:7px;font-size:.85rem;font-weight:700;color:var(--gold-2);transition:.2s}
-.tec-card:hover .twa{gap:11px}
-@media(max-width:760px){.tec-grid{grid-template-columns:1fr}}
-
-/* ===== Sistema de módulos (SPA) ===== */
-.modulo{display:none;animation:fadeIn .4s ease}
-.modulo.activo{display:block}
-@keyframes fadeIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
-@media (prefers-reduced-motion:reduce){.modulo{animation:none}}
-/* Menú: marcar solapa activa */
-nav.menu a.nav-activo{color:#fff}
-nav.menu a.nav-activo::after{right:0!important}
-/* Fondo reactivo al scroll */
-.aura{transition:background-position .3s ease, opacity .3s ease}
 </style>
 </head>
 <body>
-<div class="aura"></div>
 
 <header>
-  <div class="wrap nav">
-    <a class="brand" href="#" onclick="irA('inicio');return false;">
-      <div class="logo"><img src="logo-header.png" alt="Estudio CG"></div>
-      <div class="brand-t"><strong>Estudio CG</strong><span>Gestoría & Consultoría</span></div>
+  <div class="wrap nav-container">
+    <a class="brand" href="#" onclick="mostrar('inicio');return false;">
+      <div class="brand-monogram">CG</div>
+      <div class="brand-text">
+        <strong>ESTUDIO CG</strong>
+        <span>GESTORÍA Y CONSULTORÍA</span>
+      </div>
     </a>
-    <button class="hamb" aria-label="Abrir menú" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
-        <nav class="menu" id="menu">
-      <a href="#" id="nav-inicio" data-mod="inicio" onclick="mostrar('inicio');return false;">Inicio</a>
+    <button class="hamb" aria-label="Abrir menú" onclick="document.getElementById('nav-menu').classList.toggle('open')">☰</button>
+    <nav class="menu" id="nav-menu">
+      <a href="#" data-mod="inicio" class="nav-activo" onclick="mostrar('inicio');return false;">Inicio</a>
       <a href="#" data-mod="servicios" onclick="mostrar('servicios');return false;">Servicios</a>
-      <a href="#" data-mod="otros" onclick="mostrar('otros');return false;">Otros Servicios</a>
-      <a href="#" data-mod="proceso" onclick="mostrar('proceso');return false;">Cómo trabajamos</a>
-      <a href="#" data-mod="nosotros" onclick="mostrar('nosotros');return false;">Nosotros</a>
+      <a href="#" data-mod="proceso" onclick="mostrar('proceso');return false;">Método</a>
+      <a href="#" data-mod="nosotros" onclick="mostrar('nosotros');return false;">Firma</a>
       <a href="#" data-mod="resenas" onclick="mostrar('resenas');return false;">Opiniones</a>
-      <a href="#" data-mod="faq" onclick="mostrar('faq');return false;">Preguntas</a>
-      <a href="#" data-mod="contacto" onclick="mostrar('contacto');return false;">Contacto</a>
+      <a href="#" data-mod="faq" onclick="mostrar('faq');return false;">Consultas</a>
+      <a href="#" data-mod="otros" onclick="mostrar('otros');return false;">Tecnología</a>
+      <a class="btn btn-secondary" href="#" data-mod="contacto" onclick="mostrar('contacto');return false;">Contacto</a>
     </nav>
   </div>
 </header>
 
-<div id="cuerpo">
+<div id="app-root">
+
 <!-- MÓDULO INICIO -->
 <div class="modulo activo" id="mod-inicio">
-<section class="hero" id="inicio">
-  <div class="hero-bg"></div>
-  <div class="hero-overlay"></div>
-  <div class="wrap hero-inner">
-    <span class="pill">Previsional · Laboral · Fiscal · Migratorio</span>
-    <h1>Tus trámites, resueltos de manera <em>simple, rápida y segura</em>.</h1>
-    <p class="eslogan">«Si se puede hacer, lo hacemos. Si no, también vemos.»</p>
-    <p class="hero-desc">Asesoramiento integral y soluciones personalizadas para personas y empresas, con más de 20 años de experiencia en gestiones ante organismos públicos.</p>
-    <div class="hero-cta">
-      <a class="btn btn-wa" href="https://wa.me/5491125114119?text=Hola%2C%20quiero%20hacer%20una%20consulta" target="_blank" rel="noopener">Consultá por WhatsApp</a>
-      <a class="btn btn-glass" href="#" onclick="irA('servicios');return false;">Ver servicios</a>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Soluciones Previsionales & Corporativas</span>
+        <h1>Tus trámites, resueltos de forma <em>precisa, ágil y transparente.</em></h1>
+        <div class="hero-motto">«Si se puede hacer, lo hacemos. Si no, también vemos.»</div>
+        <p class="hero-desc">Asesoramiento integral y representación ante organismos públicos y privados[cite: 1]. Más de dos décadas combinando solvencia técnica con atención personalizada[cite: 1].</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://wa.me/5491125114119?text=Hola%2C%20quiero%20hacer%20una%20consulta" target="_blank" rel="noopener">
+            Consultá por WhatsApp
+          </a>
+          <a class="btn btn-secondary" href="#" onclick="mostrar('servicios');return false;">Explorar servicios</a>
+        </div>
+      </div>
+      <div class="metrics-panel">
+        <div class="metric-item">
+          <div class="val">+20</div>
+          <div class="lbl">Años de Trayectoria</div>
+        </div>
+        <div class="metric-item">
+          <div class="val">5.0<sup>★</sup></div>
+          <div class="lbl">Calificación Google Maps</div>
+        </div>
+        <div class="metric-item">
+          <div class="val">100%</div>
+          <div class="lbl">Seguimiento Personalizado</div>
+        </div>
+      </div>
     </div>
-    <div class="hero-foot">
-      <a class="rating-mini" href="https://maps.app.goo.gl/qpvtmTRtjDiKDS7K6" target="_blank" rel="noopener">
-        <span class="rm-stars">★★★★★</span>
-        <span class="rm-txt"><b>5.0</b> · 40 reseñas en Google</span>
-      </a>
-      <span class="hero-sep">|</span>
-      <span class="hero-exp">+20 años de experiencia</span>
-    </div>
-  </div>
-</section>
+  </section>
 
-<div class="marquee" aria-hidden="true">
-  <div class="marquee-track">
-    <span>Gestionamos ante <i>·</i> ANSES <i>·</i> ARCA <i>·</i> PAMI <i>·</i> IPS PBA <i>·</i> Migraciones <i>·</i> TAD <i>·</i> RENAPER <i>·</i> Registro Civil <i>·</i></span>
-    <span>Gestionamos ante <i>·</i> ANSES <i>·</i> ARCA <i>·</i> PAMI <i>·</i> IPS PBA <i>·</i> Migraciones <i>·</i> TAD <i>·</i> RENAPER <i>·</i> Registro Civil <i>·</i></span>
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>Gestión Especializada <i>·</i> ANSES <i>·</i> ARCA <i>·</i> PAMI <i>·</i> IPS PBA <i>·</i> Migraciones <i>·</i> TAD <i>·</i> RENAPER <i>·</i> Registro Civil <i>·</i></span>
+      <span>Gestión Especializada <i>·</i> ANSES <i>·</i> ARCA <i>·</i> PAMI <i>·</i> IPS PBA <i>·</i> Migraciones <i>·</i> TAD <i>·</i> RENAPER <i>·</i> Registro Civil <i>·</i></span>
+    </div>
   </div>
+
+  <!-- Trámites Más Consultados -->
+  <section>
+    <div class="wrap">
+      <span class="eyebrow">Gestiones Frecuentes</span>
+      <h2 class="h2">Trámites más consultados</h2>
+      <p class="sub">Resolución rápida y estructurada en los expedientes más requeridos por particulares y empresas.</p>
+      
+      <div class="quick-access-grid">
+        <a class="quick-card" href="https://wa.me/5491125114119?text=Hola%2C%20quiero%20consultar%20sobre%20mi%20Jubilaci%C3%B3n" target="_blank" rel="noopener">
+          <div>
+            <div class="quick-card-num">01</div>
+            <h4>Jubilaciones</h4>
+            <p>ANSES, IPS Provincia, moratorias y cómputo de aportes[cite: 1].</p>
+          </div>
+          <div class="arrow">Consultar →</div>
+        </a>
+        <a class="quick-card" href="https://wa.me/5491125114119?text=Hola%2C%20quiero%20consultar%20sobre%20Pensiones" target="_blank" rel="noopener">
+          <div>
+            <div class="quick-card-num">02</div>
+            <h4>Pensiones</h4>
+            <p>Directas, derivadas, por fallecimiento y regímenes especiales[cite: 1].</p>
+          </div>
+          <div class="arrow">Consultar →</div>
+        </a>
+        <a class="quick-card" href="https://wa.me/5491125114119?text=Hola%2C%20quiero%20consultar%20sobre%20Monotributo" target="_blank" rel="noopener">
+          <div>
+            <div class="quick-card-num">03</div>
+            <h4>Monotributo</h4>
+            <p>Alta, recategorización semestral, SICAM y deudas fiscales[cite: 1].</p>
+          </div>
+          <div class="arrow">Consultar →</div>
+        </a>
+        <a class="quick-card" href="https://wa.me/5491125114119?text=Hola%2C%20quiero%20consultar%20sobre%20Liquidaci%C3%B3n%20de%20sueldos" target="_blank" rel="noopener">
+          <div>
+            <div class="quick-card-num">04</div>
+            <h4>Liquidación Sueldos</h4>
+            <p>Recibos por convenio, Libro de Sueldos Digital y F.931[cite: 1].</p>
+          </div>
+          <div class="arrow">Consultar →</div>
+        </a>
+        <a class="quick-card" href="https://wa.me/5491125114119?text=Hola%2C%20quiero%20consultar%20sobre%20Ciudadan%C3%ADa" target="_blank" rel="noopener">
+          <div>
+            <div class="quick-card-num">05</div>
+            <h4>Ciudadanía & Migraciones</h4>
+            <p>Radicación, certificaciones migratorias y documentación[cite: 1].</p>
+          </div>
+          <div class="arrow">Consultar →</div>
+        </a>
+        <a class="quick-card" href="https://wa.me/5491125114119?text=Hola%2C%20quiero%20consultar%20sobre%20Partidas" target="_blank" rel="noopener">
+          <div>
+            <div class="quick-card-num">06</div>
+            <h4>Partidas & Legalizaciones</h4>
+            <p>Búsqueda y legalización de partidas en todo el país[cite: 1].</p>
+          </div>
+          <div class="arrow">Consultar →</div>
+        </a>
+        <a class="quick-card" href="https://wa.me/5491125114119?text=Hola%2C%20quiero%20consultar%20sobre%20infracciones" target="_blank" rel="noopener">
+          <div>
+            <div class="quick-card-num">07</div>
+            <h4>Infracciones de Tránsito</h4>
+            <p>Descargos y regularización de multas en CABA y provincias[cite: 1].</p>
+          </div>
+          <div class="arrow">Consultar →</div>
+        </a>
+        <a class="quick-card" href="https://wa.me/5491125114119?text=Hola%2C%20quiero%20consultar%20sobre%20PUAM%20o%20PNC" target="_blank" rel="noopener">
+          <div>
+            <div class="quick-card-num">08</div>
+            <h4>PUAM & Pensiones</h4>
+            <p>Pensión Universal para el Adulto Mayor e Invalidez[cite: 1].</p>
+          </div>
+          <div class="arrow">Consultar →</div>
+        </a>
+      </div>
+      
+      <div style="margin-top: 40px; text-align: center;">
+        <button class="btn btn-secondary" onclick="mostrar('servicios')">Ver todas las áreas de práctica →</button>
+      </div>
+    </div>
+  </section>
 </div>
 
-<!-- TRÁMITES MÁS PEDIDOS -->
-<section class="destacados">
-  <div class="wrap">
-    <div class="dest-head">
-      <span class="pill reveal">Lo más consultado</span>
-      <h2 class="h2 reveal">Nuestros trámites más pedidos</h2>
-      <p class="sub reveal">Un vistazo a las gestiones que más resolvemos. Tocá cualquiera para consultar, o mirá todas las áreas más abajo.</p>
-    </div>
-    <div class="dest-grid">
-      <a class="dest-card reveal" href="https://wa.me/5491125114119?text=Hola%2C%20quiero%20consultar%20sobre%20mi%20Jubilaci%C3%B3n" target="_blank" rel="noopener"><span class="dest-ic">🏛️</span><h4>Jubilaciones</h4><p>ANSES e IPS Provincia</p></a>
-      <a class="dest-card reveal" href="https://wa.me/5491125114119?text=Hola%2C%20quiero%20consultar%20sobre%20Pensiones" target="_blank" rel="noopener"><span class="dest-ic">📄</span><h4>Pensiones</h4><p>Directas, derivadas y por fallecimiento</p></a>
-      <a class="dest-card reveal" href="https://wa.me/5491125114119?text=Hola%2C%20quiero%20consultar%20sobre%20Monotributo" target="_blank" rel="noopener"><span class="dest-ic">🧾</span><h4>Monotributo</h4><p>Alta y recategorización</p></a>
-      <a class="dest-card reveal" href="https://wa.me/5491125114119?text=Hola%2C%20quiero%20consultar%20sobre%20Ciudadan%C3%ADa" target="_blank" rel="noopener"><span class="dest-ic">🌎</span><h4>Ciudadanía</h4><p>Ciudadanía argentina y migratorio</p></a>
-      <a class="dest-card reveal" href="https://wa.me/5491125114119?text=Hola%2C%20quiero%20consultar%20sobre%20Liquidaci%C3%B3n%20de%20sueldos" target="_blank" rel="noopener"><span class="dest-ic">📋</span><h4>Liquidación de sueldos</h4><p>Y cargas sociales</p></a>
-      <a class="dest-card reveal" href="https://wa.me/5491125114119?text=Hola%2C%20quiero%20consultar%20sobre%20una%20infracci%C3%B3n%20de%20tr%C3%A1nsito" target="_blank" rel="noopener"><span class="dest-ic">🚗</span><h4>Infracciones</h4><p>CABA y otras provincias</p></a>
-      <a class="dest-card reveal" href="https://wa.me/5491125114119?text=Hola%2C%20quiero%20consultar%20sobre%20Partidas" target="_blank" rel="noopener"><span class="dest-ic">🗂️</span><h4>Partidas</h4><p>Nacimiento, matrimonio, defunción</p></a>
-      <a class="dest-card reveal" href="https://wa.me/5491125114119?text=Hola%2C%20quiero%20consultar%20sobre%20PUAM%20o%20PNC" target="_blank" rel="noopener"><span class="dest-ic">👵</span><h4>PUAM / PNC</h4><p>Pensiones no contributivas</p></a>
-    </div>
-    <div class="dest-cta">
-      <a class="btn btn-glass reveal" href="#" onclick="mostrar('servicios');return false;">Ver todas las áreas de servicio →</a>
-    </div>
-  </div>
-</section>
-</div>
 <!-- MÓDULO SERVICIOS -->
 <div class="modulo" id="mod-servicios">
-<!-- SERVICIOS -->
-<section id="servicios">
-  <div class="wrap">
-    <span class="pill reveal">Nuestros servicios</span>
-    <h2 class="h2 reveal">Un solo estudio para todas tus gestiones</h2>
-    <p class="sub reveal">Trabajamos con compromiso y responsabilidad para que cada trámite sea rápido, seguro y eficiente, desde la primera consulta hasta la resolución final.</p>
-    <div class="serv-grid">
-      <div class="card card-res reveal" data-area="0">
-        <div class="chip">🏛️</div>
-        <h3>Área Previsional</h3>
-        <p class="card-res-p">Jubilaciones (ANSES e IPS), pensiones, PUAM, PNC y planificación previsional.</p>
-        <span class="vermas">Ver trámites <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </div>
-      <div class="card card-res reveal" data-area="1">
-        <div class="chip">📋</div>
-        <h3>Gestión Laboral <span class="tag-new">Nuevo</span></h3>
-        <p class="card-res-p">Liquidación de sueldos, cargas sociales, asesoramiento a empleadores y confección de CVs.</p>
-        <span class="vermas">Ver trámites <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </div>
-      <div class="card card-res reveal" data-area="2">
-        <div class="chip">🧾</div>
-        <h3>Asesoramiento Fiscal</h3>
-        <p class="card-res-p">Monotributo, Bienes Personales, SICAM, facturación y planes de pago.</p>
-        <span class="vermas">Ver trámites <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </div>
-      <div class="card card-res reveal" data-area="3">
-        <div class="chip">🗂️</div>
-        <h3>Claves y Otros Trámites <span class="tag-new">Nuevo</span></h3>
-        <p class="card-res-p">ANSES, ARCA, PAMI, TAD, partidas, RENAPER, infracciones, ciudadanía y apostillado.</p>
-        <span class="vermas">Ver trámites <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </div>
-      <div class="card card-res reveal" data-area="4">
-        <div class="chip">⚖️</div>
-        <h3>Área Legal</h3>
-        <p class="card-res-p">Sucesiones, contratos, cartas documento, informe de dominio y poderes.</p>
-        <span class="vermas">Ver trámites <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+  <section>
+    <div class="wrap">
+      <span class="eyebrow">Áreas de Especialidad</span>
+      <h2 class="h2">Estructura de servicios</h2>
+      <p class="sub">Una cobertura integral organizada por departamentos técnicos para dar respuesta precisa a cada requerimiento.</p>
+      
+      <div class="services-editorial-grid">
+        <div class="serv-card" data-area="0">
+          <div>
+            <div class="serv-card-head">
+              <span class="serv-card-num">01</span>
+            </div>
+            <h3>Área Previsional</h3>
+            <p>Jubilaciones nacionales (ANSES) e IPS Provincia de Buenos Aires, pensiones, PUAM, cómputo de moratorias y planificación previsional estratégica[cite: 1].</p>
+          </div>
+          <div class="serv-action">Explorar trámites <span>→</span></div>
+        </div>
+
+        <div class="serv-card" data-area="1">
+          <div>
+            <div class="serv-card-head">
+              <span class="serv-card-num">02</span>
+              <span class="serv-badge">Actualizado</span>
+            </div>
+            <h3>Gestión Laboral</h3>
+            <p>Liquidación mensual de haberes, cargas sociales (F.931), asesoría preventiva al empleador, confección de CVs técnicos y optimización de perfiles LinkedIn[cite: 1].</p>
+          </div>
+          <div class="serv-action">Explorar trámites <span>→</span></div>
+        </div>
+
+        <div class="serv-card" data-area="2">
+          <div>
+            <div class="serv-card-head">
+              <span class="serv-card-num">03</span>
+            </div>
+            <h3>Asesoramiento Fiscal</h3>
+            <p>Monotributo integral, Bienes Personales, regularización SICAM, facturación electrónica y planes de facilidades ante ARCA (ex AFIP)[cite: 1].</p>
+          </div>
+          <div class="serv-action">Explorar trámites <span>→</span></div>
+        </div>
+
+        <div class="serv-card" data-area="3">
+          <div>
+            <div class="serv-card-head">
+              <span class="serv-card-num">04</span>
+              <span class="serv-badge">Frecuente</span>
+            </div>
+            <h3>Organismos & Claves</h3>
+            <p>Clave de Seguridad Social, Clave Fiscal, gestiones ante PAMI, trámites a distancia (TAD), certificados RENAPER, antecedentes y apostillados[cite: 1].</p>
+          </div>
+          <div class="serv-action">Explorar trámites <span>→</span></div>
+        </div>
+
+        <div class="serv-card" data-area="4">
+          <div>
+            <div class="serv-card-head">
+              <span class="serv-card-num">05</span>
+            </div>
+            <h3>Área Legal</h3>
+            <p>Juicios sucesorios, redacción de contratos civiles y comerciales, intimaciones por carta documento, informes de dominio vehicular e inmobiliario[cite: 1].</p>
+          </div>
+          <div class="serv-action">Explorar trámites <span>→</span></div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 </div>
+
 <!-- MÓDULO PROCESO -->
 <div class="modulo" id="mod-proceso">
-<section id="proceso">
-  <div class="wrap">
-    <span class="pill reveal">Cómo trabajamos</span>
-    <h2 class="h2 reveal">Tres pasos, cero vueltas</h2>
-    <p class="sub reveal">Vos hacés la consulta; nosotros nos ocupamos del resto.</p>
-    <div class="pasos">
-      <div class="paso reveal"><div class="n">1</div><h3>Escribinos tu consulta</h3><p>Contactanos por WhatsApp, correo o el formulario. Analizamos tu caso y te decimos con claridad qué se puede hacer, qué documentación necesitás y cuánto demora.</p></div>
-      <div class="paso reveal"><div class="n">2</div><h3>Gestionamos por vos</h3><p>Iniciamos y seguimos el trámite ante ANSES, ARCA, PAMI, IPS PBA, Migraciones o el organismo que corresponda, de forma presencial o a distancia.</p></div>
-      <div class="paso reveal"><div class="n">3</div><h3>Te mantenemos al tanto</h3><p>Recibís avances en cada etapa hasta la resolución final, sin trámites eternos ni respuestas a medias.</p></div>
+  <section>
+    <div class="wrap">
+      <span class="eyebrow">Metodología de Trabajo</span>
+      <h2 class="h2">Criterio, rigor y previsibilidad</h2>
+      <p class="sub">Un protocolo de tres fases diseñado para eliminar la incertidumbre burocrática y reducir tiempos de espera.</p>
+      
+      <div class="steps-editorial">
+        <div class="step-col">
+          <div class="step-idx">I</div>
+          <h3>Diagnóstico y Requisitos</h3>
+          <p>Evaluamos tu historial previsional o documental de forma exhaustiva[cite: 1]. Determinamos viabilidad real, costos estipulados y documentación exacta requerida[cite: 1].</p>
+        </div>
+        <div class="step-col">
+          <div class="step-idx">II</div>
+          <h3>Instanciación & Gestión</h3>
+          <p>Presentamos y gestionamos el expediente ante el organismo competente (ANSES, ARCA, IPS, Migraciones), monitoreando cada circuito administrativo[cite: 1].</p>
+        </div>
+        <div class="step-col">
+          <div class="step-idx">III</div>
+          <h3>Resolución y Entrega</h3>
+          <p>Hacemos seguimiento continuo de la resolución final[cite: 1]. Te informamos de cada hito alcanzado con total claridad hasta el cobro o conclusión del expediente[cite: 1].</p>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 </div>
+
 <!-- MÓDULO NOSOTROS -->
 <div class="modulo" id="mod-nosotros">
-<section class="porque" id="nosotros">
-  <div class="wrap">
-    <div>
-      <span class="pill reveal">Por qué elegirnos</span>
-      <h2 class="h2 reveal">Más de 20 años resolviendo gestiones</h2>
-      <div class="valores" style="margin-top:28px">
-        <div class="valor reveal"><div class="dot">🎓</div><div><h4>Experiencia comprobada</h4><p>Dos décadas de trabajo en gestión previsional, laboral y administrativa ante organismos públicos y privados.</p></div></div>
-        <div class="valor reveal"><div class="dot">🤝</div><div><h4>Atención personalizada</h4><p>Cada caso es único: te asesoramos de manera directa, con seguimiento propio y sin intermediarios.</p></div></div>
-        <div class="valor reveal"><div class="dot">🔍</div><div><h4>Compromiso y transparencia</h4><p>Te explicamos cada paso en lenguaje claro, con honorarios acordados desde el inicio.</p></div></div>
-        <div class="valor reveal"><div class="dot">⚡</div><div><h4>Rapidez y eficiencia</h4><p>Conocemos los circuitos de cada organismo, lo que nos permite evitar demoras y errores frecuentes.</p></div></div>
+  <section>
+    <div class="wrap about-grid">
+      <div>
+        <span class="eyebrow">Identidad & Trayectoria</span>
+        <h2 class="h2">Dos décadas construyendo respaldo profesional</h2>
+        <div class="values-list">
+          <div class="value-row">
+            <h4>Criterio Técnico</h4>
+            <p>Conocimiento profundo de las reglamentaciones vigentes, decretos y moratorias administrativas complejas[cite: 1].</p>
+          </div>
+          <div class="value-row">
+            <h4>Atención Directa</h4>
+            <p>Sin derivaciones impersonales[cite: 1]. Tu caso es evaluado y supervisado por profesionales responsables[cite: 1].</p>
+          </div>
+          <div class="value-row">
+            <h4>Honorarios Claros</h4>
+            <p>Presupuestos definidos y acordados previo al inicio del trámite[cite: 1]. Sin costos imprevistos[cite: 1].</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="quote-box">
+          <p>«Nuestro propósito es brindar la solvencia y contención técnica necesaria para que cada persona y empresa resuelva sus obligaciones y derechos sin trabas burocráticas.»</p>
+          <cite>Estudio CG — Gestoría y Consultoría</cite>
+        </div>
       </div>
     </div>
-    <div class="quote reveal">
-      <p>Nuestro objetivo es simple: que encuentres el respaldo profesional que necesitás para resolver tus gestiones de manera simple y confiable, sin perder tiempo ni hacer filas innecesarias.</p>
-      <div class="firma">Estudio CG — Gestoría & Consultoría</div>
-    </div>
-  </div>
-</section>
+  </section>
 </div>
+
 <!-- MÓDULO RESEÑAS -->
 <div class="modulo" id="mod-resenas">
-<section id="resenas">
-  <div class="wrap">
-    <div class="res-head">
-      <div style="max-width:560px">
-        <span class="pill reveal">Opiniones de nuestros clientes</span>
-        <h2 class="h2 reveal" style="margin-bottom:0">Lo que dicen quienes ya resolvieron sus trámites</h2>
+  <section>
+    <div class="wrap">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 48px; flex-wrap: wrap; gap: 20px;">
+        <div>
+          <span class="eyebrow">Prueba Social</span>
+          <h2 class="h2" style="margin-bottom:0">Opiniones verificadas</h2>
+        </div>
+        <div style="font-family: var(--font-serif); font-size: 1.2rem; color: var(--gold-light);">
+          ★ 5.0 / 5.0 en Google Business
+        </div>
       </div>
-      <div class="score reveal"><span class="n">5.0</span><div><div class="stars">★★★★★</div><small>40 reseñas en Google Maps</small></div></div>
+
+      <div class="reviews-grid">
+        <div class="rev-card">
+          <p>«Estamos muy conformes por su profesionalismo, se nota que ama lo que hace, es una persona sumamente confiable.»[cite: 1]</p>
+          <div class="rev-author">
+            <span class="rev-name">Jorge Rodríguez</span>
+            <span class="rev-meta">Google Reviews</span>
+          </div>
+        </div>
+        <div class="rev-card">
+          <p>«Gestionó la jubilación de mi hermano de manera muy profesional y rápida[cite: 1]. Te explica con total claridad cada fase del proceso[cite: 1].»</p>
+          <div class="rev-author">
+            <span class="rev-name">Isabel Campanilla</span>
+            <span class="rev-meta">Google Reviews</span>
+          </div>
+        </div>
+        <div class="rev-card">
+          <p>«Excelente persona y profesional[cite: 1]. Diligente, tenaz y con una enorme calidez humana[cite: 1]. Totalmente recomendable.»[cite: 1]</p>
+          <div class="rev-author">
+            <span class="rev-name">Laura Soto</span>
+            <span class="rev-meta">Google Reviews</span>
+          </div>
+        </div>
+      </div>
+      
+      <div style="margin-top: 36px; text-align: center;">
+        <a class="btn btn-secondary" href="https://maps.app.goo.gl/qpvtmTRtjDiKDS7K6" target="_blank" rel="noopener">Ver todas las reseñas en Google Maps →</a>
+      </div>
     </div>
-    <div class="res-grid">
-      <a class="res reveal" href="https://maps.app.goo.gl/qpvtmTRtjDiKDS7K6" target="_blank" rel="noopener"><span class="stars">★★★★★</span><p>«Estamos muy conformes por su profesionalismo, se nota que ama lo que hace, es usted una persona sumamente confiable.»</p><span class="res-autor"><span class="res-ini">J</span>Jorge Rodríguez</span><span class="src">Reseña de Google</span></a>
-      <a class="res reveal" href="https://maps.app.goo.gl/qpvtmTRtjDiKDS7K6" target="_blank" rel="noopener"><span class="stars">★★★★★</span><p>«Gestionó la jubilación de mi hermano de manera muy profesional y rápida. Te explica muy bien cómo se irá haciendo la gestión, cumplió de manera excelente todo el proceso.»</p><span class="res-autor"><span class="res-ini">I</span>Isabel Campanilla</span><span class="src">Reseña de Google</span></a>
-      <a class="res reveal" href="https://maps.app.goo.gl/qpvtmTRtjDiKDS7K6" target="_blank" rel="noopener"><span class="stars">★★★★★</span><p>«Excelente persona y profesional. Diligente, tenaz y empático. ¡Súper recomendable!»</p><span class="res-autor"><span class="res-ini">L</span>Laura Soto</span><span class="src">Reseña de Google</span></a>
-      <a class="res reveal" href="https://maps.app.goo.gl/qpvtmTRtjDiKDS7K6" target="_blank" rel="noopener"><span class="stars">★★★★★</span><p>«Buena atención, muy confiable. Recomiendo 100%.»</p><span class="res-autor"><span class="res-ini">F</span>Favio Jalsansky</span><span class="src">Reseña de Google</span></a>
-      <a class="res reveal" href="https://maps.app.goo.gl/qpvtmTRtjDiKDS7K6" target="_blank" rel="noopener"><span class="stars">★★★★★</span><p>«Excelente atención, disponibilidad y colaboración. Confiable 100%, Cristian.»</p><span class="res-autor"><span class="res-ini">E</span>Euge Bonne</span><span class="src">Reseña de Google</span></a>
-      <a class="res reveal" href="https://maps.app.goo.gl/qpvtmTRtjDiKDS7K6" target="_blank" rel="noopener"><span class="stars">★★★★★</span><p>«Excelente atención. Confiable para resolver mi consulta y lograr la resolución esperada.»</p><span class="res-autor"><span class="res-ini">M</span>Mariela Laboral</span><span class="src">Reseña de Google</span></a>
-      <div class="res cta-res reveal"><p>¿Ya trabajaste con nosotros?</p><a class="btn btn-glass" href="https://maps.app.goo.gl/qpvtmTRtjDiKDS7K6" target="_blank" rel="noopener">Ver todas en Google</a></div>
-    </div>
-  </div>
-</section>
+  </section>
 </div>
+
 <!-- MÓDULO FAQ -->
 <div class="modulo" id="mod-faq">
-<section id="faq">
-  <div class="wrap">
-    <span class="pill reveal">Preguntas frecuentes</span>
-    <h2 class="h2 reveal">Respuestas a lo que más nos consultan</h2>
-    <p class="sub reveal">Y si tu duda no está acá, escribinos y te respondemos a la brevedad.</p>
-    <div class="faq-list">
-      <details class="faq reveal"><summary>¿Cómo empiezo un trámite con ustedes? <span class="ic">+</span></summary><div class="ans">Escribinos por WhatsApp, correo o el formulario contándonos tu caso. Analizamos tu situación, te explicamos qué se puede hacer y acordamos los honorarios antes de empezar cualquier trámite.</div></details>
-      <details class="faq reveal"><summary>¿Atienden solo en Buenos Aires o también a distancia? <span class="ic">+</span></summary><div class="ans">Trabajamos de forma presencial en José Ignacio Rucci 3351, CABA, y también a distancia mediante TAD y gestión online, así que podemos ayudarte estés donde estés dentro del país.</div></details>
-      <details class="faq reveal"><summary>¿Qué documentación necesito para iniciar mi jubilación? <span class="ic">+</span></summary><div class="ans">Depende de tu caso (ANSES o IPS Provincia de Bs. As.), pero en general se requiere DNI, historial de aportes y documentación laboral. Al contactarnos te damos el listado exacto según tu situación.</div></details>
-      <details class="faq reveal"><summary>¿Tramitan jubilaciones de IPS Provincia de Buenos Aires? <span class="ic">+</span></summary><div class="ans">Sí. Sumamos recientemente la gestión de jubilaciones del IPS PBA, además de las nacionales de ANSES, jubilaciones de empleadas domésticas y de extranjeros.</div></details>
-      <details class="faq reveal"><summary>¿Cuánto demora un trámite? <span class="ic">+</span></summary><div class="ans">Los plazos los define cada organismo, pero conocer bien los circuitos nos permite evitar demoras y errores. Te mantenemos informado del avance en cada etapa hasta la resolución final.</div></details>
-      <details class="faq reveal"><summary>¿Si me faltan años de aportes puedo comprarlos? <span class="ic">+</span></summary><div class="ans">Sí. Cada caso es distinto y depende de tu situación: si tenés aportes o no. Se puede utilizar un plan de pago de la Ley 27.705 o de la Ley 24.476, o bien regularizar realizando pagos como monotributista. Escribinos y analizamos cuál es la mejor opción para vos.</div></details>
-      <details class="faq reveal"><summary>¿Cómo son los honorarios? <span class="ic">+</span></summary><div class="ans">Se acuerdan de forma clara y transparente desde el inicio, según el tipo de trámite. Sin sorpresas ni costos ocultos: sabés cuánto vas a pagar antes de empezar.</div></details>
+  <section>
+    <div class="wrap faq-wrap">
+      <span class="eyebrow">Resolución de Dudas</span>
+      <h2 class="h2">Preguntas frecuentes</h2>
+      <p class="sub">Claridad desde el primer momento sobre condiciones, plazos y modalidades de trabajo.</p>
+
+      <div class="faq-item">
+        <details>
+          <summary>¿Cómo se inicia una consulta con el estudio? <span class="sign">+</span></summary>
+          <div class="faq-body">Nos contactás por WhatsApp o correo detallando tu situación actual[cite: 1]. Evaluamos la documentación preliminar sin costo inicial y te informamos los caminos viables y honorarios correspondientes[cite: 1].</div>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details>
+          <summary>¿Atienden gestiones a distancia en todo el país? <span class="sign">+</span></summary>
+          <div class="faq-body">Sí[cite: 1]. Además de nuestra atención presencial en CABA, gestionamos expedientes a nivel federal mediante plataformas digitales (TAD, sistemas provinciales y Mi ANSES)[cite: 1].</div>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details>
+          <summary>¿Qué documentación inicial se requiere para una jubilación? <span class="sign">+</span></summary>
+          <div class="faq-body">Principalmente DNI, certificación de servicios de empleadores anteriores y claves de seguridad social[cite: 1]. En base a tu caso puntual realizamos el cómputo de años de aportes[cite: 1].</div>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details>
+          <summary>¿Se pueden comprar aportes faltantes para jubilarse? <span class="sign">+</span></summary>
+          <div class="faq-body">Sí, es factible evaluar planes de pago y moratorias de acuerdo al régimen normativo aplicable o regularización mediante SICAM para trabajadores independientes[cite: 1].</div>
+        </details>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 </div>
+
+<!-- MÓDULO OTROS SERVICIOS (TECNOLOGÍA) -->
+<div class="modulo" id="mod-otros">
+  <section>
+    <div class="wrap">
+      <span class="eyebrow">Infraestructura & Soluciones</span>
+      <h2 class="h2">Servicios tecnológicos</h2>
+      <p class="sub">Implementaciones profesionales para modernizar y asegurar hogares y oficinas comerciales[cite: 1].</p>
+
+      <div class="tech-grid">
+        <div class="tech-card">
+          <div>
+            <span class="eyebrow">Confort & Control</span>
+            <h3>Domótica Integral</h3>
+            <p>Automatización de accesos, climatización e iluminación inteligente gestionada desde dispositivos móviles[cite: 1].</p>
+          </div>
+          <a class="btn btn-secondary" href="https://wa.me/5491125114119?text=Hola%2C%20quiero%20consultar%20sobre%20Dom%C3%B3tica" target="_blank" rel="noopener">Consultar presupuesto →</a>
+        </div>
+
+        <div class="tech-card">
+          <div>
+            <span class="eyebrow">Protección Activa</span>
+            <h3>Cámaras de Seguridad</h3>
+            <p>Circuitos cerrados IP y sistemas con monitoreo remoto continuo y almacenamiento seguro en red[cite: 1].</p>
+          </div>
+          <a class="btn btn-secondary" href="https://wa.me/5491125114119?text=Hola%2C%20quiero%20consultar%20sobre%20C%C3%A1maras%20de%20Seguridad" target="_blank" rel="noopener">Consultar presupuesto →</a>
+        </div>
+
+        <div class="tech-card">
+          <div>
+            <span class="eyebrow">Mantenimiento</span>
+            <h3>Soporte Técnico PC</h3>
+            <p>Diagnóstico de hardware, optimización operativa de sistemas, limpieza de amenazas y recuperación de entornos[cite: 1].</p>
+          </div>
+          <a class="btn btn-secondary" href="https://wa.me/5491125114119?text=Hola%2C%20quiero%20consultar%20sobre%20Soporte%20PC" target="_blank" rel="noopener">Consultar presupuesto →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
 <!-- MÓDULO CONTACTO -->
 <div class="modulo" id="mod-contacto">
-<section class="contacto" id="contacto">
-  <div class="wrap">
-    <div>
-      <span class="pill reveal">Contacto</span>
-      <h2 class="h2 reveal">Hablemos de tu trámite</h2>
-      <p class="sub reveal" style="margin-bottom:28px">Completá el formulario o escribinos directo. Te respondemos a la brevedad.</p>
-      <div class="cont-grid">
-        <a class="c-item reveal" href="https://wa.me/5491125114119" target="_blank" rel="noopener"><div class="ico">📞</div><div><b>Teléfono / WhatsApp</b><span>11 2511-4119</span></div></a>
-        <a class="c-item reveal" href="mailto:gintegralcg@gmail.com"><div class="ico">✉️</div><div><b>Correo electrónico</b><span>gintegralcg@gmail.com</span></div></a>
-        <a class="c-item reveal" href="https://maps.app.goo.gl/qpvtmTRtjDiKDS7K6" target="_blank" rel="noopener"><div class="ico">📍</div><div><b>Dirección</b><span>José Ignacio Rucci 3351, CABA</span></div></a>
-        <div class="c-item reveal"><div class="ico">🕓</div><div><b>Horario de atención</b><span>Lunes a viernes · 10 a 17 hs</span></div></div>
-      </div>
-    </div>
-    <div class="form-card reveal">
-      <h3>Escribinos tu consulta</h3>
-      <p class="lead">Contanos tu caso y te contactamos con los pasos a seguir.</p>
-      <div class="field"><label for="nombre">Nombre y apellido</label><input id="nombre" type="text" placeholder="Tu nombre"></div>
-      <div class="row2">
-        <div class="field"><label for="tel">Teléfono</label><input id="tel" type="tel" placeholder="11 ...."></div>
-        <div class="field"><label for="mail">Email</label><input id="mail" type="email" placeholder="tu@correo.com"></div>
-      </div>
-      <div class="field"><label for="tema">Tipo de trámite</label>
-        <select id="tema">
-          <option value="Consulta general">Consulta general</option>
-          <option value="Jubilación / Pensión (ANSES)">Jubilación / Pensión (ANSES)</option>
-          <option value="Jubilación IPS Provincia Bs. As.">Jubilación IPS Provincia Bs. As.</option>
-          <option value="Monotributo / Fiscal">Monotributo / Fiscal</option>
-          <option value="Liquidación de sueldos">Liquidación de sueldos</option>
-          <option value="Ciudadanía / Migratorio">Ciudadanía / Migratorio</option>
-          <option value="Partidas / RENAPER / CODEM">Partidas / RENAPER / CODEM</option>
-          <option value="Otro trámite">Otro trámite</option>
-        </select>
-      </div>
-      <div class="field"><label for="msg">Mensaje</label><textarea id="msg" placeholder="Contanos brevemente qué necesitás..."></textarea></div>
-      <button class="btn btn-gold" onclick="enviarMail()">Enviar consulta por Email</button>
-      <button class="btn btn-glass" style="margin-top:10px" onclick="enviarWA()">O enviar por WhatsApp</button>
-      <p class="form-note">Tus datos se usan solo para responder tu consulta.</p>
-    </div>
-  </div>
-</section>
-</div>
-<!-- MÓDULO OTROS SERVICIOS -->
-<div class="modulo" id="mod-otros">
-  <section class="tec-hero">
-    <div class="wrap">
-      <button class="volver" onclick="verPrincipal()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg> Volver al inicio</button>
-      <div class="bigchip">💡</div>
-      <h1>Soluciones Tecnológicas</h1>
-      <p>Además de las gestiones, ofrecemos soluciones tecnológicas para tu hogar o negocio. Consultá por tu presupuesto.</p>
-    </div>
-  </section>
-  <section style="padding:0">
-    <div class="wrap">
-      <div class="tec-grid">
-        <div class="tec-card">
-          <div class="ic">🏠</div>
-          <h3>Domótica</h3>
-          <p>Sistemas inteligentes para el hogar y la oficina: iluminación, persianas, climatización y control de accesos, todo desde tu celular.</p>
-          <a class="twa" href="https://wa.me/5491125114119?text=Hola%2C%20quiero%20consultar%20sobre%20Dom%C3%B3tica" target="_blank" rel="noopener">Consultar ›</a>
-        </div>
-        <div class="tec-card">
-          <div class="ic">📹</div>
-          <h3>Cámaras de Seguridad</h3>
-          <p>Instalación y configuración de cámaras con monitoreo 24/7 desde tu móvil y alertas en tiempo real.</p>
-          <a class="twa" href="https://wa.me/5491125114119?text=Hola%2C%20quiero%20consultar%20sobre%20C%C3%A1maras%20de%20Seguridad" target="_blank" rel="noopener">Consultar ›</a>
-        </div>
-        <div class="tec-card">
-          <div class="ic">💻</div>
-          <h3>Servicio Técnico PC</h3>
-          <p>Reparación, formateo, optimización y eliminación de virus para tu computadora.</p>
-          <a class="twa" href="https://wa.me/5491125114119?text=Hola%2C%20quiero%20consultar%20sobre%20Servicio%20T%C3%A9cnico%20PC" target="_blank" rel="noopener">Consultar ›</a>
+  <section>
+    <div class="wrap contact-layout">
+      <div>
+        <span class="eyebrow">Comunicación Directa</span>
+        <h2 class="h2">Iniciemos tu gestión</h2>
+        <p class="sub">Envianos tu consulta técnica para coordinar una evaluación detallada de tu expediente[cite: 1].</p>
+        
+        <div class="contact-info-list">
+          <div class="c-row">
+            <span>Atención Inmediata</span>
+            <a href="https://wa.me/5491125114119" target="_blank" rel="noopener">+54 9 11 2511-4119[cite: 1]</a>
+          </div>
+          <div class="c-row">
+            <span>Correo Electrónico</span>
+            <a href="mailto:gintegralcg@gmail.com">gintegralcg@gmail.com[cite: 1]</a>
+          </div>
+          <div class="c-row">
+            <span>Sede Central</span>
+            <strong>José Ignacio Rucci 3351, CABA[cite: 1]</strong>
+          </div>
+          <div class="c-row">
+            <span>Horario de Atención</span>
+            <strong>Lunes a Viernes · 10:00 a 17:00 hs[cite: 1]</strong>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-</div>
-</div><!-- /cuerpo -->
 
+      <div class="editorial-form">
+        <h3>Formulario de Contacto</h3>
+        <p class="lead">Completá los datos y te responderemos a la brevedad[cite: 1].</p>
+        
+        <div class="form-group">
+          <label for="nombre">Nombre y Apellido</label>
+          <input id="nombre" type="text" placeholder="Ej. Martín Gómez">
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label for="tel">Teléfono</label>
+            <input id="tel" type="tel" placeholder="11 ....">
+          </div>
+          <div class="form-group">
+            <label for="mail">Email</label>
+            <input id="mail" type="email" placeholder="correo@ejemplo.com">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="tema">Área de Consulta</label>
+          <select id="tema">
+            <option value="Consulta general">Consulta general[cite: 1]</option>
+            <option value="Jubilación / Pensión (ANSES)">Jubilación / Pensión (ANSES)[cite: 1]</option>
+            <option value="Jubilación IPS Provincia Bs. As.">Jubilación IPS Provincia Bs. As.[cite: 1]</option>
+            <option value="Monotributo / Fiscal">Monotributo / Fiscal[cite: 1]</option>
+            <option value="Liquidación de sueldos">Liquidación de sueldos[cite: 1]</option>
+            <option value="Ciudadanía / Migratorio">Ciudadanía / Migratorio[cite: 1]</option>
+            <option value="Partidas / RENAPER / CODEM">Partidas / RENAPER / CODEM[cite: 1]</option>
+            <option value="Otro trámite">Otro trámite[cite: 1]</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="msg">Detalle del Trámite</label>
+          <textarea id="msg" rows="4" placeholder="Describí brevemente tu caso o consulta..."></textarea>
+        </div>
+
+        <div class="form-btn-group">
+          <button class="btn btn-primary" onclick="enviarMail()">Enviar por Correo Electrónico</button>
+          <button class="btn btn-secondary" onclick="enviarWA()">Enviar directamente por WhatsApp</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+</div><!-- /app-root -->
+
+<!-- Footer -->
 <footer>
   <div class="wrap">
     <div class="foot-grid">
-      <div class="foot-col foot-brand">
-        <div class="foot-logo"><div class="logo"><img src="logo-header.png" alt="Estudio CG"></div>
-          <div class="brand-t"><strong>Estudio CG</strong><span>Gestoría & Consultoría</span></div>
+      <div class="foot-brand">
+        <div class="brand">
+          <div class="brand-monogram">CG</div>
+          <div class="brand-text">
+            <strong>ESTUDIO CG</strong>
+            <span>GESTORÍA Y CONSULTORÍA</span>
+          </div>
         </div>
-        <p>Asesoramiento integral con más de 20 años de experiencia en gestiones previsionales, laborales, fiscales y migratorias.</p>
-        <p class="foot-eslogan">«Si se puede hacer, lo hacemos. Si no, también vemos.»</p>
-        <div class="foot-social">
+        <p>Solvencia técnica y compromiso en gestiones previsionales, laborales, fiscales y societarias[cite: 1].</p>
+        <div class="foot-social-row">
           <a href="https://www.instagram.com/estudiocgig" target="_blank" rel="noopener" aria-label="Instagram">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
           </a>
           <a href="https://www.facebook.com/share/1EfnPQymaQ/" target="_blank" rel="noopener" aria-label="Facebook">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V5h-3c-2.2 0-4 1.8-4 4v2H7v4h3v7h4v-7h3l1-4h-4V9c0-.6.4-1 1-1z"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V5h-3c-2.2 0-4 1.8-4 4v2H7v4h3v7h4v-7h3l1-4h-4V9c0-.6.4-1 1-1z"/></svg>
           </a>
           <a href="https://www.tiktok.com/@estudiocg" target="_blank" rel="noopener" aria-label="TikTok">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.8a4.3 4.3 0 0 1-1-2.8h-3.3v11.4a2.4 2.4 0 1 1-2.4-2.4c.2 0 .5 0 .7.1V6.7a5.7 5.7 0 1 0 5 5.7V8.7a7.3 7.3 0 0 0 4.3 1.4V6.8a4.3 4.3 0 0 1-3.3-1z"/></svg>
-          </a>
-          <a href="https://wa.me/5491125114119" target="_blank" rel="noopener" aria-label="WhatsApp">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.9 4.43-9.9 9.88 0 1.74.46 3.44 1.32 4.94L2 22l5.32-1.39c1.45.79 3.08 1.21 4.72 1.21 5.46 0 9.9-4.43 9.9-9.88C21.94 6.43 17.5 2 12.04 2z"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.8a4.3 4.3 0 0 1-1-2.8h-3.3v11.4a2.4 2.4 0 1 1-2.4-2.4c.2 0 .5 0 .7.1V6.7a5.7 5.7 0 1 0 5 5.7V8.7a7.3 7.3 0 0 0 4.3 1.4V6.8a4.3 4.3 0 0 1-3.3-1z"/></svg>
           </a>
         </div>
       </div>
+
       <div class="foot-col">
-        <h4>Servicios</h4>
-        <a href="#" onclick="mostrar('servicios');return false;">Área Previsional</a>
-        <a href="#" onclick="mostrar('servicios');return false;">Gestión Laboral</a>
-        <a href="#" onclick="mostrar('servicios');return false;">Asesoramiento Fiscal</a>
-        <a href="#" onclick="mostrar('servicios');return false;">Claves y Trámites</a>
-        <a href="#" onclick="mostrar('servicios');return false;">Área Legal</a>
-        <a href="#" onclick="mostrar('otros');return false;">Otros Servicios</a>
+        <h5>Servicios</h5>
+        <a href="#" onclick="mostrar('servicios');return false;">Área Previsional[cite: 1]</a>
+        <a href="#" onclick="mostrar('servicios');return false;">Gestión Laboral[cite: 1]</a>
+        <a href="#" onclick="mostrar('servicios');return false;">Asesoramiento Fiscal[cite: 1]</a>
+        <a href="#" onclick="mostrar('servicios');return false;">Organismos & Claves[cite: 1]</a>
+        <a href="#" onclick="mostrar('servicios');return false;">Área Legal[cite: 1]</a>
       </div>
+
       <div class="foot-col">
-        <h4>Estudio</h4>
-        <a href="#" onclick="mostrar('nosotros');return false;">Nosotros</a>
-        <a href="#" onclick="mostrar('proceso');return false;">Cómo trabajamos</a>
+        <h5>Firma</h5>
+        <a href="#" onclick="mostrar('nosotros');return false;">Trayectoria</a>
+        <a href="#" onclick="mostrar('proceso');return false;">Método</a>
         <a href="#" onclick="mostrar('resenas');return false;">Opiniones</a>
-        <a href="#" onclick="mostrar('faq');return false;">Preguntas frecuentes</a>
-        <a href="https://maps.app.goo.gl/qpvtmTRtjDiKDS7K6" target="_blank" rel="noopener">Reseñas en Google</a>
+        <a href="#" onclick="mostrar('faq');return false;">Consultas</a>
+        <a href="#" onclick="mostrar('otros');return false;">Tecnología</a>
       </div>
+
       <div class="foot-col">
-        <h4>Contacto</h4>
-        <a href="https://wa.me/5491125114119" target="_blank" rel="noopener">📞 11 2511-4119</a>
-        <a href="mailto:gintegralcg@gmail.com">✉️ gintegralcg@gmail.com</a>
-        <a href="https://maps.app.goo.gl/qpvtmTRtjDiKDS7K6" target="_blank" rel="noopener">📍 José Ignacio Rucci 3351, CABA</a>
-        <span class="foot-horario">🕓 Lun a Vie · 10 a 17 hs</span>
+        <h5>Atención</h5>
+        <span>José Ignacio Rucci 3351, CABA[cite: 1]</span>
+        <span>Lun a Vie · 10 a 17 hs[cite: 1]</span>
+        <a href="mailto:gintegralcg@gmail.com">gintegralcg@gmail.com[cite: 1]</a>
+        <a href="https://wa.me/5491125114119" target="_blank" rel="noopener">+54 9 11 2511-4119[cite: 1]</a>
       </div>
     </div>
+
     <div class="foot-bottom">
-      <span>© 2026 Estudio CG — Gestoría & Consultoría · Buenos Aires, Argentina</span>
-      <span>Previsional · Laboral · Fiscal · Asesoramiento</span>
+      <div>© 2026 Estudio CG — Gestoría & Consultoría. Todos los derechos reservados.[cite: 1]</div>
+      <div>Buenos Aires, Argentina[cite: 1]</div>
     </div>
   </div>
 </footer>
 
+<!-- Botón Flotante WhatsApp -->
+<a class="wa-float-btn" href="https://wa.me/5491125114119" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="#111111"><path d="M12.04 2c-5.46 0-9.9 4.43-9.9 9.88 0 1.74.46 3.44 1.32 4.94L2 22l5.32-1.39c1.45.79 3.08 1.21 4.72 1.21 5.46 0 9.9-4.43 9.9-9.88C21.94 6.43 17.5 2 12.04 2zm0 18.02c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23 4.54 0 8.24 3.69 8.24 8.23 0 4.54-3.7 8.24-8.24 8.24z"/></svg>
+</a>
+
+<!-- Modal Component -->
+<div class="modal-overlay" id="modalArea" role="dialog" aria-modal="true">
+  <div class="modal-window">
+    <button class="modal-close" aria-label="Cerrar modal">&times;</button>
+    <span class="eyebrow" id="mSubtitle">Catálogo de Trámites</span>
+    <h3 id="mTitulo">Detalle de Área</h3>
+    <div class="modal-items-list" id="mLista"></div>
+    <a class="btn btn-primary" id="mWaBtn" target="_blank" rel="noopener" style="width: 100%; text-align: center;">
+      Consultar por este departamento
+    </a>
+  </div>
+</div>
+
 <script>
-// Reveal on scroll
-const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target)}})},{threshold:.12});
-document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-// Al cargar, ocultar "Inicio" del menú (arrancamos en el inicio)
-(function(){var ni=document.getElementById('nav-inicio'); if(ni) ni.style.display='none';})();
+// SPA Navigation System
+function mostrar(mod) {
+  document.querySelectorAll('.modulo').forEach(m => m.classList.remove('activo'));
+  const target = document.getElementById('mod-' + mod);
+  if (target) target.classList.add('activo');
 
-// Cerrar menú móvil al hacer clic
-document.querySelectorAll('#menu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('menu').classList.remove('open')));
+  document.querySelectorAll('#nav-menu a[data-mod]').forEach(a => {
+    a.classList.toggle('nav-activo', a.getAttribute('data-mod') === mod);
+  });
 
-// Armar mensaje del formulario
-function armar(){
-  const n=document.getElementById('nombre').value.trim();
-  const t=document.getElementById('tel').value.trim();
-  const m=document.getElementById('mail').value.trim();
-  const tema=document.getElementById('tema').value;
-  const msg=document.getElementById('msg').value.trim();
-  let txt='Hola, quiero hacer una consulta.\n';
-  txt+='\nTrámite: '+tema;
-  if(n) txt+='\nNombre: '+n;
-  if(t) txt+='\nTeléfono: '+t;
-  if(m) txt+='\nEmail: '+m;
-  if(msg) txt+='\nMensaje: '+msg;
+  document.getElementById('nav-menu').classList.remove('open');
+  window.scrollTo({ top: 0, behavior: 'instant' });
+}
+
+// Form Helpers
+function armarMensaje() {
+  const n = document.getElementById('nombre').value.trim();
+  const t = document.getElementById('tel').value.trim();
+  const m = document.getElementById('mail').value.trim();
+  const tema = document.getElementById('tema').value;
+  const msg = document.getElementById('msg').value.trim();
+  let txt = 'Hola Estudio CG, deseo realizar una consulta profesional:\n';
+  txt += '\nÁrea: ' + tema;
+  if (n) txt += '\nNombre: ' + n;
+  if (t) txt += '\nTeléfono: ' + t;
+  if (m) txt += '\nEmail: ' + m;
+  if (msg) txt += '\nDetalle: ' + msg;
   return txt;
 }
-function enviarWA(){
-  window.open('https://wa.me/5491125114119?text='+encodeURIComponent(armar()),'_blank');
-}
-function enviarMail(){
-  const tema=document.getElementById('tema').value;
-  window.location.href='mailto:gintegralcg@gmail.com?subject='+encodeURIComponent('Consulta web — '+tema)+'&body='+encodeURIComponent(armar());
+
+function enviarWA() {
+  window.open('https://wa.me/5491125114119?text=' + encodeURIComponent(armarMensaje()), '_blank');
 }
 
-// ===== Sistema de módulos (SPA) =====
-function mostrar(mod){
-  // ocultar todos
-  document.querySelectorAll('.modulo').forEach(function(m){m.classList.remove('activo')});
-  // mostrar el elegido
-  var destino=document.getElementById('mod-'+mod);
-  if(destino) destino.classList.add('activo');
-  // marcar solapa activa en el menú
-  document.querySelectorAll('#menu a[data-mod]').forEach(function(a){
-    a.classList.toggle('nav-activo', a.getAttribute('data-mod')===mod);
-  });
-  // "Inicio" solo se muestra cuando NO estamos en el inicio
-  var navInicio=document.getElementById('nav-inicio');
-  if(navInicio) navInicio.style.display = (mod==='inicio') ? 'none' : '';
-  // cerrar menú móvil y volver arriba
-  document.getElementById('menu').classList.remove('open');
-  window.scrollTo({top:0,behavior:'instant'});
-  // reejecutar animaciones reveal del módulo visible
-  if(destino){
-    destino.querySelectorAll('.reveal').forEach(function(el){el.classList.add('vis')});
-  }
+function enviarMail() {
+  const tema = document.getElementById('tema').value;
+  window.location.href = 'mailto:gintegralcg@gmail.com?subject=' + encodeURIComponent('Consulta Profesional — ' + tema) + '&body=' + encodeURIComponent(armarMensaje());
 }
-// Compatibilidad con llamadas viejas
-function verTecnologia(){ mostrar('otros'); }
-function verPrincipal(){ mostrar('inicio'); }
-function irA(id){ mostrar(id); }
 
-// ===== Fondo reactivo al scroll =====
-window.addEventListener('scroll', function(){
-  var y = window.scrollY || 0;
-  var aura = document.querySelector('.aura');
-  if(aura){
-    aura.style.backgroundPosition = '0 ' + (y*0.25) + 'px, 0 ' + (y*-0.15) + 'px';
-    aura.style.opacity = Math.max(0.4, 1 - y/1400);
-  }
-}, {passive:true});
+// Trámites Data & Modal Logic
+(function() {
+  const AREAS = [
+    {
+      titulo: "Área Previsional",
+      tramites: [
+        ["Jubilaciones ANSES", "Régimen nacional ordinario, trabajadores en relación de dependencia y extranjeros con radicación legal."],
+        ["Jubilación de Empleadas Domésticas", "Gestión bajo el régimen especial de casas particulares."],
+        ["Jubilación IPS PBA", "Para empleados públicos de la administración provincial y municipal bonaerense."],
+        ["Pensiones Directas y Derivadas", "Gestión ante fallecimiento de un familiar titular ante ANSES o IPS."],
+        ["Pensión Universal Adulto Mayor (PUAM)", "Para personas mayores de 65 años sin aportes suficientes."],
+        ["Pensiones No Contributivas (PNC)", "Por invalidez, madres de 7 hijos o vejez en situación de vulnerabilidad."],
+        ["Planificación Previsional", "Cómputo anticipado de aportes y estrategia de moratorias para optimizar el haber."]
+      ]
+    },
+    {
+      titulo: "Gestión Laboral",
+      tramites: [
+        ["Liquidación de Sueldos", "Cálculo y confección de recibos conforme a los convenios colectivos aplicables."],
+        ["Cargas Sociales (F.931)", "Determinación de aportes patronales y contribuciones ante la seguridad social."],
+        ["Asesoramiento a Empleadores", "Altas, bajas, suspensiones y cumplimiento de normativas de trabajo."],
+        ["Confección de CVs y Perfil LinkedIn", "Optimización del perfil laboral y currículum profesional orientado a resultados."]
+      ]
+    },
+    {
+      titulo: "Asesoramiento Fiscal",
+      tramites: [
+        ["Monotributo Integral", "Altas, bajas, recategorizaciones periódicas y regularización tributaria."],
+        ["Bienes Personales", "Declaraciones juradas anuales y determinación patrimonial."],
+        ["Devolución de Percepciones", "Gestión de recupero por compras en moneda extranjera y retenciones."],
+        ["Regularización SICAM", "Liquidación de deuda autónoma/monotributista para computar aportes jubilatorios."],
+        ["Planes de Facilidades ARCA", "Consolidación de deudas fiscales y previsionales en cuotas."]
+      ]
+    },
+    {
+      titulo: "Organismos & Claves",
+      tramites: [
+        ["Clave de Seguridad Social ANSES", "Generación, desbloqueo y recuperación operativa."],
+        ["Clave Fiscal ARCA", "Gestión y blanqueo de accesos de nivel de seguridad requerido."],
+        ["Trámites PAMI", "Empadronamiento, coberturas especiales y órdenes prestacionales."],
+        ["Trámites a Distancia (TAD)", "Gestión de expedientes electrónicos ante carteras nacionales y CABA."],
+        ["Partidas y Legalizaciones", "Partidas de nacimiento, matrimonio y defunción en todo el país."],
+        ["Infracciones de Tránsito", "Descargos técnicos y regularización ante la Dirección de Tránsito."]
+      ]
+    },
+    {
+      titulo: "Área Legal",
+      tramites: [
+        ["Procesos Sucesorios", "Apertura, declaratoria de herederos e inscripción de bienes sucesorios."],
+        ["Contratos y Acuerdos", "Redacción de contratos de locación comercial/residencial y convenios privados."],
+        ["Cartas Documento e Intimaciones", "Redacción con rigor jurídico y remisión formal."],
+        ["Informes de Dominio", "Verificación registral de gravámenes en bienes inmuebles y automotores."]
+      ]
+    }
+  ];
 
-// ===== Modal de área (lista de trámites) =====
-(function(){
-  const AREAS = [{"titulo": "Área Previsional", "emoji": "🏛️", "tramites": [["Jubilaciones ANSES", "Tramitamos tu jubilación por el régimen nacional (ANSES), tanto para argentinos como extranjeros con residencia. Analizamos tus aportes y buscamos el mejor haber posible según tu historia laboral."], ["Jubilación de empleadas domésticas", "Gestión de la jubilación para trabajadoras de casas particulares, contemplando el régimen especial y los aportes correspondientes a esta actividad."], ["Jubilación IPS Provincia de Bs. As.", "Tramitamos jubilaciones ante el Instituto de Previsión Social (IPS) de la Provincia de Buenos Aires, para empleados provinciales y municipales."], ["Pensiones", "Gestionamos pensiones directas, derivadas y por fallecimiento de un familiar, para que accedas al beneficio que te corresponde ante ANSES o IPS."], ["PUAM", "La Pensión Universal para el Adulto Mayor es un beneficio para personas de 65 años o más que no cuentan con una jubilación. Te ayudamos a tramitarla desde cero."], ["Pensiones No Contributivas", "Beneficios para personas en situación de vulnerabilidad: por invalidez, madres de 7 o más hijos, o vejez, sin necesidad de aportes previos."], ["Salario Familiar y Asignaciones", "Gestionamos las asignaciones familiares (hijo, prenatal, ayuda escolar, etc.) ante ANSES para trabajadores y beneficiarios."], ["Planificación previsional", "Analizamos tu situación de aportes y te asesoramos sobre cuándo y cómo conviene jubilarte para obtener el mejor haber posible."]]}, {"titulo": "Gestión Laboral", "emoji": "📋", "tramites": [["Liquidación de sueldos", "Calculamos y confeccionamos los recibos de sueldo de tu personal, con todos los conceptos, descuentos y aportes al día según convenio."], ["Cargas sociales", "Determinamos y presentamos los aportes y contribuciones (F.931) que debe pagar el empleador por su personal registrado."], ["Asesoramiento a empleadores", "Te acompañamos en todo lo relativo a la relación laboral: altas, bajas, sanciones, convenios y obligaciones como empleador."], ["Confección de CVs y mejora de LinkedIn[NUEVO]", "Armamos tu currículum vitae profesional y optimizamos tu perfil de LinkedIn para mejorar tu presencia y oportunidades laborales."]]}, {"titulo": "Asesoramiento Fiscal", "emoji": "🧾", "tramites": [["Alta y recategorización de Monotributo", "Te inscribimos en el monotributo o ajustamos tu categoría según tu facturación, para que cumplas con ARCA sin pagar de más."], ["Bienes Personales", "Confeccionamos y presentamos la declaración jurada del impuesto sobre los Bienes Personales según tu patrimonio."], ["Devolución de percepciones", "Gestionamos la devolución de percepciones y retenciones que te descontaron de más (por compras en el exterior, dólar, etc.)."], ["SICAM", "Calculamos y regularizamos aportes adeudados como autónomo o monotributista a través del SICAM, útil para completar años para jubilarte."], ["Imputación de pagos y facturación", "Te ayudamos con la emisión de facturas y la correcta imputación de pagos ante ARCA."], ["Regularización de deudas", "Armamos planes de pago para regularizar deudas impositivas y previsionales, evitando intereses y sanciones mayores."]]}, {"titulo": "Claves y Otros Trámites", "emoji": "🗂️", "tramites": [["Clave de Seguridad Social ANSES", "Generamos o recuperamos tu clave de la Seguridad Social para que puedas operar en Mi ANSES y hacer trámites online."], ["Clave Fiscal ARCA", "Obtenemos o blanqueamos tu clave fiscal de ARCA (ex AFIP), necesaria para todos los trámites impositivos."], ["Trámites PAMI", "Afiliaciones, cambios y gestiones ante PAMI para jubilados y pensionados, incluyendo medicamentos y prestaciones."], ["TAD - Trámites a Distancia", "Realizamos trámites a distancia ante organismos nacionales y de CABA, sin que tengas que hacer filas ni moverte de tu casa."], ["Certificación negativa y antecedentes", "Obtenemos la certificación negativa de ANSES y el certificado de antecedentes penales para lo que necesites."], ["Partidas", "Gestionamos partidas de nacimiento, matrimonio y defunción ante el Registro Civil, incluso de otras jurisdicciones."], ["Rectificación de partidas", "Corregimos errores en partidas (nombres, fechas, datos) mediante el trámite de rectificación ante el Registro Civil."], ["CODEM", "Obtenemos el comprobante de empadronamiento que acredita a qué obra social estás afiliado, requerido en muchos trámites."], ["Certificación de datos RENAPER", "Gestionamos la certificación de datos personales ante el RENAPER, útil para validar identidad en distintos trámites."], ["Certificación migratoria y ciudadanía", "Tramitamos certificaciones de ingresos y egresos del país y acompañamos el proceso de obtención de la ciudadanía argentina."], ["Apostillado", "Gestionamos la apostilla de La Haya para que tus documentos tengan validez legal en el exterior."], ["Infracciones de tránsito[NUEVO]", "Realizamos gestiones por infracciones de tránsito en CABA y otras provincias: consulta, descargo y regularización de multas."]]}, {"titulo": "Área Legal", "emoji": "⚖️", "tramites": [["Sucesiones", "Iniciamos y acompañamos el juicio sucesorio para transmitir los bienes de una persona fallecida a sus herederos legales."], ["Contratos y acuerdos", "Redactamos y revisamos contratos y acuerdos privados (locación, compraventa, servicios, etc.) para proteger tus intereses."], ["Cartas documento y telegramas", "Confeccionamos y enviamos cartas documento y telegramas laborales para reclamos, intimaciones o renuncias con validez legal."], ["Informe de dominio", "Solicitamos el informe de dominio de un inmueble o vehículo para conocer su titularidad y si tiene gravámenes o embargos."], ["Reclamos y mediaciones", "Te representamos en reclamos y mediaciones para resolver conflictos de forma ágil antes de llegar a un juicio."], ["Asesoramiento laboral y previsional", "Asesoramiento legal sobre tus derechos laborales y previsionales, despidos, indemnizaciones y beneficios."], ["Poderes y documentación notarial", "Gestionamos poderes y documentación notarial para que alguien te represente o para formalizar actos legales."]]}];
-  const ov=document.createElement('div');
-  ov.className='modal-ov';
-  ov.innerHTML=`
-    <div class="modal modal-area" role="dialog" aria-modal="true">
-      <button class="mclose" aria-label="Cerrar">&times;</button>
-      <div class="mchip" id="mChip">📄</div>
-      <h3 id="mTitulo"></h3>
-      <div class="mlista" id="mLista"></div>
-      <a class="mwa" id="mWa" target="_blank" rel="noopener">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="#04180d"><path d="M12.04 2c-5.46 0-9.9 4.43-9.9 9.88 0 1.74.46 3.44 1.32 4.94L2 22l5.32-1.39c1.45.79 3.08 1.21 4.72 1.21 5.46 0 9.9-4.43 9.9-9.88C21.94 6.43 17.5 2 12.04 2zm0 18.02c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23 4.54 0 8.24 3.69 8.24 8.23 0 4.54-3.7 8.24-8.24 8.24z"/></svg>
-        Consultar por WhatsApp
-      </a>
-    </div>`;
-  document.body.appendChild(ov);
-  const mTitulo=ov.querySelector('#mTitulo'), mLista=ov.querySelector('#mLista'),
-        mWa=ov.querySelector('#mWa'), mChip=ov.querySelector('#mChip');
+  const modal = document.getElementById('modalArea');
+  const mTitulo = document.getElementById('mTitulo');
+  const mLista = document.getElementById('mLista');
+  const mWaBtn = document.getElementById('mWaBtn');
 
-  function abrir(idx){
-    const a=AREAS[idx]; if(!a) return;
-    mChip.textContent=a.emoji;
-    mTitulo.textContent=a.titulo;
-    mLista.innerHTML=a.tramites.map(function(t){
-      var tituloRaw=t[0], desc=t[1];
-      var esNuevo=tituloRaw.indexOf('[NUEVO]')!==-1;
-      var titulo=tituloRaw.replace('[NUEVO]','');
-      var badge=esNuevo?' <span class="tag-new">Nuevo</span>':'';
-      var wa='https://wa.me/5491125114119?text='+encodeURIComponent('Hola, quiero consultar sobre: '+titulo);
-      return '<div class="mitem"><h4>'+titulo+badge+'</h4><p>'+desc+'</p><a href="'+wa+'" target="_blank" rel="noopener">Consultar este trámite ›</a></div>';
+  function openAreaModal(idx) {
+    const data = AREAS[idx];
+    if (!data) return;
+    mTitulo.textContent = data.titulo;
+    mLista.innerHTML = data.tramites.map(t => {
+      const waUrl = 'https://wa.me/5491125114119?text=' + encodeURIComponent('Hola Estudio CG, deseo consultar sobre: ' + t[0]);
+      return `
+        <div class="modal-item">
+          <h4>${t[0]}</h4>
+          <p>${t[1]}</p>
+          <a href="${waUrl}" target="_blank" rel="noopener">Consultar trámite →</a>
+        </div>
+      `;
     }).join('');
-    mWa.href='https://wa.me/5491125114119?text='+encodeURIComponent('Hola, quiero consultar sobre '+a.titulo);
-    ov.classList.add('open');
-    document.body.style.overflow='hidden';
-    mLista.scrollTop=0;
-  }
-  function cerrar(){ov.classList.remove('open');document.body.style.overflow='';}
 
-  document.querySelectorAll('.card-res[data-area]').forEach(function(c){
-    c.addEventListener('click',function(){abrir(parseInt(c.getAttribute('data-area')))});
+    mWaBtn.href = 'https://wa.me/5491125114119?text=' + encodeURIComponent('Hola Estudio CG, deseo coordinar una consulta sobre: ' + data.titulo);
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.serv-card[data-area]').forEach(card => {
+    card.addEventListener('click', () => openAreaModal(parseInt(card.getAttribute('data-area'))));
   });
-  ov.querySelector('.mclose').addEventListener('click',cerrar);
-  ov.addEventListener('click',function(e){if(e.target===ov)cerrar()});
-  document.addEventListener('keydown',function(e){if(e.key==='Escape')cerrar()});
+
+  modal.querySelector('.modal-close').addEventListener('click', closeModal);
+  modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 })();
 </script>
-  <script src="cg-chat-widget.js" defer></script>
+<script src="cg-chat-widget.js" defer></script>
 </body>
 </html>
