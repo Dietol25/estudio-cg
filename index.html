@@ -51,7 +51,6 @@ a { color: inherit; text-decoration: none; }
 .wrap { max-width: 1240px; margin: 0 auto; padding: 0 32px; }
 section { padding: 110px 0; position: relative; }
 
-/* Tipografía Editorial */
 h1, h2, h3, .serif-font {
   font-family: var(--font-serif);
   font-weight: 600;
@@ -92,7 +91,6 @@ h1, h2, h3, .serif-font {
   margin-bottom: 48px;
 }
 
-/* Botones */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -129,7 +127,6 @@ h1, h2, h3, .serif-font {
   transform: translateY(-2px);
 }
 
-/* Header & Navegación */
 header {
   position: sticky;
   top: 0;
@@ -208,7 +205,6 @@ nav.menu a.nav-activo::after {
   cursor: pointer;
 }
 
-/* Hero Editorial */
 .hero {
   padding: 120px 0 90px;
   border-bottom: 1px solid var(--border);
@@ -255,7 +251,6 @@ nav.menu a.nav-activo::after {
   flex-wrap: wrap;
 }
 
-/* Métricas */
 .metrics-panel {
   border-left: 1px solid var(--border);
   padding-left: 48px;
@@ -283,7 +278,6 @@ nav.menu a.nav-activo::after {
   font-weight: 600;
 }
 
-/* Cinta de Organismos */
 .ticker {
   border-bottom: 1px solid var(--border);
   padding: 18px 0;
@@ -314,7 +308,6 @@ nav.menu a.nav-activo::after {
   100% { transform: translateX(-50%); }
 }
 
-/* Trámites Frecuentes */
 .quick-access-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -367,7 +360,6 @@ nav.menu a.nav-activo::after {
   gap: 6px;
 }
 
-/* Cuadrícula de Servicios */
 .services-editorial-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -443,7 +435,6 @@ nav.menu a.nav-activo::after {
   color: var(--gold-light);
 }
 
-/* Proceso */
 .steps-editorial {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -482,7 +473,6 @@ nav.menu a.nav-activo::after {
   font-weight: 300;
 }
 
-/* Sección Nosotros */
 .about-grid {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
@@ -548,7 +538,6 @@ nav.menu a.nav-activo::after {
   display: block;
 }
 
-/* Testimonios */
 .reviews-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -594,7 +583,6 @@ nav.menu a.nav-activo::after {
   text-transform: uppercase;
 }
 
-/* FAQ */
 .faq-wrap {
   max-width: 860px;
 }
@@ -632,7 +620,6 @@ nav.menu a.nav-activo::after {
   font-weight: 300;
 }
 
-/* Contacto y Formulario */
 .contact-layout {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
@@ -720,7 +707,6 @@ nav.menu a.nav-activo::after {
   margin-top: 28px;
 }
 
-/* Otros Servicios (Tecnología) */
 .tech-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -748,7 +734,6 @@ nav.menu a.nav-activo::after {
   margin-bottom: 28px;
 }
 
-/* Modal Detalle Trámites */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -836,7 +821,6 @@ nav.menu a.nav-activo::after {
   text-transform: uppercase;
 }
 
-/* Footer Editorial */
 footer {
   background: var(--bg);
   border-top: 1px solid var(--border);
@@ -906,7 +890,6 @@ footer {
   gap: 16px;
 }
 
-/* Botón Flotante WhatsApp */
 .wa-float-btn {
   position: fixed;
   bottom: 28px;
@@ -926,7 +909,6 @@ footer {
   transform: translateY(-3px) scale(1.05);
 }
 
-/* SPA Modules */
 .modulo {
   display: none;
   animation: modFadeIn 0.35s ease forwards;
@@ -937,7 +919,6 @@ footer {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Responsive */
 @media (max-width: 1024px) {
   .hero-grid, .about-grid, .contact-layout { grid-template-columns: 1fr; gap: 48px; }
   .metrics-panel { border-left: none; padding-left: 0; flex-direction: row; justify-content: space-between; border-top: 1px solid var(--border); padding-top: 32px; }
@@ -1046,7 +1027,6 @@ footer {
     </div>
   </div>
 
-  <!-- Trámites Más Consultados -->
   <section>
     <div class="wrap">
       <span class="eyebrow">Gestiones Frecuentes</span>
@@ -1459,9 +1439,8 @@ footer {
   </section>
 </div>
 
-</div><!-- /app-root -->
+</div>
 
-<!-- Footer -->
 <footer>
   <div class="wrap">
     <div class="foot-grid">
@@ -1525,12 +1504,10 @@ footer {
   </div>
 </footer>
 
-<!-- Botón Flotante WhatsApp -->
 <a class="wa-float-btn" href="https://wa.me/5491125114119" target="_blank" rel="noopener" aria-label="WhatsApp">
   <svg width="24" height="24" viewBox="0 0 24 24" fill="#111111"><path d="M12.04 2c-5.46 0-9.9 4.43-9.9 9.88 0 1.74.46 3.44 1.32 4.94L2 22l5.32-1.39c1.45.79 3.08 1.21 4.72 1.21 5.46 0 9.9-4.43 9.9-9.88C21.94 6.43 17.5 2 12.04 2zm0 18.02c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23 4.54 0 8.24 3.69 8.24 8.23 0 4.54-3.7 8.24-8.24 8.24z"/></svg>
 </a>
 
-<!-- Modal Component -->
 <div class="modal-overlay" id="modalArea" role="dialog" aria-modal="true">
   <div class="modal-window">
     <button class="modal-close" aria-label="Cerrar modal">&times;</button>
@@ -1544,7 +1521,6 @@ footer {
 </div>
 
 <script>
-// SPA Navigation System
 function mostrar(mod) {
   document.querySelectorAll('.modulo').forEach(m => m.classList.remove('activo'));
   const target = document.getElementById('mod-' + mod);
@@ -1554,7 +1530,6 @@ function mostrar(mod) {
     a.classList.toggle('nav-activo', a.getAttribute('data-mod') === mod);
   });
 
-  // Ocultar "Inicio" en el menú si ya estamos en Inicio; mostrarlo si navegamos a otra sección
   const navInicio = document.getElementById('nav-inicio');
   if (navInicio) {
     navInicio.style.display = (mod === 'inicio') ? 'none' : 'inline-block';
@@ -1564,7 +1539,6 @@ function mostrar(mod) {
   window.scrollTo({ top: 0, behavior: 'instant' });
 }
 
-// Form Helpers
 function armarMensaje() {
   const n = document.getElementById('nombre').value.trim();
   const t = document.getElementById('tel').value.trim();
@@ -1589,7 +1563,6 @@ function enviarMail() {
   window.location.href = 'mailto:gintegralcg@gmail.com?subject=' + encodeURIComponent('Consulta Profesional — ' + tema) + '&body=' + encodeURIComponent(armarMensaje());
 }
 
-// Trámites Data & Modal Logic
 (function() {
   const AREAS = [
     {
