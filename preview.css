@@ -1,0 +1,525 @@
+/* ==========================================================================
+   ESTUDIO CG — PREVIEW UX/UI SENIOR (preview.css)
+   Tokens, componentes modulares y diseño orientado a intención
+   ========================================================================== */
+
+/* Intent Selector Section */
+.intent-section {
+  padding: 85px 0 75px;
+  background: #111111;
+  position: relative;
+}
+
+.intent-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 50px;
+}
+
+.intent-header .eyebrow {
+  justify-content: center;
+}
+
+.intent-header .h2 {
+  font-size: clamp(2.3rem, 4vw, 3.2rem);
+  margin-bottom: 16px;
+}
+
+.intent-header .sub {
+  margin: 0 auto;
+  font-size: 1.08rem;
+}
+
+.intent-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-bottom: 36px;
+}
+
+.intent-card {
+  background: var(--surface);
+  border: 1px solid rgba(244, 239, 231, 0.08);
+  border-radius: 20px;
+  padding: 30px 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  transition: var(--transition);
+}
+
+.intent-card:hover {
+  border-color: rgba(196, 154, 99, 0.35);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.intent-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.intent-icon-wrap {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: rgba(196, 154, 99, 0.1);
+  border: 1px solid rgba(196, 154, 99, 0.22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+}
+
+.intent-tag {
+  font-size: 0.70rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--taupe);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(244, 239, 231, 0.08);
+}
+
+.intent-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  color: #FAF8F4;
+  margin-bottom: 10px;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.intent-card p {
+  font-size: 0.92rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.intent-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.intent-bullets li {
+  font-size: 0.85rem;
+  color: var(--cream);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.intent-bullets li span.bullet-check {
+  color: var(--gold);
+  font-weight: bold;
+}
+
+.intent-action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--gold-light) !important;
+  background-color: rgba(196, 154, 99, 0.08) !important;
+  background: rgba(196, 154, 99, 0.08) !important;
+  background-image: none !important;
+  border: 1px solid rgba(196, 154, 99, 0.28) !important;
+  border-radius: var(--radius-pill);
+  padding: 10px 18px !important;
+  margin-top: 6px;
+  cursor: pointer;
+  outline: none;
+  transition: var(--transition);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.intent-action-btn .arrow-icon-svg {
+  stroke-width: 2.8;
+  color: var(--gold-light);
+  transition: transform 0.2s ease, stroke 0.2s ease;
+  flex-shrink: 0;
+}
+
+.intent-card:hover .intent-action-btn {
+  background-color: var(--gold) !important;
+  background: var(--gold) !important;
+  color: #0D0D0D !important;
+  border-color: var(--gold) !important;
+  box-shadow: 0 4px 14px rgba(196, 154, 99, 0.35);
+}
+
+.intent-card:hover .intent-action-btn .arrow-icon-svg {
+  color: #0D0D0D;
+  transform: translateX(4px);
+}
+
+/* Card especial: 'No sé qué trámite necesito' */
+.intent-card-highlight {
+  grid-column: span 3;
+  background: linear-gradient(135deg, rgba(28, 24, 20, 0.95) 0%, rgba(20, 18, 16, 0.95) 100%);
+  border: 1px solid rgba(196, 154, 99, 0.35);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 36px;
+}
+
+.intent-card-highlight .highlight-content {
+  max-width: 680px;
+}
+
+.intent-card-highlight h3 {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+
+.intent-card-highlight p {
+  margin-bottom: 0;
+  font-size: 0.98rem;
+}
+
+.intent-card-highlight .btn {
+  flex-shrink: 0;
+  padding: 13px 28px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Trust Section con Evidencia Verificable (Optimizada y compacta) */
+.trust-evidence-section {
+  padding: 64px 0;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+}
+
+.trust-evidence-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: 36px;
+}
+
+.trust-evidence-card {
+  background: var(--surface);
+  border: 1px solid rgba(244, 239, 231, 0.08);
+  border-radius: 16px;
+  padding: 22px 18px;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.trust-evidence-card:hover {
+  border-color: rgba(196, 154, 99, 0.3);
+  transform: translateY(-3px);
+}
+
+.trust-card-metric {
+  font-family: var(--font-serif);
+  font-size: 2.3rem;
+  color: var(--gold-light);
+  line-height: 1.1;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.trust-card-title {
+  font-size: 0.98rem;
+  color: #FAF8F4;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.trust-card-desc {
+  font-size: 0.84rem;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+/* FAQ Categorizado */
+.faq-category-pills {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 34px;
+  flex-wrap: wrap;
+}
+
+.faq-cat-pill {
+  padding: 9px 20px;
+  border-radius: var(--radius-pill);
+  background: rgba(244, 239, 231, 0.05);
+  border: 1px solid rgba(244, 239, 231, 0.12);
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.faq-cat-pill:hover,
+.faq-cat-pill.active {
+  background: var(--gold);
+  color: #0D0D0D;
+  border-color: var(--gold);
+}
+
+/* Modal Dossier de Servicio Exhaustivo */
+.service-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.service-modal-overlay.active {
+  display: flex;
+}
+
+.service-modal-card {
+  background: #181818;
+  border: 1px solid rgba(196, 154, 99, 0.35);
+  border-radius: var(--radius-lg);
+  max-width: 780px;
+  width: 100%;
+  max-height: 88vh;
+  overflow-y: auto;
+  padding: 36px 32px;
+  position: relative;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+.service-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: #FAF8F4;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.service-modal-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+  .intent-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .intent-card-highlight {
+    grid-column: span 2;
+  }
+  .trust-evidence-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .intent-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .intent-card-highlight {
+    grid-column: span 1;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 24px 20px;
+  }
+  .intent-card-highlight .btn {
+    width: 100%;
+  }
+  
+  /* Trust Section Compacta en Mobile (2x2) */
+  .trust-evidence-section {
+    padding: 44px 0;
+  }
+  .trust-evidence-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 22px;
+  }
+  .trust-evidence-card {
+    padding: 16px 12px;
+    border-radius: 12px;
+  }
+  .trust-card-metric {
+    font-size: 1.85rem;
+    margin-bottom: 2px;
+  }
+  .trust-card-title {
+    font-size: 0.84rem;
+    margin-bottom: 3px;
+  }
+  .trust-card-desc {
+    font-size: 0.76rem;
+    line-height: 1.35;
+  }
+
+  .faq-category-pills {
+    overflow-x: auto;
+    padding-bottom: 8px;
+    flex-wrap: nowrap;
+  }
+  .faq-cat-pill {
+    flex-shrink: 0;
+  }
+}
+
+/* ==========================================================================
+   JERARQUÍA ELEVADA PARA TESTIMONIAL CARDS (.rev-card)
+   ========================================================================== */
+.rev-card {
+  background: var(--surface);
+  border: 1px solid rgba(244, 239, 231, 0.08);
+  border-radius: 20px;
+  padding: 30px 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: var(--transition);
+  position: relative;
+}
+
+.rev-card:hover {
+  border-color: rgba(196, 154, 99, 0.35);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
+}
+
+.rev-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.rev-stars {
+  color: var(--gold);
+  letter-spacing: 2px;
+  font-size: 1.05rem;
+  line-height: 1;
+  margin-bottom: 0;
+}
+
+.rev-verified-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.70rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--gold-light);
+  background: rgba(196, 154, 99, 0.1);
+  border: 1px solid rgba(196, 154, 99, 0.22);
+  padding: 4px 9px;
+  border-radius: var(--radius-pill);
+}
+
+.rev-quote {
+  font-family: var(--font-serif);
+  font-size: 1.16rem;
+  font-style: italic;
+  line-height: 1.6;
+  color: #FAF8F4;
+  margin-bottom: 24px;
+}
+
+.rev-author-cluster {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-top: 1px solid rgba(244, 239, 231, 0.08);
+  padding-top: 16px;
+}
+
+.rev-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(196, 154, 99, 0.22), rgba(196, 154, 99, 0.06));
+  border: 1px solid rgba(196, 154, 99, 0.3);
+  color: var(--gold-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+}
+
+.rev-author-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.rev-author-info strong.rev-name {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #FAF8F4;
+  line-height: 1.2;
+}
+
+.rev-author-info span.rev-sub {
+  font-size: 0.74rem;
+  color: var(--taupe);
+  line-height: 1.2;
+}
+
+/* Nota Secundaria y Limpieza de Contacto */
+.contact-secondary-note {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(244, 239, 231, 0.07);
+  border-radius: 12px;
+  margin-top: 20px;
+  color: var(--muted);
+  font-size: 0.84rem;
+  line-height: 1.5;
+}
+
+.contact-secondary-note .cg-icon {
+  color: var(--gold);
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+}
