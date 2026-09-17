@@ -257,10 +257,11 @@ header.scrolled {
 }
 
 .brand-logo-img {
-  height: 38px;
+  height: 48px;
   width: auto;
   object-fit: contain;
   transition: var(--transition);
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4));
 }
 
 nav.menu {
@@ -1336,8 +1337,8 @@ footer {
   section { padding: 65px 0; }
   
   /* Header Mobile: Proporción refinada y logo contenido */
-  .nav-container { height: 62px; }
-  .brand-logo-img { height: 32px; }
+  .nav-container { height: 64px; }
+  .brand-logo-img { height: 42px; }
   
   /* Menú hamburguesa móvil con blur de lujo frosted glass */
   nav.menu {
