@@ -138,20 +138,50 @@ function closeServiceModal() {
   document.body.style.overflow = '';
 }
 
-function filterFaq(cat, btn) {
-  document.querySelectorAll('.faq-cat-pill').forEach(p => p.classList.remove('active'));
-  if (btn) btn.classList.add('active');
+function selectFaqCategory(category) {
+  // Toggle active tab buttons
+  document.querySelectorAll('.faq-tab-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.category === category);
+  });
 
-  const items = document.querySelectorAll('.faq-item');
-  items.forEach(item => {
-    if (cat === 'all' || item.dataset.category === cat) {
-      item.style.display = 'block';
+  // Filter cards with smooth fade
+  const cards = document.querySelectorAll('.faq-card');
+  cards.forEach(card => {
+    if (card.dataset.category === category) {
+      card.style.display = 'block';
+      setTimeout(() => {
+        card.style.opacity = '1';
+        card.style.transform = 'translateY(0)';
+      }, 20);
     } else {
-      item.style.display = 'none';
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(10px)';
+      card.classList.remove('open');
+      setTimeout(() => {
+        card.style.display = 'none';
+      }, 250);
     }
   });
+}
+
+function toggleFaqCard(button) {
+  const card = button.closest('.faq-card');
+  if (!card) return;
+  const isOpen = card.classList.contains('open');
+  
+  // Close other open cards
+  document.querySelectorAll('.faq-card.open').forEach(c => {
+    if (c !== card) c.classList.remove('open');
+  });
+
+  if (isOpen) {
+    card.classList.remove('open');
+  } else {
+    card.classList.add('open');
+  }
 }
 
 window.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeServiceModal();
 });
+

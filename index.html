@@ -1032,100 +1032,159 @@
   </div>
 </section>
 
-<!-- PREGUNTAS FRECUENTES HUMANIZADAS & ESTRUCTURADAS -->
-<section id="faq" style="border-top: 1px solid var(--border);">
-  <div class="wrap faq-wrap">
-    <span class="eyebrow">Resolución de Dudas</span>
-    <h2 class="h2">Preguntas frecuentes</h2>
-    <p class="sub">Claridad desde el primer momento sobre plazos reales, documentación y cómo trabajamos.</p>
+<!-- SECCIÓN FAQ CON TABS Y ACCORDION ANIMADO (Inspirado en faq-tabs.tsx) -->
+<section id="faq" class="faq-section">
+  <!-- Glowing Aura Background -->
+  <div class="faq-glow-aura" aria-hidden="true"></div>
 
-    <!-- Pregunta 1: Inicio de consulta -->
-    <div class="faq-item">
-      <details open>
-        <summary>¿Cómo se inicia una consulta con el estudio? <span class="sign">+</span></summary>
-        <div class="faq-body">
-          <p style="margin-bottom: 12px;">El proceso es simple, transparente y sin vueltas:</p>
-          <ul class="faq-list">
-            <li><strong>1. Nos contactás:</strong> Por WhatsApp o mediante el formulario contándonos tu situación.</li>
-            <li><strong>2. Evaluamos tu caso:</strong> Revisamos tu historial de aportes o papeles <em>sin ningún costo inicial</em>.</li>
-            <li><strong>3. Te explicamos las opciones:</strong> Te indicamos si es viable, los plazos estimados y el presupuesto cerrado antes de comenzar.</li>
-          </ul>
-          <p>Sin compromiso. Si decidís avanzar, arrancamos con todo claro desde el primer día.</p>
-          <a href="https://wa.me/5491125114119?text=Hola%20Estudio%20CG%2C%20quiero%20hacer%20una%20consulta%20inicial" target="_blank" rel="noopener" class="faq-cta-link">
+  <div class="wrap">
+    <!-- Header con gradiente y tipografía de alto impacto -->
+    <div class="faq-header-block">
+      <span class="faq-subtitle-gradient">Claridad, plazos y documentación</span>
+      <h2 class="h2" style="margin-bottom: 0;">Preguntas Frecuentes</h2>
+    </div>
+
+    <!-- Pestañas Selectoras de Categorías (Tabs) -->
+    <div class="faq-tabs-nav" role="tablist">
+      <button type="button" class="faq-tab-btn active" data-category="previsional" onclick="selectFaqCategory('previsional')" role="tab">
+        <span>Gestión Previsional</span>
+      </button>
+      <button type="button" class="faq-tab-btn" data-category="laboral" onclick="selectFaqCategory('laboral')" role="tab">
+        <span>Gestión Laboral</span>
+      </button>
+      <button type="button" class="faq-tab-btn" data-category="fiscal" onclick="selectFaqCategory('fiscal')" role="tab">
+        <span>Asesoramiento Fiscal</span>
+      </button>
+      <button type="button" class="faq-tab-btn" data-category="general" onclick="selectFaqCategory('general')" role="tab">
+        <span>General & Honorarios</span>
+      </button>
+    </div>
+
+    <!-- Lista de Preguntas con Acordeón Animado y Rotating '+' -->
+    <div class="faq-items-wrapper">
+      <!-- CATEGORÍA 1: PREVISIONAL -->
+      <div class="faq-card open" data-category="previsional">
+        <button type="button" class="faq-card-header" onclick="toggleFaqCard(this)">
+          <span class="faq-card-question">¿Qué documentación necesito para tramitar mi jubilación?</span>
+          <svg class="faq-plus-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </button>
+        <div class="faq-card-body">
+          <p>Para realizar el cómputo de aportes inicial lo básico es: <strong>DNI original o copia legible</strong> frente y dorso, <strong>certificaciones de servicios</strong> o recibos de sueldo históricos si los conservás, y <strong>Clave de la Seguridad Social</strong>.</p>
+          <p>Si no tenés clave o está bloqueada, te ayudamos a generarla o blanquearla sin turnos engorrosos ni filas presenciales.</p>
+        </div>
+      </div>
+
+      <div class="faq-card" data-category="previsional">
+        <button type="button" class="faq-card-header" onclick="toggleFaqCard(this)">
+          <span class="faq-card-question">¿Cuánto tiempo tarda en resolverse una jubilación o pensión?</span>
+          <svg class="faq-plus-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </button>
+        <div class="faq-card-body">
+          <p>Los tiempos dependen del organismo interviniente y la complejidad de la historia laboral:</p>
+          <p>• <strong>ANSES estándar (aportes completos en sistema):</strong> 3 a 5 meses en promedio.<br>
+          • <strong>ANSES con moratoria previsional (compra de años):</strong> 4 a 8 meses según el circuito administrativo.<br>
+          • <strong>IPS (Instituto de Previsión Social - Prov. de Bs. As.):</strong> 2 a 5 meses.<br>
+          • <strong>Pensiones directas o derivadas:</strong> 2 a 4 meses.</p>
+          <p>Realizamos seguimiento continuo semana a semana para que conozcas cada avance hasta la fecha formal de cobro.</p>
+        </div>
+      </div>
+
+      <div class="faq-card" data-category="previsional">
+        <button type="button" class="faq-card-header" onclick="toggleFaqCard(this)">
+          <span class="faq-card-question">¿Se pueden comprar los años de aportes que me faltan?</span>
+          <svg class="faq-plus-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </button>
+        <div class="faq-card-body">
+          <p><strong>Sí.</strong> Evaluamos tu historial en el sistema y aplicamos a las moratorias previsionales vigentes ante ANSES o a la regularización mediante <strong>SICAM</strong> <em>(Sistema de Información para Contribuyentes Autónomos y Monotributistas)</em>. Te calculamos exactamente cuántos años podés completar y el valor de las cuotas del plan de pago.</p>
+        </div>
+      </div>
+
+      <div class="faq-card" data-category="previsional">
+        <button type="button" class="faq-card-header" onclick="toggleFaqCard(this)">
+          <span class="faq-card-question">¿Cómo se tramita una pensión por fallecimiento o acreditación de convivencia?</span>
+          <svg class="faq-plus-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </button>
+        <div class="faq-card-body">
+          <p>Acompañamos a cónyuges, convivientes e hijos en la recopilación documental, acreditación de vínculo formal y cobro de haberes devengados o subsidios de contención familiar con contención técnica y celeridad.</p>
+        </div>
+      </div>
+
+      <!-- CATEGORÍA 2: LABORAL -->
+      <div class="faq-card" data-category="laboral" style="display: none;">
+        <button type="button" class="faq-card-header" onclick="toggleFaqCard(this)">
+          <span class="faq-card-question">¿Qué incluye el servicio de liquidación de sueldos y jornales?</span>
+          <svg class="faq-plus-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </button>
+        <div class="faq-card-body">
+          <p>Confección periódica conforme a escalas paritarias y convenios colectivos vigentes, Libro de Sueldos Digital (LSD) ante ARCA, liquidación de cargas sociales F.931, ART y seguro de vida obligatorio.</p>
+        </div>
+      </div>
+
+      <div class="faq-card" data-category="laboral" style="display: none;">
+        <button type="button" class="faq-card-header" onclick="toggleFaqCard(this)">
+          <span class="faq-card-question">¿Cómo gestionan las altas y bajas de nómina laboral?</span>
+          <svg class="faq-plus-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </button>
+        <div class="faq-card-body">
+          <p>Gestionamos altas y bajas tempranas inmediatas en Mi Simplificación, redacción y confección de telegramas y cartas documento, liquidaciones finales y certificaciones de servicios (Art. 80 LCT).</p>
+        </div>
+      </div>
+
+      <div class="faq-card" data-category="laboral" style="display: none;">
+        <button type="button" class="faq-card-header" onclick="toggleFaqCard(this)">
+          <span class="faq-card-question">¿Cuál es la modalidad de contratación para comercios y empresas?</span>
+          <svg class="faq-plus-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </button>
+        <div class="faq-card-body">
+          <p>Ofrecemos abonos mensuales fijos adaptados a la cantidad de legajos de la nómina o bien presupuestos específicos por tareas eventuales según la necesidad de la empresa.</p>
+        </div>
+      </div>
+
+      <!-- CATEGORÍA 3: FISCAL -->
+      <div class="faq-card" data-category="fiscal" style="display: none;">
+        <button type="button" class="faq-card-header" onclick="toggleFaqCard(this)">
+          <span class="faq-card-question">¿Cómo regularizo mi deuda de monotributo o autónomos?</span>
+          <svg class="faq-plus-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </button>
+        <div class="faq-card-body">
+          <p>Revisamos tu estado de deuda en el sistema de ARCA, gestionamos moratorias oficiales con planes de pago accesibles y tramitamos el desbloqueo de CUIT y levantamiento de embargos bancarios.</p>
+        </div>
+      </div>
+
+      <div class="faq-card" data-category="fiscal" style="display: none;">
+        <button type="button" class="faq-card-header" onclick="toggleFaqCard(this)">
+          <span class="faq-card-question">¿Realizan recategorizaciones y facturación electrónica?</span>
+          <svg class="faq-plus-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </button>
+        <div class="faq-card-body">
+          <p>Sí. Hacemos el seguimiento de los límites de facturación para la recategorización semestral obligatoria de Monotributo, habilitación de puntos de venta y liquidación de Ingresos Brutos (AGIP / ARBA).</p>
+        </div>
+      </div>
+
+      <!-- CATEGORÍA 4: GENERAL & HONORARIOS -->
+      <div class="faq-card" data-category="general" style="display: none;">
+        <button type="button" class="faq-card-header" onclick="toggleFaqCard(this)">
+          <span class="faq-card-question">¿Cómo se cobran los honorarios y cuánto cuesta la consulta inicial?</span>
+          <svg class="faq-plus-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </button>
+        <div class="faq-card-body">
+          <p><strong>El diagnóstico inicial y revisión de viabilidad es 100% bonificado ($0 sin costo).</strong></p>
+          <p>Para la gestión se acuerda un presupuesto cerrado y accesible antes de comenzar, con facilidades de pago en cuotas o con cancelación al cobro del primer haber jubilatorio según corresponda. Cero costos ocultos.</p>
+          <a href="https://wa.me/5491125114119?text=Hola%20Estudio%20CG%2C%20quiero%20hacer%20una%20consulta%20inicial" target="_blank" rel="noopener" class="faq-cta-link-clean">
             Iniciar evaluación sin cargo por WhatsApp →
           </a>
         </div>
-      </details>
-    </div>
+      </div>
 
-    <!-- Pregunta 2: Documentación para Jubilación -->
-    <div class="faq-item">
-      <details>
-        <summary>¿Qué documentación necesito para tramitar mi jubilación? <span class="sign">+</span></summary>
-        <div class="faq-body">
-          <p style="margin-bottom: 10px;">Para realizar el cómputo de aportes inicial, lo básico es:</p>
-          <ul class="faq-list">
-            <li><strong>DNI:</strong> Original o copia legible frente y dorso.</li>
-            <li><strong>Certificaciones de Servicios:</strong> Constancias de empleadores anteriores o recibos de sueldo históricos si los conservás.</li>
-            <li><strong>Clave de la Seguridad Social:</strong> Si no la tenés o la perdiste, te ayudamos a generarla o blanquearla.</li>
-            <li><strong>Comprobantes de aportes autónomos / monotributo:</strong> Si aportaste por tu cuenta mediante <em>SICAM</em>.</li>
-          </ul>
-          <p>¿Tenés dudas sobre qué papeles tenés? Envianos fotos por WhatsApp y te confirmamos qué sirve antes de moverte de tu casa.</p>
+      <div class="faq-card" data-category="general" style="display: none;">
+        <button type="button" class="faq-card-header" onclick="toggleFaqCard(this)">
+          <span class="faq-card-question">¿Atienden gestiones a distancia si vivo en el interior o fuera del país?</span>
+          <svg class="faq-plus-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </button>
+        <div class="faq-card-body">
+          <p><strong>Sí, gestionamos trámites en todo el país.</strong> Además de nuestra sede central en CABA, trabajamos de forma 100% remota a través de <strong>TAD</strong> (Trámites a Distancia), sistemas provinciales de IPS y los canales oficiales de Mi ANSES. Podés resolver todo sin necesidad de viajar.</p>
         </div>
-      </details>
-    </div>
-
-    <!-- Pregunta 3: Tiempos de resolución (NUEVA CRÍTICA) -->
-    <div class="faq-item">
-      <details>
-        <summary>¿Cuánto tiempo tarda en resolverse una jubilación o pensión? <span class="sign">+</span></summary>
-        <div class="faq-body">
-          <p style="margin-bottom: 10px;">Los tiempos dependen del organismo y la complejidad del historial laboral:</p>
-          <ul class="faq-list">
-            <li><strong>ANSES estándar (con aportes completos en sistema):</strong> 3 a 5 meses en promedio.</li>
-            <li><strong>ANSES con moratoria previsional (compra de años):</strong> 4 a 8 meses según el circuito administrativo.</li>
-            <li><strong>IPS (Instituto de Previsión Social - Provincia de Bs. As.):</strong> 2 a 5 meses.</li>
-            <li><strong>Pensiones directas o derivadas:</strong> 2 a 4 meses.</li>
-          </ul>
-          <p>Hacemos seguimiento continuo semana a semana para que nunca te quedes sin noticias y te avisamos de cada avance hasta la fecha de cobro.</p>
-        </div>
-      </details>
-    </div>
-
-    <!-- Pregunta 4: Honorarios Transparentes (NUEVA CRÍTICA) -->
-    <div class="faq-item">
-      <details>
-        <summary>¿Cómo se cobran los honorarios y cuánto cuesta la consulta? <span class="sign">+</span></summary>
-        <div class="faq-body">
-          <p style="margin-bottom: 10px;">Nuestra política de honorarios es 100% transparente y acordada por adelantado:</p>
-          <ul class="faq-list">
-            <li><strong>Diagnóstico y revisión preliminar:</strong> 100% bonificado (sin costo de consulta).</li>
-            <li><strong>Trámites previsionales (Jubilaciones / Pensiones):</strong> Se pacta un honorario profesional fijo y accesible antes de iniciar, con facilidades de pago o cancelación al momento del primer cobro de haberes según el caso.</li>
-            <li><strong>Gestión laboral y fiscal (Monotributo, ARCA, Sueldos):</strong> Presupuesto cerrado por gestión puntual o abono mensual fijo para empresas.</li>
-          </ul>
-          <p>Cero costos ocultos ni sorpresas en el transcurso del expediente.</p>
-        </div>
-      </details>
-    </div>
-
-    <!-- Pregunta 5: Compra de aportes / Moratorias -->
-    <div class="faq-item">
-      <details>
-        <summary>¿Se pueden comprar los años de aportes que me faltan? <span class="sign">+</span></summary>
-        <div class="faq-body">
-          <p><strong>Sí.</strong> Evaluamos tu historial en el sistema y aplicamos a las moratorias previsionales vigentes ante ANSES o a la regularización mediante <strong>SICAM</strong> <em>(Sistema de Información para Contribuyentes Autónomos y Monotributistas)</em>. Te calculamos exactamente cuántos años podés completar y el valor de las cuotas del plan de pago.</p>
-        </div>
-      </details>
-    </div>
-
-    <!-- Pregunta 6: Atención a distancia en todo el país -->
-    <div class="faq-item">
-      <details>
-        <summary>¿Atienden gestiones a distancia si vivo en el interior o provincia? <span class="sign">+</span></summary>
-        <div class="faq-body">
-          <p><strong>Sí, gestionamos trámites en todo el país.</strong> Además de la atención personalizada en nuestra sede de CABA, trabajamos de manera 100% digital a través de <strong>TAD</strong> <em>(Trámites a Distancia - plataforma nacional)</em>, plataformas provinciales de <strong>IPS</strong> y los canales oficiales de Mi ANSES. Podés gestionar todo sin viajar.</p>
-        </div>
-      </details>
+      </div>
     </div>
   </div>
 </section>
