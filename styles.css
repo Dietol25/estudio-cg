@@ -194,10 +194,10 @@ header {
   left: 0;
   right: 0;
   z-index: 200;
-  background: rgba(13, 13, 13, 0.72);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: none !important;
+  background: rgba(13, 13, 13, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(244, 239, 231, 0.06);
   transition: background 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -219,27 +219,30 @@ header .nav-cta-btn {
   color: #0D0D0D !important;
   border: 1px solid var(--gold) !important;
   font-weight: 600;
-  font-size: 0.88rem;
+  font-size: 0.88rem !important;
   letter-spacing: 0.02em;
-  padding: 10px 22px;
-  border-radius: var(--radius-pill);
-  box-shadow: 0 4px 14px rgba(196, 154, 99, 0.25);
+  padding: 11px 24px !important;
+  border-radius: 9999px !important;
+  box-shadow: 0 4px 16px rgba(196, 154, 99, 0.25);
   transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 header .nav-cta-btn:hover {
   background: #D4AF7A !important;
   border-color: #D4AF7A !important;
   color: #0D0D0D !important;
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(196, 154, 99, 0.4);
+  box-shadow: 0 6px 20px rgba(196, 154, 99, 0.4);
 }
 
-/* Al hacer scroll: el blur y la base se intensifican suavemente sin alterar los colores */
+/* Al hacer scroll: se mantiene el 75% con blur profundo */
 header.scrolled {
-  background: rgba(13, 13, 13, 0.88) !important;
-  backdrop-filter: blur(16px) !important;
-  -webkit-backdrop-filter: blur(16px) !important;
-  border-bottom: none !important;
+  background: rgba(13, 13, 13, 0.85) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border-bottom: 1px solid rgba(244, 239, 231, 0.08) !important;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
@@ -1340,19 +1343,19 @@ footer {
   .nav-container { height: 64px; }
   .brand-logo-img { height: 42px; }
   
-  /* Menú hamburguesa móvil con blur de lujo frosted glass */
+  /* Menú hamburguesa móvil con 75% de opacidad y frosted glass */
   nav.menu {
     display: none;
     position: fixed;
-    top: 62px;
+    top: 64px;
     left: 0;
     right: 0;
     bottom: 0;
     width: 100vw;
-    height: calc(100vh - 62px);
-    background: rgba(13, 13, 13, 0.84) !important;
-    backdrop-filter: blur(24px) saturate(140%) !important;
-    -webkit-backdrop-filter: blur(24px) saturate(140%) !important;
+    height: calc(100vh - 64px);
+    background: rgba(13, 13, 13, 0.75) !important;
+    backdrop-filter: blur(28px) saturate(160%) !important;
+    -webkit-backdrop-filter: blur(28px) saturate(160%) !important;
     border-top: 1px solid rgba(244, 239, 231, 0.08);
     flex-direction: column;
     padding: 24px 20px 44px;
@@ -1713,13 +1716,8 @@ footer {
 }
 
 /* ==========================================================================
-   HEADER & NAVEGACIÓN REFINADA (Sin sobrecarga de botones)
+   HEADER & NAVEGACIÓN REFINADA
    ========================================================================== */
-.nav-cta-btn {
-  padding: 8px 22px !important;
-  font-size: 0.82rem !important;
-  letter-spacing: 0.04em !important;
-}
 
 /* ==========================================================================
    TRÁMITES MÁS CONSULTADOS (Cards limpias sin números ni ghost repetitivo)
