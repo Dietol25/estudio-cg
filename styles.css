@@ -532,17 +532,25 @@ nav.menu a:not(.btn):hover::after {
   display: flex;
   align-items: center;
   gap: 12px;
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: #7D756B;
-  font-weight: 600;
+  color: #FAF8F4;
+  font-weight: 700;
+  background: rgba(13, 13, 13, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(196, 154, 99, 0.35);
+  padding: 8px 18px;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
 }
 .hero-tagline-right::before {
   content: "";
-  width: 20px;
-  height: 1px;
+  width: 14px;
+  height: 2px;
   background: var(--gold);
+  border-radius: 2px;
 }
 
 /* ==========================================================================
@@ -1664,10 +1672,16 @@ footer {
   }
 
   .hero-tagline-right {
-    font-size: 0.68rem !important;
+    font-size: 0.72rem !important;
     letter-spacing: 0.14em;
-    color: #7D756B !important;
+    color: #FAF8F4 !important;
+    font-weight: 700 !important;
     justify-content: center;
+    background: rgba(13, 13, 13, 0.75);
+    border: 1px solid rgba(196, 154, 99, 0.35);
+    padding: 8px 16px;
+    border-radius: var(--radius-pill);
+    margin: 4px auto 0;
   }
   
   /* Botón hamburguesa pastilla estilo Numa */
