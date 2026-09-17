@@ -5,9 +5,11 @@ Este documento resume el estado completo, la arquitectura técnica, las decision
 ---
 
 ## 1. Ficha del Proyecto & Posicionamiento
-* **Enlace de Demostración Público Activo:**
-  * URL: https://5486428314948109-181-23-195-84.serveousercontent.com
-  * Túnel directo HTTPS sin contraseñas ni pantallas intermedias. Acceso inmediato desde cualquier celular o PC.
+* **Enlace de Demostración Público Oficial & Permanente:**
+  * URL en Vivo (GitHub Pages): **https://dietol25.github.io/estudio-cg/**
+  * Repositorio GitHub: **https://github.com/Dietol25/estudio-cg**
+  * Servidor global de alta velocidad (CDN global, SSL automático, nunca expira).
+  * Para vincularlo en Vercel con 1 clic: iniciar sesión en [vercel.com](https://vercel.com), seleccionar **"Add New Project"**, importar el repositorio `Dietol25/estudio-cg` y hacer clic en **Deploy**.
 
 
 * **Nombre de la firma:** Estudio CG — Gestoría y Consultoría
