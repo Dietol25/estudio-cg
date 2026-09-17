@@ -1,0 +1,6 @@
+# Claves y ejecutables temporales
+id_serveo*
+cloudflared.exe
+active_url.txt
+*.bak
+.system_generated/

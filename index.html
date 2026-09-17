@@ -1,0 +1,1417 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estudio CG — Gestoría y Consultoría | Previsional · Laboral · Fiscal · Legal</title>
+<meta name="description" content="Firma profesional con más de 20 años de trayectoria: jubilaciones, pensiones, gestión laboral, asesoramiento fiscal y trámites ante organismos públicos.">
+<link rel="icon" type="image/png" href="logo-estudio-cg.png">
+
+<!-- Google Fonts: Cormorant Garamond & Manrope -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Schema.org JSON-LD para SEO y GEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "Estudio CG — Gestoría y Consultoría",
+  "alternateName": "Estudio CG",
+  "image": "https://www.estudiocg.com/logo-estudio-cg.png",
+  "telephone": "+5491125114119",
+  "email": "gintegralcg@gmail.com",
+  "url": "https://www.estudiocg.com/",
+  "sameAs": [
+    "https://www.instagram.com/estudiocgig",
+    "https://www.facebook.com/estudiocgfb",
+    "https://www.tiktok.com/@estudiocg",
+    "https://www.linkedin.com/in/cristian-goncalves/"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "José Ignacio Rucci 3351",
+    "addressLocality": "Ciudad Autónoma de Buenos Aires",
+    "addressRegion": "CABA",
+    "postalCode": "C1439",
+    "addressCountry": "AR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -34.6751,
+    "longitude": -58.4735
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    "opens": "10:00",
+    "closes": "17:00"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "bestRating": "5",
+    "ratingCount": "42"
+  },
+  "priceRange": "$$"
+}
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- HEADER MINIMALISTA & ELEGANTE -->
+<header>
+  <div class="wrap nav-container">
+    <a class="brand" href="#" aria-label="Estudio CG — Inicio">
+      <img src="logo-estudio-cg.png" alt="Estudio CG — Gestoría y Consultoría" class="brand-logo-img">
+    </a>
+    
+    <button class="hamb" aria-label="Abrir menú" onclick="toggleMobileNav()">☰</button>
+    
+    <nav class="menu" id="nav-menu">
+      <a href="#tramites" onclick="closeNav()">
+        <span class="nav-item-icon">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </span>
+        <span>Trámites</span>
+      </a>
+      <a href="#servicios" onclick="closeNav()">
+        <span class="nav-item-icon">
+          <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        </span>
+        <span>Servicios</span>
+      </a>
+      <a href="#metodo" onclick="closeNav()">
+        <span class="nav-item-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </span>
+        <span>Método</span>
+      </a>
+      <a href="#firma" onclick="closeNav()">
+        <span class="nav-item-icon">
+          <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </span>
+        <span>Firma</span>
+      </a>
+      <a href="#opiniones" onclick="closeNav()">
+        <span class="nav-item-icon">
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </span>
+        <span>Opiniones</span>
+      </a>
+      <a href="#faq" onclick="closeNav()">
+        <span class="nav-item-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        </span>
+        <span>Consultas</span>
+      </a>
+      <a href="#contacto" onclick="closeNav()">
+        <span class="nav-item-icon">
+          <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </span>
+        <span>Contacto</span>
+      </a>
+      <a href="https://wa.me/5491125114119?text=Hola%20Estudio%20CG%2C%20quiero%20hacer%20una%20consulta" target="_blank" rel="noopener" class="btn btn-primary nav-cta-btn">
+        Consultar
+      </a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO INMERSIVO CALIBRADO DESKTOP & MOBILE -->
+<section class="hero-editorial-wrap" id="inicio">
+  <div class="hero-editorial-overlay"></div>
+
+  <!-- Fondo visual móvil: edge-to-edge con degradé suave al fondo oscuro -->
+  <div class="hero-mobile-visual" aria-hidden="true">
+    <img src="hero-desk-mobile.jpg" alt="Espacio de trabajo Estudio CG" class="hero-mobile-img" width="720" height="573" loading="eager" fetchpriority="high">
+    <div class="hero-mobile-fade"></div>
+  </div>
+
+  <div class="wrap hero-content">
+    <div class="hero-main-copy">
+      <span class="eyebrow">Gestoría Previsional, Laboral & Fiscal</span>
+      
+      <h1 class="hero-headline">
+        Tu jubilación, tus sueldos,<br>
+        tus trámites.<br>
+        <em>Resueltos sin vueltas.</em>
+      </h1>
+
+      <div class="hero-motto">
+        «Si se puede hacer, lo hacemos. Si no, también vemos.»
+      </div>
+
+      <p class="hero-lead">
+        Asesoramiento técnico y resolución directa para personas y empresas con más de 20 años de trayectoria destrabando expedientes ante ANSES, ARCA y organismos públicos.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#contacto">
+          Consultá tu caso gratis
+        </a>
+        <a class="btn btn-secondary" href="#tramites">
+          ¿Qué trámites resolvemos?
+        </a>
+      </div>
+    </div>
+
+    <!-- Fila Inferior con Métricas y Tagline -->
+    <div class="hero-bottom-bar">
+      <div class="hero-metrics-cluster">
+        <div class="hero-m-col">
+          <span class="hero-m-val">+20</span>
+          <span class="hero-m-lbl">AÑOS DE TRAYECTORIA</span>
+        </div>
+        <div class="hero-m-sep"></div>
+        <div class="hero-m-col">
+          <span class="hero-m-val">5.0</span>
+          <span class="hero-m-lbl">GOOGLE REVIEWS</span>
+        </div>
+        <div class="hero-m-sep"></div>
+        <div class="hero-m-col">
+          <span class="hero-m-val">100%</span>
+          <span class="hero-m-lbl">ATENCIÓN DIRECTA</span>
+        </div>
+      </div>
+
+      <div class="hero-tagline-right">
+        TU GESTIÓN, EN BUENAS MANOS.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER INFINITO CONTINUO (100% Seamless, sin espacios) -->
+<div class="ticker-wrap" aria-hidden="true">
+  <div class="ticker-track">
+    <div class="ticker-content">
+      <span>Gestión Especializada <i>·</i></span>
+      <span>ANSES <i>·</i></span>
+      <span>ARCA (ex AFIP) <i>·</i></span>
+      <span>PAMI <i>·</i></span>
+      <span>IPS Provincia Bs. As. <i>·</i></span>
+      <span>Migraciones <i>·</i></span>
+      <span>TAD (Trámites a Distancia) <i>·</i></span>
+      <span>RENAPER <i>·</i></span>
+      <span>Registro Civil <i>·</i></span>
+    </div>
+    <div class="ticker-content">
+      <span>Gestión Especializada <i>·</i></span>
+      <span>ANSES <i>·</i></span>
+      <span>ARCA (ex AFIP) <i>·</i></span>
+      <span>PAMI <i>·</i></span>
+      <span>IPS Provincia Bs. As. <i>·</i></span>
+      <span>Migraciones <i>·</i></span>
+      <span>TAD (Trámites a Distancia) <i>·</i></span>
+      <span>RENAPER <i>·</i></span>
+      <span>Registro Civil <i>·</i></span>
+    </div>
+    <div class="ticker-content">
+      <span>Gestión Especializada <i>·</i></span>
+      <span>ANSES <i>·</i></span>
+      <span>ARCA (ex AFIP) <i>·</i></span>
+      <span>PAMI <i>·</i></span>
+      <span>IPS Provincia Bs. As. <i>·</i></span>
+      <span>Migraciones <i>·</i></span>
+      <span>TAD (Trámites a Distancia) <i>·</i></span>
+      <span>RENAPER <i>·</i></span>
+      <span>Registro Civil <i>·</i></span>
+    </div>
+    <div class="ticker-content">
+      <span>Gestión Especializada <i>·</i></span>
+      <span>ANSES <i>·</i></span>
+      <span>ARCA (ex AFIP) <i>·</i></span>
+      <span>PAMI <i>·</i></span>
+      <span>IPS Provincia Bs. As. <i>·</i></span>
+      <span>Migraciones <i>·</i></span>
+      <span>TAD (Trámites a Distancia) <i>·</i></span>
+      <span>RENAPER <i>·</i></span>
+      <span>Registro Civil <i>·</i></span>
+    </div>
+  </div>
+</div>
+
+<!-- SECCIÓN TRÁMITES FRECUENTES -->
+<section id="tramites">
+  <div class="wrap">
+    <div class="section-head-flex">
+      <div>
+        <span class="eyebrow">Gestiones Frecuentes</span>
+        <h2 class="h2">Trámites más consultados</h2>
+        <p class="sub" style="margin-bottom:0">Resolución estructurada y expedita en los expedientes más requeridos ante organismos públicos.</p>
+      </div>
+    </div>
+    
+    <div class="quick-access-grid">
+      <!-- Jubilaciones -->
+      <div class="quick-card">
+        <div class="quick-card-top">
+          <div class="quick-card-icon-wrap">
+            <svg class="cg-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <span class="tramite-org-tag">ANSES · IPS</span>
+        </div>
+        <h4>Jubilaciones</h4>
+        <p>Cómputo previo de aportes, moratorias previsionales vigentes, regímenes especiales y gestión integral ante ANSES e IPS Provincia de Buenos Aires.</p>
+        <div class="quick-card-highlights">
+          <span>✓ Sin turnos presenciales</span>
+          <span>✓ Revisión de historial SICAM</span>
+        </div>
+      </div>
+
+      <!-- Pensiones -->
+      <div class="quick-card">
+        <div class="quick-card-top">
+          <div class="quick-card-icon-wrap">
+            <svg class="cg-icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <span class="tramite-org-tag">ANSES · Previsional</span>
+        </div>
+        <h4>Pensiones</h4>
+        <p>Pensiones directas por fallecimiento de trabajador activo, pensiones derivadas de titulares jubilados y regímenes de convivencia acreditada.</p>
+        <div class="quick-card-highlights">
+          <span>✓ Liquidación de haberes devengados</span>
+          <span>✓ Contención documental integral</span>
+        </div>
+      </div>
+
+      <!-- Monotributo & Fiscal -->
+      <div class="quick-card">
+        <div class="quick-card-top">
+          <div class="quick-card-icon-wrap">
+            <svg class="cg-icon" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></svg>
+          </div>
+          <span class="tramite-org-tag">ARCA (ex AFIP)</span>
+        </div>
+        <h4>Monotributo & ARCA</h4>
+        <p>Altas impositivas, recategorización cuatrimestral, emisión de comprobantes electrónicos, planes de pago y regularización de deuda fiscal.</p>
+        <div class="quick-card-highlights">
+          <span>✓ Libre deuda y certificaciones</span>
+          <span>✓ Gestión 100% digital</span>
+        </div>
+      </div>
+
+      <!-- Liquidación Sueldos -->
+      <div class="quick-card">
+        <div class="quick-card-top">
+          <div class="quick-card-icon-wrap">
+            <svg class="cg-icon" viewBox="0 0 24 24"><path d="M16 16v1a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v1"/><path d="M18 8h4a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-4"/><circle cx="8" cy="12" r="2"/></svg>
+          </div>
+          <span class="tramite-org-tag">Laboral & Nóminas</span>
+        </div>
+        <h4>Liquidación de Sueldos</h4>
+        <p>Confección de recibos de sueldo según Convenio Colectivo, Libro de Sueldos Digital y presentación mensual de cargas sociales F.931.</p>
+        <div class="quick-card-highlights">
+          <span>✓ Cumplimiento normativo estricto</span>
+          <span>✓ Soporte mensual al empleador</span>
+        </div>
+      </div>
+
+      <!-- Ciudadanía & Radicación -->
+      <div class="quick-card">
+        <div class="quick-card-top">
+          <div class="quick-card-icon-wrap">
+            <svg class="cg-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <span class="tramite-org-tag">Migraciones · Radex</span>
+        </div>
+        <h4>Ciudadanía & Radicación</h4>
+        <p>Radicación temporaria y permanente para extranjeros en Argentina, tramitación de DNI para extranjeros y asesoría en carpetas para doble ciudadanía.</p>
+        <div class="quick-card-highlights">
+          <span>✓ Seguimiento de expedientes Radex</span>
+          <span>✓ Asesoría consular</span>
+        </div>
+      </div>
+
+      <!-- Partidas & Legalizaciones -->
+      <div class="quick-card">
+        <div class="quick-card-top">
+          <div class="quick-card-icon-wrap">
+            <svg class="cg-icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <span class="tramite-org-tag">Registros Civiles</span>
+        </div>
+        <h4>Partidas & Legalizaciones</h4>
+        <p>Búsqueda y pedido de actas de nacimiento, matrimonio y defunción en CABA, Provincia de Buenos Aires y registros del interior con apostilla de La Haya.</p>
+        <div class="quick-card-highlights">
+          <span>✓ Legalizaciones ministeriales</span>
+          <span>✓ Envíos digitales o papel</span>
+        </div>
+      </div>
+
+      <!-- Infracciones de Tránsito -->
+      <div class="quick-card">
+        <div class="quick-card-top">
+          <div class="quick-card-icon-wrap">
+            <svg class="cg-icon" viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+          </div>
+          <span class="tramite-org-tag">Faltas & Tránsito</span>
+        </div>
+        <h4>Infracciones de Tránsito</h4>
+        <p>Revisión técnica de actas de infracción en CABA y jurisdicciones provinciales, análisis de prescripción legal y confección de descargos administrativos.</p>
+        <div class="quick-card-highlights">
+          <span>✓ Regularización previa a transferencias</span>
+          <span>✓ Evita pagos indebidos</span>
+        </div>
+      </div>
+
+      <!-- PUAM & Pensiones No Contributivas -->
+      <div class="quick-card">
+        <div class="quick-card-top">
+          <div class="quick-card-icon-wrap">
+            <svg class="cg-icon" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+          </div>
+          <span class="tramite-org-tag">Seguridad Social</span>
+        </div>
+        <h4>PUAM & Invalidez</h4>
+        <p>Pensión Universal para el Adulto Mayor a partir de los 65 años sin aportes suficientes, y tramitación de pensiones no contributivas por invalidez laboral.</p>
+        <div class="quick-card-highlights">
+          <span>✓ Evaluación socioeconómica</span>
+          <span>✓ Asignación médica oficial</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Banner único de acción (Reemplaza los 8 ghost links repetitivos) -->
+    <div class="tramites-action-banner">
+      <div class="tramites-banner-copy">
+        <div class="tramites-badge-icon">
+          <svg class="cg-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+        </div>
+        <div>
+          <h3>¿Tenés dudas sobre tu trámite puntual o no sabés por dónde empezar?</h3>
+          <p>Hacemos un diagnóstico previo de tu situación y te indicamos los pasos concretos sin compromiso.</p>
+        </div>
+      </div>
+      <div class="tramites-banner-btns">
+        <a href="https://wa.me/5491125114119?text=Hola%20Estudio%20CG%2C%20quiero%20consultar%20por%20un%20tr%C3%A1mite" target="_blank" rel="noopener" class="btn btn-primary">
+          <svg class="cg-icon" style="stroke: currentColor; width: 16px; height: 16px;" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          Consultar por WhatsApp
+        </a>
+        <a href="#contacto" class="btn btn-secondary">
+          Formulario de contacto
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECCIÓN SERVICIOS EDITORIALES CON DOSSIER POR DEPARTAMENTO -->
+<section id="servicios" style="border-top: 1px solid var(--border);">
+  <div class="wrap">
+    <span class="eyebrow">Áreas de Especialidad</span>
+    <h2 class="h2">Estructura por departamentos</h2>
+    <p class="sub">Una cobertura integral organizada por especialidad técnica, con equipos dedicados a cada circuito administrativo.</p>
+    
+    <div class="serv-tabs-layout">
+      <!-- Contenedor con Gradientes Indicadores sutiles en Mobile (Izquierda y Derecha) -->
+      <div class="serv-tabs-nav-wrap">
+        <!-- Indicador de gradiente y flecha izquierda -->
+        <div class="pills-fade-edge pills-fade-left" id="pillsFadeLeft" aria-hidden="true">
+          <svg viewBox="0 0 24 24" class="edge-arrow edge-arrow-left"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </div>
+
+        <div class="serv-tabs-nav" role="tablist">
+        <button class="serv-tab-btn active" onclick="switchDept(0)" role="tab" id="tab-0">
+          <div class="serv-tab-btn-icon">
+            <svg class="cg-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="serv-tab-btn-text">
+            <strong>Área Previsional</strong>
+            <span>Jubilaciones, Pensiones, PUAM</span>
+          </div>
+        </button>
+
+        <button class="serv-tab-btn" onclick="switchDept(1)" role="tab" id="tab-1">
+          <div class="serv-tab-btn-icon">
+            <svg class="cg-icon" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          </div>
+          <div class="serv-tab-btn-text">
+            <strong>Gestión Laboral</strong>
+            <span>Sueldos, F.931, Nóminas</span>
+          </div>
+        </button>
+
+        <button class="serv-tab-btn" onclick="switchDept(2)" role="tab" id="tab-2">
+          <div class="serv-tab-btn-icon">
+            <svg class="cg-icon" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></svg>
+          </div>
+          <div class="serv-tab-btn-text">
+            <strong>Asesoramiento Fiscal</strong>
+            <span>ARCA / AFIP, Monotributo, Deuda</span>
+          </div>
+        </button>
+
+        <button class="serv-tab-btn" onclick="switchDept(3)" role="tab" id="tab-3">
+          <div class="serv-tab-btn-icon">
+            <svg class="cg-icon" viewBox="0 0 24 24"><path d="M21 2l-2 2m-1.5 1.5L14 9l-3 3-2-2-4 4 3 3 2-2 3 3 3.5-3.5M19 5l-7 7"/></svg>
+          </div>
+          <div class="serv-tab-btn-text">
+            <strong>Organismos & Claves</strong>
+            <span>TAD, PAMI, RENAPER, Claves</span>
+          </div>
+        </button>
+
+        <button class="serv-tab-btn" onclick="switchDept(4)" role="tab" id="tab-4">
+          <div class="serv-tab-btn-icon">
+            <svg class="cg-icon" viewBox="0 0 24 24"><path d="M12 3v18M3 9l9-6 9 6M6 12l-3 6h6l-3-6zM18 12l-3 6h6l-3-6z"/></svg>
+          </div>
+          <div class="serv-tab-btn-text">
+            <strong>Área Legal & Gestoría</strong>
+            <span>Sucesiones, Contratos, Dominio</span>
+          </div>
+        </button>
+      </div>
+
+      <!-- Indicador de gradiente y flecha derecha -->
+      <div class="pills-fade-edge pills-fade-right" id="pillsFadeRight" aria-hidden="true">
+        <svg viewBox="0 0 24 24" class="edge-arrow edge-arrow-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </div>
+    </div>
+
+      <!-- Panel de Contenido del Departamento Activo -->
+      <div class="serv-dossier-panel">
+        
+        <!-- Dossier 0: Previsional -->
+        <div class="dept-dossier active" id="dept-0">
+          <div class="dept-dossier-head">
+            <div class="dept-dossier-badge">Especialidad Principal</div>
+            <h3>Departamento Previsional</h3>
+            <p>Especialistas en destrabar expedientes jubilatorios, moratorias y reconocimientos de servicios ante ANSES y el Instituto de Previsión Social (IPS).</p>
+          </div>
+          <div class="dept-dossier-body">
+            <h4>Gestiones y trámites incluidos en esta área:</h4>
+            <div class="dept-items-grid">
+              <div class="dept-item">
+                <div class="dept-item-dot"></div>
+                <div>
+                  <strong>Jubilación Ordinaria ANSES</strong>
+                  <p>Hombres de 65 años y mujeres de 60 con los 30 años de aportes o cómputo mixto.</p>
+                </div>
+              </div>
+              <div class="dept-item">
+                <div class="dept-item-dot"></div>
+                <div>
+                  <strong>Jubilación IPS Provincia de Bs. As.</strong>
+                  <p>Docentes, personal de salud, municipales y policía de la Provincia de Buenos Aires.</p>
+                </div>
+              </div>
+              <div class="dept-item">
+                <div class="dept-item-dot"></div>
+                <div>
+                  <strong>Moratorias Previsionales & SICAM</strong>
+                  <p>Regularización de aportes faltantes para completar los años reglamentarios.</p>
+                </div>
+              </div>
+              <div class="dept-item">
+                <div class="dept-item-dot"></div>
+                <div>
+                  <strong>Pensiones Directas y Derivadas</strong>
+                  <p>Para cónyuges, convivientes e hijos con derecho a cobro de haber previsional.</p>
+                </div>
+              </div>
+              <div class="dept-item">
+                <div class="dept-item-dot"></div>
+                <div>
+                  <strong>PUAM (Pensión Adulto Mayor)</strong>
+                  <p>Cobertura social mensual para mayores de 65 años en situación vulnerable.</p>
+                </div>
+              </div>
+              <div class="dept-item">
+                <div class="dept-item-dot"></div>
+                <div>
+                  <strong>Reajuste de Haberes</strong>
+                  <p>Evaluación técnica de liquidaciones mal calculadas por organismos oficiales.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="dept-footer-bar">
+              <div class="dept-req-box">
+                <strong>Documentación básica requerida:</strong>
+                <span>DNI, Clave de Seguridad Social y Certificaciones de Servicios.</span>
+              </div>
+              <a href="https://wa.me/5491125114119?text=Hola%20Estudio%20CG%2C%20quiero%20consultar%20por%20el%20%C3%81rea%20Previsional" target="_blank" rel="noopener" class="btn btn-primary">
+                Consultar ahora →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dossier 1: Laboral -->
+        <div class="dept-dossier" id="dept-1">
+          <div class="dept-dossier-head">
+            <div class="dept-dossier-badge">Actualizado Normativa 2026</div>
+            <h3>Departamento de Gestión Laboral</h3>
+            <p>Servicio integral para pequeñas empresas, profesionales y comercios que precisan delegar la administración de personal y nóminas con total rigor.</p>
+          </div>
+          <div class="dept-dossier-body">
+            <h4>Gestiones y trámites incluidos en esta área:</h4>
+            <div class="dept-items-grid">
+              <div class="dept-item">
+                <div class="dept-item-dot"></div>
+                <div>
+                  <strong>Liquidación de Sueldos & Jornales</strong>
+                  <p>Confección periódica conforme a escalas paritarias y convenios colectivos vigentes.</p>
+                </div>
+              </div>
+              <div class="dept-item">
+                <div class="dept-item-dot"></div>
+                <div>
+                  <strong>Libro de Sueldos Digital (LSD)</strong>
+                  <p>Parametrización y generación mensual ante ARCA / AFIP sin contingencias.</p>
+                </div>
+              </div>
+              <div class="dept-item">
+                <div class="dept-item-dot"></div>
+                <div>
+                  <strong>Cargas Sociales F.931</strong>
+                  <p>Determinación de aportes, contribuciones patronales, ART y seguro de vida.</p>
+                </div>
+              </div>
+              <div class="dept-item">
+                <div class="dept-item-dot"></div>
+                <div>
+                  <strong>Altas y Bajas Tempranas (Mi Simplificación)</strong>
+                  <p>Gestión inmediata de ingresos de nómina y confección de telegramas y desvinculaciones.</p>
+                </div>
+              </div>
+              <div class="dept-item">
+                <div class="dept-item-dot"></div>
+                <div>
+                  <strong>Certificaciones de Servicios Art. 80</strong>
+                  <p>Elaboración de certificaciones laborales obligatorias ante cese contractual.</p>
+                </div>
+              </div>
+              <div class="dept-item">
+                <div class="dept-item-dot"></div>
+                <div>
+                  <strong>Asesoría Preventiva al Empleador</strong>
+                  <p>Revisión contractual para evitar contingencias laborales y reclamos judiciales.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="dept-footer-bar">
+              <div class="dept-req-box">
+                <strong>Modalidad de trabajo:</strong>
+                <span>Abono mensual fijo o liquidaciones puntuales por legajo.</span>
+              </div>
+              <a href="https://wa.me/5491125114119?text=Hola%20Estudio%20CG%2C%20quiero%20consultar%20por%20Gesti%C3%B3n%20Laboral" target="_blank" rel="noopener" class="btn btn-primary">
+                Consultar ahora →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dossier 2: Fiscal -->
+        <div class="dept-dossier" id="dept-2">
+          <div class="dept-dossier-head">
+            <div class="dept-dossier-badge">ARCA / Rentas Provinciales</div>
+            <h3>Departamento Fiscal & Tributario</h3>
+            <p>Mantenimiento y regularización de la situación impositiva de particulares, monotributistas, autónomos y prestadores de servicios.</p>
+          </div>
+          <div class="dept-dossier-body">
+            <h4>Gestiones y trámites incluidos en esta área:</h4>
+            <div class="dept-items-grid">
+              <div class="dept-item">
+                <div class="dept-item-dot"></div>
+                <div>
+                  <strong>Monotributo Integral</strong>
+                  <p>Alta de CUIT, inscripción, recategorización semestral obligatoria y baja formal.</p>
+                </div>
+              </div>
+              <div class="dept-item">
+                <div class="dept-item-dot"></div>
+                <div>
+                  <strong>Facturación Electrónica</strong>
+                  <p>Habilitación de puntos de venta y emisión de comprobantes bajo normativa oficial.</p>
+                </div>
+              </div>
+              <div class="dept-item">
+                <div class="dept-item-dot"></div>
+                <div>
+                  <strong>Planes de Pago y Moratorias Fiscales</strong>
+                  <p>Regularización de deuda ante ARCA con cuotas accesibles para destrabar CUITs.</p>
+                </div>
+              </div>
+              <div class="dept-item">
+                <div class="dept-item-dot"></div>
+                <div>
+                  <strong>Ingresos Brutos (AGIP / ARBA)</strong>
+                  <p>Inscripción al régimen simplificado, Convenio Multilateral y declaraciones juradas.</p>
+                </div>
+              </div>
+              <div class="dept-item">
+                <div class="dept-item-dot"></div>
+                <div>
+                  <strong>SICAM Previsional</strong>
+                  <p>Liquidación de deudas de autónomos y monotributistas requeridas para jubilarse.</p>
+                </div>
+              </div>
+              <div class="dept-item">
+                <div class="dept-item-dot"></div>
+                <div>
+                  <strong>Certificados de No Retención</strong>
+                  <p>Tramitación de exenciones y desgravaciones impositivas vigentes.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="dept-footer-bar">
+              <div class="dept-req-box">
+                <strong>Documentación requerida:</strong>
+                <span>Número de CUIT y Clave Fiscal Nivel 3 activa.</span>
+              </div>
+              <a href="https://wa.me/5491125114119?text=Hola%20Estudio%20CG%2C%20quiero%20consultar%20por%20Asesoramiento%20Fiscal" target="_blank" rel="noopener" class="btn btn-primary">
+                Consultar ahora →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dossier 3: Organismos & Claves -->
+        <div class="dept-dossier" id="dept-3">
+          <div class="dept-dossier-head">
+            <div class="dept-dossier-badge">Gestión Ágil Digital</div>
+            <h3>Organismos Públicos & Claves</h3>
+            <p>Desbloqueo de accesos, habilitación de perfiles en plataformas oficiales y tramitación ante organismos nacionales y provinciales.</p>
+          </div>
+          <div class="dept-dossier-body">
+            <h4>Gestiones y trámites incluidos en esta área:</h4>
+            <div class="dept-items-grid">
+              <div class="dept-item">
+                <div class="dept-item-dot"></div>
+                <div>
+                  <strong>Clave de Seguridad Social (ANSES)</strong>
+                  <p>Blanqueo de contraseñas y vinculación de relaciones familiares para trámites.</p>
+                </div>
+              </div>
+              <div class="dept-item">
+                <div class="dept-item-dot"></div>
+                <div>
+                  <strong>Clave Fiscal ARCA Nivel 3</strong>
+                  <p>Validación biométrica y gestión de poderes mediante Administrador de Relaciones.</p>
+                </div>
+              </div>
+              <div class="dept-item">
+                <div class="dept-item-dot"></div>
+                <div>
+                  <strong>Trámites a Distancia (TAD)</strong>
+                  <p>Iniciación y seguimiento de expedientes ministeriales federales 100% digitales.</p>
+                </div>
+              </div>
+              <div class="dept-item">
+                <div class="dept-item-dot"></div>
+                <div>
+                  <strong>PAMI: Afiliación & Cobertura</strong>
+                  <p>Tramitación de carnet digital, subsidios de medicamentos y asignación de prestadores.</p>
+                </div>
+              </div>
+              <div class="dept-item">
+                <div class="dept-item-dot"></div>
+                <div>
+                  <strong>Certificados RENAPER & Antecedentes</strong>
+                  <p>Partidas de nacimiento, certificados de defunción y antecedentes penales para trámites.</p>
+                </div>
+              </div>
+              <div class="dept-item">
+                <div class="dept-item-dot"></div>
+                <div>
+                  <strong>Apostillas de La Haya</strong>
+                  <p>Legalización internacional de documentación para trámites en el exterior.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="dept-footer-bar">
+              <div class="dept-req-box">
+                <strong>Plazo de resolución:</strong>
+                <span>Gestiones operativas de 24 a 72 horas hábiles.</span>
+              </div>
+              <a href="https://wa.me/5491125114119?text=Hola%20Estudio%20CG%2C%20quiero%20consultar%20por%20Organismos%20y%20Claves" target="_blank" rel="noopener" class="btn btn-primary">
+                Consultar ahora →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dossier 4: Legal & Gestoría -->
+        <div class="dept-dossier" id="dept-4">
+          <div class="dept-dossier-head">
+            <div class="dept-dossier-badge">Respaldo Jurídico</div>
+            <h3>Área Legal & Gestoría Documental</h3>
+            <p>Intervención técnica y jurídica en procesos civiles, patrimoniales, contractuales e informes de titularidad.</p>
+          </div>
+          <div class="dept-dossier-body">
+            <h4>Gestiones y trámites incluidos en esta área:</h4>
+            <div class="dept-items-grid">
+              <div class="dept-item">
+                <div class="dept-item-dot"></div>
+                <div>
+                  <strong>Sucesiones Ab-Intestato y Testamentarias</strong>
+                  <p>Declaratoria de herederos, inscripción de bienes inmuebles y automotores.</p>
+                </div>
+              </div>
+              <div class="dept-item">
+                <div class="dept-item-dot"></div>
+                <div>
+                  <strong>Contratos Civiles & Comerciales</strong>
+                  <p>Locación de inmuebles según normativa vigente, comodatos, mutuos y compraventas.</p>
+                </div>
+              </div>
+              <div class="dept-item">
+                <div class="dept-item-dot"></div>
+                <div>
+                  <strong>Cartas Documento & Notificaciones</strong>
+                  <p>Redacción técnica de intimaciones, respuestas laborales y emplazamientos legales.</p>
+                </div>
+              </div>
+              <div class="dept-item">
+                <div class="dept-item-dot"></div>
+                <div>
+                  <strong>Informes de Dominio e Inhibiciones</strong>
+                  <p>Consulta en Registro de la Propiedad Inmueble y Registro del Automotor (DNRPA).</p>
+                </div>
+              </div>
+              <div class="dept-item">
+                <div class="dept-item-dot"></div>
+                <div>
+                  <strong>Transferencias Automotor</strong>
+                  <p>Formularios 08, verificación policial, bajas y regularización de patentes.</p>
+                </div>
+              </div>
+              <div class="dept-item">
+                <div class="dept-item-dot"></div>
+                <div>
+                  <strong>Constitución de Sociedades</strong>
+                  <p>Inscripción de SAS y SRL ante Inspección General de Justicia (IGJ) o DPPJ.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="dept-footer-bar">
+              <div class="dept-req-box">
+                <strong>Atención:</strong>
+                <span>Presupuestos definidos y asesoría personalizada por abogados matriculados.</span>
+              </div>
+              <a href="https://wa.me/5491125114119?text=Hola%20Estudio%20CG%2C%20quiero%20consultar%20por%20el%20%C3%81rea%20Legal" target="_blank" rel="noopener" class="btn btn-primary">
+                Consultar ahora →
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MÉTODO DE TRABAJO -->
+<section id="metodo" style="border-top: 1px solid var(--border);">
+  <div class="wrap">
+    <span class="eyebrow">Metodología de Trabajo</span>
+    <h2 class="h2">Criterio, rigor y previsibilidad</h2>
+    <p class="sub">Un protocolo de tres fases diseñado para eliminar la incertidumbre burocrática y reducir tiempos de espera.</p>
+    
+    <div class="steps-editorial">
+      <div class="step-card">
+        <div class="step-head">
+          <div class="step-idx">I</div>
+          <svg class="cg-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </div>
+        <h3>Diagnóstico y Requisitos</h3>
+        <p>Evaluamos tu historial previsional o documental de forma exhaustiva. Determinamos la viabilidad real, costos estipulados y la documentación exacta requerida.</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-head">
+          <div class="step-idx">II</div>
+          <svg class="cg-icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        </div>
+        <h3>Presentación & Gestión</h3>
+        <p>Armamos tu carpeta técnica e ingresamos el expediente ante el organismo correspondiente (ANSES, ARCA, IPS o Migraciones). Realizamos el seguimiento administrativo paso a paso sin que tengas que hacer filas ni perder tiempo.</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-head">
+          <div class="step-idx">III</div>
+          <svg class="cg-icon" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <h3>Resolución y Entrega</h3>
+        <p>Hacemos seguimiento continuo hasta la resolución final. Te informamos de cada hito alcanzado con total claridad hasta el cobro o conclusión formal.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FIRMA & TRAYECTORIA CON IMAGEN DE CONTEXTO REAL -->
+<section id="firma" style="border-top: 1px solid var(--border);">
+  <div class="wrap about-grid">
+    <div>
+      <span class="eyebrow">Identidad & Trayectoria</span>
+      <h2 class="h2">Dos décadas construyendo respaldo profesional</h2>
+      <p class="sub" style="margin-bottom: 24px;">En Estudio CG entendemos que detrás de cada expediente previsional, laboral o legal hay personas que necesitan certeza, celeridad y contención técnica real.</p>
+      
+      <div class="values-list">
+        <div class="value-row">
+          <svg class="cg-icon" style="margin-top: 4px;" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <div class="value-content">
+            <h4>Criterio Técnico y Solvencia</h4>
+            <p>Conocimiento profundo de reglamentaciones vigentes, decretos y moratorias administrativas complejas para encontrar el camino más favorable.</p>
+          </div>
+        </div>
+
+        <div class="value-row">
+          <svg class="cg-icon" style="margin-top: 4px;" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <div class="value-content">
+            <h4>Atención Directa y Personalizada</h4>
+            <p>Sin derivaciones impersonales. Tu expediente es evaluado y seguido de principio a fin por profesionales responsables del estudio.</p>
+          </div>
+        </div>
+
+        <div class="value-row">
+          <svg class="cg-icon" style="margin-top: 4px;" viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          <div class="value-content">
+            <h4>Honorarios Claros y Definidos</h4>
+            <p>Presupuestos acordados previo al inicio del trámite. Sin costos ocultos ni sorpresas durante el transcurso del expediente.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Columna derecha con Retrato y Bio Oficial del Fundador: Cristian Manuel Gonçalves -->
+    <div class="identity-visual-col">
+      <div class="identity-image-card founder-profile-card">
+        <div class="founder-card-header">
+          <div class="founder-avatar-frame">
+            <img src="cristian-framed.jpg" alt="Cristian Manuel Gonçalves — Fundador de Estudio CG" class="founder-avatar-img" width="160" height="160">
+          </div>
+          <div class="founder-title-block">
+            <h3 class="founder-name">Cristian Manuel Gonçalves</h3>
+            <span class="founder-specialty">Gestión Previsional · Administración · Análisis de RRHH</span>
+          </div>
+        </div>
+        
+        <div class="founder-bio-box">
+          <div class="founder-bio-text">
+            <p>
+              «Mi experiencia combina la gestión previsional, la administración y el análisis de Recursos Humanos, con una mirada integral orientada a resolver cada trámite de manera clara, ordenada y responsable.»
+            </p>
+            <p>
+              «Acompaño a cada cliente durante todo el proceso, desde el análisis inicial hasta la presentación, seguimiento y resolución de su trámite. Mi objetivo es transformar procedimientos complejos en procesos más simples, comprensibles y transparentes.»
+            </p>
+          </div>
+
+          <div class="founder-footer-bar">
+            <div class="founder-seal">
+              <span class="founder-seal-dot"></span>
+              <span>Atención y seguimiento personal</span>
+            </div>
+            <div class="founder-actions-wrap">
+              <a href="https://www.linkedin.com/in/cristian-goncalves/" target="_blank" rel="noopener" aria-label="LinkedIn de Cristian Manuel Gonçalves" class="founder-linkedin-link" title="Ver perfil en LinkedIn">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </a>
+              <a href="https://wa.me/5491125114119?text=Hola%20Cristian%2C%20estuve%20viendo%20tu%20perfil%20en%20la%20web%20y%20quiero%20hacerte%20una%20consulta" target="_blank" rel="noopener" class="founder-direct-link">
+                Consultar con Cristian →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRUEBA SOCIAL / OPINIONES VERIFICADAS -->
+<section id="opiniones" style="border-top: 1px solid var(--border);">
+  <div class="wrap">
+    <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 44px; flex-wrap: wrap; gap: 20px;">
+      <div>
+        <span class="eyebrow">Prueba Social</span>
+        <h2 class="h2" style="margin-bottom:0">Opiniones verificadas</h2>
+      </div>
+      <div style="font-family: var(--font-serif); font-size: 1.3rem; color: var(--gold-light); display: flex; align-items: center; gap: 8px;">
+        <span>★ 5.0 / 5.0</span>
+        <span class="serv-badge" style="font-size: 0.72rem;">Google Maps Business</span>
+      </div>
+    </div>
+
+    <div class="reviews-grid">
+      <div class="rev-card">
+        <div>
+          <div class="rev-stars">★★★★★</div>
+          <p>«Estamos muy conformes por su profesionalismo, se nota que ama lo que hace, es una persona sumamente confiable.»</p>
+        </div>
+        <div class="rev-author">
+          <span class="rev-name">Jorge Rodríguez</span>
+          <span class="rev-meta">Google Reviews</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div>
+          <div class="rev-stars">★★★★★</div>
+          <p>«Gestionó la jubilación de mi hermano de manera muy profesional y rápida. Te explica con total claridad cada fase del proceso.»</p>
+        </div>
+        <div class="rev-author">
+          <span class="rev-name">Isabel Campanilla</span>
+          <span class="rev-meta">Google Reviews</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div>
+          <div class="rev-stars">★★★★★</div>
+          <p>«Excelente persona y profesional. Diligente, tenaz y con una enorme calidez humana. Totalmente recomendable.»</p>
+        </div>
+        <div class="rev-author">
+          <span class="rev-name">Laura Soto</span>
+          <span class="rev-meta">Google Reviews</span>
+        </div>
+      </div>
+    </div>
+    
+    <div style="margin-top: 36px; text-align: center;">
+      <a class="btn btn-secondary" href="https://maps.app.goo.gl/qpvtmTRtjDiKDS7K6" target="_blank" rel="noopener">
+        Ver todas las reseñas en Google Maps →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- PREGUNTAS FRECUENTES HUMANIZADAS & ESTRUCTURADAS -->
+<section id="faq" style="border-top: 1px solid var(--border);">
+  <div class="wrap faq-wrap">
+    <span class="eyebrow">Resolución de Dudas</span>
+    <h2 class="h2">Preguntas frecuentes</h2>
+    <p class="sub">Claridad desde el primer momento sobre plazos reales, documentación y cómo trabajamos.</p>
+
+    <!-- Pregunta 1: Inicio de consulta -->
+    <div class="faq-item">
+      <details open>
+        <summary>¿Cómo se inicia una consulta con el estudio? <span class="sign">+</span></summary>
+        <div class="faq-body">
+          <p style="margin-bottom: 12px;">El proceso es simple, transparente y sin vueltas:</p>
+          <ul class="faq-list">
+            <li><strong>1. Nos contactás:</strong> Por WhatsApp o mediante el formulario contándonos tu situación.</li>
+            <li><strong>2. Evaluamos tu caso:</strong> Revisamos tu historial de aportes o papeles <em>sin ningún costo inicial</em>.</li>
+            <li><strong>3. Te explicamos las opciones:</strong> Te indicamos si es viable, los plazos estimados y el presupuesto cerrado antes de comenzar.</li>
+          </ul>
+          <p>Sin compromiso. Si decidís avanzar, arrancamos con todo claro desde el primer día.</p>
+          <a href="https://wa.me/5491125114119?text=Hola%20Estudio%20CG%2C%20quiero%20hacer%20una%20consulta%20inicial" target="_blank" rel="noopener" class="faq-cta-link">
+            Iniciar evaluación sin cargo por WhatsApp →
+          </a>
+        </div>
+      </details>
+    </div>
+
+    <!-- Pregunta 2: Documentación para Jubilación -->
+    <div class="faq-item">
+      <details>
+        <summary>¿Qué documentación necesito para tramitar mi jubilación? <span class="sign">+</span></summary>
+        <div class="faq-body">
+          <p style="margin-bottom: 10px;">Para realizar el cómputo de aportes inicial, lo básico es:</p>
+          <ul class="faq-list">
+            <li><strong>DNI:</strong> Original o copia legible frente y dorso.</li>
+            <li><strong>Certificaciones de Servicios:</strong> Constancias de empleadores anteriores o recibos de sueldo históricos si los conservás.</li>
+            <li><strong>Clave de la Seguridad Social:</strong> Si no la tenés o la perdiste, te ayudamos a generarla o blanquearla.</li>
+            <li><strong>Comprobantes de aportes autónomos / monotributo:</strong> Si aportaste por tu cuenta mediante <em>SICAM</em>.</li>
+          </ul>
+          <p>¿Tenés dudas sobre qué papeles tenés? Envianos fotos por WhatsApp y te confirmamos qué sirve antes de moverte de tu casa.</p>
+        </div>
+      </details>
+    </div>
+
+    <!-- Pregunta 3: Tiempos de resolución (NUEVA CRÍTICA) -->
+    <div class="faq-item">
+      <details>
+        <summary>¿Cuánto tiempo tarda en resolverse una jubilación o pensión? <span class="sign">+</span></summary>
+        <div class="faq-body">
+          <p style="margin-bottom: 10px;">Los tiempos dependen del organismo y la complejidad del historial laboral:</p>
+          <ul class="faq-list">
+            <li><strong>ANSES estándar (con aportes completos en sistema):</strong> 3 a 5 meses en promedio.</li>
+            <li><strong>ANSES con moratoria previsional (compra de años):</strong> 4 a 8 meses según el circuito administrativo.</li>
+            <li><strong>IPS (Instituto de Previsión Social - Provincia de Bs. As.):</strong> 2 a 5 meses.</li>
+            <li><strong>Pensiones directas o derivadas:</strong> 2 a 4 meses.</li>
+          </ul>
+          <p>Hacemos seguimiento continuo semana a semana para que nunca te quedes sin noticias y te avisamos de cada avance hasta la fecha de cobro.</p>
+        </div>
+      </details>
+    </div>
+
+    <!-- Pregunta 4: Honorarios Transparentes (NUEVA CRÍTICA) -->
+    <div class="faq-item">
+      <details>
+        <summary>¿Cómo se cobran los honorarios y cuánto cuesta la consulta? <span class="sign">+</span></summary>
+        <div class="faq-body">
+          <p style="margin-bottom: 10px;">Nuestra política de honorarios es 100% transparente y acordada por adelantado:</p>
+          <ul class="faq-list">
+            <li><strong>Diagnóstico y revisión preliminar:</strong> 100% bonificado (sin costo de consulta).</li>
+            <li><strong>Trámites previsionales (Jubilaciones / Pensiones):</strong> Se pacta un honorario profesional fijo y accesible antes de iniciar, con facilidades de pago o cancelación al momento del primer cobro de haberes según el caso.</li>
+            <li><strong>Gestión laboral y fiscal (Monotributo, ARCA, Sueldos):</strong> Presupuesto cerrado por gestión puntual o abono mensual fijo para empresas.</li>
+          </ul>
+          <p>Cero costos ocultos ni sorpresas en el transcurso del expediente.</p>
+        </div>
+      </details>
+    </div>
+
+    <!-- Pregunta 5: Compra de aportes / Moratorias -->
+    <div class="faq-item">
+      <details>
+        <summary>¿Se pueden comprar los años de aportes que me faltan? <span class="sign">+</span></summary>
+        <div class="faq-body">
+          <p><strong>Sí.</strong> Evaluamos tu historial en el sistema y aplicamos a las moratorias previsionales vigentes ante ANSES o a la regularización mediante <strong>SICAM</strong> <em>(Sistema de Información para Contribuyentes Autónomos y Monotributistas)</em>. Te calculamos exactamente cuántos años podés completar y el valor de las cuotas del plan de pago.</p>
+        </div>
+      </details>
+    </div>
+
+    <!-- Pregunta 6: Atención a distancia en todo el país -->
+    <div class="faq-item">
+      <details>
+        <summary>¿Atienden gestiones a distancia si vivo en el interior o provincia? <span class="sign">+</span></summary>
+        <div class="faq-body">
+          <p><strong>Sí, gestionamos trámites en todo el país.</strong> Además de la atención personalizada en nuestra sede de CABA, trabajamos de manera 100% digital a través de <strong>TAD</strong> <em>(Trámites a Distancia - plataforma nacional)</em>, plataformas provinciales de <strong>IPS</strong> y los canales oficiales de Mi ANSES. Podés gestionar todo sin viajar.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO & FORMULARIO OPTIMIZADO -->
+<section id="contacto" style="border-top: 1px solid var(--border);">
+  <div class="wrap contact-layout">
+    <div class="contact-left-col">
+      <span class="eyebrow">Comunicación Directa</span>
+      <h2 class="h2">Iniciemos tu gestión</h2>
+      <p class="sub" style="margin-bottom: 24px;">Envianos tu consulta para coordinar una evaluación técnica sin compromiso. Respondemos en menos de 24 horas hábiles.</p>
+      
+      <!-- Beneficios / Confianza CRO -->
+      <div class="contact-trust-badges">
+        <div class="trust-badge-item">
+          <svg class="cg-icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span>Evaluación preliminar sin costo inicial</span>
+        </div>
+        <div class="trust-badge-item">
+          <svg class="cg-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>Respuesta técnica en menos de 24 hs</span>
+        </div>
+        <div class="trust-badge-item">
+          <svg class="cg-icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span>Atención directa por profesionales matriculados</span>
+        </div>
+      </div>
+
+      <!-- Canal Principal Directo (WhatsApp) + Metadata Institucional Limpia -->
+      <div class="contact-methods-block">
+        <a href="https://wa.me/5491125114119?text=Hola%20Estudio%20CG%2C%20quiero%20hacer%20una%20consulta%20directa" target="_blank" rel="noopener" class="contact-hero-wa-btn">
+          <div class="contact-wa-icon-glow">
+            <svg class="cg-icon" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          </div>
+          <div class="contact-wa-copy">
+            <span class="contact-wa-badge">Canal de respuesta prioritaria</span>
+            <span class="contact-wa-phone">+54 9 11 2511-4119</span>
+            <span class="contact-wa-cta">Abrir chat directo con un asesor previsional/laboral →</span>
+          </div>
+        </a>
+
+        <!-- Datos Institucionales fuera de cajas pesadas (Texto limpio, email accionable, dirección informativa) -->
+        <div class="contact-editorial-meta">
+          <a href="mailto:gintegralcg@gmail.com" class="contact-meta-row" title="Enviar correo a gintegralcg@gmail.com">
+            <div class="contact-meta-icon">
+              <svg class="cg-icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <span class="meta-label">Correo para documentación & legajos</span>
+              <strong class="meta-value link-accent">gintegralcg@gmail.com</strong>
+            </div>
+          </a>
+
+          <div class="contact-meta-row">
+            <div class="contact-meta-icon">
+              <svg class="cg-icon" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <span class="meta-label">Sede Central · CABA</span>
+              <strong class="meta-value">José Ignacio Rucci 3351</strong>
+              <span class="meta-time">Atención presencial: Lunes a Viernes de 10:00 a 17:00 hs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FORMULARIO EJECUTIVO CON FLUJO INTELIGENTE -->
+    <div class="editorial-form">
+      <div class="form-header-row">
+        <div class="form-title-col">
+          <h3>Formulario de Consulta</h3>
+          <p class="lead" style="margin-bottom: 0;">Elegí tu canal preferido de respuesta.</p>
+        </div>
+        <span class="form-secure-badge">🔒 Datos protegidos</span>
+      </div>
+
+      <!-- Selector de canal preferido -->
+      <div class="contact-mode-selector">
+        <label class="mode-pill active" onclick="setContactMode('wa', this)">
+          <input type="radio" name="contactMode" value="wa" checked style="display:none">
+          <svg class="cg-icon" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          <span>Respuesta por WhatsApp</span>
+        </label>
+        <label class="mode-pill" onclick="setContactMode('email', this)">
+          <input type="radio" name="contactMode" value="email" style="display:none">
+          <svg class="cg-icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span>Respuesta por Correo</span>
+        </label>
+      </div>
+      
+      <form id="contactForm" onsubmit="event.preventDefault(); submitSmartForm();">
+        <div class="form-group">
+          <label for="nombre">Nombre y Apellido *</label>
+          <input id="nombre" type="text" placeholder="Ej. Martín Gómez" required>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label for="tel">Teléfono / WhatsApp *</label>
+            <input id="tel" type="tel" placeholder="11 2511-4119" required>
+          </div>
+          <div class="form-group">
+            <label for="mail">Correo Electrónico</label>
+            <input id="mail" type="email" placeholder="correo@ejemplo.com">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="tema">Área de Consulta *</label>
+          <select id="tema" required>
+            <option value="Jubilación / Pensión (ANSES)">Jubilación / Pensión (ANSES)</option>
+            <option value="Jubilación IPS Provincia Bs. As.">Jubilación IPS Provincia Bs. As.</option>
+            <option value="Monotributo / Situación Fiscal ARCA">Monotributo / Situación Fiscal ARCA</option>
+            <option value="Liquidación de Sueldos & Cargas F.931">Liquidación de Sueldos & Cargas F.931</option>
+            <option value="Ciudadanía / Radicación Migratoria">Ciudadanía / Radicación Migratoria</option>
+            <option value="Partidas / RENAPER / Legalizaciones">Partidas / RENAPER / Legalizaciones</option>
+            <option value="Sucesiones / Contratos / Área Legal">Sucesiones / Contratos / Área Legal</option>
+            <option value="Otra consulta técnica">Otra consulta técnica</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="msg">Detalle del Trámite o Situación Actual *</label>
+          <textarea id="msg" rows="3" placeholder="Contanos brevemente sobre tu trámite, aportes o duda..." required></textarea>
+        </div>
+
+        <!-- Botón Único Dinámico -->
+        <button type="submit" id="smartSubmitBtn" class="btn btn-primary smart-submit-btn">
+          <svg class="cg-icon" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          <span id="submitBtnText">Enviar consulta por WhatsApp</span>
+        </button>
+      </form>
+
+      <div class="form-feedback-card" id="formFeedback">
+        <div class="feedback-icon">✓</div>
+        <h4>¡Consulta recibida con éxito!</h4>
+        <p>Un profesional del equipo de Estudio CG revisará tu solicitud y se contactará a la brevedad.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<!-- FOOTER MINIMALISTA & EDITORIAL -->
+<footer>
+  <div class="wrap">
+    <div class="foot-3col-grid">
+      <!-- Columna 1: Marca, Respaldo & Datos Físicos -->
+      <div class="foot-col-brand">
+        <img src="logo-estudio-cg.png" alt="Estudio CG" class="foot-logo">
+        <p class="foot-brand-desc">Solvencia técnica y contención profesional en gestiones previsionales, laborales y fiscales desde 2004.</p>
+        <div class="foot-contact-stack">
+          <div class="foot-meta-item">
+            <svg class="cg-icon" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>José Ignacio Rucci 3351, CABA</span>
+          </div>
+          <div class="foot-meta-item">
+            <svg class="cg-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>Lun a Vie · 10 a 17 hs</span>
+          </div>
+          <a href="mailto:gintegralcg@gmail.com" class="foot-meta-item foot-meta-link">
+            <svg class="cg-icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span>gintegralcg@gmail.com</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Columna 2: Navegación Institucional -->
+      <div class="foot-col-nav">
+        <h4 class="foot-col-title">Secciones</h4>
+        <div class="foot-nav-links">
+          <a href="#tramites">Trámites Frecuentes</a>
+          <a href="#servicios">Estructura por Áreas</a>
+          <a href="#metodo">Método de Trabajo</a>
+          <a href="#firma">Identidad & Trayectoria</a>
+          <a href="#opiniones">Opiniones Verificadas</a>
+          <a href="#faq">Preguntas Frecuentes</a>
+          <a href="#contacto">Canales de Contacto</a>
+        </div>
+      </div>
+
+      <!-- Columna 3: Canales Oficiales & Redes -->
+      <div class="foot-col-social">
+        <h4 class="foot-col-title">Canales Oficiales</h4>
+        <p class="foot-social-copy">Conectá con el estudio a través de nuestras vías oficiales de comunicación directa y contenidos informativos.</p>
+        <div class="foot-social-pills">
+          <a href="https://wa.me/5491125114119" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp Estudio CG">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/estudiocgig" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram @estudiocgig">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://www.facebook.com/estudiocgfb" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook @estudiocgfb">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V5h-3c-2.2 0-4 1.8-4 4v2H7v4h3v7h4v-7h3l1-4h-4V9c0-.6.4-1 1-1z"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@estudiocg" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok @estudiocg">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.47 6.3 6.3 0 0 0 1.93-4.51V8.71a8.21 8.21 0 0 0 4.84 1.57v-3.59h-.02z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/cristian-goncalves/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn Cristian Manuel Gonçalves">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="foot-minimal-bottom">
+      <span>© 2026 Estudio CG — Gestoría y Consultoría Integral. Todos los derechos reservados.</span>
+      <span>CABA, República Argentina</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ASISTENTE VIRTUAL DE MARCA — ESTUDIO CG (CHATBOT SIMULADO) -->
+  <!-- Botón Elegante Volver Arriba -->
+  <button id="scrollTopBtn" class="scroll-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Volver arriba">
+    <svg class="scroll-top-icon" viewBox="0 0 24 24">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+<div class="cg-chatbot-widget" id="cgChatbot">
+  <!-- Ventana de Chat Inspirada en la Referencia Oficial Estudio CG -->
+  <div class="cg-chat-window" id="chatWindow">
+    <!-- Header del Chat -->
+    <div class="chat-header">
+      <div class="chat-header-info">
+        <div class="chat-avatar">
+          <span>CG</span>
+        </div>
+        <div>
+          <h4>Asistente de Estudio CG</h4>
+          <span class="chat-status-text"><span class="chat-status-dot-green"></span> En línea</span>
+        </div>
+      </div>
+      <div class="chat-header-actions">
+        <button class="chat-header-btn" onclick="toggleChatbot()" title="Minimizar">
+          <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </button>
+        <button class="chat-header-btn" onclick="toggleChatbot()" title="Cerrar">
+          <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Cuerpo de Mensajes -->
+    <div class="chat-body" id="chatMessages">
+      <!-- Mensaje Inicial con Avatar CG -->
+      <div class="chat-msg-row">
+        <div class="chat-msg-avatar">CG</div>
+        <div class="chat-msg bot-msg">
+          <p>Hola, soy el asistente de Estudio CG. Puedo orientarte sobre trámites y acompañarte en el primer paso.</p>
+        </div>
+      </div>
+
+      <!-- Pregunta Guía Destacada -->
+      <div class="chat-question-pill">
+        ¿Qué necesitás gestionar?
+      </div>
+
+      <!-- Menú de Opciones Interactivas en Tarjetas / Pastillas (Fiel a la Referencia) -->
+      <div class="chat-options-list" id="chatOptions">
+        <button class="chat-option-card" onclick="handleOption('jubilaciones')">
+          <div class="option-icon">
+            <svg class="cg-icon" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <span class="option-label">Jubilaciones y pensiones</span>
+          <svg class="option-chevron" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+
+        <button class="chat-option-card" onclick="handleOption('migratorios')">
+          <div class="option-icon">
+            <svg class="cg-icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <span class="option-label">Trámites migratorios</span>
+          <svg class="option-chevron" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+
+        <button class="chat-option-card" onclick="handleOption('documentacion')">
+          <div class="option-icon">
+            <svg class="cg-icon" viewBox="0 0 24 24"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+          </div>
+          <span class="option-label">Documentación</span>
+          <svg class="option-chevron" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+
+        <button class="chat-option-card" onclick="handleOption('empresas')">
+          <div class="option-icon">
+            <svg class="cg-icon" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="16" y2="14"/><line x1="8" y1="18" x2="16" y2="18"/></svg>
+          </div>
+          <span class="option-label">Trámites para empresas</span>
+          <svg class="option-chevron" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+
+        <button class="chat-option-card" onclick="handleOption('otro')">
+          <div class="option-icon">
+            <svg class="cg-icon" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <span class="option-label">Otro trámite</span>
+          <svg class="option-chevron" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Footer Input del Chat -->
+    <div class="chat-footer">
+      <form class="chat-input-form" onsubmit="event.preventDefault(); sendChatMessage();">
+        <input type="text" id="chatInput" placeholder="Escribí tu consulta..." autocomplete="off">
+        <button type="submit" class="chat-send-btn" aria-label="Enviar mensaje">
+          <svg viewBox="0 0 24 24" class="send-paper-plane"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
+        </button>
+      </form>
+      <span class="chat-disclaimer">La información brindada es orientativa. Para una gestión personalizada, te recomendamos contactarnos.</span>
+    </div>
+  </div>
+
+  <!-- Globo / Tooltip en Hover y Notificación (Fiel a la Referencia) -->
+  <div class="launcher-speech-bubble" id="launcherBubble" onclick="toggleChatbot()">
+    <span>¿Necesitás ayuda?</span>
+    <div class="bubble-tail"></div>
+  </div>
+
+  <!-- Botón Lanzador de Marca con Monograma CG y Punto Verde -->
+  <button class="cg-chat-launcher" id="chatLauncher" onclick="toggleChatbot()" aria-label="Abrir Asistente de Estudio CG">
+    <div class="launcher-avatar">
+      <span class="launcher-cg">CG</span>
+      <svg class="launcher-close-icon" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </div>
+    <span class="launcher-online-dot"></span>
+    <span class="launcher-notif-badge" id="launcherNotifBadge">1</span>
+  </button>
+</div>
+
+<script src="main.js" defer></script>
+<script src="cg-chat-widget.js" defer></script>
+</body>
+</html>
