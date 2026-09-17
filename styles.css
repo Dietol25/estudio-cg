@@ -3522,7 +3522,7 @@ a.contact-meta-row:hover .link-accent {
 .founder-avatar-frame {
   position: relative;
   width: 140px;
-  height: 140px;
+  height: 175px;
   border-radius: 20px;
   border: 2px solid var(--gold);
   overflow: hidden;
@@ -3535,7 +3535,7 @@ a.contact-meta-row:hover .link-accent {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: center 20%;
   display: block;
   transition: transform 0.4s ease;
 }
@@ -3665,9 +3665,10 @@ a.contact-meta-row:hover .link-accent {
     gap: 14px;
   }
   .founder-avatar-frame {
-    width: 125px;
-    height: 125px;
+    width: 130px;
+    height: 165px;
     border-radius: 18px;
+    margin: 0 auto;
   }
   .founder-role-badge {
     align-self: center;
@@ -3993,7 +3994,7 @@ a.contact-meta-row:hover .link-accent {
 
 .founder-avatar-frame {
   width: 140px;
-  height: 140px;
+  height: 175px;
   flex-shrink: 0;
   border-radius: 20px;
   overflow: hidden;
@@ -4006,7 +4007,7 @@ a.contact-meta-row:hover .link-accent {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: center 20%;
   display: block;
   transition: transform 0.4s ease;
 }
@@ -4151,13 +4152,14 @@ a.contact-meta-row:hover .link-accent {
     min-height: auto;
   }
   .founder-card-header {
-    gap: 14px;
-    padding-bottom: 16px;
+    gap: 16px;
+    padding-bottom: 18px;
   }
   .founder-avatar-frame {
-    width: 110px;
-    height: 110px;
-    border-radius: 16px;
+    width: 130px;
+    height: 165px;
+    border-radius: 18px;
+    margin: 0 auto;
   }
   .founder-name {
     font-size: 1.2rem;
