@@ -269,6 +269,7 @@ function toggleMobileNav() {
     document.body.style.overflow = 'hidden';
     if (hamb) hamb.textContent = '✕';
   } else {
+    document.querySelectorAll('.nav-dropdown.active').forEach(d => d.classList.remove('active'));
     document.body.classList.remove('mobile-menu-active');
     document.body.style.overflow = '';
     if (hamb) hamb.textContent = '☰';
@@ -279,18 +280,21 @@ function closeNav() {
   const menu = document.getElementById('nav-menu');
   const hamb = document.querySelector('.hamb');
   if (menu) menu.classList.remove('open');
+  document.querySelectorAll('.nav-dropdown.active').forEach(d => d.classList.remove('active'));
   document.body.classList.remove('mobile-menu-active');
   document.body.style.overflow = '';
+  if (hamb) hamb.textContent = '☰';
 }
 
 function toggleServicesDropdown(event) {
-  if (window.innerWidth <= 900) {
-    if (event) {
-      event.preventDefault();
-      event.stopPropagation();
-    }
-    const dropdown = event ? event.target.closest('.nav-dropdown') : document.querySelector('.nav-dropdown');
-    if (dropdown) dropdown.classList.toggle('active');
+  if (event) {
+    event.preventDefault();
+    event.stopPropagation();
+  }
+  const trigger = event ? (event.currentTarget || event.target) : document.querySelector('.nav-dropdown-trigger');
+  const dropdown = trigger ? trigger.closest('.nav-dropdown') : document.querySelector('.nav-dropdown');
+  if (dropdown) {
+    dropdown.classList.toggle('active');
   }
 }
 

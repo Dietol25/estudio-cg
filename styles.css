@@ -1351,7 +1351,7 @@ footer {
   .nav-container { height: 64px; }
   .brand-logo-img { height: 42px; }
   
-  /* Menú hamburguesa móvil con 85% de opacidad y frosted glass */
+  /* Menú móvil 100% opaco y sólido — sin transparencias ni sangrado del fondo */
   nav.menu {
     display: none;
     position: fixed;
@@ -1361,9 +1361,9 @@ footer {
     bottom: 0;
     width: 100vw;
     height: calc(100vh - 64px);
-    background: rgba(13, 13, 13, 0.85) !important;
-    backdrop-filter: blur(32px) saturate(180%) !important;
-    -webkit-backdrop-filter: blur(32px) saturate(180%) !important;
+    background: #0C0C0C !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
     border-top: 1px solid rgba(244, 239, 231, 0.08);
     flex-direction: column;
     padding: 24px 20px 44px;
@@ -1372,7 +1372,7 @@ footer {
     z-index: 999;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
-    box-shadow: inset 0 10px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: none;
   }
   nav.menu.open { display: flex !important; }
   nav.menu a:not(.btn) {
@@ -3280,10 +3280,15 @@ footer {
   fill: none;
 }
 
-/* Ocultar elementos flotantes cuando el menú móvil está abierto */
+/* Ocultar elementos flotantes y solidificar header cuando el menú móvil está abierto */
 body.mobile-menu-active .cg-chatbot-widget,
 body.mobile-menu-active .scroll-to-top {
   display: none !important;
+}
+body.mobile-menu-active header {
+  background: #0C0C0C !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
 }
 
 /* En mobile: Asistente CG discreto (50px), respetando safe areas y sin bloquear botones */
