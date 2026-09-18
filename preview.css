@@ -1292,10 +1292,59 @@ body {
 }
 
 @media (max-width: 768px) {
-  /* Grillas de 2 columnas en mobile */
+  /* Grillas en mobile: 1 columna extendida, limpia, simétrica y legible */
   .intent-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 12px !important;
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .intent-card {
+    padding: 22px 20px !important;
+    border-radius: 16px !important;
+    background: var(--surface) !important;
+  }
+
+  .intent-card-top {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    margin-bottom: 14px !important;
+  }
+
+  .intent-icon-wrap {
+    width: 44px !important;
+    height: 44px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .intent-tag {
+    font-size: 0.72rem !important;
+    padding: 4px 12px !important;
+    white-space: nowrap !important;
+    letter-spacing: 0.08em !important;
+  }
+
+  .intent-card h3 {
+    font-size: 1.3rem !important;
+    margin-bottom: 8px !important;
+  }
+
+  .intent-card p {
+    font-size: 0.90rem !important;
+    line-height: 1.55 !important;
+    margin-bottom: 18px !important;
+  }
+
+  .intent-action-btn {
+    font-size: 0.88rem !important;
+    padding: 11px 18px !important;
+    width: 100% !important;
+    white-space: nowrap !important;
+    display: inline-flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    box-sizing: border-box !important;
+    margin-top: auto !important;
   }
 
   .trust-evidence-grid {
@@ -1335,33 +1384,37 @@ body {
 
 @media (max-width: 480px) {
   .intent-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 8px !important;
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
   }
   .intent-card {
-    padding: 14px 12px !important;
+    padding: 18px 16px !important;
+    border-radius: 14px !important;
   }
   .intent-card h3 {
-    font-size: 0.98rem !important;
+    font-size: 1.2rem !important;
   }
   .intent-card p {
-    font-size: 0.78rem !important;
-    line-height: 1.35 !important;
+    font-size: 0.86rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 16px !important;
   }
   .intent-card-top {
-    margin-bottom: 10px !important;
+    margin-bottom: 12px !important;
   }
   .intent-icon-wrap {
-    width: 36px !important;
-    height: 36px !important;
+    width: 40px !important;
+    height: 40px !important;
   }
   .intent-tag {
-    font-size: 0.65rem !important;
-    padding: 2px 6px !important;
+    font-size: 0.68rem !important;
+    padding: 3px 10px !important;
+    white-space: nowrap !important;
   }
   .intent-action-btn {
-    font-size: 0.78rem !important;
-    margin-top: 10px !important;
+    font-size: 0.84rem !important;
+    padding: 10px 16px !important;
+    white-space: nowrap !important;
   }
 }
 
