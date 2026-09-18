@@ -935,12 +935,13 @@ nav.menu a:not(.btn):hover::after {
 
 .modal-item {
   border-bottom: 1px solid var(--border);
-  padding-bottom: 16px;
+  padding: 14px 0;
 }
-.modal-item:last-child { border-bottom: none; }
+.modal-item:first-child { padding-top: 4px; }
+.modal-item:last-child { border-bottom: none; padding-bottom: 4px; }
 
 .modal-item h4 {
-  font-size: 1.02rem;
+  font-size: 1.04rem;
   font-weight: 700;
   color: var(--cream-light);
   margin-bottom: 4px;
@@ -948,10 +949,10 @@ nav.menu a:not(.btn):hover::after {
 
 .modal-item p {
   color: var(--muted);
-  font-size: 0.88rem;
+  font-size: 0.90rem;
   font-weight: 300;
   line-height: 1.55;
-  margin-bottom: 8px;
+  margin-bottom: 0;
 }
 
 .modal-item a {

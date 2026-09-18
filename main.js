@@ -407,12 +407,10 @@ function enviarFormWeb() {
     if (mTitulo) mTitulo.textContent = data.titulo;
     if (mLista) {
       mLista.innerHTML = data.tramites.map(t => {
-        const waUrl = 'https://wa.me/5491125114119?text=' + encodeURIComponent('Hola Estudio CG, deseo consultar sobre: ' + t[0]);
         return `
           <div class="modal-item">
             <h4>${t[0]}</h4>
             <p>${t[1]}</p>
-            <a href="${waUrl}" target="_blank" rel="noopener">Consultar trámite →</a>
           </div>
         `;
       }).join('');
