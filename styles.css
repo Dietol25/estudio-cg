@@ -778,6 +778,92 @@ nav.menu a:not(.btn):hover::after {
   color: var(--gold-light);
 }
 
+/* Integración iconográfica y botón refinado con flecha lateral */
+.serv-card .intent-card-top,
+.intent-orientation-banner .intent-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.intent-icon-wrap {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: rgba(196, 154, 99, 0.1);
+  border: 1px solid rgba(196, 154, 99, 0.22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+.intent-icon-wrap .cg-icon {
+  width: 22px;
+  height: 22px;
+  stroke: var(--gold);
+  stroke-width: 2;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.intent-tag {
+  font-size: 0.70rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--taupe);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(244, 239, 231, 0.08);
+}
+
+.intent-action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: var(--font-sans);
+  font-size: 0.90rem;
+  font-weight: 600;
+  color: var(--gold-light) !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 10px 0 2px !important;
+  margin-top: auto !important;
+  cursor: pointer;
+  outline: none;
+  transition: var(--transition);
+  text-decoration: none !important;
+}
+
+.intent-action-btn .arrow-icon-svg {
+  stroke-width: 2.6;
+  color: var(--gold);
+  transition: transform 0.22s ease, color 0.22s ease;
+  flex-shrink: 0;
+}
+
+.serv-card:hover .intent-action-btn,
+.intent-card:hover .intent-action-btn,
+.intent-orientation-banner:hover .intent-action-btn {
+  color: #FAF8F4 !important;
+}
+
+.serv-card:hover .intent-action-btn .arrow-icon-svg,
+.intent-card:hover .intent-action-btn .arrow-icon-svg,
+.intent-orientation-banner:hover .intent-action-btn .arrow-icon-svg {
+  color: var(--gold-light);
+  transform: translateX(6px);
+}
+
 /* ==========================================================================
    MODAL INTERACTIVO
    ========================================================================== */
