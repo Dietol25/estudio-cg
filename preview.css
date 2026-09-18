@@ -285,24 +285,44 @@ body {
 
 .trust-card-metric {
   font-family: var(--font-serif);
-  font-size: 2.3rem;
+  font-size: 2.8rem;
   color: var(--gold-light);
-  line-height: 1.1;
-  margin-bottom: 6px;
-  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 8px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.trust-card-metric .metric-plus,
+.trust-card-metric .metric-currency {
+  font-size: 0.85em;
+  color: var(--gold);
+  vertical-align: 1px;
+}
+
+.trust-card-metric .metric-star {
+  font-size: 0.76em;
+  color: var(--gold);
+  vertical-align: 2px;
+  margin-left: 2px;
 }
 
 .trust-card-title {
-  font-size: 0.98rem;
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
   color: #FAF8F4;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 6px;
+  letter-spacing: 0.01em;
 }
 
 .trust-card-desc {
+  font-family: var(--font-sans);
   font-size: 0.84rem;
   color: var(--muted);
   line-height: 1.45;
+  max-width: 340px;
+  margin: 0 auto;
 }
 
 /* FAQ Categorizado */
@@ -707,33 +727,39 @@ body {
     width: 100%;
   }
   
-  /* Trust Section en Mobile (1 sola columna extendida y limpia) */
+  /* Trust Section en Mobile (1 sola columna extendida, compacta y jerárquica) */
   .trust-evidence-section {
-    padding: 38px 0 !important;
+    padding: 30px 0 !important;
   }
   .trust-evidence-grid {
     grid-template-columns: 1fr !important;
-    gap: 12px !important;
-    margin-top: 20px !important;
+    gap: 10px !important;
+    margin-top: 18px !important;
   }
   .trust-evidence-card {
-    padding: 22px 20px !important;
-    border-radius: 16px !important;
+    padding: 18px 16px !important;
+    border-radius: 14px !important;
     text-align: center;
   }
   .trust-card-metric {
-    font-size: 2.2rem !important;
-    margin-bottom: 4px !important;
+    font-size: 2.7rem !important;
+    line-height: 1 !important;
+    margin-bottom: 6px !important;
+    font-weight: 600 !important;
+    letter-spacing: -0.01em !important;
   }
   .trust-card-title {
-    font-size: 1.05rem !important;
+    font-size: 1.02rem !important;
+    font-weight: 700 !important;
     margin-bottom: 6px !important;
+    color: #FAF8F4 !important;
   }
   .trust-card-desc {
-    font-size: 0.88rem !important;
+    font-size: 0.82rem !important;
     line-height: 1.45 !important;
-    max-width: 480px;
+    max-width: 310px;
     margin: 0 auto !important;
+    color: var(--muted) !important;
   }
 
   /* Método de Trabajo en Móvil (Horizontal Snap / Compacto) */
@@ -1425,6 +1451,27 @@ body {
     font-size: 0.84rem !important;
     padding: 10px 16px !important;
     white-space: nowrap !important;
+  }
+  .trust-evidence-grid {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+  .trust-evidence-card {
+    padding: 16px 14px !important;
+    border-radius: 12px !important;
+  }
+  .trust-card-metric {
+    font-size: 2.6rem !important;
+    line-height: 1 !important;
+    margin-bottom: 4px !important;
+  }
+  .trust-card-title {
+    font-size: 0.98rem !important;
+    margin-bottom: 4px !important;
+  }
+  .trust-card-desc {
+    font-size: 0.80rem !important;
+    line-height: 1.4 !important;
   }
 }
 
