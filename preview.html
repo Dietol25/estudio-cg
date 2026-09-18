@@ -575,7 +575,7 @@
       </div>
     </div>
 
-    <div class="reviews-grid">
+    <div class="reviews-grid" id="reviewsGrid">
       <div class="rev-card">
         <div class="rev-card-header">
           <div class="rev-stars">★★★★★</div>
@@ -631,6 +631,19 @@
       </div>
     </div>
     
+    <!-- Controles de Carrusel en Móvil -->
+    <div class="reviews-carousel-nav" id="reviewsCarouselNav">
+      <div class="reviews-dots">
+        <button type="button" class="review-dot active" onclick="scrollToReview(0)" aria-label="Ir a testimonio 1"></button>
+        <button type="button" class="review-dot" onclick="scrollToReview(1)" aria-label="Ir a testimonio 2"></button>
+        <button type="button" class="review-dot" onclick="scrollToReview(2)" aria-label="Ir a testimonio 3"></button>
+      </div>
+      <span class="reviews-swipe-hint">
+        <span>Deslizá para ver más</span>
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+      </span>
+    </div>
+
     <div style="margin-top: 36px; text-align: center;">
       <a class="btn btn-secondary" href="https://maps.app.goo.gl/qpvtmTRtjDiKDS7K6" target="_blank" rel="noopener">
         Ver todas las reseñas en Google Maps →

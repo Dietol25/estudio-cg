@@ -192,3 +192,32 @@ window.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeServiceModal();
 });
 
+// ==========================================================================
+// CARRUSEL DE RESEÑAS EN MÓVIL
+// ==========================================================================
+function scrollToReview(index) {
+  const grid = document.getElementById('reviewsGrid');
+  if (!grid) return;
+  const cards = grid.querySelectorAll('.rev-card');
+  if (cards[index]) {
+    cards[index].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const reviewsGrid = document.getElementById('reviewsGrid');
+  const dots = document.querySelectorAll('.review-dot');
+  if (!reviewsGrid || !dots.length) return;
+
+  reviewsGrid.addEventListener('scroll', () => {
+    const scrollLeft = reviewsGrid.scrollLeft;
+    const cardWidth = reviewsGrid.querySelector('.rev-card')?.offsetWidth || 300;
+    const activeIndex = Math.round(scrollLeft / (cardWidth + 16));
+    
+    dots.forEach((dot, idx) => {
+      dot.classList.toggle('active', idx === Math.min(activeIndex, dots.length - 1));
+    });
+  }, { passive: true });
+});
+
+
