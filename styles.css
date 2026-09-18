@@ -1635,7 +1635,7 @@ footer {
     display: block;
     position: relative;
     width: 100%;
-    height: clamp(220px, 56vw, 300px);
+    height: clamp(280px, 78vw, 380px);
     border-radius: 0;
     overflow: hidden;
     margin: 0;
@@ -1647,20 +1647,20 @@ footer {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 70% 60%;
+    object-position: 65% 82%;
     display: block;
   }
 
-  /* Degradé suave que funde la base de la imagen con el fondo oscuro */
+  /* Degradé suave que funde solo la base inferior con el fondo oscuro */
   .hero-mobile-fade {
     position: absolute;
     inset: 0;
     background: linear-gradient(180deg, 
-      rgba(13, 13, 13, 0.35) 0%,
-      rgba(13, 13, 13, 0) 20%, 
-      rgba(13, 13, 13, 0.15) 50%, 
-      rgba(13, 13, 13, 0.70) 78%, 
-      rgba(13, 13, 13, 0.95) 92%,
+      rgba(13, 13, 13, 0.20) 0%,
+      rgba(13, 13, 13, 0) 25%, 
+      rgba(13, 13, 13, 0) 72%, 
+      rgba(13, 13, 13, 0.45) 86%, 
+      rgba(13, 13, 13, 0.85) 94%,
       #0D0D0D 100%);
     pointer-events: none;
   }
