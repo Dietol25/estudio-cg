@@ -30,11 +30,11 @@
           <svg class="dropdown-chevron" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
         </a>
         <div class="dropdown-menu">
-          <a href="servicios/previsional.html">Área Previsional</a>
-          <a href="servicios/laboral.html">Gestión Laboral</a>
-          <a href="servicios/fiscal.html">Asesoramiento Fiscal</a>
-          <a href="servicios/tramites.html">Trámites y Gestoría</a>
-          <a href="servicios/legal.html">Área Legal <span class="badge-prox">Próximamente</span></a>
+          <a href="servicios.html?area=0" onclick="if(window.openAreaModal){openAreaModal(0); if(window.closeNav)closeNav(); return false;}">Área Previsional</a>
+          <a href="servicios.html?area=1" onclick="if(window.openAreaModal){openAreaModal(1); if(window.closeNav)closeNav(); return false;}">Gestión Laboral</a>
+          <a href="servicios.html?area=2" onclick="if(window.openAreaModal){openAreaModal(2); if(window.closeNav)closeNav(); return false;}">Asesoramiento Fiscal</a>
+          <a href="servicios.html?area=3" onclick="if(window.openAreaModal){openAreaModal(3); if(window.closeNav)closeNav(); return false;}">Trámites y Gestoría</a>
+          <a href="servicios.html?area=4" onclick="if(window.openAreaModal){openAreaModal(4); if(window.closeNav)closeNav(); return false;}">Área Legal <span class="badge-prox">Próximamente</span></a>
           <a href="servicios.html" class="dropdown-all-link">Ver todos los servicios →</a>
         </div>
       </div>
@@ -60,120 +60,61 @@
     </div>
   </section>
 
-  <!-- LISTADO DE LAS 5 ÁREAS CON DETALLE -->
+  <!-- CATÁLOGO EDITORIAL COMPACTO (5 ÁREAS CON MODAL INTERACTIVO) -->
   <section style="padding: 70px 0;">
     <div class="wrap">
-      <div style="display: flex; flex-direction: column; gap: 32px;">
+      <div class="services-editorial-grid">
 
-        <!-- Área 1: Previsional -->
-        <article style="background: var(--surface); border: 1px solid rgba(244,239,231,0.08); border-radius: 20px; padding: 36px 32px; transition: var(--transition);" onmouseover="this.style.borderColor='rgba(196,154,99,0.35)'" onmouseout="this.style.borderColor='rgba(244,239,231,0.08)'">
-          <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px; margin-bottom: 20px;">
-            <div>
-              <span class="intent-tag">ANSES · IPS · CAJAS PROVINCIALES</span>
-              <h2 style="font-family: var(--font-serif); font-size: 2rem; color: #FAF8F4; margin: 10px 0 6px;">1. Área Previsional</h2>
-              <p style="color: var(--gold-light); font-size: 0.95rem; margin: 0; font-weight: 500;">Jubilaciones ordinarias, moratorias, cómputo histórico de aportes y pensiones.</p>
-            </div>
-            <a href="servicios/previsional.html" class="btn btn-primary" style="padding: 10px 22px; font-size: 0.88rem;">
-              Ver área completa →
-            </a>
+        <!-- 01 Área Previsional -->
+        <article class="serv-card" data-area="0">
+          <div class="serv-card-head">
+            <span class="serv-num">01</span>
           </div>
-          <!-- CONFIRMAR CON CLIENTE: moratorias vigentes y redacción de requisitos de aportes -->
-          <p style="color: var(--muted); font-size: 0.95rem; line-height: 1.6; max-width: 900px; margin-bottom: 20px;">
-            Atendemos a personas próximas a jubilarse o que necesitan completar sus aportes para acceder al beneficio. Tramitamos jubilaciones ordinarias, moratorias previsionales vigentes, regímenes especiales ante ANSES y el Instituto de Previsión Social (IPS) bonaerense, además de pensiones por fallecimiento con o sin unión convivencial inscripta.
-          </p>
-          <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-            <a href="servicios/previsional.html#jubilaciones" class="faq-hub-pill">Jubilaciones ANSES e IPS →</a>
-            <a href="servicios/previsional.html#pensiones" class="faq-hub-pill">Pensiones y Convivencia →</a>
-            <a href="servicios/previsional.html#aportes" class="faq-hub-pill">Cómputo de Aportes & SICAM →</a>
-          </div>
+          <h3>Área Previsional</h3>
+          <p>Jubilaciones nacionales (ANSES) e IPS Provincia de Buenos Aires, pensiones, PUAM, cómputo de moratorias y planificación previsional estratégica.</p>
+          <span class="serv-action">EXPLORAR TRÁMITES →</span>
         </article>
 
-        <!-- Área 2: Gestión Laboral -->
-        <article style="background: var(--surface); border: 1px solid rgba(244,239,231,0.08); border-radius: 20px; padding: 36px 32px; transition: var(--transition);" onmouseover="this.style.borderColor='rgba(196,154,99,0.35)'" onmouseout="this.style.borderColor='rgba(244,239,231,0.08)'">
-          <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px; margin-bottom: 20px;">
-            <div>
-              <span class="intent-tag">COMERCIOS · PYMES · EMPLEADORES</span>
-              <h2 style="font-family: var(--font-serif); font-size: 2rem; color: #FAF8F4; margin: 10px 0 6px;">2. Gestión Laboral y Sueldos</h2>
-              <p style="color: var(--gold-light); font-size: 0.95rem; margin: 0; font-weight: 500;">Liquidación bajo convenio, Libro de Sueldos Digital (LSD) y cargas sociales F.931.</p>
-            </div>
-            <a href="servicios/laboral.html" class="btn btn-primary" style="padding: 10px 22px; font-size: 0.88rem;">
-              Ver área completa →
-            </a>
+        <!-- 02 Gestión Laboral -->
+        <article class="serv-card" data-area="1">
+          <div class="serv-card-head">
+            <span class="serv-num">02</span>
+            <span class="serv-badge">ACTUALIZADO</span>
           </div>
-          <!-- CONFIRMAR CON CLIENTE: convenios colectivos habituales atendidos -->
-          <p style="color: var(--muted); font-size: 0.95rem; line-height: 1.6; max-width: 900px; margin-bottom: 20px;">
-            Externalización integral de la administración de personal y liquidación salarial para pequeños comercios y empresas medianas. Gestión de altas y bajas en ARCA Mi Simplificación, liquidaciones mensuales y de aguinaldo bajo convenios colectivos aplicables a cada sector y emisión formal de recibos de sueldo.
-          </p>
-          <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-            <a href="servicios/laboral.html#alcance" class="faq-hub-pill">Liquidación mensual de haberes →</a>
-            <a href="servicios/laboral.html#requisitos" class="faq-hub-pill">Libro de Sueldos Digital (LSD) →</a>
-            <a href="servicios/laboral.html#faq" class="faq-hub-pill">F.931 y Cargas Sociales →</a>
-          </div>
+          <h3>Gestión Laboral</h3>
+          <p>Liquidación mensual de haberes, cargas sociales (F.931), asesoría preventiva al empleador, confección de CVs técnicos y optimización de perfiles LinkedIn.</p>
+          <span class="serv-action">EXPLORAR TRÁMITES →</span>
         </article>
 
-        <!-- Área 3: Asesoramiento Fiscal -->
-        <article style="background: var(--surface); border: 1px solid rgba(244,239,231,0.08); border-radius: 20px; padding: 36px 32px; transition: var(--transition);" onmouseover="this.style.borderColor='rgba(196,154,99,0.35)'" onmouseout="this.style.borderColor='rgba(244,239,231,0.08)'">
-          <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px; margin-bottom: 20px;">
-            <div>
-              <span class="intent-tag">ARCA · AGIP · ARBA</span>
-              <h2 style="font-family: var(--font-serif); font-size: 2rem; color: #FAF8F4; margin: 10px 0 6px;">3. Asesoramiento Fiscal & Tributario</h2>
-              <p style="color: var(--gold-light); font-size: 0.95rem; margin: 0; font-weight: 500;">Monotributo, regularización de deuda, planes de facilidades y destrabe de cuentas.</p>
-            </div>
-            <a href="servicios/fiscal.html" class="btn btn-primary" style="padding: 10px 22px; font-size: 0.88rem;">
-              Ver área completa →
-            </a>
+        <!-- 03 Asesoramiento Fiscal -->
+        <article class="serv-card" data-area="2">
+          <div class="serv-card-head">
+            <span class="serv-num">03</span>
           </div>
-          <p style="color: var(--muted); font-size: 0.95rem; line-height: 1.6; max-width: 900px; margin-bottom: 20px;">
-            Regularizamos tu situación ante la Agencia de Recaudación y Control Aduanero (ARCA, ex AFIP) y fiscos provinciales (AGIP en CABA, ARBA en PBA). Inscripciones de CUIT, recategorizaciones semestrales de Monotributo, presentación de declaraciones juradas y suscripción de planes de pago para levantar intimaciones, juicios de ejecución fiscal y embargos bancarios.
-          </p>
-          <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-            <a href="servicios/fiscal.html#alcance" class="faq-hub-pill">Monotributo e Ingresos Brutos →</a>
-            <a href="servicios/fiscal.html#requisitos" class="faq-hub-pill">Planes de Pago y Moratorias Fiscales →</a>
-            <a href="servicios/fiscal.html#faq" class="faq-hub-pill">Levantamiento de Embargos →</a>
-          </div>
+          <h3>Asesoramiento Fiscal</h3>
+          <p>Monotributo integral, Bienes Personales, regularización SICAM, facturación electrónica y planes de facilidades ante ARCA (ex AFIP).</p>
+          <span class="serv-action">EXPLORAR TRÁMITES →</span>
         </article>
 
-        <!-- Área 4: Trámites y Gestoría Registral -->
-        <article style="background: var(--surface); border: 1px solid rgba(244,239,231,0.08); border-radius: 20px; padding: 36px 32px; transition: var(--transition);" onmouseover="this.style.borderColor='rgba(196,154,99,0.35)'" onmouseout="this.style.borderColor='rgba(244,239,231,0.08)'">
-          <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px; margin-bottom: 20px;">
-            <div>
-              <span class="intent-tag">REGISTRO CIVIL · CANCILLERÍA · TAD</span>
-              <h2 style="font-family: var(--font-serif); font-size: 2rem; color: #FAF8F4; margin: 10px 0 6px;">4. Trámites y Gestoría Registral</h2>
-              <p style="color: var(--gold-light); font-size: 0.95rem; margin: 0; font-weight: 500;">Búsqueda y legalización de partidas en todo el país, Apostillado de La Haya y TAD.</p>
-            </div>
-            <a href="servicios/tramites.html" class="btn btn-primary" style="padding: 10px 22px; font-size: 0.88rem;">
-              Ver área completa →
-            </a>
+        <!-- 04 Organismos & Claves -->
+        <article class="serv-card" data-area="3">
+          <div class="serv-card-head">
+            <span class="serv-num">04</span>
+            <span class="serv-badge">FRECUENTE</span>
           </div>
-          <p style="color: var(--muted); font-size: 0.95rem; line-height: 1.6; max-width: 900px; margin-bottom: 20px;">
-            Servicio de localización y pedido de actas de nacimiento, matrimonio y defunción en CABA, Provincia de Buenos Aires y registros civiles provinciales. Legalizaciones ministeriales ante el Ministerio del Interior y gestión oficial de Apostilla de La Haya para presentaciones consulares (ciudadanía italiana, española o radicaciones en el exterior).
-          </p>
-          <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-            <a href="servicios/tramites.html#alcance" class="faq-hub-pill">Partidas y Actas Oficiales →</a>
-            <a href="servicios/tramites.html#alcance" class="faq-hub-pill">Apostilla de La Haya →</a>
-            <a href="servicios/tramites.html#requisitos" class="faq-hub-pill">Búsqueda en Archivos Históricos →</a>
-          </div>
+          <h3>Organismos &amp; Claves</h3>
+          <p>Clave de Seguridad Social, Clave Fiscal, gestiones ante PAMI, trámites a distancia (TAD), certificados RENAPER, antecedentes y apostillados.</p>
+          <span class="serv-action">EXPLORAR TRÁMITES →</span>
         </article>
 
-        <!-- Área 5: Área Legal (Próximamente) -->
-        <article style="background: var(--surface); border: 1px solid rgba(244,239,231,0.08); border-radius: 20px; padding: 36px 32px; transition: var(--transition);" onmouseover="this.style.borderColor='rgba(196,154,99,0.35)'" onmouseout="this.style.borderColor='rgba(244,239,231,0.08)'">
-          <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px; margin-bottom: 20px;">
-            <div>
-              <span class="intent-tag">PRÁCTICA EN LANZAMIENTO</span>
-              <h2 style="font-family: var(--font-serif); font-size: 2rem; color: #FAF8F4; margin: 10px 0 6px;">5. Área Legal & Sucesiones <span class="badge-prox">Próximamente</span></h2>
-              <p style="color: var(--gold-light); font-size: 0.95rem; margin: 0; font-weight: 500;">Sucesiones, contratos comerciales, derecho societario y patrocinio administrativo.</p>
-            </div>
-            <a href="servicios/legal.html" class="btn btn-secondary" style="padding: 10px 22px; font-size: 0.88rem;">
-              Conocer más →
-            </a>
+        <!-- 05 Área Legal -->
+        <article class="serv-card" data-area="4">
+          <div class="serv-card-head">
+            <span class="serv-num">05</span>
           </div>
-          <p style="color: var(--muted); font-size: 0.95rem; line-height: 1.6; max-width: 900px; margin-bottom: 20px;">
-            Ampliamos nuestra cobertura técnica para brindar asesoramiento letrado en procesos sucesorios en CABA y PBA, acuerdos contractuales entre particulares o empresas, redacción de instrumentos comerciales y representación en gestiones administrativas.
-          </p>
-          <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-            <a href="servicios/legal.html#alcance" class="faq-hub-pill">Sucesiones y Declaratoria de Herederos →</a>
-            <a href="servicios/legal.html#alcance" class="faq-hub-pill">Contratos y Dominio →</a>
-          </div>
+          <h3>Área Legal</h3>
+          <p>Juicios sucesorios, redacción de contratos civiles y comerciales, intimaciones por carta documento, informes de dominio vehicular e inmobiliario.</p>
+          <span class="serv-action">EXPLORAR TRÁMITES →</span>
         </article>
 
       </div>
@@ -193,6 +134,19 @@
     </div>
   </section>
 </main>
+
+<!-- MODAL INTERACTIVO DE TRÁMITES POR ÁREA -->
+<div id="modalArea" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="mTitulo">
+  <div class="modal-window">
+    <button class="modal-close" aria-label="Cerrar modal">&times;</button>
+    <span class="eyebrow" style="margin-bottom: 6px; letter-spacing: 0.12em;">— CATÁLOGO DE TRÁMITES</span>
+    <h3 id="mTitulo" class="h2" style="margin-bottom: 20px;">Área</h3>
+    <div id="mLista" class="modal-items-list"></div>
+    <a id="mWaBtn" href="#" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top: 20px; width: 100%; text-align: center; justify-content: center; padding: 14px 24px; font-weight: 600;">
+      Consultar por este departamento
+    </a>
+  </div>
+</div>
 
 <!-- FOOTER COMPLETO -->
 <footer>
@@ -221,11 +175,11 @@
       <div class="foot-col-nav">
         <h4 class="foot-col-title">Secciones</h4>
         <div class="foot-nav-links">
-          <a href="servicios/previsional.html">Área Previsional</a>
-          <a href="servicios/laboral.html">Gestión Laboral</a>
-          <a href="servicios/fiscal.html">Asesoramiento Fiscal</a>
-          <a href="servicios/tramites.html">Trámites y Gestoría</a>
-          <a href="servicios/legal.html">Área Legal <span class="badge-prox">Próximamente</span></a>
+          <a href="servicios.html?area=0" onclick="if(window.openAreaModal){openAreaModal(0); return false;}">Área Previsional</a>
+          <a href="servicios.html?area=1" onclick="if(window.openAreaModal){openAreaModal(1); return false;}">Gestión Laboral</a>
+          <a href="servicios.html?area=2" onclick="if(window.openAreaModal){openAreaModal(2); return false;}">Asesoramiento Fiscal</a>
+          <a href="servicios.html?area=3" onclick="if(window.openAreaModal){openAreaModal(3); return false;}">Trámites y Gestoría</a>
+          <a href="servicios.html?area=4" onclick="if(window.openAreaModal){openAreaModal(4); return false;}">Área Legal <span class="badge-prox">Próximamente</span></a>
           <a href="como-trabajamos.html">Cómo trabajamos</a>
           <a href="nosotros.html">Nosotros</a>
           <a href="preguntas-frecuentes.html">Preguntas Frecuentes</a>

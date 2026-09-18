@@ -395,6 +395,8 @@ function enviarFormWeb() {
   ];
 
   const modal = document.getElementById('modalArea');
+  if (!modal) return;
+
   const mTitulo = document.getElementById('mTitulo');
   const mLista = document.getElementById('mLista');
   const mWaBtn = document.getElementById('mWaBtn');
@@ -402,19 +404,23 @@ function enviarFormWeb() {
   function openAreaModal(idx) {
     const data = AREAS[idx];
     if (!data) return;
-    mTitulo.textContent = data.titulo;
-    mLista.innerHTML = data.tramites.map(t => {
-      const waUrl = 'https://wa.me/5491125114119?text=' + encodeURIComponent('Hola Estudio CG, deseo consultar sobre: ' + t[0]);
-      return `
-        <div class="modal-item">
-          <h4>${t[0]}</h4>
-          <p>${t[1]}</p>
-          <a href="${waUrl}" target="_blank" rel="noopener">Consultar trámite →</a>
-        </div>
-      `;
-    }).join('');
+    if (mTitulo) mTitulo.textContent = data.titulo;
+    if (mLista) {
+      mLista.innerHTML = data.tramites.map(t => {
+        const waUrl = 'https://wa.me/5491125114119?text=' + encodeURIComponent('Hola Estudio CG, deseo consultar sobre: ' + t[0]);
+        return `
+          <div class="modal-item">
+            <h4>${t[0]}</h4>
+            <p>${t[1]}</p>
+            <a href="${waUrl}" target="_blank" rel="noopener">Consultar trámite →</a>
+          </div>
+        `;
+      }).join('');
+    }
 
-    mWaBtn.href = 'https://wa.me/5491125114119?text=' + encodeURIComponent('Hola Estudio CG, deseo coordinar una consulta sobre: ' + data.titulo);
+    if (mWaBtn) {
+      mWaBtn.href = 'https://wa.me/5491125114119?text=' + encodeURIComponent('Hola Estudio CG, deseo coordinar una consulta sobre: ' + data.titulo);
+    }
     modal.classList.add('open');
     document.body.style.overflow = 'hidden';
   }
@@ -424,13 +430,29 @@ function enviarFormWeb() {
     document.body.style.overflow = '';
   }
 
+  window.openAreaModal = openAreaModal;
+  window.closeAreaModal = closeModal;
+
   document.querySelectorAll('.serv-card[data-area]').forEach(card => {
     card.addEventListener('click', () => openAreaModal(parseInt(card.getAttribute('data-area'))));
   });
 
-  modal.querySelector('.modal-close').addEventListener('click', closeModal);
+  const closeBtn = modal.querySelector('.modal-close');
+  if (closeBtn) closeBtn.addEventListener('click', closeModal);
   modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+  // Auto-apertura si se accede con parámetro de área o ancla hash
+  const urlParams = new URLSearchParams(window.location.search);
+  const areaParam = urlParams.get('area');
+  if (areaParam !== null && !isNaN(parseInt(areaParam))) {
+    setTimeout(() => openAreaModal(parseInt(areaParam)), 150);
+  } else if (window.location.hash) {
+    const match = window.location.hash.match(/#area-?(\d+)/i);
+    if (match) {
+      setTimeout(() => openAreaModal(parseInt(match[1])), 150);
+    }
+  }
 })();
 
 // Listener para botón Volver Arriba

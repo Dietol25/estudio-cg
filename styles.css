@@ -726,6 +726,15 @@ nav.menu a:not(.btn):hover::after {
   margin-bottom: 22px;
 }
 
+.serv-num {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-style: italic;
+  color: var(--gold);
+  font-weight: 500;
+  line-height: 1;
+}
+
 .serv-badge {
   font-size: 0.68rem;
   letter-spacing: 0.12em;
@@ -804,6 +813,7 @@ nav.menu a:not(.btn):hover::after {
   flex-direction: column;
   position: relative;
   box-shadow: 0 32px 80px rgba(0,0,0,0.85);
+  animation: modalEnter 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .modal-close {
@@ -869,6 +879,30 @@ nav.menu a:not(.btn):hover::after {
   gap: 6px;
 }
 .modal-item a:hover { color: var(--gold-light); }
+
+@keyframes modalEnter {
+  from { opacity: 0; transform: translateY(14px) scale(0.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@media (max-width: 768px) {
+  .modal-overlay {
+    padding: 14px;
+  }
+  .modal-window {
+    padding: 26px 18px 20px;
+    max-height: 92vh;
+    border-radius: 18px;
+  }
+  .modal-close {
+    top: 14px;
+    right: 14px;
+  }
+  .modal-window h3 {
+    font-size: 1.75rem;
+    padding-right: 28px;
+  }
+}
 
 /* ==========================================================================
    MÉTODO EN 3 PASOS
