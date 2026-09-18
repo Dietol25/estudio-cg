@@ -264,8 +264,8 @@ body {
 
 .trust-evidence-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
   margin-top: 36px;
 }
 
@@ -707,30 +707,33 @@ body {
     width: 100%;
   }
   
-  /* Trust Section Compacta en Mobile (2x2) */
+  /* Trust Section en Mobile (1 sola columna extendida y limpia) */
   .trust-evidence-section {
-    padding: 36px 0 !important;
+    padding: 38px 0 !important;
   }
   .trust-evidence-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 8px !important;
-    margin-top: 18px !important;
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+    margin-top: 20px !important;
   }
   .trust-evidence-card {
-    padding: 14px 10px !important;
-    border-radius: 12px !important;
+    padding: 22px 20px !important;
+    border-radius: 16px !important;
+    text-align: center;
   }
   .trust-card-metric {
-    font-size: 1.65rem !important;
-    margin-bottom: 2px !important;
+    font-size: 2.2rem !important;
+    margin-bottom: 4px !important;
   }
   .trust-card-title {
-    font-size: 0.80rem !important;
-    margin-bottom: 2px !important;
+    font-size: 1.05rem !important;
+    margin-bottom: 6px !important;
   }
   .trust-card-desc {
-    font-size: 0.74rem !important;
-    line-height: 1.3 !important;
+    font-size: 0.88rem !important;
+    line-height: 1.45 !important;
+    max-width: 480px;
+    margin: 0 auto !important;
   }
 
   /* Método de Trabajo en Móvil (Horizontal Snap / Compacto) */
@@ -1296,7 +1299,7 @@ body {
   }
 
   .trust-evidence-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-columns: 1fr !important;
     gap: 12px !important;
   }
 
