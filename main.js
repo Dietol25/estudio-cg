@@ -522,59 +522,79 @@ document.addEventListener('DOMContentLoaded', () => {
 // ==========================================================================
 // CARRUSEL DE RESEÑAS EN MÓVIL
 // ==========================================================================
-let currentReviewIdx = 0;
+var currentReviewIdx = 0;
 
 function scrollToReview(index) {
-  const grid = document.getElementById('reviewsGrid');
+  var grid = document.getElementById('reviewsGrid');
   if (!grid) return;
-  const cards = grid.querySelectorAll('.rev-card');
+  var cards = grid.querySelectorAll('.rev-card');
   if (!cards.length) return;
 
   if (index < 0) index = 0;
   if (index >= cards.length) index = cards.length - 1;
   currentReviewIdx = index;
 
-  const card = cards[index];
-  if (card) {
-    grid.scrollTo({
-      left: card.offsetLeft - grid.offsetLeft,
-      behavior: 'smooth'
-    });
+  var targetCard = cards[index];
+  if (targetCard) {
+    targetCard.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
   }
 
-  const dots = document.querySelectorAll('.review-dot');
-  dots.forEach((dot, idx) => {
-    dot.classList.toggle('active', idx === currentReviewIdx);
+  updateReviewDots(index);
+}
+
+function updateReviewDots(index) {
+  var dots = document.querySelectorAll('.review-dot');
+  dots.forEach(function(dot, idx) {
+    dot.classList.toggle('active', idx === index);
   });
 }
 
 function navigateReviews(direction) {
-  const grid = document.getElementById('reviewsGrid');
+  var grid = document.getElementById('reviewsGrid');
   if (!grid) return;
-  const cards = grid.querySelectorAll('.rev-card');
+  var cards = grid.querySelectorAll('.rev-card');
   if (!cards.length) return;
 
-  let targetIndex = currentReviewIdx + direction;
+  var targetIndex = currentReviewIdx + direction;
   if (targetIndex < 0) targetIndex = cards.length - 1;
   else if (targetIndex >= cards.length) targetIndex = 0;
 
   scrollToReview(targetIndex);
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  const reviewsGrid = document.getElementById('reviewsGrid');
-  const dots = document.querySelectorAll('.review-dot');
+function initReviewsCarousel() {
+  var reviewsGrid = document.getElementById('reviewsGrid');
+  var dots = document.querySelectorAll('.review-dot');
   if (!reviewsGrid || !dots.length) return;
 
-  reviewsGrid.addEventListener('scroll', () => {
-    const scrollLeft = reviewsGrid.scrollLeft;
-    const cardWidth = reviewsGrid.querySelector('.rev-card')?.offsetWidth || reviewsGrid.clientWidth || 300;
-    const gap = 16;
-    const activeIndex = Math.round(scrollLeft / (cardWidth + gap));
-    currentReviewIdx = Math.max(0, Math.min(activeIndex, dots.length - 1));
-    
-    dots.forEach((dot, idx) => {
-      dot.classList.toggle('active', idx === currentReviewIdx);
-    });
+  var scrollTimeout;
+  reviewsGrid.addEventListener('scroll', function() {
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(function() {
+      var gridRect = reviewsGrid.getBoundingClientRect();
+      var gridCenter = gridRect.left + gridRect.width / 2;
+      var cards = reviewsGrid.querySelectorAll('.rev-card');
+      var closestIdx = 0;
+      var minDiff = Infinity;
+
+      cards.forEach(function(card, idx) {
+        var rect = card.getBoundingClientRect();
+        var cardCenter = rect.left + rect.width / 2;
+        var diff = Math.abs(gridCenter - cardCenter);
+        if (diff < minDiff) {
+          minDiff = diff;
+          closestIdx = idx;
+        }
+      });
+
+      currentReviewIdx = closestIdx;
+      updateReviewDots(closestIdx);
+    }, 40);
   }, { passive: true });
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initReviewsCarousel);
+} else {
+  initReviewsCarousel();
+}
