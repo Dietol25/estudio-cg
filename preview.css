@@ -4,23 +4,21 @@
    ========================================================================== */
 
 /* ==========================================================================
-   ELEGANT DARK PATTERN — ADAPTADO AL DESIGN SYSTEM ESTUDIO CG
-   Micro-textura de puntos dorados + gradiente radial carbón + destellos angulares
+   FONDO EDITORIAL SÓLIDO Y LIMPIO — ESTUDIO CG
+   Fondo negro azabache #0C0C0C con suave resplandor ambiental ámbar superior
    ========================================================================== */
 body {
-  background-color: #0c0c0c;
-  background-image: 
-    radial-gradient(ellipse 90% 45% at 50% -10%, rgba(196, 154, 99, 0.09) 0%, transparent 60%),
-    radial-gradient(circle at 1px 1px, rgba(223, 188, 138, 0.04) 1px, transparent 0);
-  background-size: 100% 100%, 28px 28px;
-  background-attachment: scroll, fixed;
+  background-color: #0C0C0C;
+  background-image: radial-gradient(ellipse 90% 45% at 50% 0%, rgba(196, 154, 99, 0.06) 0%, transparent 65%);
+  background-repeat: no-repeat;
+  background-size: 100% 750px;
 }
 
-/* Patrón completo con gradiente carbón y rayos dorados angulados */
+/* Sección editorial limpia sin tramas de puntos ni distorsiones angulares */
 .elegant-dark-pattern {
   position: relative;
   overflow: hidden;
-  background: #0e0e0e;
+  background: #0C0C0C;
 }
 
 .elegant-dark-pattern::before {
@@ -28,25 +26,12 @@ body {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: radial-gradient(100% 100% at 0% 0%, rgb(28, 25, 22) 0%, rgb(13, 13, 13) 100%);
-  mask: radial-gradient(125% 100% at 0% 0%, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.25) 88%, rgba(0, 0, 0, 0) 100%);
-  -webkit-mask: radial-gradient(125% 100% at 0% 0%, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.25) 88%, rgba(0, 0, 0, 0) 100%);
+  background: radial-gradient(ellipse 80% 50% at 50% 50%, rgba(196, 154, 99, 0.035) 0%, transparent 70%);
   z-index: 0;
 }
 
 .elegant-dark-pattern::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: 
-    linear-gradient(rgba(223, 188, 138, 0.06) 0%, rgba(196, 154, 99, 0) 100%),
-    radial-gradient(circle at 1px 1px, rgba(223, 188, 138, 0.09) 1px, transparent 0);
-  background-size: 100% 100%, 24px 24px;
-  mask: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgb(0,0,0) 25%, rgba(0,0,0,0.35) 45%, rgba(0,0,0,0.08) 70%, rgba(0,0,0,0) 95%);
-  -webkit-mask: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgb(0,0,0) 25%, rgba(0,0,0,0.35) 45%, rgba(0,0,0,0.08) 70%, rgba(0,0,0,0) 95%);
-  transform: skewX(-35deg);
-  z-index: 0;
+  display: none !important;
 }
 
 .elegant-dark-pattern > * {
@@ -57,7 +42,7 @@ body {
 /* Intent Selector Section con textura elegante */
 .intent-section {
   padding: 85px 0 75px;
-  background: #111111;
+  background: #0C0C0C;
   position: relative;
 }
 
@@ -1332,6 +1317,12 @@ body {
     display: block !important;
     opacity: 1 !important;
     pointer-events: auto !important;
+  }
+  main[style*="padding-top"] {
+    padding-top: 64px !important;
+  }
+  .elegant-dark-pattern {
+    padding: 44px 0 32px !important;
   }
 }
 

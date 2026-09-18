@@ -4,4 +4,5 @@ cloudflared.exe
 active_url.txt
 *.bak
 cristian-framed-old.jpg
+*-original.png
 .system_generated/

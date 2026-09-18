@@ -39,7 +39,11 @@ html, body {
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100%;
+}
 
 body {
   font-family: var(--font-sans);
@@ -49,6 +53,9 @@ body {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+  position: relative;
 }
 
 a { color: inherit; text-decoration: none; }
@@ -257,10 +264,12 @@ header.scrolled {
   display: flex;
   align-items: center;
   gap: 12px;
+  line-height: 0;
+  text-decoration: none;
 }
 
 .brand-logo-img {
-  height: 48px;
+  height: 46px;
   width: auto;
   object-fit: contain;
   transition: var(--transition);
@@ -1347,9 +1356,14 @@ footer {
   .wrap { padding: 0 18px; }
   section { padding: 65px 0; }
   
-  /* Header Mobile: Proporción refinada y logo contenido */
-  .nav-container { height: 64px; }
-  .brand-logo-img { height: 42px; }
+  /* Header Mobile: Proporción simétrica y alineación milimétrica */
+  .nav-container {
+    height: 64px;
+    align-items: center;
+  }
+  .brand-logo-img {
+    height: 38px;
+  }
   
   /* Menú móvil 100% opaco y sólido — sin transparencias ni sangrado del fondo */
   nav.menu {
@@ -1454,17 +1468,24 @@ footer {
     justify-content: center;
     width: 40px;
     height: 40px;
-    font-size: 1.35rem;
+    min-width: 40px;
+    min-height: 40px;
+    font-size: 1.25rem;
     line-height: 1;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.12);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: #FFFFFF !important;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(244, 239, 231, 0.16);
+    color: var(--cream) !important;
     cursor: pointer;
     transition: var(--transition);
+    padding: 0;
+    margin: 0;
+    -webkit-tap-highlight-color: transparent;
   }
-  .hamb:hover {
-    background: rgba(255, 255, 255, 0.2);
+  .hamb:hover, .hamb:active {
+    background: rgba(255, 255, 255, 0.16);
+    border-color: rgba(196, 154, 99, 0.4);
+    color: var(--gold-light) !important;
   }
   
   /* ==========================================================================
@@ -1684,21 +1705,7 @@ footer {
     margin: 4px auto 0;
   }
   
-  /* Botón hamburguesa pastilla estilo Numa */
-  .hamb {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 0.84rem;
-    font-weight: 700;
-    padding: 7px 16px;
-    border-radius: var(--radius-pill);
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    color: var(--cream-light);
-  }
+
   
   .h2 {
     font-size: clamp(1.85rem, 6.5vw, 2.3rem);
