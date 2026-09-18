@@ -825,8 +825,9 @@ nav.menu a:not(.btn):hover::after {
 .intent-action-btn {
   display: inline-flex;
   align-items: center;
-  justify-content: space-between;
-  width: 100%;
+  justify-content: flex-start;
+  gap: 8px;
+  width: auto;
   box-sizing: border-box;
   font-family: var(--font-sans);
   font-size: 0.90rem;

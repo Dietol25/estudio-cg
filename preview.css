@@ -163,8 +163,9 @@ body {
 .intent-action-btn {
   display: inline-flex;
   align-items: center;
-  justify-content: space-between;
-  width: 100%;
+  justify-content: flex-start;
+  gap: 8px;
+  width: auto;
   box-sizing: border-box;
   font-family: var(--font-sans);
   font-size: 0.90rem;
@@ -1481,10 +1482,11 @@ body {
   .intent-action-btn {
     font-size: 0.90rem !important;
     padding: 8px 0 2px !important;
-    width: 100% !important;
+    width: auto !important;
     white-space: nowrap !important;
     display: inline-flex !important;
-    justify-content: space-between !important;
+    justify-content: flex-start !important;
+    gap: 8px !important;
     align-items: center !important;
     box-sizing: border-box !important;
     background: transparent !important;
