@@ -1486,12 +1486,14 @@ body {
   }
 }
 
-/* Botón WhatsApp de Contacto y enlace Email */
+/* Botón WhatsApp de Contacto (sin resplandor/luz, acabado mate limpio) */
+.btn-wa,
 .btn-wa-submit {
   background-color: var(--wa) !important;
   color: #ffffff !important;
-  border-color: rgba(255, 255, 255, 0.2) !important;
-  box-shadow: 0 4px 18px rgba(37, 195, 104, 0.35) !important;
+  border: none !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
   font-weight: 700;
   font-size: 0.94rem;
   padding: 14px 20px;
@@ -1505,9 +1507,10 @@ body {
   transition: var(--transition);
 }
 
+.btn-wa:hover,
 .btn-wa-submit:hover {
   background-color: var(--wa-hover) !important;
-  box-shadow: 0 8px 24px rgba(37, 195, 104, 0.45) !important;
+  box-shadow: none !important;
   transform: translateY(-2px);
 }
 
