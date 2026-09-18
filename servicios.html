@@ -24,20 +24,7 @@
     <button class="hamb" aria-label="Abrir menú" onclick="toggleMobileNav()">☰</button>
     
     <nav class="menu" id="nav-menu">
-      <div class="nav-dropdown">
-        <a href="servicios.html" class="nav-dropdown-trigger active" onclick="toggleServicesDropdown(event)">
-          <span>Servicios</span>
-          <svg class="dropdown-chevron" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-        </a>
-        <div class="dropdown-menu">
-          <a href="servicios.html?area=0" onclick="if(window.openAreaModal){openAreaModal(0); if(window.closeNav)closeNav(); return false;}">Área Previsional</a>
-          <a href="servicios.html?area=1" onclick="if(window.openAreaModal){openAreaModal(1); if(window.closeNav)closeNav(); return false;}">Gestión Laboral</a>
-          <a href="servicios.html?area=2" onclick="if(window.openAreaModal){openAreaModal(2); if(window.closeNav)closeNav(); return false;}">Asesoramiento Fiscal</a>
-          <a href="servicios.html?area=3" onclick="if(window.openAreaModal){openAreaModal(3); if(window.closeNav)closeNav(); return false;}">Trámites y Gestoría</a>
-          <a href="servicios.html?area=4" onclick="if(window.openAreaModal){openAreaModal(4); if(window.closeNav)closeNav(); return false;}">Área Legal <span class="badge-prox">Próximamente</span></a>
-          <a href="servicios.html" class="dropdown-all-link">Ver todos los servicios →</a>
-        </div>
-      </div>
+      <a href="servicios.html" class="active" onclick="closeNav()">Servicios</a>
       <a href="como-trabajamos.html" onclick="closeNav()">Cómo trabajamos</a>
       <a href="nosotros.html" onclick="closeNav()">Nosotros</a>
       <a href="preguntas-frecuentes.html" onclick="closeNav()">Preguntas Frecuentes</a>
