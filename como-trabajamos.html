@@ -11,6 +11,267 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css?v=15">
   <link rel="stylesheet" href="preview.css?v=15">
+  <style>
+    /* Estilos Scoped: Método y Protocolo de Trabajo */
+    .method-main {
+      padding-top: 100px;
+    }
+    .method-hero {
+      padding: 60px 0 45px;
+      border-bottom: 1px solid var(--border);
+    }
+    .method-hero-wrap {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .method-hero .eyebrow {
+      justify-content: center;
+    }
+    .method-hero-title {
+      font-size: clamp(2.4rem, 4.5vw, 3.4rem);
+      margin-bottom: 16px;
+    }
+    .method-hero-sub {
+      margin: 0 auto;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .method-section {
+      padding: 70px 0;
+    }
+    .method-section-wrap {
+      max-width: 960px;
+    }
+
+    /* Tarjetas de Fases */
+    .phase-card {
+      background: var(--surface);
+      border: 1px solid rgba(244, 239, 231, 0.08);
+      border-radius: 20px;
+      padding: 36px 32px;
+      margin-bottom: 30px;
+      box-sizing: border-box;
+    }
+    .phase-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+    .phase-tag {
+      background: rgba(196, 154, 99, 0.12);
+      color: var(--gold-light);
+      border-color: rgba(196, 154, 99, 0.3);
+    }
+    .phase-title {
+      font-family: var(--font-serif);
+      font-size: 1.9rem;
+      color: #FAF8F4;
+      margin: 8px 0 4px;
+      line-height: 1.25;
+    }
+    .phase-badge-wrap {
+      text-align: right;
+    }
+    .phase-badge {
+      display: inline-block;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--gold-light);
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 4px 12px;
+      border-radius: 20px;
+      max-width: 100%;
+      white-space: normal;
+    }
+    .phase-badge-sub {
+      display: block;
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+    .phase-desc {
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .phase-box {
+      background: rgba(0, 0, 0, 0.25);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .phase-box-title {
+      color: var(--cream-light);
+      font-size: 0.9rem;
+      display: block;
+      margin-bottom: 10px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .phase-checklist {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 10px;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+    .phase-checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      line-height: 1.45;
+    }
+    .phase-check-icon {
+      color: var(--gold);
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* CTA Final */
+    .method-cta {
+      text-align: center;
+      margin-top: 45px;
+      background: rgba(196, 154, 99, 0.08);
+      border: 1px solid rgba(196, 154, 99, 0.25);
+      border-radius: 18px;
+      padding: 36px 24px;
+      box-sizing: border-box;
+    }
+    .method-cta-title {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      color: #FAF8F4;
+      margin-bottom: 10px;
+    }
+    .method-cta-desc {
+      color: var(--muted);
+      max-width: 580px;
+      margin: 0 auto 24px;
+      font-size: 0.95rem;
+    }
+    .method-cta .btn {
+      padding: 12px 28px;
+    }
+
+    /* Reglas Responsivas: Mobile (<=768px) */
+    @media (max-width: 768px) {
+      .method-main {
+        padding-top: 80px;
+      }
+      .method-hero {
+        padding: 40px 0 30px;
+      }
+      .method-section {
+        padding: 40px 0;
+      }
+      .phase-card {
+        padding: 24px 18px;
+        margin-bottom: 20px;
+        border-radius: 16px;
+      }
+      .phase-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+      .phase-title {
+        font-size: 1.55rem;
+      }
+      .phase-badge-wrap {
+        text-align: left;
+      }
+      .phase-desc {
+        font-size: 0.9rem;
+        margin-bottom: 16px;
+      }
+      .phase-box {
+        padding: 16px 14px;
+      }
+      .phase-checklist {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        font-size: 0.85rem;
+      }
+      .method-cta {
+        padding: 28px 16px;
+        margin-top: 30px;
+        border-radius: 16px;
+      }
+      .method-cta-title {
+        font-size: 1.55rem;
+      }
+      .method-cta-desc {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+      }
+      /* Override scoped para prevenir overflow horizontal por nowrap global en .btn */
+      .method-cta .btn {
+        white-space: normal;
+        text-align: center;
+        width: 100%;
+        max-width: 320px;
+        box-sizing: border-box;
+        padding: 12px 18px;
+        font-size: 0.92rem;
+        line-height: 1.35;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    /* Reglas Responsivas: Pantallas Muy Pequeñas (<=380px) */
+    @media (max-width: 380px) {
+      .method-hero {
+        padding: 30px 0 20px;
+      }
+      .method-hero-title {
+        font-size: 2rem !important;
+      }
+      .phase-card {
+        padding: 18px 12px;
+      }
+      .phase-title {
+        font-size: 1.35rem;
+      }
+      .phase-badge {
+        font-size: 0.74rem;
+        padding: 3px 8px;
+      }
+      .phase-desc {
+        font-size: 0.85rem;
+      }
+      .phase-box {
+        padding: 14px 10px;
+      }
+      .phase-checklist {
+        font-size: 0.82rem;
+        gap: 6px;
+      }
+      .method-cta {
+        padding: 22px 12px;
+      }
+      .method-cta-title {
+        font-size: 1.35rem;
+      }
+      .method-cta .btn {
+        max-width: 100%;
+        font-size: 0.85rem;
+        padding: 12px 12px;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -35,154 +296,154 @@
   </div>
 </header>
 
-<main style="padding-top: 100px;">
+<main class="method-main">
   <!-- HERO INTERNO -->
-  <section class="elegant-dark-pattern" style="padding: 60px 0 45px; border-bottom: 1px solid var(--border);">
-    <div class="wrap" style="text-align: center; max-width: 800px; margin: 0 auto;">
-      <span class="eyebrow" style="justify-content: center;">Protocolo Operativo</span>
-      <h1 class="h2" style="font-size: clamp(2.4rem, 4.5vw, 3.4rem); margin-bottom: 16px;">Criterio, Rigor y Previsibilidad</h1>
-      <p class="sub" style="margin: 0 auto; font-size: 1.1rem; line-height: 1.6;">
+  <section class="method-hero elegant-dark-pattern">
+    <div class="wrap method-hero-wrap">
+      <span class="eyebrow">Protocolo Operativo</span>
+      <h1 class="h2 method-hero-title">Criterio, Rigor y Previsibilidad</h1>
+      <p class="sub method-hero-sub">
         Un proceso estructurado en 3 fases para eliminar la incertidumbre, evitar demoras burocráticas y darte certezas de principio a fin.
       </p>
     </div>
   </section>
 
   <!-- SECCIÓN DE 3 ETAPAS EXPANDIDAS -->
-  <section style="padding: 70px 0;">
-    <div class="wrap" style="max-width: 960px;">
+  <section class="method-section">
+    <div class="wrap method-section-wrap">
       
       <!-- FASE 1 -->
-      <div style="background: var(--surface); border: 1px solid rgba(244,239,231,0.08); border-radius: 20px; padding: 36px 32px; margin-bottom: 30px;">
-        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 14px; margin-bottom: 16px;">
+      <div class="phase-card">
+        <div class="phase-header">
           <div>
-            <span class="intent-tag" style="background: rgba(196,154,99,0.12); color: var(--gold-light); border-color: rgba(196,154,99,0.3);">FASE I</span>
-            <h2 style="font-family: var(--font-serif); font-size: 1.9rem; color: #FAF8F4; margin: 8px 0 4px;">Diagnóstico de Viabilidad y Requisitos</h2>
+            <span class="intent-tag phase-tag">FASE I</span>
+            <h2 class="phase-title">Diagnóstico de Viabilidad y Requisitos</h2>
           </div>
-          <div style="text-align: right;">
+          <div class="phase-badge-wrap">
             <!-- CONFIRMAR CON CLIENTE: plazo estimado para el diagnóstico inicial -->
-            <span style="display: inline-block; font-size: 0.82rem; font-weight: 700; color: var(--gold-light); background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); padding: 4px 12px; border-radius: 20px;">
+            <span class="phase-badge">
               TIEMPO ESTIMADO: A confirmar en la evaluación inicial
             </span>
             <!-- CONFIRMAR CON CLIENTE: política de aranceles y bonificación de consulta inicial -->
-            <span style="display: block; font-size: 0.8rem; color: var(--muted); margin-top: 4px;">Evaluación inicial de viabilidad</span>
+            <span class="phase-badge-sub">Evaluación inicial de viabilidad</span>
           </div>
         </div>
         
-        <p style="color: var(--muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">
+        <p class="phase-desc">
           En esta primera instancia revisamos minuciosamente tu situación previsional, tributaria o registral. Verificamos en los padrones oficiales si cumplís con los requisitos exigidos por ley o qué acciones previas hacen falta para estar en regla.
         </p>
 
-        <div style="background: rgba(0,0,0,0.25); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; padding: 20px;">
-          <strong style="color: var(--cream-light); font-size: 0.9rem; display: block; margin-bottom: 10px; letter-spacing: 0.04em; text-transform: uppercase;">
+        <div class="phase-box">
+          <strong class="phase-box-title">
             📄 Documentación que te solicitamos en esta etapa:
           </strong>
-          <ul style="list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 10px; font-size: 0.88rem; color: var(--muted);">
-            <li style="display: flex; align-items: center; gap: 8px;">
-              <span style="color: var(--gold);">✔</span> Foto nítida o PDF de tu DNI (ambos lados).
+          <ul class="phase-checklist">
+            <li>
+              <span class="phase-check-icon">✔</span> Foto nítida o PDF de tu DNI (ambos lados).
             </li>
-            <li style="display: flex; align-items: center; gap: 8px;">
-              <span style="color: var(--gold);">✔</span> Número de CUIL / CUIT.
+            <li>
+              <span class="phase-check-icon">✔</span> Número de CUIL / CUIT.
             </li>
-            <li style="display: flex; align-items: center; gap: 8px;">
-              <span style="color: var(--gold);">✔</span> Clave de Seguridad Social o Clave Fiscal (si contás con ellas).
+            <li>
+              <span class="phase-check-icon">✔</span> Clave de Seguridad Social o Clave Fiscal (si contás con ellas).
             </li>
-            <li style="display: flex; align-items: center; gap: 8px;">
-              <span style="color: var(--gold);">✔</span> Certificaciones de servicios o recibos históricos si conservás.
+            <li>
+              <span class="phase-check-icon">✔</span> Certificaciones de servicios o recibos históricos si conservás.
             </li>
           </ul>
         </div>
       </div>
 
       <!-- FASE 2 -->
-      <div style="background: var(--surface); border: 1px solid rgba(244,239,231,0.08); border-radius: 20px; padding: 36px 32px; margin-bottom: 30px;">
-        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 14px; margin-bottom: 16px;">
+      <div class="phase-card">
+        <div class="phase-header">
           <div>
-            <span class="intent-tag" style="background: rgba(196,154,99,0.12); color: var(--gold-light); border-color: rgba(196,154,99,0.3);">FASE II</span>
-            <h2 style="font-family: var(--font-serif); font-size: 1.9rem; color: #FAF8F4; margin: 8px 0 4px;">Armado de Legajo, Presentación & Gestión</h2>
+            <span class="intent-tag phase-tag">FASE II</span>
+            <h2 class="phase-title">Armado de Legajo, Presentación & Gestión</h2>
           </div>
-          <div style="text-align: right;">
+          <div class="phase-badge-wrap">
             <!-- CONFIRMAR CON CLIENTE: plazo estimado para el armado de legajo y presentación formal -->
-            <span style="display: inline-block; font-size: 0.82rem; font-weight: 700; color: var(--gold-light); background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); padding: 4px 12px; border-radius: 20px;">
+            <span class="phase-badge">
               TIEMPO ESTIMADO: Según circuito administrativo
             </span>
-            <span style="display: block; font-size: 0.8rem; color: var(--muted); margin-top: 4px;">Ingreso formal ante el organismo</span>
+            <span class="phase-badge-sub">Ingreso formal ante el organismo</span>
           </div>
         </div>
         
-        <p style="color: var(--muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">
+        <p class="phase-desc">
           Con la viabilidad confirmada y el presupuesto pactado por escrito, elaboramos la carpeta técnica completa. Liquidamos deudas o moratorias en SICAM, generamos los formularios oficiales, solicitamos turnos prioritarios e ingresamos formalmente el expediente ante ANSES, ARCA, IPS o plataforma TAD.
         </p>
 
-        <div style="background: rgba(0,0,0,0.25); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; padding: 20px;">
-          <strong style="color: var(--cream-light); font-size: 0.9rem; display: block; margin-bottom: 10px; letter-spacing: 0.04em; text-transform: uppercase;">
+        <div class="phase-box">
+          <strong class="phase-box-title">
             📋 Acciones técnicas que ejecutamos:
           </strong>
-          <ul style="list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 10px; font-size: 0.88rem; color: var(--muted);">
-            <li style="display: flex; align-items: center; gap: 8px;">
+          <ul class="phase-checklist">
+            <li>
               <!-- CONFIRMAR CON CLIENTE: números o modelos específicos de formularios oficiales -->
-              <span style="color: var(--gold);">✔</span> Confección y suscripción de formularios oficiales de inicio.
+              <span class="phase-check-icon">✔</span> Confección y suscripción de formularios oficiales de inicio.
             </li>
-            <li style="display: flex; align-items: center; gap: 8px;">
-              <span style="color: var(--gold);">✔</span> Cómputo de aportes y adhesión a moratoria vigente.
+            <li>
+              <span class="phase-check-icon">✔</span> Cómputo de aportes y adhesión a moratoria vigente.
             </li>
-            <li style="display: flex; align-items: center; gap: 8px;">
-              <span style="color: var(--gold);">✔</span> Obtención de partidas y legalizaciones requeridas.
+            <li>
+              <span class="phase-check-icon">✔</span> Obtención de partidas y legalizaciones requeridas.
             </li>
-            <li style="display: flex; align-items: center; gap: 8px;">
-              <span style="color: var(--gold);">✔</span> Entrega de constancia oficial de expediente para seguimiento.
+            <li>
+              <span class="phase-check-icon">✔</span> Entrega de constancia oficial de expediente para seguimiento.
             </li>
           </ul>
         </div>
       </div>
 
       <!-- FASE 3 -->
-      <div style="background: var(--surface); border: 1px solid rgba(244,239,231,0.08); border-radius: 20px; padding: 36px 32px; margin-bottom: 30px;">
-        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 14px; margin-bottom: 16px;">
+      <div class="phase-card">
+        <div class="phase-header">
           <div>
-            <span class="intent-tag" style="background: rgba(196,154,99,0.12); color: var(--gold-light); border-color: rgba(196,154,99,0.3);">FASE III</span>
-            <h2 style="font-family: var(--font-serif); font-size: 1.9rem; color: #FAF8F4; margin: 8px 0 4px;">Seguimiento Activo, Dictamen & Cobro</h2>
+            <span class="intent-tag phase-tag">FASE III</span>
+            <h2 class="phase-title">Seguimiento Activo, Dictamen & Cobro</h2>
           </div>
-          <div style="text-align: right;">
+          <div class="phase-badge-wrap">
             <!-- CONFIRMAR CON CLIENTE: tiempos promedio de resolución de expedientes por organismo -->
-            <span style="display: inline-block; font-size: 0.82rem; font-weight: 700; color: var(--gold-light); background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); padding: 4px 12px; border-radius: 20px;">
+            <span class="phase-badge">
               PLAZO: Sujeto a los tiempos del organismo oficial
             </span>
-            <span style="display: block; font-size: 0.8rem; color: var(--muted); margin-top: 4px;">Según organismo y dictamen oficial</span>
+            <span class="phase-badge-sub">Según organismo y dictamen oficial</span>
           </div>
         </div>
         
-        <p style="color: var(--muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">
+        <p class="phase-desc">
           No dejamos expedientes a la deriva. Monitoreamos semanalmente cada cambio de estado, respondemos requerimientos o vistas administrativas y te mantenemos informado por WhatsApp. Una vez acordado el beneficio o dictada la resolución, te guiamos en la apertura de cuenta bancaria y liquidación de haberes retroactivos.
         </p>
 
-        <div style="background: rgba(0,0,0,0.25); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; padding: 20px;">
-          <strong style="color: var(--cream-light); font-size: 0.9rem; display: block; margin-bottom: 10px; letter-spacing: 0.04em; text-transform: uppercase;">
+        <div class="phase-box">
+          <strong class="phase-box-title">
             🎯 Lo que recibís al finalizar:
           </strong>
-          <ul style="list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 10px; font-size: 0.88rem; color: var(--muted);">
-            <li style="display: flex; align-items: center; gap: 8px;">
-              <span style="color: var(--gold);">✔</span> Resolución formal de otorgamiento del beneficio.
+          <ul class="phase-checklist">
+            <li>
+              <span class="phase-check-icon">✔</span> Resolución formal de otorgamiento del beneficio.
             </li>
-            <li style="display: flex; align-items: center; gap: 8px;">
-              <span style="color: var(--gold);">✔</span> Fecha exacta y banco asignado para el primer cobro.
+            <li>
+              <span class="phase-check-icon">✔</span> Fecha exacta y banco asignado para el primer cobro.
             </li>
-            <li style="display: flex; align-items: center; gap: 8px;">
-              <span style="color: var(--gold);">✔</span> Liquidación de retroactivos devengados.
+            <li>
+              <span class="phase-check-icon">✔</span> Liquidación de retroactivos devengados.
             </li>
-            <li style="display: flex; align-items: center; gap: 8px;">
-              <span style="color: var(--gold);">✔</span> Asesoramiento post-resolución (obra social PAMI, etc.).
+            <li>
+              <span class="phase-check-icon">✔</span> Asesoramiento post-resolución (obra social PAMI, etc.).
             </li>
           </ul>
         </div>
       </div>
 
       <!-- CTA FINAL -->
-      <div style="text-align: center; margin-top: 45px; background: rgba(196,154,99,0.08); border: 1px solid rgba(196,154,99,0.25); border-radius: 18px; padding: 36px 24px;">
-        <h3 style="font-family: var(--font-serif); font-size: 2rem; color: #FAF8F4; margin-bottom: 10px;">¿Querés que evaluemos tu expediente hoy?</h3>
-        <p style="color: var(--muted); max-width: 580px; margin: 0 auto 24px; font-size: 0.95rem;">
+      <div class="method-cta">
+        <h3 class="method-cta-title">¿Querés que evaluemos tu expediente hoy?</h3>
+        <p class="method-cta-desc">
           Iniciá la Fase I sin ningún costo. Te decimos con honestidad técnica si tu trámite es viable y cómo resolverlo.
         </p>
-        <a href="https://wa.me/5491125114119?text=Hola%20Estudio%20CG%2C%20quiero%20iniciar%20la%20evaluaci%C3%B3n%20de%20mi%20caso" target="_blank" rel="noopener" class="btn btn-primary" style="padding: 12px 28px;">
+        <a href="https://wa.me/5491125114119?text=Hola%20Estudio%20CG%2C%20quiero%20iniciar%20la%20evaluaci%C3%B3n%20de%20mi%20caso" target="_blank" rel="noopener" class="btn btn-primary">
           Iniciar diagnóstico sin cargo por WhatsApp →
         </a>
       </div>
