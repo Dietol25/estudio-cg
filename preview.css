@@ -182,42 +182,45 @@ body {
   width: 100%;
   box-sizing: border-box;
   font-family: var(--font-sans);
-  font-size: 0.88rem;
+  font-size: 0.90rem;
   font-weight: 600;
   color: var(--gold-light) !important;
-  background-color: rgba(196, 154, 99, 0.08) !important;
-  background: rgba(196, 154, 99, 0.08) !important;
+  background: transparent !important;
+  background-color: transparent !important;
   background-image: none !important;
-  border: 1px solid rgba(196, 154, 99, 0.28) !important;
-  border-radius: var(--radius-pill);
-  padding: 10px 18px !important;
-  margin-top: 6px;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 8px 0 2px !important;
+  margin-top: auto !important;
   cursor: pointer;
   outline: none;
   transition: var(--transition);
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  text-decoration: none !important;
 }
 
 .intent-action-btn .arrow-icon-svg {
-  stroke-width: 2.8;
-  color: var(--gold-light);
-  transition: transform 0.2s ease, stroke 0.2s ease;
+  stroke-width: 2.4;
+  color: var(--gold);
+  transition: transform 0.22s ease, color 0.22s ease;
   flex-shrink: 0;
 }
 
-.intent-card:hover .intent-action-btn {
-  background-color: var(--gold) !important;
-  background: var(--gold) !important;
-  color: #0D0D0D !important;
-  border-color: var(--gold) !important;
-  box-shadow: 0 4px 14px rgba(196, 154, 99, 0.35);
+.intent-card:hover .intent-action-btn,
+.intent-action-btn:hover {
+  background: transparent !important;
+  background-color: transparent !important;
+  color: #FAF8F4 !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
-.intent-card:hover .intent-action-btn .arrow-icon-svg {
-  color: #0D0D0D;
-  transform: translateX(4px);
+.intent-card:hover .intent-action-btn .arrow-icon-svg,
+.intent-action-btn:hover .arrow-icon-svg {
+  color: var(--gold-light);
+  transform: translateX(6px);
 }
 
 /* Card especial: 'No sé qué trámite necesito' */
@@ -1372,20 +1375,24 @@ body {
   }
 
   .intent-action-btn {
-    font-size: 0.88rem !important;
-    padding: 11px 18px !important;
+    font-size: 0.90rem !important;
+    padding: 8px 0 2px !important;
     width: 100% !important;
     white-space: nowrap !important;
     display: inline-flex !important;
     justify-content: space-between !important;
     align-items: center !important;
     box-sizing: border-box !important;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
     margin-top: auto !important;
   }
 
   .trust-evidence-grid {
     grid-template-columns: 1fr !important;
-    gap: 12px !important;
+    gap: 10px !important;
   }
 
   /* Hero Mobile: Un solo botón principal (WhatsApp) + texto secundario */
@@ -1448,8 +1455,12 @@ body {
     white-space: nowrap !important;
   }
   .intent-action-btn {
-    font-size: 0.84rem !important;
-    padding: 10px 16px !important;
+    font-size: 0.86rem !important;
+    padding: 6px 0 !important;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
     white-space: nowrap !important;
   }
   .trust-evidence-grid {
