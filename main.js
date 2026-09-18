@@ -534,7 +534,13 @@ function scrollToReview(index) {
   if (index >= cards.length) index = cards.length - 1;
   currentReviewIdx = index;
 
-  cards[index].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+  const card = cards[index];
+  if (card) {
+    grid.scrollTo({
+      left: card.offsetLeft - grid.offsetLeft,
+      behavior: 'smooth'
+    });
+  }
 
   const dots = document.querySelectorAll('.review-dot');
   dots.forEach((dot, idx) => {
@@ -548,10 +554,7 @@ function navigateReviews(direction) {
   const cards = grid.querySelectorAll('.rev-card');
   if (!cards.length) return;
 
-  const cardWidth = cards[0].offsetWidth + 16;
-  const computedIndex = Math.round(grid.scrollLeft / cardWidth);
-  let targetIndex = computedIndex + direction;
-
+  let targetIndex = currentReviewIdx + direction;
   if (targetIndex < 0) targetIndex = cards.length - 1;
   else if (targetIndex >= cards.length) targetIndex = 0;
 
@@ -565,8 +568,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   reviewsGrid.addEventListener('scroll', () => {
     const scrollLeft = reviewsGrid.scrollLeft;
-    const cardWidth = reviewsGrid.querySelector('.rev-card')?.offsetWidth || 300;
-    const activeIndex = Math.round(scrollLeft / (cardWidth + 16));
+    const cardWidth = reviewsGrid.querySelector('.rev-card')?.offsetWidth || reviewsGrid.clientWidth || 300;
+    const gap = 16;
+    const activeIndex = Math.round(scrollLeft / (cardWidth + gap));
     currentReviewIdx = Math.max(0, Math.min(activeIndex, dots.length - 1));
     
     dots.forEach((dot, idx) => {
