@@ -35,28 +35,32 @@ function setContactMode(mode, el) {
 }
 
 function submitSmartForm() {
-  const nombre = document.getElementById('nombre').value.trim();
-  const tel = document.getElementById('tel').value.trim();
-  const mail = document.getElementById('mail').value.trim();
-  const tema = document.getElementById('tema').value;
-  const msg = document.getElementById('msg').value.trim();
+  const nombre = document.getElementById('nombre') ? document.getElementById('nombre').value.trim() : '';
+  const tel = document.getElementById('tel') ? document.getElementById('tel').value.trim() : '';
+  const mailEl = document.getElementById('mail');
+  const mail = mailEl ? mailEl.value.trim() : '';
+  const tema = document.getElementById('tema') ? document.getElementById('tema').value : 'Consulta general';
+  const msgEl = document.getElementById('msg');
+  const msg = msgEl ? msgEl.value.trim() : '';
 
-  if (!nombre || !tel || !msg) {
-    alert('Por favor completá los campos obligatorios.');
+  if (!nombre || !tel) {
+    alert('Por favor, completá tu nombre y teléfono de contacto.');
     return;
   }
 
-  if (currentContactMode === 'wa') {
-    const textoWA = `Hola Estudio CG!%0A*Consulta desde la web*%0A*Nombre:* ${encodeURIComponent(nombre)}%0A*Teléfono:* ${encodeURIComponent(tel)}%0A*Email:* ${encodeURIComponent(mail || 'No especificado')}%0A*Área:* ${encodeURIComponent(tema)}%0A*Detalle:* ${encodeURIComponent(msg)}`;
-    window.open(`https://wa.me/5491125114119?text=${textoWA}`, '_blank');
-  }
+  let textoWA = `Hola Estudio CG!%0A*Consulta desde la web*%0A*Nombre:* ${encodeURIComponent(nombre)}%0A*Teléfono:* ${encodeURIComponent(tel)}%0A*Trámite:* ${encodeURIComponent(tema)}`;
+  if (mail) textoWA += `%0A*Email:* ${encodeURIComponent(mail)}`;
+  if (msg) textoWA += `%0A*Detalle:* ${encodeURIComponent(msg)}`;
+
+  window.open(`https://wa.me/5491125114119?text=${textoWA}`, '_blank');
 
   // Feedback en pantalla
   const fb = document.getElementById('formFeedback');
   if (fb) {
     fb.classList.add('active');
     setTimeout(() => {
-      document.getElementById('contactForm').reset();
+      const form = document.getElementById('contactForm');
+      if (form) form.reset();
     }, 1500);
   }
 }
@@ -277,20 +281,25 @@ function closeNav() {
   if (menu) menu.classList.remove('open');
   document.body.classList.remove('mobile-menu-active');
   document.body.style.overflow = '';
-  if (hamb) hamb.textContent = '☰';
 }
 
-// old closeNav
-function _unusedCloseNav() {
-  document.getElementById('nav-menu').classList.remove('open');
+function toggleServicesDropdown(event) {
+  if (window.innerWidth <= 900) {
+    if (event) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+    const dropdown = event ? event.target.closest('.nav-dropdown') : document.querySelector('.nav-dropdown');
+    if (dropdown) dropdown.classList.toggle('active');
+  }
 }
 
 function armarMensaje() {
-  const n = document.getElementById('nombre').value.trim();
-  const t = document.getElementById('tel').value.trim();
-  const m = document.getElementById('mail').value.trim();
-  const tema = document.getElementById('tema').value;
-  const msg = document.getElementById('msg').value.trim();
+  const n = document.getElementById('nombre') ? document.getElementById('nombre').value.trim() : '';
+  const t = document.getElementById('tel') ? document.getElementById('tel').value.trim() : '';
+  const m = document.getElementById('mail') ? document.getElementById('mail').value.trim() : '';
+  const tema = document.getElementById('tema') ? document.getElementById('tema').value : 'Consulta general';
+  const msg = document.getElementById('msg') ? document.getElementById('msg').value.trim() : '';
   
   let txt = 'Hola Estudio CG, deseo realizar una consulta profesional:\n';
   txt += '\n• Área: ' + tema;
@@ -302,12 +311,11 @@ function armarMensaje() {
 }
 
 function enviarWA() {
-  const n = document.getElementById('nombre').value.trim();
-  const t = document.getElementById('tel').value.trim();
-  const msg = document.getElementById('msg').value.trim();
+  const n = document.getElementById('nombre') ? document.getElementById('nombre').value.trim() : '';
+  const t = document.getElementById('tel') ? document.getElementById('tel').value.trim() : '';
   
-  if (!n || !t || !msg) {
-    alert('Por favor, completá tu nombre, teléfono y el detalle de tu trámite.');
+  if (!n || !t) {
+    alert('Por favor, completá tu nombre y teléfono.');
     return;
   }
   window.open('https://wa.me/5491125114119?text=' + encodeURIComponent(armarMensaje()), '_blank');
@@ -315,11 +323,14 @@ function enviarWA() {
 
 function enviarFormWeb() {
   const feedback = document.getElementById('formFeedback');
-  feedback.classList.add('active');
-  feedback.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  if (feedback) {
+    feedback.classList.add('active');
+    feedback.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
   
   setTimeout(() => {
-    document.getElementById('contactForm').reset();
+    const f = document.getElementById('contactForm');
+    if (f) f.reset();
   }, 2000);
 }
 

@@ -1121,3 +1121,280 @@ body {
   color: var(--gold-light);
   transform: translateY(-1px);
 }
+
+/* ==========================================================================
+   DROPDOWN DE SERVICIOS (DESKTOP & MOBILE)
+   ========================================================================== */
+.nav-dropdown {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-dropdown-trigger {
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-family: var(--font-sans);
+  font-size: 0.86rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 6px 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: var(--transition);
+}
+
+.nav-dropdown-trigger:hover,
+.nav-dropdown:hover .nav-dropdown-trigger {
+  color: var(--cream-light);
+}
+
+.dropdown-chevron {
+  width: 13px;
+  height: 13px;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  fill: none;
+  transition: transform 0.22s ease;
+}
+
+.nav-dropdown:hover .dropdown-chevron,
+.nav-dropdown.active .dropdown-chevron {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  min-width: 240px;
+  background: #141414;
+  border: 1px solid rgba(244, 239, 231, 0.12);
+  border-radius: 14px;
+  padding: 10px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.65);
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 500;
+}
+
+.nav-dropdown:hover .dropdown-menu,
+.nav-dropdown:focus-within .dropdown-menu,
+.nav-dropdown.active .dropdown-menu {
+  display: block;
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+
+.dropdown-menu a {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 9px 12px !important;
+  font-size: 0.86rem !important;
+  color: var(--cream) !important;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: var(--transition) !important;
+  font-weight: 500 !important;
+}
+
+.dropdown-menu a:hover {
+  background: rgba(196, 154, 99, 0.14) !important;
+  color: var(--gold-light) !important;
+  transform: translateX(3px);
+}
+
+.dropdown-menu a::after {
+  display: none !important;
+}
+
+.dropdown-all-link {
+  margin-top: 6px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 10px !important;
+  color: var(--gold-light) !important;
+  font-weight: 600 !important;
+  font-size: 0.82rem !important;
+}
+
+/* Dropdown en Menú Móvil */
+@media (max-width: 900px) {
+  .nav-dropdown {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+  .nav-dropdown-trigger {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 1.05rem;
+    color: var(--cream-light);
+    border-bottom: 1px solid rgba(244, 239, 231, 0.05);
+    justify-content: space-between;
+  }
+  .dropdown-menu {
+    position: static;
+    transform: none !important;
+    min-width: 100%;
+    background: rgba(255, 255, 255, 0.02);
+    border: none;
+    border-left: 2px solid var(--gold);
+    border-radius: 0;
+    padding: 6px 0 6px 14px;
+    margin: 4px 0 8px 10px;
+    box-shadow: none;
+  }
+  .nav-dropdown.active .dropdown-menu {
+    display: block !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+}
+
+/* ==========================================================================
+   BADGE PROXIMAMENTE
+   ========================================================================== */
+.badge-prox {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: rgba(196, 154, 99, 0.15);
+  color: var(--gold-light);
+  border: 1px solid rgba(196, 154, 99, 0.35);
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+/* ==========================================================================
+   MOBILE RESPONSIVE AJUSTES REQUERIDOS (768px)
+   ========================================================================== */
+.hero-mobile-text-link {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  /* Grillas de 2 columnas en mobile */
+  .intent-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+
+  .trust-evidence-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+
+  /* Hero Mobile: Un solo botón principal (WhatsApp) + texto secundario */
+  .hero-actions {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+    max-width: 320px;
+  }
+  .hero-actions .btn-secondary {
+    display: none !important;
+  }
+  .hero-mobile-text-link {
+    display: inline-block !important;
+    color: var(--gold-light);
+    font-size: 0.90rem;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 8px;
+    text-decoration: underline;
+  }
+
+  /* Formulario Contacto Mobile: seguro ante botón flotante */
+  .editorial-form {
+    padding-bottom: 28px !important;
+  }
+  .smart-submit-btn, .btn-wa-submit {
+    position: relative;
+    z-index: 10;
+  }
+}
+
+@media (max-width: 480px) {
+  .intent-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
+  }
+  .intent-card {
+    padding: 14px 12px !important;
+  }
+  .intent-card h3 {
+    font-size: 0.98rem !important;
+  }
+  .intent-card p {
+    font-size: 0.78rem !important;
+    line-height: 1.35 !important;
+  }
+  .intent-card-top {
+    margin-bottom: 10px !important;
+  }
+  .intent-icon-wrap {
+    width: 36px !important;
+    height: 36px !important;
+  }
+  .intent-tag {
+    font-size: 0.65rem !important;
+    padding: 2px 6px !important;
+  }
+  .intent-action-btn {
+    font-size: 0.78rem !important;
+    margin-top: 10px !important;
+  }
+}
+
+/* Botón WhatsApp de Contacto y enlace Email */
+.btn-wa-submit {
+  background-color: var(--wa) !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 4px 18px rgba(37, 195, 104, 0.35) !important;
+  font-weight: 700;
+  font-size: 0.94rem;
+  padding: 14px 20px;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-wa-submit:hover {
+  background-color: var(--wa-hover) !important;
+  box-shadow: 0 8px 24px rgba(37, 195, 104, 0.45) !important;
+  transform: translateY(-2px);
+}
+
+.contact-email-alt {
+  text-align: center;
+  margin-top: 14px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.contact-email-alt a {
+  color: var(--gold-light);
+  text-decoration: underline;
+  transition: var(--transition);
+}
+
+.contact-email-alt a:hover {
+  color: #FAF8F4;
+}
