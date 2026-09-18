@@ -195,13 +195,40 @@ window.addEventListener('keydown', (e) => {
 // ==========================================================================
 // CARRUSEL DE RESEÑAS EN MÓVIL
 // ==========================================================================
+let currentReviewIdx = 0;
+
 function scrollToReview(index) {
   const grid = document.getElementById('reviewsGrid');
   if (!grid) return;
   const cards = grid.querySelectorAll('.rev-card');
-  if (cards[index]) {
-    cards[index].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-  }
+  if (!cards.length) return;
+
+  if (index < 0) index = 0;
+  if (index >= cards.length) index = cards.length - 1;
+  currentReviewIdx = index;
+
+  cards[index].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+
+  const dots = document.querySelectorAll('.review-dot');
+  dots.forEach((dot, idx) => {
+    dot.classList.toggle('active', idx === currentReviewIdx);
+  });
+}
+
+function navigateReviews(direction) {
+  const grid = document.getElementById('reviewsGrid');
+  if (!grid) return;
+  const cards = grid.querySelectorAll('.rev-card');
+  if (!cards.length) return;
+
+  const cardWidth = cards[0].offsetWidth + 16;
+  const computedIndex = Math.round(grid.scrollLeft / cardWidth);
+  let targetIndex = computedIndex + direction;
+
+  if (targetIndex < 0) targetIndex = cards.length - 1;
+  else if (targetIndex >= cards.length) targetIndex = 0;
+
+  scrollToReview(targetIndex);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -213,9 +240,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const scrollLeft = reviewsGrid.scrollLeft;
     const cardWidth = reviewsGrid.querySelector('.rev-card')?.offsetWidth || 300;
     const activeIndex = Math.round(scrollLeft / (cardWidth + 16));
+    currentReviewIdx = Math.max(0, Math.min(activeIndex, dots.length - 1));
     
     dots.forEach((dot, idx) => {
-      dot.classList.toggle('active', idx === Math.min(activeIndex, dots.length - 1));
+      dot.classList.toggle('active', idx === currentReviewIdx);
     });
   }, { passive: true });
 });

@@ -984,13 +984,38 @@ body {
     margin-bottom: 18px;
   }
 
-  /* Indicadores visuales de carrusel (Dots & Swipe hint) */
+  /* Controles visuales de carrusel (Flechas al lado de los dots) */
   .reviews-carousel-nav {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    gap: 12px;
-    margin-top: 14px;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 16px;
+  }
+
+  .review-arrow-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(244, 239, 231, 0.14);
+    color: var(--gold-light);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+    padding: 0;
+    touch-action: manipulation;
+  }
+
+  .review-arrow-btn:hover,
+  .review-arrow-btn:active {
+    background: rgba(196, 154, 99, 0.18);
+    border-color: rgba(196, 154, 99, 0.45);
+    color: #FAF8F4;
+    transform: scale(1.06);
   }
 
   .reviews-dots {
@@ -1016,26 +1041,6 @@ body {
     border-radius: 999px;
     background: var(--gold-light);
     box-shadow: 0 0 8px rgba(196, 154, 99, 0.5);
-  }
-
-  .reviews-swipe-hint {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 0.76rem;
-    color: var(--taupe);
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-  }
-
-  .reviews-swipe-hint svg {
-    color: var(--gold-light);
-    animation: swipeHintMove 1.6s infinite ease-in-out;
-  }
-
-  @keyframes swipeHintMove {
-    0%, 100% { transform: translateX(0); }
-    50% { transform: translateX(5px); }
   }
 
   /* Compact Mobile Vertical Rhythm — Reducción de scroll innecesario */
