@@ -271,7 +271,7 @@ header nav.menu a:not(.btn).active {
   color: #FAF8F4;
 }
 header .hamb {
-  color: #FAF8F4;
+  color: var(--gold-light);
 }
 header .nav-cta-btn {
   background: var(--gold) !important;
@@ -1652,34 +1652,45 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 6px;
+    gap: 7px;
     width: auto;
-    min-width: 84px;
+    min-width: 88px;
     height: 44px;
     min-height: 44px;
     padding: 0 16px;
-    border-radius: 22px;
-    background: rgba(255, 255, 255, 0.10);
-    border: 1px solid rgba(244, 239, 231, 0.28);
-    color: var(--cream) !important;
+    border-radius: var(--radius-pill);
+    background: rgba(196, 154, 99, 0.10);
+    border: 1px solid rgba(196, 154, 99, 0.35);
+    color: var(--gold-light) !important;
     cursor: pointer;
     transition: var(--transition);
     -webkit-tap-highlight-color: transparent;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   }
   .hamb-icon {
     font-size: 1.15rem;
     line-height: 1;
+    color: var(--gold);
+    transition: var(--transition);
   }
   .hamb-label {
     font-family: var(--font-sans);
-    font-size: 0.85rem;
+    font-size: 0.86rem;
     font-weight: 600;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.02em;
+    color: var(--cream-light);
+    transition: var(--transition);
   }
-  .hamb:hover, .hamb:active {
-    background: rgba(255, 255, 255, 0.18);
-    border-color: rgba(196, 154, 99, 0.5);
-    color: var(--gold-light) !important;
+  .hamb:hover, .hamb:active, .hamb[aria-expanded="true"] {
+    background: rgba(196, 154, 99, 0.18);
+    border-color: var(--gold);
+    box-shadow: 0 4px 14px rgba(196, 154, 99, 0.22);
+  }
+  .hamb:hover .hamb-label, .hamb:active .hamb-label, .hamb[aria-expanded="true"] .hamb-label {
+    color: var(--gold-light);
+  }
+  .hamb:hover .hamb-icon, .hamb:active .hamb-icon, .hamb[aria-expanded="true"] .hamb-icon {
+    color: var(--gold-light);
   }
   
   /* ==========================================================================
