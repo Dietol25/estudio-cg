@@ -350,15 +350,16 @@ function enviarFormWeb() {
 
 // Catálogo modal de trámites por área
 (function() {
+// CONFIRMAR CON CLIENTE: el trámite "Ciudadanía & Migraciones" aparece en la lista de "más consultados" del cliente pero no existe actualmente en ninguna área. No se agrega hasta confirmar si corresponde a Organismos & Claves o si ya no se ofrece.
   const AREAS = [
     {
       titulo: "Área Previsional",
       tramites: [
-        ["Jubilaciones ANSES", "Régimen nacional ordinario, relación de dependencia y extranjeros con radicación legal."],
+        ["Jubilaciones ANSES", "Régimen nacional ordinario, relación de dependencia y extranjeros con radicación legal.", true],
         ["Jubilación de Empleadas Domésticas", "Gestión bajo el régimen especial de casas particulares."],
         ["Jubilación IPS PBA", "Para empleados públicos de la administración provincial y municipal bonaerense."],
-        ["Pensiones Directas y Derivadas", "Gestión ante fallecimiento de un familiar titular ante ANSES o IPS."],
-        ["Pensión Universal Adulto Mayor (PUAM)", "Para personas mayores de 65 años sin aportes suficientes."],
+        ["Pensiones Directas y Derivadas", "Gestión ante fallecimiento de un familiar titular ante ANSES o IPS.", true],
+        ["Pensión Universal Adulto Mayor (PUAM)", "Para personas mayores de 65 años sin aportes suficientes.", true],
         ["Pensiones No Contributivas (PNC)", "Por invalidez, madres de 7 hijos o vejez en situación de vulnerabilidad."],
         ["Planificación Previsional", "Cómputo anticipado de aportes y estrategia de moratorias para optimizar el haber."]
       ]
@@ -366,7 +367,7 @@ function enviarFormWeb() {
     {
       titulo: "Gestión Laboral",
       tramites: [
-        ["Liquidación de Sueldos", "Cálculo y confección de recibos conforme a los convenios colectivos aplicables."],
+        ["Liquidación de Sueldos", "Cálculo y confección de recibos conforme a los convenios colectivos aplicables.", true],
         ["Cargas Sociales (F.931)", "Determinación de aportes patronales y contribuciones ante la seguridad social."],
         ["Asesoramiento a Empleadores", "Altas, bajas, suspensiones y cumplimiento de normativas de trabajo."],
         ["Confección de CVs y Perfil LinkedIn", "Optimización del perfil laboral y currículum profesional orientado a resultados."]
@@ -375,7 +376,7 @@ function enviarFormWeb() {
     {
       titulo: "Asesoramiento Fiscal",
       tramites: [
-        ["Monotributo Integral", "Altas, bajas, recategorizaciones periódicas y regularización tributaria."],
+        ["Monotributo Integral", "Altas, bajas, recategorizaciones periódicas y regularización tributaria.", true],
         ["Bienes Personales", "Declaraciones juradas anuales y determinación patrimonial."],
         ["Devolución de Percepciones", "Gestión de recupero por compras en moneda extranjera y retenciones."],
         ["Regularización SICAM", "Liquidación de deuda autónoma/monotributista para computar aportes jubilatorios."],
@@ -389,8 +390,8 @@ function enviarFormWeb() {
         ["Clave Fiscal ARCA", "Gestión y blanqueo de accesos de nivel de seguridad requerido."],
         ["Trámites PAMI", "Empadronamiento, coberturas especiales y órdenes prestacionales."],
         ["Trámites a Distancia (TAD)", "Gestión de expedientes electrónicos ante carteras nacionales y CABA."],
-        ["Partidas y Legalizaciones", "Partidas de nacimiento, matrimonio y defunción en todo el país."],
-        ["Infracciones de Tránsito", "Descargos técnicos y regularización ante la Dirección de Tránsito."]
+        ["Partidas y Legalizaciones", "Partidas de nacimiento, matrimonio y defunción en todo el país.", true],
+        ["Infracciones de Tránsito", "Descargos técnicos y regularización ante la Dirección de Tránsito.", true]
       ]
     },
     {
@@ -419,7 +420,7 @@ function enviarFormWeb() {
       mLista.innerHTML = data.tramites.map(t => {
         return `
           <div class="modal-item">
-            <h4>${t[0]}</h4>
+            <h4>${t[0]}${t[2] ? ' <span class="modal-item-badge">★ Destacado</span>' : ''}</h4>
             <p>${t[1]}</p>
           </div>
         `;

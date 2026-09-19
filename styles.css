@@ -1000,6 +1000,20 @@ nav.menu a:not(.btn):hover::after {
   margin-bottom: 4px;
 }
 
+.modal-item-badge {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--gold-light);
+  background: rgba(196, 154, 99, 0.15);
+  border: 1px solid rgba(196, 154, 99, 0.35);
+  border-radius: 20px;
+  padding: 2px 9px;
+  margin-left: 8px;
+  vertical-align: middle;
+  letter-spacing: 0.02em;
+}
+
 .modal-item p {
   color: var(--muted);
   font-size: 0.90rem;
