@@ -110,11 +110,22 @@ body.service-page-wrapper {
   display: flex;
   align-items: center;
   gap: 14px;
+  flex-shrink: 0;
+}
+
+.service-nav-left > a:first-child {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  line-height: 0;
 }
 
 .service-nav-logo {
-  height: 32px;
+  height: 36px;
   width: auto;
+  aspect-ratio: 531 / 447;
+  object-fit: contain;
+  flex-shrink: 0;
   display: block;
 }
 
@@ -130,6 +141,7 @@ body.service-page-wrapper {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.07);
   border-radius: 999px;
+  flex-shrink: 0;
   transition: var(--transition);
 }
 
@@ -151,6 +163,7 @@ body.service-page-wrapper {
   border-radius: 999px;
   text-decoration: none;
   white-space: nowrap;
+  flex-shrink: 0;
   transition: var(--transition);
 }
 
@@ -160,11 +173,34 @@ body.service-page-wrapper {
 }
 
 @media (max-width: 520px) {
+  .service-nav-inner {
+    gap: 8px;
+  }
+  .service-nav-left {
+    gap: 8px;
+  }
+  .service-nav-logo {
+    height: 32px;
+  }
+  .service-back-link {
+    padding: 5px 10px;
+    font-size: 0.80rem;
+  }
   .service-back-link span {
     display: none;
   }
   .service-back-link::after {
     content: "Inicio";
+  }
+  .service-nav-cta {
+    padding: 6px 12px;
+    font-size: 0.80rem;
+  }
+  .service-nav-cta span {
+    display: none;
+  }
+  .service-nav-cta::after {
+    content: "WhatsApp";
   }
 }
 

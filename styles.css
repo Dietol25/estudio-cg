@@ -318,12 +318,15 @@ header.scrolled {
   gap: 12px;
   line-height: 0;
   text-decoration: none;
+  flex-shrink: 0;
 }
 
 .brand-logo-img {
   height: 46px;
   width: auto;
+  aspect-ratio: 531 / 447;
   object-fit: contain;
+  flex-shrink: 0;
   transition: var(--transition);
   filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4));
 }
