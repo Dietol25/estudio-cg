@@ -624,76 +624,20 @@ if (document.readyState === 'loading') {
 }
 
 /* ==========================================================================
-   LIVING ORIGAMI BACKGROUND — ESTUDIO CG DARK LUXURY AMBIENCE
+   STATIC DARK LUXURY BACKGROUND (SIN ANIMACIÓN)
    ========================================================================== */
-function initLivingOrigamiBackground() {
-  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    return;
-  }
-  if (document.querySelector('.origami-ambient-bg')) return;
-
+function initStaticLuxuryBackground() {
+  if (document.querySelector('.cg-luxury-static-bg')) return;
   const bg = document.createElement('div');
-  bg.className = 'origami-ambient-bg';
+  bg.className = 'cg-luxury-static-bg';
   bg.setAttribute('aria-hidden', 'true');
-
-  const isMobile = window.innerWidth <= 768;
-  const count = isMobile ? 7 : 14;
-
-  const random = (min, max) => Math.random() * (max - min) + min;
-
-  for (let i = 0; i < count; i++) {
-    const container = document.createElement('div');
-    container.className = 'drifter-container';
-
-    const yStart = random(-35, 35);
-    const yEnd = yStart + random(-20, 20);
-    const rStart = random(-12, 12);
-    const rEnd = rStart + random(-10, 10);
-    const duration = random(18, 38);
-    const delay = random(-30, 5);
-    const scale = random(0.5, 1.05);
-
-    container.style.setProperty('--y-start', `${yStart.toFixed(1)}vh`);
-    container.style.setProperty('--y-end', `${yEnd.toFixed(1)}vh`);
-    container.style.setProperty('--r-start', `${rStart.toFixed(1)}deg`);
-    container.style.setProperty('--r-end', `${rEnd.toFixed(1)}deg`);
-    container.style.animationDuration = `${duration.toFixed(1)}s`;
-    container.style.animationDelay = `${delay.toFixed(1)}s`;
-    container.style.transform = `scale(${scale.toFixed(2)})`;
-
-    const crane = document.createElement('div');
-    crane.className = 'origami-crane';
-    crane.style.animationDelay = `${random(-3, 0).toFixed(1)}s`;
-    crane.style.animationDuration = `${random(3, 4.5).toFixed(1)}s`;
-
-    const body = document.createElement('div');
-    body.className = 'crane-part body';
-
-    const wingL = document.createElement('div');
-    wingL.className = 'crane-part wing-left';
-    wingL.style.animationDuration = `${random(1.1, 1.6).toFixed(2)}s`;
-
-    const wingR = document.createElement('div');
-    wingR.className = 'crane-part wing-right';
-    wingR.style.animationDuration = `${random(1.1, 1.6).toFixed(2)}s`;
-
-    const tail = document.createElement('div');
-    tail.className = 'crane-part tail';
-
-    crane.appendChild(body);
-    crane.appendChild(wingL);
-    crane.appendChild(wingR);
-    crane.appendChild(tail);
-    container.appendChild(crane);
-    bg.appendChild(container);
-  }
-
   document.body.prepend(bg);
 }
 
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initLivingOrigamiBackground);
+  document.addEventListener('DOMContentLoaded', initStaticLuxuryBackground);
 } else {
-  initLivingOrigamiBackground();
+  initStaticLuxuryBackground();
 }
+
 
