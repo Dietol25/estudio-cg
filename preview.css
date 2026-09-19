@@ -1636,3 +1636,10 @@ body {
 .contact-email-alt a:hover {
   color: #FAF8F4;
 }
+
+/* Footer Sólido y Libre de Veladuras */
+footer {
+  position: relative;
+  z-index: 10;
+  background: #090909 !important;
+}

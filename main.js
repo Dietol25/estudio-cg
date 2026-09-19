@@ -634,14 +634,11 @@ if (document.readyState === 'loading') {
 }
 
 /* ==========================================================================
-   STATIC DARK LUXURY BACKGROUND (SIN ANIMACIÓN)
+   FONDO DARK LUXURY — LIMPIO Y LIBRE DE VELADURAS
    ========================================================================== */
 function initStaticLuxuryBackground() {
-  if (document.querySelector('.cg-luxury-static-bg')) return;
-  const bg = document.createElement('div');
-  bg.className = 'cg-luxury-static-bg';
-  bg.setAttribute('aria-hidden', 'true');
-  document.body.prepend(bg);
+  const existing = document.querySelector('.cg-luxury-static-bg');
+  if (existing) existing.remove();
 }
 
 if (document.readyState === 'loading') {

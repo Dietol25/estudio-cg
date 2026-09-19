@@ -2872,11 +2872,14 @@ footer {
    FOOTER MINIMALISTA
    ========================================================================== */
 footer {
-  background: #090909;
+  position: relative;
+  z-index: 10;
+  background: #090909 !important;
   border-top: 1px solid var(--border);
   padding: 55px 0 30px;
   font-size: 0.86rem;
-  color: var(--muted);
+  color: #C2B6A2;
+  box-shadow: 0 -12px 36px rgba(0, 0, 0, 0.85);
 }
 /* ==========================================================================
    FOOTER: ESTRUCTURA EDITORIAL EN 4 COLUMNAS (CATEGORÍAS OPTIMIZADAS)
@@ -2913,7 +2916,7 @@ footer {
 }
 .foot-brand-desc {
   font-size: 0.86rem;
-  color: var(--muted);
+  color: #C2B6A2;
   line-height: 1.6;
   margin-bottom: 20px;
   max-width: 320px;
@@ -2928,7 +2931,7 @@ footer {
   align-items: center;
   gap: 10px;
   font-size: 0.82rem;
-  color: var(--taupe);
+  color: #D6CCC0;
   transition: var(--transition);
 }
 .foot-meta-item svg {
@@ -2953,7 +2956,7 @@ footer {
   gap: 10px;
 }
 .foot-nav-links a {
-  color: var(--muted);
+  color: #C2B6A2;
   font-size: 0.86rem;
   font-weight: 400;
   transition: var(--transition);
@@ -2962,7 +2965,7 @@ footer {
   text-decoration: none;
 }
 .foot-nav-links a:hover {
-  color: var(--gold-light);
+  color: #FAF8F4;
   transform: translateX(3px);
 }
 
@@ -2973,7 +2976,7 @@ footer {
 }
 .foot-social-copy {
   font-size: 0.85rem;
-  color: var(--muted);
+  color: #C2B6A2;
   line-height: 1.6;
   margin-bottom: 20px;
   max-width: 280px;
@@ -2992,7 +2995,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--muted);
+  color: #C2B6A2;
   transition: var(--transition);
 }
 .foot-social-pills a:hover {
@@ -3009,7 +3012,7 @@ footer {
   align-items: center;
   padding-top: 24px;
   font-size: 0.78rem;
-  color: var(--muted-soft);
+  color: #9E978E;
   flex-wrap: wrap;
   gap: 12px;
 }
@@ -4428,15 +4431,7 @@ a.contact-meta-row:hover .link-accent {
    obsidiana (#0D0D0D) y resplandor sutil dorado (#C49A63 / #241A10)
    ========================================================================== */
 .cg-luxury-static-bg {
-  position: fixed;
-  inset: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-  overflow: hidden;
-  z-index: 0;
-  background: radial-gradient(125% 125% at 50% 10%, #0D0D0D 40%, rgba(196, 154, 99, 0.22) 100%);
-  opacity: 0.85;
+  display: none !important;
 }
 
 
