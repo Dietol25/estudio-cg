@@ -1649,25 +1649,33 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
-    min-width: 40px;
-    min-height: 40px;
-    font-size: 1.25rem;
-    line-height: 1;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(244, 239, 231, 0.16);
+    gap: 6px;
+    width: auto;
+    min-width: 84px;
+    height: 44px;
+    min-height: 44px;
+    padding: 0 16px;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(244, 239, 231, 0.28);
     color: var(--cream) !important;
     cursor: pointer;
     transition: var(--transition);
-    padding: 0;
-    margin: 0;
     -webkit-tap-highlight-color: transparent;
   }
+  .hamb-icon {
+    font-size: 1.15rem;
+    line-height: 1;
+  }
+  .hamb-label {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+  }
   .hamb:hover, .hamb:active {
-    background: rgba(255, 255, 255, 0.16);
-    border-color: rgba(196, 154, 99, 0.4);
+    background: rgba(255, 255, 255, 0.18);
+    border-color: rgba(196, 154, 99, 0.5);
     color: var(--gold-light) !important;
   }
   

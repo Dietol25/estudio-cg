@@ -264,15 +264,21 @@ function toggleMobileNav() {
   const hamb = document.querySelector('.hamb');
   if (!menu) return;
   const isOpen = menu.classList.toggle('open');
+  const icon = hamb ? hamb.querySelector('.hamb-icon') : null;
+  const label = hamb ? hamb.querySelector('.hamb-label') : null;
   if (isOpen) {
     document.body.classList.add('mobile-menu-active');
     document.body.style.overflow = 'hidden';
-    if (hamb) hamb.textContent = '✕';
+    if (icon) icon.textContent = '✕';
+    if (label) label.textContent = 'Cerrar';
+    if (hamb) hamb.setAttribute('aria-expanded', 'true');
   } else {
     document.querySelectorAll('.nav-dropdown.active').forEach(d => d.classList.remove('active'));
     document.body.classList.remove('mobile-menu-active');
     document.body.style.overflow = '';
-    if (hamb) hamb.textContent = '☰';
+    if (icon) icon.textContent = '☰';
+    if (label) label.textContent = 'Menú';
+    if (hamb) hamb.setAttribute('aria-expanded', 'false');
   }
 }
 
@@ -283,7 +289,11 @@ function closeNav() {
   document.querySelectorAll('.nav-dropdown.active').forEach(d => d.classList.remove('active'));
   document.body.classList.remove('mobile-menu-active');
   document.body.style.overflow = '';
-  if (hamb) hamb.textContent = '☰';
+  const icon = hamb ? hamb.querySelector('.hamb-icon') : null;
+  const label = hamb ? hamb.querySelector('.hamb-label') : null;
+  if (icon) icon.textContent = '☰';
+  if (label) label.textContent = 'Menú';
+  if (hamb) hamb.setAttribute('aria-expanded', 'false');
 }
 
 function toggleServicesDropdown(event) {
