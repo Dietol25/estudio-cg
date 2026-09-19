@@ -40,9 +40,10 @@ body,
 body.service-page-wrapper {
   background-color: #0c0c0c !important;
   background-image: 
-    radial-gradient(ellipse 110% 65% at 50% -5%, rgba(196, 154, 99, 0.05) 0%, transparent 65%),
-    radial-gradient(circle at 1px 1px, rgba(223, 188, 138, 0.03) 1px, transparent 0) !important;
-  background-size: 100% 100%, 28px 28px !important;
+    radial-gradient(ellipse 110% 800px at 50% 0%, rgba(223, 188, 138, 0.22) 0%, rgba(196, 154, 99, 0.12) 30%, rgba(196, 154, 99, 0.04) 55%, transparent 75%),
+    radial-gradient(circle at 1px 1px, rgba(223, 188, 138, 0.035) 1px, transparent 0) !important;
+  background-size: 100% 800px, 28px 28px !important;
+  background-repeat: no-repeat, repeat !important;
   background-attachment: scroll, fixed !important;
   color: #FAF8F4 !important;
   font-family: 'Manrope', system-ui, -apple-system, sans-serif !important;
@@ -58,8 +59,8 @@ body.service-page-wrapper {
   top: 0;
   left: 0;
   right: 0;
-  height: 500px;
-  background: radial-gradient(ellipse 70% 360px at 50% 0%, rgba(196, 154, 99, 0.12) 0%, rgba(0,0,0,0) 80%);
+  height: 520px;
+  background: radial-gradient(ellipse 75% 380px at 50% 0%, rgba(196, 154, 99, 0.12) 0%, rgba(196, 154, 99, 0.03) 50%, rgba(0,0,0,0) 80%);
   pointer-events: none;
   z-index: 0;
 }
