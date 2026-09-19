@@ -186,115 +186,106 @@
     </div>
 
     <div class="intent-grid">
-      <!-- Tarjeta 1: Jubilarme -->
-      <div class="intent-card">
-        <div>
-          <div class="intent-card-top">
-            <div class="intent-icon-wrap">
-              <svg class="cg-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            </div>
-            <span class="intent-tag">Previsional</span>
-          </div>
-          <h3>Jubilarme</h3>
-          <!-- CONFIRMAR CON CLIENTE: régimen de moratoria previsional vigente -->
-          <p>ANSES, IPS, moratorias previsionales vigentes y cálculo del haber inicial.</p>
-        </div>
-        <a href="servicios/previsional.html#jubilaciones" class="intent-action-btn" style="text-decoration: none; display: inline-flex !important; align-items: center !important; justify-content: flex-start !important; gap: 8px !important; width: auto !important;">
-          <span>Ver cómo resolverlo</span>
-          <svg class="arrow-icon-svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-        </a>
-      </div>
-
-      <!-- Tarjeta 2: Pensión -->
-      <div class="intent-card">
+      <!-- 01 Área Previsional -->
+      <article class="intent-card" onclick="window.location.href='servicios.html?area=0'" style="cursor: pointer;">
         <div>
           <div class="intent-card-top">
             <div class="intent-icon-wrap">
               <svg class="cg-icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
             </div>
-            <span class="intent-tag">Seguridad Social</span>
+            <div style="display: flex; gap: 6px; align-items: center; flex-wrap: wrap; justify-content: flex-end;">
+              <span class="intent-tag" style="background: rgba(196, 154, 99, 0.15); color: var(--gold-light); border-color: rgba(196, 154, 99, 0.35);">★ Más consultada</span>
+              <span class="intent-tag">01 · Previsional</span>
+            </div>
           </div>
-          <h3>Pensión</h3>
-          <p>Pensiones por fallecimiento, unión convivencial y haberes devengados.</p>
+          <h3>Área Previsional</h3>
+          <!-- CONFIRMAR CON CLIENTE: régimen de moratoria previsional vigente -->
+          <p>Jubilaciones (ANSES e IPS PBA), pensiones, PUAM, cómputo de moratorias y planificación previsional.</p>
         </div>
-        <a href="servicios/previsional.html#pensiones" class="intent-action-btn" style="text-decoration: none; display: inline-flex !important; align-items: center !important; justify-content: flex-start !important; gap: 8px !important; width: auto !important;">
-          <span>Ver cómo resolverlo</span>
+        <a href="servicios.html?area=0" class="intent-action-btn" style="text-decoration: none; display: inline-flex !important; align-items: center !important; justify-content: flex-start !important; gap: 8px !important; width: auto !important;">
+          <span>Explorar trámites</span>
           <svg class="arrow-icon-svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
         </a>
-      </div>
+      </article>
 
-      <!-- Tarjeta 3: Saber mis aportes -->
-      <div class="intent-card">
+      <!-- 02 Gestión Laboral -->
+      <article class="intent-card" onclick="window.location.href='servicios.html?area=1'" style="cursor: pointer;">
+        <div>
+          <div class="intent-card-top">
+            <div class="intent-icon-wrap">
+              <svg class="cg-icon" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            </div>
+            <span class="intent-tag" style="border-color: rgba(196,154,99,0.4); color: var(--gold-light);">02 · Actualizado</span>
+          </div>
+          <h3>Gestión Laboral</h3>
+          <!-- CONFIRMAR CON CLIENTE: convenios colectivos específicos atendidos -->
+          <p>Liquidación de haberes, cargas sociales (F.931), asesoría al empleador y confección de CVs y perfiles LinkedIn.</p>
+        </div>
+        <a href="servicios.html?area=1" class="intent-action-btn" style="text-decoration: none; display: inline-flex !important; align-items: center !important; justify-content: flex-start !important; gap: 8px !important; width: auto !important;">
+          <span>Explorar trámites</span>
+          <svg class="arrow-icon-svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+      </article>
+
+      <!-- 03 Asesoramiento Fiscal -->
+      <article class="intent-card" onclick="window.location.href='servicios.html?area=2'" style="cursor: pointer;">
         <div>
           <div class="intent-card-top">
             <div class="intent-icon-wrap">
               <svg class="cg-icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
             </div>
-            <span class="intent-tag">Historial Laboral</span>
+            <div style="display: flex; gap: 6px; align-items: center; flex-wrap: wrap; justify-content: flex-end;">
+              <span class="intent-tag" style="background: rgba(196, 154, 99, 0.15); color: var(--gold-light); border-color: rgba(196, 154, 99, 0.35);">★ Más consultada</span>
+              <span class="intent-tag">03 · Fiscal & ARCA</span>
+            </div>
           </div>
-          <h3>Saber mis aportes</h3>
-          <p>Auditoría en padrones de ANSES y regularización de deudas en SICAM.</p>
+          <h3>Asesoramiento Fiscal</h3>
+          <p>Monotributo integral, Bienes Personales, regularización SICAM, facturación electrónica y planes de facilidades ante ARCA (ex AFIP).</p>
         </div>
-        <a href="servicios/previsional.html#aportes" class="intent-action-btn" style="text-decoration: none; display: inline-flex !important; align-items: center !important; justify-content: flex-start !important; gap: 8px !important; width: auto !important;">
-          <span>Ver cómo resolverlo</span>
+        <a href="servicios.html?area=2" class="intent-action-btn" style="text-decoration: none; display: inline-flex !important; align-items: center !important; justify-content: flex-start !important; gap: 8px !important; width: auto !important;">
+          <span>Explorar trámites</span>
           <svg class="arrow-icon-svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
         </a>
-      </div>
+      </article>
 
-      <!-- Tarjeta 4: Trámite trabado / Documentación -->
-      <div class="intent-card">
+      <!-- 04 Organismos & Claves -->
+      <article class="intent-card" onclick="window.location.href='servicios.html?area=3'" style="cursor: pointer;">
         <div>
           <div class="intent-card-top">
             <div class="intent-icon-wrap">
-              <svg class="cg-icon" viewBox="0 0 24 24"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+              <svg class="cg-icon" viewBox="0 0 24 24"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6"/><path d="m15.5 7.5 3 3L22 7l-3-3"/></svg>
             </div>
-            <span class="intent-tag">Documentación</span>
+            <div style="display: flex; gap: 6px; align-items: center; flex-wrap: wrap; justify-content: flex-end;">
+              <span class="intent-tag" style="background: rgba(196, 154, 99, 0.15); color: var(--gold-light); border-color: rgba(196, 154, 99, 0.35);">★ Más consultada</span>
+              <span class="intent-tag" style="border-color: rgba(196,154,99,0.4); color: var(--gold-light);">04 · Frecuente</span>
+            </div>
           </div>
-          <h3>Trámite trabado</h3>
-          <p>Búsqueda de partidas, Apostillado de La Haya y expedientes en TAD.</p>
+          <h3>Organismos &amp; Claves</h3>
+          <p>Clave de Seguridad Social, Clave Fiscal, gestiones ante PAMI, trámites a distancia (TAD), certificados RENAPER, antecedentes y apostillados.</p>
         </div>
-        <a href="servicios/tramites.html" class="intent-action-btn" style="text-decoration: none; display: inline-flex !important; align-items: center !important; justify-content: flex-start !important; gap: 8px !important; width: auto !important;">
-          <span>Ver cómo resolverlo</span>
+        <a href="servicios.html?area=3" class="intent-action-btn" style="text-decoration: none; display: inline-flex !important; align-items: center !important; justify-content: flex-start !important; gap: 8px !important; width: auto !important;">
+          <span>Explorar trámites</span>
           <svg class="arrow-icon-svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
         </a>
-      </div>
+      </article>
 
-      <!-- Tarjeta 5: Sueldos / Nóminas -->
-      <div class="intent-card">
+      <!-- 05 Área Legal -->
+      <article class="intent-card" onclick="window.location.href='servicios.html?area=4'" style="cursor: pointer;">
         <div>
           <div class="intent-card-top">
             <div class="intent-icon-wrap">
-              <svg class="cg-icon" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              <svg class="cg-icon" viewBox="0 0 24 24"><path d="M12 3v18"/><path d="m19 8 3 8a3 3 0 0 1-6 0l3-8"/><path d="m5 8 3 8a3 3 0 0 1-6 0l3-8"/><path d="M3 8h18"/></svg>
             </div>
-            <!-- CONFIRMAR CON CLIENTE: convenios colectivos específicos atendidos -->
-            <span class="intent-tag">Comercios & Pymes</span>
+            <span class="intent-tag">05 · Legal</span>
           </div>
-          <h3>Sueldos & Nóminas</h3>
-          <p>Liquidación bajo convenio aplicable, Libro de Sueldos Digital (LSD) y F.931.</p>
+          <h3>Área Legal</h3>
+          <p>Juicios sucesorios, redacción de contratos civiles y comerciales, intimaciones por carta documento, informes de dominio vehicular e inmobiliario.</p>
         </div>
-        <a href="servicios/laboral.html" class="intent-action-btn" style="text-decoration: none; display: inline-flex !important; align-items: center !important; justify-content: flex-start !important; gap: 8px !important; width: auto !important;">
-          <span>Ver cómo resolverlo</span>
+        <a href="servicios.html?area=4" class="intent-action-btn" style="text-decoration: none; display: inline-flex !important; align-items: center !important; justify-content: flex-start !important; gap: 8px !important; width: auto !important;">
+          <span>Explorar trámites</span>
           <svg class="arrow-icon-svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
         </a>
-      </div>
-
-      <!-- Tarjeta 6: Monotributo / Deuda -->
-      <div class="intent-card">
-        <div>
-          <div class="intent-card-top">
-            <div class="intent-icon-wrap">
-              <svg class="cg-icon" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></svg>
-            </div>
-            <span class="intent-tag">ARCA / Fiscal</span>
-          </div>
-          <h3>Monotributo / Deuda</h3>
-          <p>Planes de facilidades de pago, recategorizaciones y regularización tributaria.</p>
-        </div>
-        <a href="servicios/fiscal.html" class="intent-action-btn" style="text-decoration: none; display: inline-flex !important; align-items: center !important; justify-content: flex-start !important; gap: 8px !important; width: auto !important;">
-          <span>Ver cómo resolverlo</span>
-          <svg class="arrow-icon-svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-        </a>
-      </div>
+      </article>
     </div>
 
     <!-- CIERRE INTEGRADO DE TRÁMITES -->
@@ -306,7 +297,6 @@
         <p class="intent-footer-integrated-desc">Escribinos en tus palabras. Analizamos tu situación técnica y te indicamos el camino correspondiente.</p>
       </div>
       <div class="intent-footer-integrated-actions">
-        <a href="servicios.html" class="intent-footer-all-link">Ver las 5 áreas en detalle →</a>
         <a href="https://wa.me/5491125114119?text=Hola%20Estudio%20CG%2C%20no%20s%C3%A9%20qu%C3%A9%20tr%C3%A1mite%20me%20corresponde%20y%20deseo%20orientaci%C3%B3n" target="_blank" rel="noopener" class="btn btn-primary" style="padding: 11px 22px; font-size: 0.88rem; white-space: nowrap;">
           Orientación por WhatsApp →
         </a>
@@ -469,13 +459,11 @@
         <div class="form-group" style="margin-bottom: 22px;">
           <label for="tema">¿Qué trámite necesitás? *</label>
           <select id="tema" required>
-            <option value="Jubilación / Pensión (ANSES)">Jubilación / Pensión (ANSES)</option>
-            <option value="Jubilación IPS Provincia Bs. As.">Jubilación IPS Provincia Bs. As.</option>
-            <option value="Monotributo / Situación Fiscal ARCA">Monotributo / Situación Fiscal ARCA</option>
-            <option value="Liquidación de Sueldos & Cargas F.931">Liquidación de Sueldos & Cargas F.931</option>
-            <option value="Partidas / Apostilla La Haya / Registral">Partidas / Apostilla La Haya / Registral</option>
-            <option value="Área Legal / Sucesiones / Contratos">Área Legal / Sucesiones / Contratos</option>
-            <option value="Orientación general sin cargo">Orientación general sin cargo</option>
+            <option value="Área Previsional">Área Previsional</option>
+            <option value="Gestión Laboral">Gestión Laboral</option>
+            <option value="Asesoramiento Fiscal">Asesoramiento Fiscal</option>
+            <option value="Organismos & Claves">Organismos &amp; Claves</option>
+            <option value="Área Legal">Área Legal</option>
           </select>
         </div>
 
@@ -537,7 +525,8 @@
           <a href="servicios/laboral.html">Gestión Laboral</a>
           <a href="servicios/fiscal.html">Asesoramiento Fiscal</a>
           <a href="servicios/tramites.html">Trámites y Gestoría</a>
-          <a href="servicios/legal.html">Área Legal <span class="badge-prox">Próximamente</span></a>
+          <!-- Área Legal habilitada: servicios/legal.html cuenta con contenido funcional y la tarjeta 05 está activa. Revertir con <span class="badge-prox">Próximamente</span> si comercialmente aún no se ofrece. -->
+          <a href="servicios/legal.html">Área Legal</a>
           <a href="como-trabajamos.html">Cómo trabajamos</a>
           <a href="nosotros.html">Nosotros</a>
           <a href="preguntas-frecuentes.html">Preguntas Frecuentes</a>
