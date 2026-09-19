@@ -648,4 +648,15 @@ if (document.readyState === 'loading') {
   initStaticLuxuryBackground();
 }
 
+/* ==========================================================================
+   ACORDEÓN DE PREGUNTAS FRECUENTES (FAQ)
+   ========================================================================== */
+function toggleFaqCard(button) {
+  const card = button.closest('.faq-card');
+  if (!card) return;
+  card.classList.toggle('open');
+}
+window.toggleFaqCard = toggleFaqCard;
+
+
 
