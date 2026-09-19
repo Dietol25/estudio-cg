@@ -1687,7 +1687,7 @@ footer {
   .hamb-icon {
     font-size: 1.15rem;
     line-height: 1;
-    color: var(--gold);
+    color: var(--gold-light);
     transition: var(--transition);
   }
   .hamb-label {
@@ -1695,7 +1695,7 @@ footer {
     font-size: 0.86rem;
     font-weight: 600;
     letter-spacing: 0.02em;
-    color: var(--cream-light);
+    color: var(--gold-light);
     transition: var(--transition);
   }
   .hamb:hover, .hamb:active, .hamb[aria-expanded="true"] {
