@@ -4316,3 +4316,127 @@ a.contact-meta-row:hover .link-accent {
   }
 }
 
+/* ==========================================================================
+   LIVING ORIGAMI AMBIENT BACKGROUND — ESTUDIO CG DARK LUXURY DS
+   ========================================================================== */
+.origami-ambient-bg {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+  perspective: 1200px;
+  opacity: 0.38;
+  mix-blend-mode: screen;
+  transition: opacity 0.5s ease;
+}
+
+.drifter-container {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform-style: preserve-3d;
+  animation: drift linear infinite;
+  will-change: transform;
+}
+
+.origami-crane {
+  position: relative;
+  width: 46px;
+  height: 46px;
+  transform-style: preserve-3d;
+  animation: bob 3.6s ease-in-out infinite;
+  filter: drop-shadow(0 0 6px rgba(196, 154, 99, 0.45));
+}
+
+.crane-part {
+  position: absolute;
+  inset: 0;
+  backface-visibility: visible;
+}
+
+/* Cuerpo central facetado dorado */
+.crane-part.body {
+  clip-path: polygon(50% 0%, 75% 55%, 50% 95%, 25% 55%);
+  background: linear-gradient(135deg, rgba(229, 194, 135, 0.8) 0%, rgba(196, 154, 99, 0.6) 50%, rgba(140, 105, 60, 0.35) 100%);
+  transform: translateZ(5px);
+}
+
+/* Ala izquierda con aleteo 3D */
+.crane-part.wing-left {
+  clip-path: polygon(50% 35%, 0% 5%, 35% 75%);
+  background: linear-gradient(45deg, rgba(229, 194, 135, 0.7) 0%, rgba(196, 154, 99, 0.35) 100%);
+  transform-origin: 50% 40%;
+  animation: flap-left 1.4s ease-in-out infinite;
+}
+
+/* Ala derecha con aleteo 3D */
+.crane-part.wing-right {
+  clip-path: polygon(50% 35%, 100% 5%, 65% 75%);
+  background: linear-gradient(-45deg, rgba(229, 194, 135, 0.75) 0%, rgba(196, 154, 99, 0.4) 100%);
+  transform-origin: 50% 40%;
+  animation: flap-right 1.4s ease-in-out infinite;
+}
+
+/* Cola origami facetada */
+.crane-part.tail {
+  clip-path: polygon(50% 65%, 42% 100%, 58% 100%);
+  background: linear-gradient(180deg, rgba(196, 154, 99, 0.55) 0%, rgba(140, 105, 60, 0.25) 100%);
+  transform-origin: 50% 65%;
+  transform: translateZ(2px) rotateX(20deg);
+}
+
+@keyframes drift {
+  0% {
+    transform: translateX(-15vw) translateY(var(--y-start, 0vh)) rotateZ(var(--r-start, 0deg));
+  }
+  100% {
+    transform: translateX(115vw) translateY(var(--y-end, 0vh)) rotateZ(var(--r-end, 0deg));
+  }
+}
+
+@keyframes bob {
+  0%, 100% {
+    transform: translateY(-8px);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+@keyframes flap-left {
+  0%, 100% {
+    transform: translateZ(15px) rotateY(-90deg) skewX(20deg) rotateX(10deg);
+  }
+  50% {
+    transform: translateZ(15px) rotateY(-90deg) skewX(20deg) rotateX(-20deg);
+  }
+}
+
+@keyframes flap-right {
+  0%, 100% {
+    transform: translateZ(15px) rotateY(90deg) skewX(-20deg) rotateX(10deg);
+  }
+  50% {
+    transform: translateZ(15px) rotateY(90deg) skewX(-20deg) rotateX(-20deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .origami-ambient-bg {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .origami-ambient-bg {
+    opacity: 0.25;
+  }
+  .origami-crane {
+    width: 34px;
+    height: 34px;
+  }
+}
+
