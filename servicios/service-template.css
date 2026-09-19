@@ -152,6 +152,10 @@ body.service-page-wrapper {
   background: rgba(196, 154, 99, 0.08);
 }
 
+.service-back-link-mobile-home {
+  display: none;
+}
+
 .service-nav-cta {
   display: inline-flex;
   align-items: center;
@@ -184,14 +188,12 @@ body.service-page-wrapper {
     height: 32px;
   }
   .service-back-link {
-    padding: 5px 10px;
-    font-size: 0.80rem;
-  }
-  .service-back-link span {
     display: none;
   }
-  .service-back-link::after {
-    content: "Inicio";
+  .service-back-link-mobile-home {
+    display: inline-flex;
+    padding: 5px 10px;
+    font-size: 0.80rem;
   }
   .service-nav-cta {
     padding: 6px 12px;
