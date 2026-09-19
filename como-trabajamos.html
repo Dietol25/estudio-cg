@@ -111,8 +111,10 @@
     .phase-box-title {
       color: var(--cream-light);
       font-size: 0.9rem;
-      display: block;
-      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
       letter-spacing: 0.04em;
       text-transform: uppercase;
     }
@@ -135,7 +137,10 @@
     .phase-check-icon {
       color: var(--gold);
       flex-shrink: 0;
-      margin-top: 1px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
     }
 
     /* CTA Final */
@@ -333,20 +338,25 @@
 
         <div class="phase-box">
           <strong class="phase-box-title">
-            📄 Documentación que te solicitamos en esta etapa:
+            <span class="phase-title-icon"><svg class="cg-icon cg-icon-sm" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>
+            Documentación que te solicitamos en esta etapa:
           </strong>
           <ul class="phase-checklist">
             <li>
-              <span class="phase-check-icon">✔</span> Foto nítida o PDF de tu DNI (ambos lados).
+              <span class="phase-check-icon"><svg class="cg-icon cg-icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <span>Foto nítida o PDF de tu DNI (ambos lados).</span>
             </li>
             <li>
-              <span class="phase-check-icon">✔</span> Número de CUIL / CUIT.
+              <span class="phase-check-icon"><svg class="cg-icon cg-icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <span>Número de CUIL / CUIT.</span>
             </li>
             <li>
-              <span class="phase-check-icon">✔</span> Clave de Seguridad Social o Clave Fiscal (si contás con ellas).
+              <span class="phase-check-icon"><svg class="cg-icon cg-icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <span>Clave de Seguridad Social o Clave Fiscal (si contás con ellas).</span>
             </li>
             <li>
-              <span class="phase-check-icon">✔</span> Certificaciones de servicios o recibos históricos si conservás.
+              <span class="phase-check-icon"><svg class="cg-icon cg-icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <span>Certificaciones de servicios o recibos históricos si conservás.</span>
             </li>
           </ul>
         </div>
@@ -373,20 +383,25 @@
 
         <div class="phase-box">
           <strong class="phase-box-title">
-            📋 Acciones técnicas que ejecutamos:
+            <span class="phase-title-icon"><svg class="cg-icon cg-icon-sm" viewBox="0 0 24 24"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/><path d="m9 14 2 2 4-4"/></svg></span>
+            Acciones técnicas que ejecutamos:
           </strong>
           <ul class="phase-checklist">
             <li>
-              <span class="phase-check-icon">✔</span> Confección y suscripción de formularios oficiales de inicio.
+              <span class="phase-check-icon"><svg class="cg-icon cg-icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <span>Confección y suscripción de formularios oficiales de inicio.</span>
             </li>
             <li>
-              <span class="phase-check-icon">✔</span> Cómputo de aportes y adhesión a moratorias vigentes (Ley 24.476 y Ley 27.705).
+              <span class="phase-check-icon"><svg class="cg-icon cg-icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <span>Cómputo de aportes y adhesión a moratorias vigentes (Ley 24.476 y Ley 27.705).</span>
             </li>
             <li>
-              <span class="phase-check-icon">✔</span> Obtención de partidas y legalizaciones requeridas.
+              <span class="phase-check-icon"><svg class="cg-icon cg-icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <span>Obtención de partidas y legalizaciones requeridas.</span>
             </li>
             <li>
-              <span class="phase-check-icon">✔</span> Entrega de constancia oficial de expediente para seguimiento.
+              <span class="phase-check-icon"><svg class="cg-icon cg-icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <span>Entrega de constancia oficial de expediente para seguimiento.</span>
             </li>
           </ul>
         </div>
@@ -413,20 +428,25 @@
 
         <div class="phase-box">
           <strong class="phase-box-title">
-            🎯 Lo que recibís al finalizar:
+            <span class="phase-title-icon"><svg class="cg-icon cg-icon-sm" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span>
+            Lo que recibís al finalizar:
           </strong>
           <ul class="phase-checklist">
             <li>
-              <span class="phase-check-icon">✔</span> Resolución formal de otorgamiento del beneficio.
+              <span class="phase-check-icon"><svg class="cg-icon cg-icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <span>Resolución formal de otorgamiento del beneficio.</span>
             </li>
             <li>
-              <span class="phase-check-icon">✔</span> Fecha exacta y banco asignado para el primer cobro.
+              <span class="phase-check-icon"><svg class="cg-icon cg-icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <span>Fecha exacta y banco asignado para el primer cobro.</span>
             </li>
             <li>
-              <span class="phase-check-icon">✔</span> Liquidación de retroactivos devengados.
+              <span class="phase-check-icon"><svg class="cg-icon cg-icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <span>Liquidación de retroactivos devengados.</span>
             </li>
             <li>
-              <span class="phase-check-icon">✔</span> Asesoramiento post-resolución (obra social PAMI, etc.).
+              <span class="phase-check-icon"><svg class="cg-icon cg-icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <span>Asesoramiento post-resolución (obra social PAMI, etc.).</span>
             </li>
           </ul>
         </div>
