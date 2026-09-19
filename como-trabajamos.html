@@ -47,85 +47,127 @@
     }
 
     /* Tarjetas de Fases */
+    /* Tarjetas de Fases */
     .phase-card {
       background: var(--surface);
       border: 1px solid rgba(244, 239, 231, 0.08);
       border-radius: 20px;
-      padding: 36px 32px;
-      margin-bottom: 30px;
+      padding: 36px 36px 32px;
+      margin-bottom: 32px;
       box-sizing: border-box;
+      transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+    .phase-card:hover {
+      border-color: rgba(196, 154, 99, 0.22);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     }
     .phase-header {
+      margin-bottom: 18px;
+    }
+    .phase-meta-row {
       display: flex;
       justify-content: space-between;
-      align-items: flex-start;
+      align-items: center;
       flex-wrap: wrap;
-      gap: 14px;
+      gap: 12px;
       margin-bottom: 16px;
     }
     .phase-tag {
       background: rgba(196, 154, 99, 0.12);
       color: var(--gold-light);
-      border-color: rgba(196, 154, 99, 0.3);
+      border: 1px solid rgba(196, 154, 99, 0.3);
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      font-weight: 700;
+      padding: 5px 14px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+    }
+    .phase-badges-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    .phase-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.80rem;
+      font-weight: 600;
+      color: var(--gold-light);
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      padding: 5px 13px;
+      border-radius: 999px;
+      line-height: 1.35;
+      letter-spacing: 0.01em;
+    }
+    .phase-badge-icon {
+      color: var(--gold);
+      flex-shrink: 0;
+      width: 14px;
+      height: 14px;
+    }
+    .phase-badge-sub {
+      display: inline-flex;
+      align-items: center;
+      font-size: 0.80rem;
+      font-weight: 500;
+      color: var(--cream-light);
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      padding: 5px 13px;
+      border-radius: 999px;
+      line-height: 1.35;
+    }
+    .phase-badge-highlight {
+      background: rgba(196, 154, 99, 0.12);
+      border-color: rgba(196, 154, 99, 0.28);
+      color: var(--gold-light);
+      font-weight: 600;
     }
     .phase-title {
       font-family: var(--font-serif);
-      font-size: 1.9rem;
+      font-size: 1.85rem;
       color: #FAF8F4;
-      margin: 8px 0 4px;
+      margin: 0;
       line-height: 1.25;
-    }
-    .phase-badge-wrap {
-      text-align: right;
-    }
-    .phase-badge {
-      display: inline-block;
-      font-size: 0.82rem;
-      font-weight: 700;
-      color: var(--gold-light);
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      padding: 4px 12px;
-      border-radius: 20px;
-      max-width: 100%;
-      white-space: normal;
-    }
-    .phase-badge-sub {
-      display: block;
-      font-size: 0.8rem;
-      color: var(--muted);
-      margin-top: 4px;
+      letter-spacing: -0.01em;
     }
     .phase-desc {
       color: var(--muted);
-      font-size: 0.95rem;
-      line-height: 1.6;
-      margin-bottom: 20px;
+      font-size: 0.96rem;
+      line-height: 1.65;
+      margin: 0 0 22px 0;
     }
     .phase-box {
       background: rgba(0, 0, 0, 0.25);
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      border-radius: 12px;
-      padding: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 14px;
+      padding: 22px 24px;
       box-sizing: border-box;
     }
     .phase-box-title {
       color: var(--cream-light);
-      font-size: 0.9rem;
+      font-size: 0.82rem;
       display: flex;
       align-items: center;
       gap: 8px;
-      margin-bottom: 12px;
-      letter-spacing: 0.04em;
+      margin-bottom: 14px;
+      letter-spacing: 0.05em;
       text-transform: uppercase;
+      font-weight: 700;
     }
     .phase-checklist {
       list-style: none;
       padding: 0;
       margin: 0;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 10px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 12px 24px;
       font-size: 0.88rem;
       color: var(--muted);
     }
@@ -187,19 +229,25 @@
         border-radius: 16px;
       }
       .phase-header {
+        margin-bottom: 14px;
+      }
+      .phase-meta-row {
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
+        margin-bottom: 12px;
+      }
+      .phase-badges-group {
+        justify-content: flex-start;
+        gap: 8px;
       }
       .phase-title {
-        font-size: 1.55rem;
-      }
-      .phase-badge-wrap {
-        text-align: left;
+        font-size: 1.5rem;
+        line-height: 1.3;
       }
       .phase-desc {
         font-size: 0.9rem;
-        margin-bottom: 16px;
+        margin-bottom: 18px;
       }
       .phase-box {
         padding: 16px 14px;
@@ -321,16 +369,17 @@
       <!-- FASE 1 -->
       <div class="phase-card">
         <div class="phase-header">
-          <div>
+          <div class="phase-meta-row">
             <span class="intent-tag phase-tag">FASE I</span>
-            <h2 class="phase-title">Diagnóstico de Viabilidad y Requisitos</h2>
+            <div class="phase-badges-group">
+              <span class="phase-badge">
+                <svg class="cg-icon cg-icon-sm phase-badge-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                PLAZO: Según la complejidad y el tipo de trámite
+              </span>
+              <span class="phase-badge-sub phase-badge-highlight">Consulta inicial sin costo</span>
+            </div>
           </div>
-          <div class="phase-badge-wrap">
-            <span class="phase-badge">
-              PLAZO: Según la complejidad y el tipo de trámite
-            </span>
-            <span class="phase-badge-sub">Consulta inicial sin costo</span>
-          </div>
+          <h2 class="phase-title">Diagnóstico de Viabilidad y Requisitos</h2>
         </div>
         
         <p class="phase-desc">
@@ -366,16 +415,17 @@
       <!-- FASE 2 -->
       <div class="phase-card">
         <div class="phase-header">
-          <div>
+          <div class="phase-meta-row">
             <span class="intent-tag phase-tag">FASE II</span>
-            <h2 class="phase-title">Armado de Legajo, Presentación & Gestión</h2>
+            <div class="phase-badges-group">
+              <span class="phase-badge">
+                <svg class="cg-icon cg-icon-sm phase-badge-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                PLAZO: Variable según la complejidad del expediente
+              </span>
+              <span class="phase-badge-sub">Ingreso formal ante el organismo</span>
+            </div>
           </div>
-          <div class="phase-badge-wrap">
-            <span class="phase-badge">
-               PLAZO: Variable según la complejidad del expediente
-            </span>
-            <span class="phase-badge-sub">Ingreso formal ante el organismo</span>
-          </div>
+          <h2 class="phase-title">Armado de Legajo, Presentación & Gestión</h2>
         </div>
         
         <p class="phase-desc">
@@ -411,16 +461,17 @@
       <!-- FASE 3 -->
       <div class="phase-card">
         <div class="phase-header">
-          <div>
+          <div class="phase-meta-row">
             <span class="intent-tag phase-tag">FASE III</span>
-            <h2 class="phase-title">Seguimiento Activo, Dictamen & Cobro</h2>
+            <div class="phase-badges-group">
+              <span class="phase-badge">
+                <svg class="cg-icon cg-icon-sm phase-badge-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                PLAZO: Sujeto a la complejidad y al organismo oficial
+              </span>
+              <span class="phase-badge-sub">Según organismo y dictamen oficial</span>
+            </div>
           </div>
-          <div class="phase-badge-wrap">
-            <span class="phase-badge">
-              PLAZO: Sujeto a la complejidad y al organismo oficial
-            </span>
-            <span class="phase-badge-sub">Según organismo y dictamen oficial</span>
-          </div>
+          <h2 class="phase-title">Seguimiento Activo, Dictamen & Cobro</h2>
         </div>
         
         <p class="phase-desc">
