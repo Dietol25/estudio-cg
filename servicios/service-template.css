@@ -40,8 +40,8 @@ body,
 body.service-page-wrapper {
   background-color: #0c0c0c !important;
   background-image: 
-    radial-gradient(ellipse 90% 45% at 50% -10%, rgba(196, 154, 99, 0.09) 0%, transparent 60%),
-    radial-gradient(circle at 1px 1px, rgba(223, 188, 138, 0.04) 1px, transparent 0) !important;
+    radial-gradient(ellipse 110% 65% at 50% -5%, rgba(196, 154, 99, 0.05) 0%, transparent 65%),
+    radial-gradient(circle at 1px 1px, rgba(223, 188, 138, 0.03) 1px, transparent 0) !important;
   background-size: 100% 100%, 28px 28px !important;
   background-attachment: scroll, fixed !important;
   color: #FAF8F4 !important;

@@ -47,7 +47,10 @@ html {
 
 body {
   font-family: var(--font-sans);
-  background-color: var(--bg);
+  background-color: #0C0C0C;
+  background-image: radial-gradient(120% 80% at 50% 0%, rgba(196, 154, 99, 0.05) 0%, transparent 65%);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
   color: var(--cream);
   line-height: 1.65;
   font-size: 16px;
