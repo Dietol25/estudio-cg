@@ -2792,20 +2792,20 @@ footer {
   color: var(--muted);
 }
 /* ==========================================================================
-   FOOTER: ESTRUCTURA EDITORIAL EN 3 COLUMNAS (BALANCEADA & DARK LUXURY)
+   FOOTER: ESTRUCTURA EDITORIAL EN 4 COLUMNAS (CATEGORÍAS OPTIMIZADAS)
    ========================================================================== */
 .foot-3col-grid {
   display: grid;
-  grid-template-columns: 1.25fr 0.95fr 1fr;
-  gap: 48px;
+  grid-template-columns: 1.35fr 0.95fr 0.95fr 1fr;
+  gap: 36px;
   padding-bottom: 44px;
   border-bottom: 1px solid rgba(244, 239, 231, 0.08);
 }
 
 .foot-col-title {
   font-family: var(--font-sans);
-  font-size: 0.78rem;
-  letter-spacing: 0.14em;
+  font-size: 0.76rem;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--gold);
   font-weight: 700;
@@ -2818,10 +2818,11 @@ footer {
   flex-direction: column;
 }
 .foot-logo {
-  height: 38px;
+  height: 44px;
   width: auto;
   align-self: flex-start;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
+  filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.5));
 }
 .foot-brand-desc {
   font-size: 0.86rem;
@@ -2854,7 +2855,7 @@ footer {
   transform: translateX(2px);
 }
 
-/* Columna 2: Navegación */
+/* Columnas de Navegación */
 .foot-col-nav {
   display: flex;
   flex-direction: column;
@@ -2866,18 +2867,19 @@ footer {
 }
 .foot-nav-links a {
   color: var(--muted);
-  font-size: 0.88rem;
+  font-size: 0.86rem;
   font-weight: 400;
   transition: var(--transition);
   display: inline-flex;
   align-items: center;
+  text-decoration: none;
 }
 .foot-nav-links a:hover {
   color: var(--gold-light);
   transform: translateX(3px);
 }
 
-/* Columna 3: Canales Oficiales */
+/* Columna Canales Oficiales */
 .foot-col-social {
   display: flex;
   flex-direction: column;
@@ -2887,7 +2889,7 @@ footer {
   color: var(--muted);
   line-height: 1.6;
   margin-bottom: 20px;
-  max-width: 290px;
+  max-width: 280px;
 }
 .foot-social-pills {
   display: flex;
@@ -2925,13 +2927,21 @@ footer {
   gap: 12px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .foot-3col-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 36px;
     padding-bottom: 36px;
   }
 }
+
+@media (max-width: 640px) {
+  .foot-3col-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
 
 
 /* ==========================================================================
