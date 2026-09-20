@@ -4470,11 +4470,14 @@ a.contact-meta-row:hover .link-accent {
    NAVIGATION IMPROVEMENTS: BACK-LINK & DETAIL-LINK
    ========================================================================== */
 .back-link {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: fit-content;
   font-size: 14px;
   color: #DFBC8A; /* dorado del sitio */
   text-decoration: none;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   font-family: 'Inter', sans-serif;
   font-weight: 500;
   transition: color 0.3s ease;

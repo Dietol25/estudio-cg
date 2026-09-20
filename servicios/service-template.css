@@ -211,11 +211,14 @@ body.service-page-wrapper {
    BREADCRUMB & HERO DE SERVICIO
    ========================================================================== */
 .back-link {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: fit-content;
   font-size: 14px;
   color: #DFBC8A; /* dorado del sitio */
   text-decoration: none;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   font-family: 'Inter', sans-serif;
   font-weight: 500;
   transition: color 0.3s ease;
@@ -261,7 +264,8 @@ body.service-page-wrapper {
 }
 
 .service-hero-badge {
-  display: inline-flex;
+  display: flex;
+  width: fit-content;
   align-items: center;
   gap: 8px;
   background: rgba(196, 154, 99, 0.12);
