@@ -73,7 +73,8 @@ export default async function handler(req, res) {
       console.error('Anthropic error:', detalle);
       return res.status(502).json({
         reply: 'Disculpá, tuve un problema para responder. Escribinos directamente por WhatsApp y te ayudamos.',
-        derivar: true
+        derivar: true,
+        debug_error: detalle
       });
     }
 
