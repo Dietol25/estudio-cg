@@ -4466,4 +4466,40 @@ a.contact-meta-row:hover .link-accent {
   display: none !important;
 }
 
+/* ==========================================================================
+   NAVIGATION IMPROVEMENTS: BACK-LINK & DETAIL-LINK
+   ========================================================================== */
+.back-link {
+  display: inline-block;
+  font-size: 14px;
+  color: #DFBC8A; /* dorado del sitio */
+  text-decoration: none;
+  margin-bottom: 24px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.back-link:hover {
+  color: #F4EFE7; /* text-primary hover */
+  text-decoration: underline;
+}
+
+.detail-link {
+  display: inline-block;
+  font-size: 12px;
+  color: #b8b0a3; /* text-secondary, gris suave */
+  text-decoration: none;
+  margin-top: 12px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.detail-link:hover {
+  color: #DFBC8A; /* dorado on hover */
+  text-decoration: underline;
+}
+
+
 

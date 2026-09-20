@@ -210,6 +210,22 @@ body.service-page-wrapper {
 /* ==========================================================================
    BREADCRUMB & HERO DE SERVICIO
    ========================================================================== */
+.back-link {
+  display: inline-block;
+  font-size: 14px;
+  color: #DFBC8A; /* dorado del sitio */
+  text-decoration: none;
+  margin-bottom: 24px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.back-link:hover {
+  color: #F4EFE7; /* text-primary hover */
+  text-decoration: underline;
+}
+
 .service-breadcrumb {
   display: flex;
   align-items: center;
