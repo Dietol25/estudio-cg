@@ -411,6 +411,15 @@ function enviarFormWeb() {
   const mTitulo = document.getElementById('mTitulo');
   const mLista = document.getElementById('mLista');
   const mWaBtn = document.getElementById('mWaBtn');
+  const mDetailLink = document.getElementById('modal-detail-link');
+
+  const AREA_GUIDES = [
+    'servicios/previsional.html',
+    'servicios/laboral.html',
+    'servicios/fiscal.html',
+    'servicios/tramites.html',
+    'servicios/legal.html'
+  ];
 
   function openAreaModal(idx) {
     const data = AREAS[idx];
@@ -430,6 +439,9 @@ function enviarFormWeb() {
     if (mWaBtn) {
       mWaBtn.href = 'https://wa.me/5491125114119?text=' + encodeURIComponent('Hola Estudio CG, deseo coordinar una consulta sobre: ' + data.titulo);
     }
+    if (mDetailLink && AREA_GUIDES[idx]) {
+      mDetailLink.href = AREA_GUIDES[idx];
+    }
     modal.classList.add('open');
     document.body.style.overflow = 'hidden';
   }
@@ -443,11 +455,15 @@ function enviarFormWeb() {
   window.closeAreaModal = closeModal;
 
   document.querySelectorAll('.serv-card[data-area]').forEach(card => {
-    card.addEventListener('click', () => openAreaModal(parseInt(card.getAttribute('data-area'))));
+    card.addEventListener('click', (e) => {
+      if (e.target.closest('a')) return;
+      openAreaModal(parseInt(card.getAttribute('data-area')));
+    });
   });
 
   const closeBtn = modal.querySelector('.modal-close');
   if (closeBtn) closeBtn.addEventListener('click', closeModal);
+  if (mDetailLink) mDetailLink.addEventListener('click', closeModal);
   modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
@@ -456,6 +472,10 @@ function enviarFormWeb() {
   const areaParam = urlParams.get('area');
   if (areaParam !== null && !isNaN(parseInt(areaParam))) {
     setTimeout(() => openAreaModal(parseInt(areaParam)), 150);
+    if (window.history.replaceState) {
+      const cleanUrl = window.location.pathname + window.location.hash;
+      window.history.replaceState(null, '', cleanUrl);
+    }
   } else if (window.location.hash) {
     const match = window.location.hash.match(/#area-?(\d+)/i);
     if (match) {

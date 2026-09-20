@@ -4501,5 +4501,22 @@ a.contact-meta-row:hover .link-accent {
   text-decoration: underline;
 }
 
+.modal-detail-link {
+  display: inline-block;
+  font-size: 12px;
+  color: #b8b0a3; /* text-secondary, gris suave */
+  text-decoration: none;
+  margin-top: 16px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+  text-align: center;
+}
+
+.modal-detail-link:hover {
+  color: #DFBC8A; /* dorado on hover */
+  text-decoration: underline;
+}
+
 
 
