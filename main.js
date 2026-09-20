@@ -157,18 +157,47 @@ function handleOption(optionKey) {
   }, 450);
 }
 
-function sendChatMessage() {
+const chatHistory = [];
+
+async function sendChatMessage() {
   const input = document.getElementById('chatInput');
   const userText = input.value.trim();
   if (!userText) return;
 
   addChatMessage(userText, 'user');
+  chatHistory.push({ role: 'user', content: userText });
   input.value = '';
 
   const optionsContainer = document.getElementById('chatOptions');
   if (optionsContainer) optionsContainer.style.display = 'none';
 
-  setTimeout(() => {
+  const container = document.getElementById('chatMessages');
+  const typingEl = document.createElement('div');
+  typingEl.className = 'chat-msg bot-msg chat-typing-indicator';
+  typingEl.innerHTML = '<p style="color: var(--muted); font-style: italic; font-size: 0.88rem;">Escribiendo respuesta...</p>';
+  container.appendChild(typingEl);
+  container.scrollTop = container.scrollHeight;
+
+  try {
+    const res = await fetch('/api/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ messages: chatHistory })
+    });
+    if (typingEl.parentNode) typingEl.remove();
+
+    if (res.ok) {
+      const data = await res.json();
+      if (data.reply) {
+        chatHistory.push({ role: 'assistant', content: data.reply });
+        const waUrl = 'https://wa.me/5491125114119?text=' + encodeURIComponent('Hola Estudio CG, deseo coordinar una consulta: ' + userText);
+        addBotReply(data.reply, data.derivar ? 'Consultar caso por WhatsApp →' : '', data.derivar ? waUrl : '');
+        return;
+      }
+    }
+    throw new Error('API offline o sin respuesta');
+  } catch (err) {
+    if (typingEl.parentNode) typingEl.remove();
     const lower = userText.toLowerCase();
     let key = 'otro';
 
@@ -184,7 +213,7 @@ function sendChatMessage() {
 
     const item = knowledgeBase[key];
     addBotReply(item.text, item.actionText, item.actionLink);
-  }, 500);
+  }
 }
 
 function addChatMessage(text, sender) {

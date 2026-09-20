@@ -40,16 +40,6 @@ export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
   if (req.method === 'OPTIONS') return res.status(200).end();
-  if (req.method === 'GET') {
-    const modelsRes = await fetch('https://api.anthropic.com/v1/models', {
-      headers: {
-        'x-api-key': process.env.ANTHROPIC_API_KEY,
-        'anthropic-version': '2023-06-01'
-      }
-    });
-    const modelsData = await modelsRes.json();
-    return res.status(200).json(modelsData);
-  }
   if (req.method !== 'POST') return res.status(405).json({ error: 'Método no permitido' });
 
   try {
@@ -62,17 +52,6 @@ export default async function handler(req, res) {
       role: m.role === 'assistant' ? 'assistant' : 'user',
       content: String(m.content || '').slice(0, 2000)
     }));
-
-    const modelsRes = await fetch('https://api.anthropic.com/v1/models', {
-      headers: {
-        'x-api-key': process.env.ANTHROPIC_API_KEY,
-        'anthropic-version': '2023-06-01'
-      }
-    });
-    const modelsData = await modelsRes.json();
-    if (req.query && req.query.list_models) {
-      return res.status(200).json(modelsData);
-    }
 
     const r = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
@@ -94,8 +73,7 @@ export default async function handler(req, res) {
       console.error('Anthropic error:', detalle);
       return res.status(502).json({
         reply: 'Disculpá, tuve un problema para responder. Escribinos directamente por WhatsApp y te ayudamos.',
-        derivar: true,
-        debug_error: detalle
+        derivar: true
       });
     }
 
