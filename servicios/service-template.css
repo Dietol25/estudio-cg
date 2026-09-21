@@ -282,7 +282,7 @@ body.service-page-wrapper {
 
 .service-hero-title {
   font-family: 'Cormorant Garamond', Georgia, serif !important;
-  font-size: clamp(2.3rem, 4.5vw, 3.5rem) !important;
+  font-size: clamp(1.75rem, 4vw, 2.8rem);
   font-weight: 600;
   line-height: 1.15;
   color: #FAF8F4 !important;
@@ -640,7 +640,7 @@ footer {
     padding: 10px 0 24px;
   }
   .service-hero-title {
-    font-size: 2.1rem !important;
+    font-size: clamp(1.55rem, 6vw, 1.9rem);
   }
   .service-bento-card {
     padding: 20px 18px;

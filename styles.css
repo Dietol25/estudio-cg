@@ -109,12 +109,33 @@ h1, h2, h3, .serif-title {
   border-radius: var(--radius-pill);
 }
 
+/* ── ESCALA TIPOGRÁFICA UNIFICADA ─────────────────────────────
+   .hero-headline     → hero de index.html (el más grande, único)
+   .page-hero-title   → título principal de páginas internas
+   .h2                → títulos de sección en todo el sitio
+   .h3-section        → subtítulos / tarjetas destacadas
+   ──────────────────────────────────────────────────────────── */
+
+/* Título hero de páginas internas (servicios, como-trabajamos,
+   nosotros, preguntas-frecuentes, subpáginas) */
+.page-hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.75rem, 4vw, 2.8rem);
+  line-height: 1.15;
+  color: var(--cream-light);
+  margin-bottom: 16px;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+}
+
+/* Título de sección — usado en todas las secciones del sitio */
 .h2 {
-  font-size: clamp(2.2rem, 3.8vw, 3.3rem);
-  line-height: 1.14;
+  font-size: clamp(1.75rem, 3.8vw, 2.8rem);
+  line-height: 1.16;
   color: var(--cream-light);
   margin-bottom: 16px;
 }
+
 
 .sub {
   color: var(--muted);
@@ -1931,11 +1952,17 @@ footer {
 
   
   .h2 {
-    font-size: clamp(1.85rem, 6.5vw, 2.3rem);
+    font-size: clamp(1.55rem, 6vw, 1.9rem);
     line-height: 1.18;
     margin-bottom: 12px;
   }
-  
+
+  .page-hero-title {
+    font-size: clamp(1.55rem, 6vw, 1.9rem);
+    line-height: 1.18;
+    margin-bottom: 12px;
+  }
+
   .sub {
     font-size: 0.94rem;
     line-height: 1.6;
