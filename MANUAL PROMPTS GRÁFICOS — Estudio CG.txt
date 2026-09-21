@@ -1,0 +1,323 @@
+════════════════════════════════════════════════════════════
+  MANUAL DE PROMPTS MASTER — ESTUDIO CG
+  Piezas gráficas con IA · Midjourney / Firefly / DALL·E / Canva AI
+════════════════════════════════════════════════════════════
+  Design System v22 · Septiembre 2026
+  Gestoría Previsional, Laboral y Fiscal · CABA, Argentina
+════════════════════════════════════════════════════════════
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  1.  IDENTIDAD VISUAL — DESIGN SYSTEM OFICIAL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PALETA DE COLORES
+─────────────────
+  Fondo principal     Nero profundo      #0D0D0D
+  Fondo sutil         Carbón suave       #131313
+  Superficie/cards    Grafito            #181818
+  Texto principal     Crema              #F4EFE7
+  Texto claro         Crema blanca       #FAF8F4
+  Dorado principal    Gold CG            #C49A63  ← COLOR MARCA
+  Dorado luminoso     Gold Light         #DFBC8A
+  Dorado acento       Gold Accent        #B88A52
+  Texto secundario    Taupe              #C9B9A5
+  Texto muted         Gris cálido        #BCB6AD
+  CTA WhatsApp        Verde WA           #25C368
+
+★ REGLA DE ORO: negro profundo como base, dorado como jerarquía
+  y acento. SIN colores fríos (sin azul, sin morado, sin verde
+  salvo WhatsApp).
+
+
+TIPOGRAFÍA
+──────────
+  TITULARES     →  Cormorant Garamond  (serif, weight 500, elegante)
+  CUERPO / UI   →  Manrope             (sans-serif, weight 400-700, limpio)
+
+  Eyebrows / etiquetas:  UPPERCASE · letter-spacing amplio · color dorado
+  Headlines H1:          Grandes, impactantes, Cormorant Garamond
+  Subtítulos:            Cormorant Garamond, tamaño medio
+
+
+ATMÓSFERA VISUAL
+────────────────
+  Estilo       →  Luxury editorial, minimalista oscuro, premium
+  Iluminación  →  Luz suave desde arriba, halo dorado difuso (neblina cálida)
+  Textura      →  Superficies lisas. Grano de película muy sutil (opcional)
+  Contraste    →  Alto: fondo oscuro vs. tipografía/elementos dorados
+  Sensación    →  Confianza · Solidez profesional · Elegancia accesible
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  2.  PROMPT BASE UNIVERSAL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Usá este bloque al INICIO de todos tus prompts:
+
+  Dark luxury editorial design, deep black background (#0D0D0D),
+  warm gold accents (#C49A63, #DFBC8A), cream white typography
+  (#FAF8F4), Cormorant Garamond serif headline, Manrope sans-serif
+  body text, soft diffused gold light from top, professional gestoria
+  studio, Argentina, premium minimalist aesthetic, high contrast,
+  clean layout, no clutter, no blue tones, no cold colors
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  3.  PROMPTS POR FORMATO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+─────────────────────────────────────────────────────────────
+  A)  POST CUADRADO — Instagram Feed  (1080 × 1080 px)
+─────────────────────────────────────────────────────────────
+
+  Instagram square post 1080x1080px, dark luxury editorial design,
+  deep matte black background, centered composition, Cormorant
+  Garamond serif headline in cream white (#FAF8F4), warm gold label
+  (#C49A63) as eyebrow text in uppercase Manrope, minimal layout
+  with generous white space, subtle warm gold ambient glow from top
+  center, no people, no photography, flat graphic, professional
+  accounting and legal gestoria studio Estudio CG Argentina branding,
+  gold thin horizontal divider line, --ar 1:1
+
+  [ VARIANTE CON FOTO ]
+  Instagram square post 1080x1080px, dark editorial split layout,
+  left half: deep black with gold serif headline and Manrope body in
+  cream, right half: elegant desaturated professional photo with warm
+  gold color grade, gold (#DFBC8A) thin border as separator,
+  luxury minimal composition, --ar 1:1
+
+
+─────────────────────────────────────────────────────────────
+  B)  STORY / REEL COVER — Vertical  (1080 × 1920 px)
+─────────────────────────────────────────────────────────────
+
+  Instagram Story 1080x1920px vertical format, dark luxury editorial,
+  deep black background (#0D0D0D), centered vertical layout, large
+  Cormorant Garamond headline top third in cream white, gold eyebrow
+  label uppercase center, call-to-action button at bottom in WhatsApp
+  green (#25C368) pill shape with white text, soft radial gold warm
+  gradient top center fading to pure black, generous padding sides,
+  minimal graphic elements, --ar 9:16
+
+
+─────────────────────────────────────────────────────────────
+  C)  BANNER LINKEDIN — Perfil  (1584 × 396 px)
+─────────────────────────────────────────────────────────────
+
+  LinkedIn banner 1584x396px horizontal, dark editorial luxury
+  branding, deep black background, left aligned Cormorant Garamond
+  large serif name in cream (#FAF8F4), gold thin line separator
+  vertical, right: Manrope uppercase tagline in gold (#C49A63),
+  subtle warm glow from left side, minimal layout, wide horizontal
+  format, no photography, professional gestoria legal accounting
+  studio Argentina, --ar 4:1
+
+
+─────────────────────────────────────────────────────────────
+  D)  POST LANDSCAPE — Facebook / LinkedIn Feed  (1200 × 628 px)
+─────────────────────────────────────────────────────────────
+
+  Social media landscape post 1200x628px, dark luxury editorial
+  layout, split composition: left 60% dark black with cream serif
+  headline and gold accent elements, right 40% dark photo or dark
+  abstract texture with warm gold overlay, professional gestoria
+  brand, minimal clean design, --ar 1.91:1
+
+
+─────────────────────────────────────────────────────────────
+  E)  FLYER / INFOGRAFÍA SERVICIO  (1080 × 1350 px)
+─────────────────────────────────────────────────────────────
+
+  Instagram portrait infographic 1080x1350px, dark luxury editorial
+  design, deep black background, Cormorant Garamond large serif
+  headline top in cream white, gold eyebrow label uppercase small,
+  3-4 benefit icons row in warm gold line-art SVG style, Manrope
+  body text in cream/taupe (#C9B9A5), bottom CTA pill button gold
+  outline or WhatsApp green solid, subtle gold ambient glow top
+  center fading, clean sections with thin gold divider lines,
+  no clutter, --ar 4:5
+
+
+─────────────────────────────────────────────────────────────
+  F)  PORTADA / HERO VISUAL  (1260 × 700 px)
+─────────────────────────────────────────────────────────────
+
+  Hero banner image 1260x700px, cinematic dark editorial, deep black
+  scene, centered composition, large Cormorant Garamond serif headline
+  in cream white with natural baseline leading, warm gold diffused
+  radial light from top fading to pure black edges, thin gold
+  horizontal accent line below headline, Manrope subtitle in muted
+  cream below, minimal premium luxury professional branding aesthetic,
+  wide landscape, --ar 16:9
+
+
+─────────────────────────────────────────────────────────────
+  G)  TARJETA DE SERVICIO — UI Card  (600 × 400 px)
+─────────────────────────────────────────────────────────────
+
+  Service card UI graphic 600x400px, dark luxury card design,
+  background #181818 surface dark graphite, rounded corners 18px,
+  thin border rgba(244,239,231,0.12), gold line-art icon top-left
+  in #C49A63, Cormorant Garamond medium title in cream white, Manrope
+  small body text in muted #BCB6AD, subtle gold glow bottom,
+  no photography, minimal flat design, premium editorial, --ar 3:2
+
+
+─────────────────────────────────────────────────────────────
+  H)  CARRUSEL — Slides educativos  (1080 × 1080 px × N)
+─────────────────────────────────────────────────────────────
+
+  SLIDE 1 — PORTADA
+  Carousel cover slide 1080x1080px, dark luxury editorial, bold
+  Cormorant Garamond large serif headline centered in cream white,
+  gold eyebrow uppercase label above, page number "01" bottom right
+  in gold, deep black background, subtle warm gold ambient glow top
+  center, clean generous spacing, --ar 1:1
+
+  SLIDES INTERIORES (02, 03, 04...)
+  Carousel interior slide 1080x1080px, dark editorial layout,
+  left: large gold number in Cormorant Garamond serif, right: Manrope
+  medium body content in cream and muted taupe, thin gold top
+  horizontal line accent, black background, consistent visual rhythm
+  with cover slide, minimal padding, --ar 1:1
+
+  SLIDE FINAL — CTA
+  Carousel final CTA slide 1080x1080px, dark luxury editorial,
+  centered layout, gold seal or badge icon top center, Cormorant
+  Garamond headline "Consultá tu caso" in cream, WhatsApp green
+  (#25C368) pill CTA button with white Manrope text, bottom contact
+  info in muted taupe small caps, warm gold ambient glow, --ar 1:1
+
+
+─────────────────────────────────────────────────────────────
+  I)  TARJETA DIGITAL / MINIBANNER WHATSAPP  (800 × 450 px)
+─────────────────────────────────────────────────────────────
+
+  WhatsApp digital card 800x450px, dark luxury editorial, left: logo
+  zone dark surface card with gold CG monogram, right: contact info
+  layout in Manrope - name in cream, specialty in gold uppercase
+  small, phone and address in taupe muted, WhatsApp green icon accent,
+  thin gold divider, --ar 16:9
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  4.  MODIFICADORES DE TONO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Agregá uno de estos tokens al FINAL del prompt para afinar el tono:
+
+  Más lujoso      →  ultra premium, haute couture aesthetic
+  Más cálido      →  warm welcoming professional, approachable luxury
+  Más editorial   →  magazine editorial layout, Vogue Argentina style
+  Más minimalista →  extreme minimalism, Swiss grid, generous negative space
+  Más corporativo →  corporate premium, boardroom aesthetic, formal authority
+  Más humano      →  human-centered, empathetic design, soft warmth
+  Con textura     →  subtle grain texture, analog warmth, fine paper feel
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  5.  PALABRAS PROHIBIDAS EN PROMPTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ❌ NO usar          →   ✅ Reemplazar por
+  ─────────────────────────────────────────────────────────
+  bright / vivid      →   muted warm tones / low saturation gold
+  blue / purple       →   gold / cream / deep black
+  playful / fun       →   editorial / refined / authoritative
+  stock photo style   →   editorial photography / cinematic dark
+  white background    →   deep black background / dark surface
+  flat colorful icons →   gold line-art icons / monochrome icons
+  gradient rainbow    →   warm gold ambient glow / radial gold fade
+  colorful            →   monochromatic dark with gold accents
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  6.  REGLAS DE COMPOSICIÓN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  1. JERARQUÍA
+     Eyebrow (dorado) → Titular (serif crema) → Cuerpo (sans taupe) → CTA
+
+  2. ESPACIO
+     Siempre generous negative space. El respiro ES parte del diseño.
+
+  3. ALINEACIÓN
+     Left-aligned o centered. Nunca right-aligned salvo layouts split.
+
+  4. ÍCONOS
+     Line-art, monocromáticos en dorado o crema. Sin relleno sólido.
+
+  5. BORDES
+     Redondeados (18-24px). Thin borders rgba con baja opacidad.
+
+  6. FOTOGRAFÍA
+     Siempre color grade oscuro y warm. Nunca sobreexpuesta.
+
+  7. LOGO / MONOGRAMA CG
+     Siempre en dorado sobre fondo oscuro. Nunca invertido.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  7.  PROMPT SEED PARA MIDJOURNEY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  /imagine prompt: dark luxury editorial professional branding,
+  Estudio CG gestoria argentina, deep matte black background,
+  warm gold typography and accents #C49A63 #DFBC8A, Cormorant Garamond
+  serif headline in cream #FAF8F4, Manrope sans body, soft diffused
+  gold radial ambient light from top, minimal negative space layout,
+  no cold colors, premium authoritative calm aesthetic,
+  --ar [REEMPLAZAR ratio] --style raw --v 6.1
+
+  Ratios de referencia:
+    Feed cuadrado   →  --ar 1:1
+    Story / Reel    →  --ar 9:16
+    Hero / Banner   →  --ar 16:9
+    Flyer portrait  →  --ar 4:5
+    LinkedIn banner →  --ar 4:1
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  8.  BRIEF RÁPIDO PARA DISEÑADOR / COLABORADOR
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  QUIÉN ES
+  Estudio CG — Gestoría Previsional, Laboral y Fiscal
+  Fundador: Cristian Manuel Gonçalves
+  Ciudad: CABA, Buenos Aires, Argentina
+  Web: https://www.estudiocg.com
+
+  PÚBLICO
+  Adultos 40-65 años con trámites previsionales (jubilaciones,
+  pensiones) y empresas PyME con necesidades laborales y fiscales.
+  Nivel socioeconómico medio-alto. Valoran la confianza y la claridad.
+
+  VOZ VISUAL
+  Seria · Confiable · Elegante sin ser fría.
+  Como un estudio jurídico de lujo, pero accesible.
+
+  NO ES:
+  · Una fintech o startup
+  · Un banco o entidad financiera
+  · Una app de tecnología
+  · Un estudio de diseño creativo / agencia
+
+  SÍ ES:
+  · La oficina de Cristian: ordenada, dorada, oscura, de confianza
+  · Un profesional que resuelve trámites complejos con trato directo
+  · 20+ años de trayectoria → autoridad, no modernidad forzada
+
+  COLORES
+  Negro profundo + dorado cálido + crema.
+  Sin azul · Sin rojo · Sin verde (salvo ícono WhatsApp)
+
+  TIPOGRAFÍA
+  Cormorant Garamond → impacto emocional, jerarquía editorial
+  Manrope → claridad funcional, legibilidad en pantallas
+
+
+════════════════════════════════════════════════════════════
+  Estudio CG · Design System v22 · Septiembre 2026
+  Para consultas: https://wa.me/5491125114119
+════════════════════════════════════════════════════════════

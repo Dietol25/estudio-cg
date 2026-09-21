@@ -4522,4 +4522,22 @@ a.contact-meta-row:hover .link-accent {
 }
 
 
+/* ============================================================
+   VIEW TRANSITIONS API — Cross-fade suave entre páginas (MPA)
+   Progressive enhancement: sin efecto en Safari / browsers sin soporte.
+   No toca animaciones internas existentes (modal, chat, ticker, etc.)
+   ============================================================ */
+
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.25s;
+  animation-timing-function: ease;
+}
+
+
+
 
